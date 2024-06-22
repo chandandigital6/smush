@@ -207,8 +207,10 @@
                             <div class="bg-white flex flex-col  p-4">
                                 <i class="fa-solid fa-quote-left text-[#eeb21c] text-[30px]"></i>
                                 <p class="text-black  text-[14px] font-normal font-[roboto] mt-2"
-                                       style="word-spacing: 10px;">Restore your car's pristine finish with our expert scratch repair techniques to remove scratches and blemishes, ensuring your vehicle looks as good as new. Satisfaction guaranteed.</p>
-                                 <h6 class="text-black font-bold font-[roboto] mt-2">Menny Tee</h6>
+                                       style="word-spacing: 10px;">
+                                    {{$testimonial->msg}}
+                                </p>
+                                 <h6 class="text-black font-bold font-[roboto] mt-2">{{$testimonial->name}}</h6>
                                 <div>
                                     <i class="fa fa-star text-[#eeb21c] text-sm"></i>
                                     <i class="fa fa-star text-[#eeb21c] text-sm"></i>
