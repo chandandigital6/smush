@@ -32,16 +32,18 @@ class HomeController extends Controller
           $about=About::all();
           $counters=Counter::all();
           $chooseUs=ChoseUs::all();
-          return view('front_end.about',compact('about','teams' ,'counters','chooseUs'));
+          $testimonials=Testimonial::all();
+          return view('front_end.about',compact('about','teams' ,'counters','chooseUs','testimonials'));
       }
       public function services(){
           $services=Service::all();
           $testimonials=Testimonial::all();
           $chooseUs=ChoseUs::all();
-          return view('front_end.services',compact('services','testimonials','chooseUs'));
+          $logos=ClientLogo::all();
+          return view('front_end.services',compact('services','testimonials','chooseUs','logos'));
       }
       public function contact(){
-          return view('front.contact');
+          return view('front_end.contact');
       }
       public function price(){
           $teams=Team::all();

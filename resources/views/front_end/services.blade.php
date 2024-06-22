@@ -245,82 +245,33 @@
 
 
     {{--our gallery section start here--}}
-    <div class="w-full  relative py-6">
-        <div class="w-full  flex justify-center">
-            <div class=" w-full flex flex-col items-center gap-6 py-[5px]">
-                <h2 class="lg:text-[50px] md:text-[40px] sm:text-[35px] text-[30px] text-[#EEB21C] font-bold">OUR
-                    GALLERY</h2>
-                <div class="max-w-[600px]">
-                    <p class="text-black lg:leading-7 md:leading-2 lg:text-[16px] md:text-[13px] text-[12px] font-medium font-[roboto] text-center"
-                       style="word-spacing: 10px;">Restore your car's pristine finish with our expert scratch repair
-                        services. Our skilled technicians use advanced techniques to
-                        remove scratches and blemishes, ensuring your vehicle looks as good as new. Satisfaction
-                        guaranteed.</p>
+    <div class="w-full relative py-6">
+        <div class="w-full flex justify-center">
+            @foreach($logos as $logo)
+                <div class="w-full flex flex-col items-center gap-6 py-[5px]">
+                    <h2 class="lg:text-[50px] md:text-[40px] sm:text-[35px] text-[30px] text-[#EEB21C] font-bold">{{ $logo->title }}</h2>
+                    <div class="max-w-[600px]">
+                        <p class="text-black lg:leading-7 md:leading-2 lg:text-[16px] md:text-[13px] text-[12px] font-medium font-[roboto] text-center"
+                           style="word-spacing: 10px;">{{ $logo->msg }}</p>
+                    </div>
+                    <div class="swiffy-slider slider-nav-autoplay slider-item-show4">
+                        <ul class="slider-container">
+                            @if (is_string($logo->image) && !empty($logo->image))
+                                @php
+                                    $imagePaths = explode(',', $logo->image);
+                                @endphp
+                                @foreach($imagePaths as $imagePath)
+                                    <li class="w-full relative">
+                                        <img src="{{ asset('storage/'.$imagePath) }}" alt="{{ $logo->title }}" class="w-full lg:h-[550px] md:h-[500px] sm:h-[400px] h-[300px] object-cover">
+                                    </li>
+                                @endforeach
+                            @endif
+                        </ul>
+                        <button type="button" class="slider-nav"></button>
+                        <button type="button" class="slider-nav slider-nav-next"></button>
+                    </div>
                 </div>
-                <div class="swiffy-slider slider-nav-autoplay slider-item-show4">
-                    <ul class="slider-container">
-                        {{-- make copy of this li for dynamic slider --}}
-                        <li class="w-full  relative">
-                            <img src="{{asset('asset/images/Rectangle 40.png')}}"
-                                 class="w-full lg:h-[550px] md:h-[500px] sm:h-[400px] h-[300px] object-cover">
-                        </li>
-                        {{--slider copy ends here--}}
-                        <li class="w-full  relative">
-                            <img src="{{asset('asset/images/Rectangle 41.png')}}"
-                                 class="w-full lg:h-[550px] md:h-[500px] sm:h-[400px] h-[300px] object-cover">
-                        </li>
-                        <li class="w-full  relative">
-                            <img src="{{asset('asset/images/Rectangle 42.png')}}"
-                                 class="w-full lg:h-[550px] md:h-[500px] sm:h-[400px] h-[300px] object-cover">
-                        </li>
-                        <li class="w-full  relative">
-                            <img src="{{asset('asset/images/Rectangle 44.png')}}"
-                                 class="w-full lg:h-[550px] md:h-[500px] sm:h-[400px] h-[300px] object-cover">
-                        </li>
-                        <li class="w-full  relative">
-                            <img src="{{asset('asset/images/Rectangle 45.png')}}"
-                                 class="w-full lg:h-[550px] md:h-[500px] sm:h-[400px] h-[300px] object-cover">
-                        </li>
-                        <li class="w-full  relative">
-                            <img src="{{asset('asset/images/Rectangle 46.png')}}"
-                                 class="w-full lg:h-[550px] md:h-[500px] sm:h-[400px] h-[300px] object-cover">
-                        </li>
-                        <li class="w-full  relative">
-                            <img src="{{asset('asset/images/Rectangle 47.png')}}"
-                                 class="w-full lg:h-[550px] md:h-[500px] sm:h-[400px] h-[300px] object-cover">
-                        </li>
-                        <li class="w-full  relative">
-                            <img src="{{asset('asset/images/Rectangle51.png')}}"
-                                 class="w-full lg:h-[550px] md:h-[500px] sm:h-[400px] h-[300px] object-cover">
-                        </li>
-                        <li class="w-full  relative">
-                            <img src="{{asset('asset/images/Rectangle56.png')}}"
-                                 class="w-full lg:h-[550px] md:h-[500px] sm:h-[400px] h-[300px] object-cover">
-                        </li>
-                        <li class="w-full  relative">
-                            <img src="{{asset('asset/images/Rectangle 72.png')}}"
-                                 class="w-full lg:h-[550px] md:h-[500px] sm:h-[400px] h-[300px] object-cover">
-                        </li>
-                        <li class="w-full  relative">
-                            <img src="{{asset('asset/images/Rectangle79.png')}}"
-                                 class="w-full lg:h-[550px] md:h-[500px] sm:h-[400px] h-[300px] object-cover">
-                        </li>
-                        <li class="w-full  relative">
-                            <img src="{{asset('asset/images/Rectangle95.png')}}"
-                                 class="w-full lg:h-[550px] md:h-[500px] sm:h-[400px] h-[300px] object-cover">
-                        </li>
-
-
-                    </ul>
-
-                    <button type="button" class="slider-nav"></button>
-                    <button type="button" class="slider-nav slider-nav-next"></button>
-
-
-                </div>
-
-
-            </div>
+            @endforeach
         </div>
     </div>
     {{--our gallery section ends here    --}}
