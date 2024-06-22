@@ -202,53 +202,102 @@
 
 
     {{--about section start here--}}
-    <div class="w-full  relative py-6">
-        <div class="w-full  flex justify-center">
-            <div class=" w-full flex flex-col items-center gap-6 py-10 px-4" style="background-image: url({{asset('asset/images/Rectangle43.png')}})">
-                <h2 class="lg:text-[50px] md:text-[40px] sm:text-[35px] text-[30px] text-white font-bold">WHAT OUR CLIENTS SAY</h2>
-                <div class="swiffy-slider slider-item-show3 slider-nav-dark">
-                    <ul class="slider-container">
-                        {{-- make copy of this li for dynamic slider --}}
-                        @foreach($testimonials as $testimonial)
+    <div class="w-full  relative py-10"
+         style="background-image: url({{asset('asset/images/bac.png')}})">
+        <div class="w-full px-4 flex justify-center">
+            @foreach($chooseUs as $choos)
 
 
-                            <li class="w-full  relative">
-                                <div class="bg-white flex flex-col  p-4">
-                                    <i class="fa-solid fa-quote-left text-[#eeb21c] text-[30px]"></i>
-                                    <p class="text-black  text-[14px] font-normal font-[roboto] mt-2"
-                                       style="word-spacing: 10px;">Restore your car's pristine finish with our expert scratch repair techniques to remove scratches and blemishes, ensuring your vehicle looks as good as new. Satisfaction guaranteed.</p>
-                                    <h6 class="text-black font-bold font-[roboto] mt-2">Menny Tee</h6>
-                                    <div>
-                                        <i class="fa fa-star text-[#eeb21c] text-sm"></i>
-                                        <i class="fa fa-star text-[#eeb21c] text-sm"></i>
-                                        <i class="fa fa-star text-[#eeb21c] text-sm"></i>
-                                        <i class="fa fa-star text-[#eeb21c] text-sm"></i>
-                                        <i class="fa fa-star text-[#eeb21c] text-sm"></i>
-                                    </div>
-
-                                    <div class="w-full h-4 mt-6 mb-4 bg-[#eeb21c]">
-
-                                    </div>
-                                </div>
-                            </li>
-                            {{--slider copy ends here--}}
-
-                        @endforeach
+            <div class="lg:w-[70%] md:w-[80%] sm:w-[90%] w-full rounded-[50px]"
+                 style="background-image: url({{asset('asset/images/Rectangle56.png')}});box-shadow: 0px 0px 10px 1px #25a8df">
+                <div class="w-full flex flex-col items-center gap-2 p-2 bg-[#25a8df]/90 rounded-[50px]">
+                    <h2 class=" lg:text-[45px] md:text-[40px] text-center sm:text-[35px] text-[25px] text-white font-bold">
+                        {{$choos->title}}</h2>
+                    <h2 class="uppercase lg:text-[45px] md:text-[40px] text-center sm:text-[35px] text-[25px] text-white font-bold">
+                       {{$choos->heading}}</h2>
 
 
+                    <div class="w-full grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-1 mt-6">
+                        <div class="w-full flex justify-center items-center">
+                            <img src="{{asset('storage/'.$choos->image)}}" alt="">
+                        </div>
+                        <div class="flex flex-col gap-4">
+                            <div class="flex gap-2">
+                                <ul class="flex flex-col gap-8 pl-8"
+                                    style="list-style-image: url({{asset('storage/'.$choos->f_image)}});">
+                                    <li>
+                                        <h2 class="uppercase  lg:text-[30px] md:text-[25px]  sm:text-[20px] text-[20px] text-white font-bold">
+                                          {{$choos->f_title}}</h2>
+                                        <p class="text-white lg:leading-7 md:leading-2 lg:text-[18px] md:text-[13px] text-[12px] font-normal font-[roboto]"
+                                           style="word-spacing: 3px;">
+                                        {!! $choos->f_msg !!}
 
+                                        </p>
 
+                                    </li>
+                                    <li>
+                                        <h2 class="uppercase lg:text-[30px] md:text-[25px]  sm:text-[20px] text-[20px] text-white font-bold">
+                                            {{$choos->f_1_title}}</h2>
+                                        <p class="text-white lg:leading-7 md:leading-2 lg:text-[18px] md:text-[13px] text-[12px] font-normal font-[roboto]"
+                                           style="word-spacing: 3px;">
+                                            {!! $choos->f_1_msg !!}
+                                        </p>
 
-                    </ul>
+                                    </li>
+                                    <li>
+                                        <h2 class="uppercase lg:text-[30px] md:text-[25px]  sm:text-[20px] text-[20px] text-white font-bold">
+                                         {{$choos->f_2_title}}</h2>
+                                        <p class="text-white lg:leading-7 md:leading-2 lg:text-[18px] md:text-[13px] text-[12px] font-normal font-[roboto]"
+                                           style="word-spacing: 3px;">
+                                            {!! $choos->f_2_msg !!}
+                                        </p>
 
-                    <button type="button" class="slider-nav"></button>
-                    <button type="button" class="slider-nav slider-nav-next"></button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
 
 
                 </div>
 
-
             </div>
+            @endforeach
+        </div>
+        <div class="w-full px-4 flex justify-center">
+
+            <div class="lg:w-[70%] md:w-[80%] sm:w-[90%] w-full">
+                <div class="w-full grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-4 mt-6">
+                    <div class="flex flex-col gap-2">
+                        <div class="flex gap-4">
+                            <ul class="flex flex-col gap-4 lg:pl-32 md:pl-32 pl-8"
+                                style="list-style-image: url({{asset('asset/images/Arrow.png')}});">
+                                <li>
+                                    <p class="text-black lg:leading-7 md:leading-2 lg:text-[24px] md:text-[13px] text-[12px] font-bold font-[roboto]"
+                                       style="word-spacing: 3px;">Perfect color matching</p>
+                                </li>
+                                <li>
+                                    <p class="text-black lg:leading-7 md:leading-2 lg:text-[24px] md:text-[13px] text-[12px] font-bold font-[roboto]"
+                                       style="word-spacing: 3px;">No impact on your car insurance</p>
+                                </li>
+                                <li>
+                                    <p class="text-black lg:leading-7 md:leading-2 lg:text-[24px] md:text-[13px] text-[12px] font-bold font-[roboto]"
+                                       style="word-spacing: 3px;">Trade qualified and courteous tradesman</p>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="w-full flex justify-center items-center">
+                        <a href="{{route('home')}}"
+                           class="lg:text-[20px] md:text-[18px] text-[14px] w-max text-white bg-[#EEB21C] px-4 lg:py-2 md:py-2 py-1 font-bold rounded-md border-[1px] border-[#EEB21C] hover:bg-white hover:text-[#EEB21C]  transition ease-in duration-2000">
+                            GET FREE ESTIMATE
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
         </div>
     </div>
 

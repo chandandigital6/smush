@@ -280,140 +280,41 @@
     {{--our clients section start here--}}
     <div class="w-full  relative py-6">
         <div class="w-full  flex justify-center">
-            <div class=" w-full flex flex-col items-center gap-6 py-10 px-4"
-                 style="background-image: url({{asset('asset/images/Rectangle43.png')}})">
-                <h2 class="lg:text-[50px] md:text-[40px] sm:text-[35px] text-[30px] text-white font-bold">WHAT OUR
-                    CLIENTS SAY</h2>
+            <div class=" w-full flex flex-col items-center gap-6 py-10 px-4" style="background-image: url({{asset('asset/images/Rectangle43.png')}})">
+                <h2 class="lg:text-[50px] md:text-[40px] sm:text-[35px] text-[30px] text-white font-bold">WHAT OUR CLIENTS SAY</h2>
                 <div class="swiffy-slider slider-item-show3 slider-nav-dark">
                     <ul class="slider-container">
                         {{-- make copy of this li for dynamic slider --}}
-                        <li class="w-full  relative">
-                            <div class="bg-white flex flex-col  p-4">
-                                <i class="fa-solid fa-quote-left text-[#eeb21c] text-[30px]"></i>
-                                <p class="text-black  text-[14px] font-normal font-[roboto] mt-2"
-                                   style="word-spacing: 10px;">Restore your car's pristine finish with our expert
-                                    scratch repair techniques to remove scratches and blemishes, ensuring your vehicle
-                                    looks as good as new. Satisfaction guaranteed.</p>
-                                <h6 class="text-black font-bold font-[roboto] mt-2">Menny Tee</h6>
-                                <div>
-                                    <i class="fa fa-star text-[#eeb21c] text-sm"></i>
-                                    <i class="fa fa-star text-[#eeb21c] text-sm"></i>
-                                    <i class="fa fa-star text-[#eeb21c] text-sm"></i>
-                                    <i class="fa fa-star text-[#eeb21c] text-sm"></i>
-                                    <i class="fa fa-star text-[#eeb21c] text-sm"></i>
-                                </div>
+                        @foreach($testimonials as $testimonial)
 
-                                <div class="w-full h-4 mt-6 mb-4 bg-[#eeb21c]">
 
-                                </div>
-                            </div>
-                        </li>
-                        {{--slider copy ends here--}}
-                        <li class="w-full  relative">
-                            <div class="bg-white flex flex-col  p-4">
-                                <i class="fa-solid fa-quote-left text-[#eeb21c] text-[30px]"></i>
-                                <p class="text-black  text-[14px] font-normal font-[roboto] mt-2"
-                                   style="word-spacing: 10px;">Restore your car's pristine finish with our expert
-                                    scratch repair techniques to remove scratches and blemishes, ensuring your vehicle
-                                    looks as good as new. Satisfaction guaranteed.</p>
-                                <h6 class="text-black font-bold font-[roboto] mt-2">Menny Tee</h6>
-                                <div>
-                                    <i class="fa fa-star text-[#eeb21c] text-sm"></i>
-                                    <i class="fa fa-star text-[#eeb21c] text-sm"></i>
-                                    <i class="fa fa-star text-[#eeb21c] text-sm"></i>
-                                    <i class="fa fa-star text-[#eeb21c] text-sm"></i>
-                                    <i class="fa fa-star text-[#eeb21c] text-sm"></i>
-                                </div>
+                            <li class="w-full  relative">
+                                <div class="bg-white flex flex-col  p-4">
+                                    <i class="fa-solid fa-quote-left text-[#eeb21c] text-[30px]"></i>
+                                    <p class="text-black  text-[14px] font-normal font-[roboto] mt-2"
+                                       style="word-spacing: 10px;">
+                                        {{$testimonial->msg}}
+                                    </p>
+                                    <h6 class="text-black font-bold font-[roboto] mt-2">{{$testimonial->name}}</h6>
+                                    <div>
+                                        <i class="fa fa-star text-[#eeb21c] text-sm"></i>
+                                        <i class="fa fa-star text-[#eeb21c] text-sm"></i>
+                                        <i class="fa fa-star text-[#eeb21c] text-sm"></i>
+                                        <i class="fa fa-star text-[#eeb21c] text-sm"></i>
+                                        <i class="fa fa-star text-[#eeb21c] text-sm"></i>
+                                    </div>
 
-                                <div class="w-full h-4 mt-6 mb-4 bg-[#eeb21c]">
+                                    <div class="w-full h-4 mt-6 mb-4 bg-[#eeb21c]">
 
+                                    </div>
                                 </div>
-                            </div>
-                        </li>
-                        <li class="w-full  relative">
-                            <div class="bg-white flex flex-col  p-4">
-                                <i class="fa-solid fa-quote-left text-[#eeb21c] text-[30px]"></i>
-                                <p class="text-black  text-[14px] font-normal font-[roboto] mt-2"
-                                   style="word-spacing: 10px;">Restore your car's pristine finish with our expert
-                                    scratch repair techniques to remove scratches and blemishes, ensuring your vehicle
-                                    looks as good as new. Satisfaction guaranteed.</p>
-                                <h6 class="text-black font-bold font-[roboto] mt-2">Menny Tee</h6>
-                                <div>
-                                    <i class="fa fa-star text-[#eeb21c] text-sm"></i>
-                                    <i class="fa fa-star text-[#eeb21c] text-sm"></i>
-                                    <i class="fa fa-star text-[#eeb21c] text-sm"></i>
-                                    <i class="fa fa-star text-[#eeb21c] text-sm"></i>
-                                    <i class="fa fa-star text-[#eeb21c] text-sm"></i>
-                                </div>
+                            </li>
+                            {{--slider copy ends here--}}
 
-                                <div class="w-full h-4 mt-6 mb-4 bg-[#eeb21c]">
+                        @endforeach
 
-                                </div>
-                            </div>
-                        </li>
-                        <li class="w-full  relative">
-                            <div class="bg-white flex flex-col  p-4">
-                                <i class="fa-solid fa-quote-left text-[#eeb21c] text-[30px]"></i>
-                                <p class="text-black  text-[14px] font-normal font-[roboto] mt-2"
-                                   style="word-spacing: 10px;">Restore your car's pristine finish with our expert
-                                    scratch repair techniques to remove scratches and blemishes, ensuring your vehicle
-                                    looks as good as new. Satisfaction guaranteed.</p>
-                                <h6 class="text-black font-bold font-[roboto] mt-2">Menny Tee</h6>
-                                <div>
-                                    <i class="fa fa-star text-[#eeb21c] text-sm"></i>
-                                    <i class="fa fa-star text-[#eeb21c] text-sm"></i>
-                                    <i class="fa fa-star text-[#eeb21c] text-sm"></i>
-                                    <i class="fa fa-star text-[#eeb21c] text-sm"></i>
-                                    <i class="fa fa-star text-[#eeb21c] text-sm"></i>
-                                </div>
 
-                                <div class="w-full h-4 mt-6 mb-4 bg-[#eeb21c]">
 
-                                </div>
-                            </div>
-                        </li>
-                        <li class="w-full  relative">
-                            <div class="bg-white flex flex-col  p-4">
-                                <i class="fa-solid fa-quote-left text-[#eeb21c] text-[30px]"></i>
-                                <p class="text-black  text-[14px] font-normal font-[roboto] mt-2"
-                                   style="word-spacing: 10px;">Restore your car's pristine finish with our expert
-                                    scratch repair techniques to remove scratches and blemishes, ensuring your vehicle
-                                    looks as good as new. Satisfaction guaranteed.</p>
-                                <h6 class="text-black font-bold font-[roboto] mt-2">Menny Tee</h6>
-                                <div>
-                                    <i class="fa fa-star text-[#eeb21c] text-sm"></i>
-                                    <i class="fa fa-star text-[#eeb21c] text-sm"></i>
-                                    <i class="fa fa-star text-[#eeb21c] text-sm"></i>
-                                    <i class="fa fa-star text-[#eeb21c] text-sm"></i>
-                                    <i class="fa fa-star text-[#eeb21c] text-sm"></i>
-                                </div>
-
-                                <div class="w-full h-4 mt-6 mb-4 bg-[#eeb21c]">
-
-                                </div>
-                            </div>
-                        </li>
-                        <li class="w-full  relative">
-                            <div class="bg-white flex flex-col  p-4">
-                                <i class="fa-solid fa-quote-left text-[#eeb21c] text-[30px]"></i>
-                                <p class="text-black  text-[14px] font-normal font-[roboto] mt-2"
-                                   style="word-spacing: 10px;">Restore your car's pristine finish with our expert
-                                    scratch repair techniques to remove scratches and blemishes, ensuring your vehicle
-                                    looks as good as new. Satisfaction guaranteed.</p>
-                                <h6 class="text-black font-bold font-[roboto] mt-2">Menny Tee</h6>
-                                <div>
-                                    <i class="fa fa-star text-[#eeb21c] text-sm"></i>
-                                    <i class="fa fa-star text-[#eeb21c] text-sm"></i>
-                                    <i class="fa fa-star text-[#eeb21c] text-sm"></i>
-                                    <i class="fa fa-star text-[#eeb21c] text-sm"></i>
-                                    <i class="fa fa-star text-[#eeb21c] text-sm"></i>
-                                </div>
-
-                                <div class="w-full h-4 mt-6 mb-4 bg-[#eeb21c]">
-
-                                </div>
-                            </div>
-                        </li>
 
 
                     </ul>
