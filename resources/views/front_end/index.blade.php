@@ -42,11 +42,12 @@
     {{--about section start here--}}
     <div class="w-full  relative lg:pt-[250px] md:pt-[200px] sm:pt-[180px] pt-[100px]"
          style="background-image: url({{asset('asset/images/bac.png')}})">
+
         <div class="w-full h-max absolute -top-[50px] left-0 px-4 flex justify-center z-50 ">
             <div
                 class=" lg:w-[1000px] lg:h-[250px] md:h-[200px] sm:h-[180px] h-[100px] bg-white px-2 rounded-lg shadow-md shadow-gray-400 flex justify-between items-center gap-4">
                 <div>
-                    <img class="lg:w-52 md:w-48 sm:w-40 w-10 h-auto" src="{{asset('asset/images/yeelowcar.png')}}"
+                    <img class="lg:w-52 md:w-48 sm:w-40 w-24 h-auto" src="{{asset('asset/images/yeelowcar.png')}}"
                          alt="">
                 </div>
                 <div class="flex flex-col gap-1 items-center py-2">
@@ -61,7 +62,7 @@
                     </a>
                 </div>
                 <div>
-                    <img class="lg:w-52 md:w-48 sm:w-40 w-10 h-auto" src="{{asset('asset/images/bluecar.png')}}"
+                    <img class="lg:w-52 md:w-48 sm:w-40 w-24 h-auto" src="{{asset('asset/images/bluecar.png')}}"
                          alt="">
                 </div>
             </div>
@@ -197,7 +198,7 @@
         <div class="w-full  flex justify-center">
             <div class=" w-full flex flex-col items-center gap-6 py-10 px-4" style="background-image: url({{asset('asset/images/Rectangle43.png')}})">
                 <h2 class="lg:text-[50px] md:text-[40px] sm:text-[35px] text-[30px] text-white font-bold">WHAT OUR CLIENTS SAY</h2>
-                <div class="swiffy-slider slider-item-show3 slider-nav-dark">
+                <div class="swiffy-slider slider-item-show3 slider-nav-dark slider-nav-autoplay">
                     <ul class="slider-container">
                         {{-- make copy of this li for dynamic slider --}}
                         @foreach($testimonials as $testimonial)

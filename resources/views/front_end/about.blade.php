@@ -121,7 +121,7 @@
             <div
                 class=" lg:w-[1000px] lg:h-[250px] md:h-[200px] sm:h-[180px] h-[100px] bg-white px-2 rounded-lg shadow-md shadow-gray-400 flex justify-between items-center gap-4">
                 <div>
-                    <img class="lg:w-52 md:w-48 sm:w-40 w-10 h-auto" src="{{asset('asset/images/yeelowcar.png')}}"
+                    <img class="lg:w-52 md:w-48 sm:w-40 w-24 h-auto" src="{{asset('asset/images/yeelowcar.png')}}"
                          alt="">
                 </div>
                 <div class="flex flex-col gap-1 items-center py-2">
@@ -136,11 +136,12 @@
                     </a>
                 </div>
                 <div>
-                    <img class="lg:w-52 md:w-48 sm:w-40 w-10 h-auto" src="{{asset('asset/images/bluecar.png')}}"
+                    <img class="lg:w-52 md:w-48 sm:w-40 w-24 h-auto" src="{{asset('asset/images/bluecar.png')}}"
                          alt="">
                 </div>
             </div>
         </div>
+
 
 
         <div class="w-full px-4 flex justify-center">
@@ -150,8 +151,12 @@
                 <div
                     class="lg:w-[70%] md:w-[80%] sm:w-[90%] w-full grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-4 py-[5px]">
                     <div class="w-full flex flex-col gap-6 p-2">
-                        <h2 class="uppercase font-bold lg:text-[40px] md:text-[30px] text-[25px]">{{$aboutUs->title}} <span
+                        <h2 class="uppercase font-bold lg:text-[40px] md:text-[30px] text-[25px] text-center">{{$aboutUs->title}} <span
                                 class="text-[#15AEF1]">{{$aboutUs->heading}}</span></h2>
+                        <div class="w-full  justify-center items-center lg:hidden md:hidden flex">
+                            <img src="{{asset('storage/'.$aboutUs->image)}}" alt="">
+                        </div>
+
                         <p class="text-black lg:leading-7 md:leading-2 lg:text-[18px] md:text-[13px] text-[12px] font-medium font-[roboto]"
                            style="word-spacing: 10px;">
                             {!! $aboutUs->description !!}
@@ -164,7 +169,7 @@
 {{--                            LEARN MORE--}}
 {{--                        </a>--}}
                     </div>
-                    <div class="w-full flex justify-center items-center">
+                    <div class="w-full justify-center items-center lg:flex md:flex hidden">
                         <img src="{{asset('storage/'.$aboutUs->image)}}" alt="">
                     </div>
                 </div>

@@ -120,7 +120,7 @@
             <div
                 class=" lg:w-[1000px] lg:h-[250px] md:h-[200px] sm:h-[180px] h-[100px] bg-white px-2 rounded-lg shadow-md shadow-gray-400 flex justify-between items-center gap-4">
                 <div>
-                    <img class="lg:w-52 md:w-48 sm:w-40 w-10 h-auto" src="{{asset('asset/images/yeelowcar.png')}}"
+                    <img class="lg:w-52 md:w-48 sm:w-40 w-24 h-auto" src="{{asset('asset/images/yeelowcar.png')}}"
                          alt="">
                 </div>
                 <div class="flex flex-col gap-1 items-center py-2">
@@ -135,11 +135,12 @@
                     </a>
                 </div>
                 <div>
-                    <img class="lg:w-52 md:w-48 sm:w-40 w-10 h-auto" src="{{asset('asset/images/bluecar.png')}}"
+                    <img class="lg:w-52 md:w-48 sm:w-40 w-24 h-auto" src="{{asset('asset/images/bluecar.png')}}"
                          alt="">
                 </div>
             </div>
         </div>
+
 
 
         <div class="w-full px-4 flex justify-center">
