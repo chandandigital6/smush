@@ -21,7 +21,7 @@
                     CONTACT INFO
                 </h2>
                 <span class="text-[17px] text-white font-bold font-[roboto] mt-2">
-                        Phone No.: <span class="font-normal">00123 1178241</span>
+                        Phone No.: <span class="font-normal">0449599000</span>
                    </span>
                 <span class="text-[17px] text-white font-bold font-[roboto]">
                         Email: <span class="font-normal"> quote@mobilesmashrepair.com</span>

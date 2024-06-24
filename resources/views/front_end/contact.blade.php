@@ -220,7 +220,7 @@
                               <h2 class=" font-bold lg:text-[30px] md:text-[20px] text-[20px]"> <span
                                       class="text-[#15AEF1]">Phone</span></h2>
                               <p class="text-[#5c5b5b]  lg:text-[15px] md:text-[12px] text-[10px] font-normal font-[roboto]"
-                                 style="word-spacing: 10px;">00123 1178241</p>
+                                 style="word-spacing: 10px;">0449599000</p>
                           </div>
                      </div>
                      <div class="flex items-center gap-2">

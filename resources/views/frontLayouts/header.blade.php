@@ -9,9 +9,9 @@
                     class="fa-brands fa-youtube"></i></a>
         </div>
         <div class="flex gap-2 items-center gap-4">
-            <a href="tel:00123 1178241" target="_blank"
+            <a href="tel:0449599000" target="_blank"
                class="text-white hover:text-[#15AEF1] font-semibold text-[16px] transition ease-in duration-2000 ">
-                <span>00123 1178241</span>
+                <span>0449599000</span>
             </a>
             <a href="" class="text-white hover:text-[#15AEF1] text-[20px] transition ease-in duration-2000 ">
                 <i class="fa fa-user"></i>
