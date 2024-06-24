@@ -42,7 +42,6 @@
     {{--about section start here--}}
     <div class="w-full  relative lg:pt-[250px] md:pt-[200px] sm:pt-[180px] pt-[100px]"
          style="background-image: url({{asset('asset/images/bac.png')}})">
-
         <div class="w-full h-max absolute -top-[50px] left-0 px-4 flex justify-center z-50 ">
             <div
                 class=" lg:w-[1000px] lg:h-[250px] md:h-[200px] sm:h-[180px] h-[100px] bg-white px-2 rounded-lg shadow-md shadow-gray-400 flex justify-between items-center gap-4">
@@ -69,31 +68,36 @@
         </div>
 
 
+
         <div class="w-full px-4 flex justify-center">
             @foreach($about as $aboutUs)
 
 
-            <div
-                class="lg:w-[70%] md:w-[80%] sm:w-[90%] w-full grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-4 py-[5px]">
-                <div class="w-full flex flex-col gap-6 p-2">
-                    <h2 class="uppercase font-bold lg:text-[40px] md:text-[30px] text-[25px]">{{$aboutUs->title}} <span
-                            class="text-[#15AEF1]">{{$aboutUs->heading}}</span></h2>
-                    <p class="text-black lg:leading-7 md:leading-2 lg:text-[18px] md:text-[13px] text-[12px] font-medium font-[roboto]"
-                       style="word-spacing: 10px;">
-                       {!! $aboutUs->description !!}
-                    </p>
+                <div
+                    class="lg:w-[70%] md:w-[80%] sm:w-[90%] w-full grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-4 py-[5px]">
+                    <div class="w-full flex flex-col gap-6 p-2">
+                        <h2 class="uppercase font-bold lg:text-[40px] md:text-[30px] text-[25px] text-center">{{$aboutUs->title}} <span
+                                class="text-[#15AEF1]">{{$aboutUs->heading}}</span></h2>
+                        <div class="w-full  justify-center items-center lg:hidden md:hidden flex">
+                            <img src="{{asset('storage/'.$aboutUs->image)}}" alt="">
+                        </div>
+
+                        <p class="text-black lg:leading-7 md:leading-2 lg:text-[18px] md:text-[13px] text-[12px] font-medium font-[roboto]"
+                           style="word-spacing: 10px;">
+                            {!! $aboutUs->description !!}
+                        </p>
 
 
 
-                    <a href="{{route('about')}}"
-                       class="lg:text-[25px] md:text-[20px] text-[14px] w-max text-white bg-[#15aef1] px-4 lg:py-2 md:py-2 py-1 font-bold rounded-md border-[1px] border-[#15aef1] hover:bg-white hover:text-[#15aef1]  transition ease-in duration-2000">
-                        LEARN MORE
-                    </a>
+                        {{--                        <a href="{{route('contact')}}"--}}
+                        {{--                           class="lg:text-[25px] md:text-[20px] text-[14px] w-max text-white bg-[#15aef1] px-4 lg:py-2 md:py-2 py-1 font-bold rounded-md border-[1px] border-[#15aef1] hover:bg-white hover:text-[#15aef1]  transition ease-in duration-2000">--}}
+                        {{--                            LEARN MORE--}}
+                        {{--                        </a>--}}
+                    </div>
+                    <div class="w-full justify-center items-center lg:flex md:flex hidden">
+                        <img src="{{asset('storage/'.$aboutUs->image)}}" alt="">
+                    </div>
                 </div>
-                <div class="w-full flex justify-center items-center">
-                    <img src="{{asset('storage/'.$aboutUs->image)}}" alt="">
-                </div>
-            </div>
             @endforeach
         </div>
     </div>
