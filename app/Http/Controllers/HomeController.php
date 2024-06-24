@@ -46,15 +46,15 @@ class HomeController extends Controller
       public function contact(){
           return view('front_end.contact');
       }
-      public function price(){
-          $teams=Team::all();
-          $plans=Plan::all();
-          return view('front.price',compact('plans','teams'));
-      }
-      public function team(){
-          $teams=Team::all();
-          return view('front.team',compact('teams'));
-      }
+//      public function price(){
+//          $teams=Team::all();
+//          $plans=Plan::all();
+//          return view('front.price',compact('plans','teams'));
+//      }
+//      public function team(){
+//          $teams=Team::all();
+//          return view('front.team',compact('teams'));
+//      }
       public function testimonial(){
           $testimonials=Testimonial::all();
           return view('front.testimonial',compact('testimonials'));
@@ -67,11 +67,12 @@ class HomeController extends Controller
         $blogs=Blog::all();
         return view('front.blog',compact('blogs'));
     }
-    public function blogDetails(Blog $blog){
-       $categories = Blog::all();
+    public function blogDetails(Blog $blogs){
+//        dd($blogs);
+//       $categories = Blog::all();
         $recentPosts = Blog::orderBy('created_at', 'desc')->take(5)->get();
 //
         // Pass the data to the view
-        return view('front.blogDetails', compact('blog', 'categories', 'recentPosts'));
+        return view('front_end.blogDetails', compact('blogs', 'recentPosts'));
     }
 }

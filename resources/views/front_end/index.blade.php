@@ -316,7 +316,7 @@
                             </div>
                             <div class="relative h-16 bg-white">
                                 <div class="absolute -top-[30px] left-0 flex justify-center w-full">
-                                    <a href="{{route('contact')}}"
+                                    <a href="{{route('blog-details',$blogs->id)}}"
                                        class="w-[90%] flex justify-center lg:text-[25px] md:text-[20px] text-[14px] text-white bg-[#15aef1] px-4 lg:py-2 md:py-2 py-1 font-bold rounded-sm border-[1px] border-[#15aef1]  transition ease-in duration-2000">
                                        {{$blogs->title}}
                                     </a>
