@@ -16,7 +16,7 @@
                                 contact us</p>
                         </div>
                         <div class="flex gap-4">
-                            <a href="{{route('contact')}}"
+                            <a href="{{route('services')}}"
                                class="lg:text-[25px] md:text-[20px] text-[14px] text-white bg-[#eeb21c] px-4 lg:py-2 md:py-2 py-1 font-bold rounded-md border-[1px] border-[#eeb21c] hover:bg-white hover:text-[#eeb21c]  transition ease-in duration-2000">
                                 SERVICES
                             </a>
@@ -41,7 +41,7 @@
                                 contact us</p>
                         </div>
                         <div class="flex gap-4">
-                            <a href="{{route('contact')}}"
+                            <a href="{{route('services')}}"
                                class="lg:text-[25px] md:text-[20px] text-[14px] text-white bg-[#eeb21c] px-4 lg:py-2 md:py-2 py-1 font-bold rounded-md border-[1px] border-[#eeb21c] hover:bg-white hover:text-[#eeb21c]  transition ease-in duration-2000">
                                 SERVICES
                             </a>
@@ -65,7 +65,7 @@
                                 contact us</p>
                         </div>
                         <div class="flex gap-4">
-                            <a href="{{route('contact')}}"
+                            <a href="{{route('services')}}"
                                class="lg:text-[25px] md:text-[20px] text-[14px] text-white bg-[#eeb21c] px-4 lg:py-2 md:py-2 py-1 font-bold rounded-md border-[1px] border-[#eeb21c] hover:bg-white hover:text-[#eeb21c]  transition ease-in duration-2000">
                                 SERVICES
                             </a>
@@ -89,7 +89,7 @@
                                 contact us</p>
                         </div>
                         <div class="flex gap-4">
-                            <a href="{{route('contact')}}"
+                            <a href="{{route('services')}}"
                                class="lg:text-[25px] md:text-[20px] text-[14px] text-white bg-[#eeb21c] px-4 lg:py-2 md:py-2 py-1 font-bold rounded-md border-[1px] border-[#eeb21c] hover:bg-white hover:text-[#eeb21c]  transition ease-in duration-2000">
                                 SERVICES
                             </a>
