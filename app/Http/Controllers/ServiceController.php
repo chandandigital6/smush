@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\ServiceRequest;
+use App\Models\ChoseUs;
+use App\Models\ClientLogo;
 use App\Models\Service;
 use Illuminate\Http\Request;
 
@@ -63,4 +65,14 @@ class ServiceController extends Controller
         $productDuplicate->save();
         return redirect()->back();
     }
+
+
+    public function show(Service $service){
+//          dd($service);
+        $logos=ClientLogo::all();
+        $chooseUs=ChoseUs::all();
+        $services=Service::all();
+        return view('front_end.servicesDetail',compact('service','logos','chooseUs','services'));
+    }
+
 }

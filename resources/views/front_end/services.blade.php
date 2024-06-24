@@ -16,11 +16,11 @@
                                 WHAT WE OFFER?</p>
                         </div>
                         <div class="flex gap-4">
-                            <a href="{{route('home')}}"
+                            <a href="{{route('contact')}}"
                                class="lg:text-[25px] md:text-[20px] text-[14px] text-white bg-[#eeb21c] px-4 lg:py-2 md:py-2 py-1 font-bold rounded-md border-[1px] border-[#eeb21c] hover:bg-white hover:text-[#eeb21c]  transition ease-in duration-2000">
                                 SERVICES
                             </a>
-                            <a href="{{route('home')}}"
+                            <a href="{{route('contact')}}"
                                class="lg:text-[25px] md:text-[20px] text-[14px] text-white bg-[#15aef1] px-4 lg:py-2 md:py-2 py-1 font-bold rounded-md border-[1px] border-[#15aef1] hover:bg-white hover:text-[#15aef1]  transition ease-in duration-2000">
                                 ENQUIRY
                             </a>
@@ -42,11 +42,11 @@
                                 WHAT WE OFFER?</p>
                         </div>
                         <div class="flex gap-4">
-                            <a href="{{route('home')}}"
+                            <a href="{{route('contact')}}"
                                class="lg:text-[25px] md:text-[20px] text-[14px] text-white bg-[#eeb21c] px-4 lg:py-2 md:py-2 py-1 font-bold rounded-md border-[1px] border-[#eeb21c] hover:bg-white hover:text-[#eeb21c]  transition ease-in duration-2000">
                                 SERVICES
                             </a>
-                            <a href="{{route('home')}}"
+                            <a href="{{route('contact')}}"
                                class="lg:text-[25px] md:text-[20px] text-[14px] text-white bg-[#15aef1] px-4 lg:py-2 md:py-2 py-1 font-bold rounded-md border-[1px] border-[#15aef1] hover:bg-white hover:text-[#15aef1]  transition ease-in duration-2000">
                                 ENQUIRY
                             </a>
@@ -66,11 +66,11 @@
                                 WHAT WE OFFER?</p>
                         </div>
                         <div class="flex gap-4">
-                            <a href="{{route('home')}}"
+                            <a href="{{route('contact')}}"
                                class="lg:text-[25px] md:text-[20px] text-[14px] text-white bg-[#eeb21c] px-4 lg:py-2 md:py-2 py-1 font-bold rounded-md border-[1px] border-[#eeb21c] hover:bg-white hover:text-[#eeb21c]  transition ease-in duration-2000">
                                 SERVICES
                             </a>
-                            <a href="{{route('home')}}"
+                            <a href="{{route('contact')}}"
                                class="lg:text-[25px] md:text-[20px] text-[14px] text-white bg-[#15aef1] px-4 lg:py-2 md:py-2 py-1 font-bold rounded-md border-[1px] border-[#15aef1] hover:bg-white hover:text-[#15aef1]  transition ease-in duration-2000">
                                 ENQUIRY
                             </a>
@@ -109,7 +109,7 @@
                     <h5 class="font-bold lg:text-[30px] md:text-[20px] sm:text-[17px] text-[10px]">
                         quote@mobilesmashrepair.com</h5>
                     <h5 class="font-bold lg:text-[30px] md:text-[20px] sm:text-[17px] text-[10px]">OR</h5>
-                    <a href="{{route('home')}}"
+                    <a href="{{route('contact')}}"
                        class=" lg:text-[14px] md:text-[14px] sm:text-[14px] text-[7px] w-max text-white bg-[#15aef1] px-4 lg:py-2 md:py-2 py-1 font-bold rounded-full border-[1px] border-[#15aef1] hover:bg-white hover:text-[#15aef1]  transition ease-in duration-2000">
                         CLICK HERE
                     </a>
@@ -229,7 +229,7 @@
                         </div>
                     </div>
                     <div class="w-full flex justify-center items-center">
-                        <a href="{{route('home')}}"
+                        <a href="{{route('contact')}}"
                            class="lg:text-[20px] md:text-[18px] text-[14px] w-max text-white bg-[#EEB21C] px-4 lg:py-2 md:py-2 py-1 font-bold rounded-md border-[1px] border-[#EEB21C] hover:bg-white hover:text-[#EEB21C]  transition ease-in duration-2000">
                             GET FREE ESTIMATE
                         </a>
@@ -357,7 +357,7 @@
                         </div>
                     </div>
                     <div class="w-full flex justify-center items-center">
-                        <a href="{{route('home')}}"
+                        <a href="{{route('contact')}}"
                            class="lg:text-[20px] md:text-[18px] text-[14px] w-max text-white bg-[#EEB21C] px-4 lg:py-2 md:py-2 py-1 font-bold rounded-md border-[1px] border-[#EEB21C] hover:bg-white hover:text-[#EEB21C]  transition ease-in duration-2000">
                             GET FREE ESTIMATE
                         </a>

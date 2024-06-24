@@ -2,7 +2,7 @@
     <div class="lg:w-[70%] md:w-[80%] sm:w-[90%] w-full flex flex-col justify-between py-10">
         <div class="flex gap-4 items-center w-full">
             <div class="w-max">
-                <a href="{{route('home')}}">
+                <a href="{{route('contact')}}">
                     <img class="h-auto lg:w-full md:w-[70px] sm:w-[60px] w-[70px]"
                          src="{{asset('asset/images/mainLogo.png')}}" alt="">
                 </a>
@@ -27,7 +27,7 @@
                         Email: <span class="font-normal"> quote@mobilesmashrepair.com</span>
                    </span>
 
-                <a href="{{route('home')}}"
+                <a href="{{route('contact')}}"
                    class="lg:text-[17px] md:text-[17px] text-[14px] w-max mt-8 text-white bg-[#eeb21c] px-4 lg:py-2 md:py-2 py-1 font-semibold rounded-full border-[1px] border-[#eeb21c] hover:bg-white hover:text-[#eeb21c]  transition ease-in duration-2000">
                     Get Free Estimate
                 </a>
@@ -42,41 +42,22 @@
                 </div>
             </div>
             <div class="w-full grid grid-cols-2 gap-2">
+                @php
+                    $services = \App\Models\Service::all();
+                @endphp
+
                 <div class="w-full flex flex-col">
                     <h2 class="lg:text-[30px] md:text-[30px] text-[20px] text-white font-bold ">
                         OUR SERVICE
                     </h2>
 
-
-                    <a href="{{route('services-detail')}}" class="uppercase text-[15px] text-white font-normal font-[roboto] mt-2 hover:text-[#eeb21c] transition ease-in duration-2000 hover:scale-95">
-                        SMASH REPAIRS
-                    </a>
-                    <a href="{{route('services-detail')}}" class="uppercase text-[15px] text-white font-normal font-[roboto] mt-1 hover:text-[#eeb21c] transition ease-in duration-2000 hover:scale-95">
-                        Scratch Repair
-                    </a>
-                    <a href="{{route('services-detail')}}" class="uppercase text-[15px] text-white font-normal font-[roboto] mt-1 hover:text-[#eeb21c] transition ease-in duration-2000 hover:scale-95">
-                        Car Spray Painting
-                    </a>
-                    <a href="{{route('services-detail')}}" class="uppercase text-[15px] text-white font-normal font-[roboto] mt-1 hover:text-[#eeb21c] transition ease-in duration-2000 hover:scale-95">
-                        BUMPER REPAIRS
-                    </a>
-                    <a href="{{route('services-detail')}}" class="uppercase text-[15px] text-white font-normal font-[roboto] mt-1 hover:text-[#eeb21c] transition ease-in duration-2000 hover:scale-95">
-                        DENT REPAIRS
-                    </a>
-                    <a href="{{route('services-detail')}}" class="uppercase text-[15px] text-white font-normal font-[roboto] mt-1 hover:text-[#eeb21c] transition ease-in duration-2000 hover:scale-95">
-                        PANEL BEATING
-                    </a>
-                    <a href="{{route('services-detail')}}" class="uppercase text-[15px] text-white font-normal font-[roboto] mt-1 hover:text-[#eeb21c] transition ease-in duration-2000 hover:scale-95">
-                        TRUCK REPAIRS
-                    </a>
-                    <a href="{{route('services-detail')}}" class="uppercase text-[15px] text-white font-normal font-[roboto] mt-1 hover:text-[#eeb21c] transition ease-in duration-2000 hover:scale-95">
-                        Headlight restoration
-                    </a>
-                    <a href="{{route('services-detail')}}" class="uppercase text-[15px] text-white font-normal font-[roboto] mt-1 hover:text-[#eeb21c] transition ease-in duration-2000 hover:scale-95">
-                        Scratch and chip repair
-                    </a>
-
+                    @foreach($services as $service)
+                        <a href="{{ route('service.show', $service->id) }}" class="uppercase text-[15px] text-white font-normal font-[roboto] mt-1 hover:text-[#eeb21c] transition ease-in duration-2000 hover:scale-95">
+                            {{ $service->title }}
+                        </a>
+                    @endforeach
                 </div>
+
                 <div class="w-full flex flex-col">
                     <h2 class="lg:text-[30px] md:text-[30px] text-[20px] text-white font-bold ">
                         OFFICE: Melbourne
@@ -92,7 +73,7 @@
 
             <div class="w-full flex flex-col ">
                 <p class="lg:text-[20px] md:text-[20px] text-[12px] text-white font-bold font-[roboto] text-center">
-                    Copyright © 2024 MOBILE SMASH REPAIR  - Powered by VIRAL BUSINESS
+                    Copyright © 2024 MOBILE SMASH REPAIR  - POWERED by VIRAL BUSINESS
                 </p>
                 <p class="lg:text-[18px] md:text-[18px] text-[11px] text-white font-medium font-[roboto] text-center">
                     PRIVACY POLICY    TERMS & CONDITIONS
