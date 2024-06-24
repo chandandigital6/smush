@@ -118,44 +118,23 @@
 
 
                @include('front_end.components.servicesSection')
+
+
             </div>
+
+        </div>
+        <div class="w-full lg:col-span-3 md:col-span-2 sm:col-span-2 col-span-2 flex justify-center ">
+            <a href="{{route('services')}}"
+               class="mt-6 lg:text-[25px] md:text-[20px] text-[14px] w-max text-white bg-[#15aef1] px-4 lg:py-2 md:py-2 py-1 font-bold rounded-md border-[1px] border-[#15aef1] hover:bg-white hover:text-[#15aef1]  transition ease-in duration-2000">
+                Show More
+            </a>
         </div>
     </div>
     {{--what we offer section ends here    --}}
 
 
-    {{--appointment section start here--}}
-{{--    <div class="w-full  relative  bg-no-repeat bg-center bg-cover "--}}
-{{--         style="background-image: url({{asset('asset/images/image1.png')}});">--}}
-{{--        <div class="w-full px-4 flex justify-center py-6 bg-black/70">--}}
-{{--            <div class="lg:w-[70%] md:w-[80%] sm:w-[90%] w-full flex flex-col items-center gap-6 py-[5px]">--}}
+    {{--appointment section start here    --}}
 
-{{--                <div class="grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-1 grid-cols-1 gap-4 items-center">--}}
-{{--                @foreach($plan as $plans)--}}
-
-
-{{--                    <div class="bg-[#eeb21c] rounded-xl px-[20px] py-[30px] flex flex-col items-center h-max">--}}
-{{--                        <img src="{{asset('storage/'.$plans->image)}}" alt="">--}}
-{{--                        <h2 class="uppercase lg:text-[30px] md:text-[25px] text-center sm:text-[20px] text-[15px] text-white font-bold">--}}
-{{--                            {{$plans->title}}</h2>--}}
-{{--                        <p class="text-white lg:leading-7 md:leading-2 lg:text-[16px] md:text-[13px] text-[12px] font-medium font-[roboto] text-center"--}}
-{{--                           style="word-spacing: 10px;">--}}
-{{--                            {!! $plans->msg !!}--}}
-{{--                        </p>--}}
-
-{{--                        <a href="{{route('contact')}}"--}}
-{{--                           class="mt-6 lg:text-[20px] md:text-[17px] text-[14px] w-max text-black bg-white px-4  py-1 font-bold rounded-md border-[1px] border-white hover:bg-white hover:text-black  transition ease-in duration-2000">--}}
-{{--                            Call Now--}}
-{{--                        </a>--}}
-{{--                    </div>--}}
-{{--                    @endforeach--}}
-
-
-{{--                </div>--}}
-
-{{--            </div>--}}
-{{--        </div>--}}
-{{--    </div>--}}
     <div class="w-full  relative  bg-no-repeat bg-center bg-cover "
          style="background-image: url({{asset('assets/images/image1.png')}});">
         <div class="w-full px-4 flex justify-center py-6 bg-black/70">
@@ -219,6 +198,7 @@
             </div>
         </div>
     </div>
+    </div>>
     {{--appointment section ends here    --}}
 
 
