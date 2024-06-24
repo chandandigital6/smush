@@ -134,7 +134,7 @@
 
 
                     <div class="bg-[#eeb21c] rounded-xl px-[20px] py-[30px] flex flex-col items-center h-max">
-                        <img src="{{asset('asset/images/Engineer.png')}}" alt="">
+                        <img src="{{asset('storage/'.$plans->image)}}" alt="">
                         <h2 class="uppercase lg:text-[30px] md:text-[25px] text-center sm:text-[20px] text-[15px] text-white font-bold">
                             {{$plans->title}}</h2>
                         <p class="text-white lg:leading-7 md:leading-2 lg:text-[16px] md:text-[13px] text-[12px] font-medium font-[roboto] text-center"
