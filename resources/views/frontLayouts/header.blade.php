@@ -1,6 +1,6 @@
 <div class="w-full bg-[#EEB21C] px-4 flex justify-center">
     <div class="lg:w-[70%] md:w-[80%] sm:w-[90%] w-full flex justify-between py-[5px]">
-        <div class="flex lg:gap-10 md:gap-10 sm:gap-10 gap-4 text-[25px]">
+        <div class="flex lg:gap-10 md:gap-10 sm:gap-10 gap-4 text-[15px]">
             <a href="" class="text-white hover:text-[#15AEF1] transition ease-in duration-2000 "><i
                     class="fa-brands fa-instagram"></i></a>
             <a href="" class="text-white hover:text-[#15AEF1] transition ease-in duration-2000 "><i
