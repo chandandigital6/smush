@@ -7,13 +7,13 @@
 </head>
 <body>
 <div style="font-family: Arial, sans-serif;">
-    <h2 style="color: #333;">New Appointment Created</h2>
+    <h2 style="color: #333;">New Contact Details</h2>
 
     <p><strong>Appointment Details:</strong></p>
     <ul>
         <li><strong>Name:</strong> {{ $appointment->name }}</li>
         <li><strong>Email:</strong> {{ $appointment->email }}</li>
-        <li><strong>Service:</strong> {{ $appointment->service }}</li>
+{{--        <li><strong>Service:</strong> {{ $appointment->service }}</li>--}}
 {{--        <li><strong>Email:</strong> {{ $appointment->number }}</li>--}}
         <li><strong>Phone Number:</strong> {{ $appointment->number }}</li>
         <li><strong>Phone Number:</strong> {!! $appointment->msg !!}</li>
