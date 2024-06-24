@@ -153,23 +153,41 @@
                     <p class="text-black lg:leading-7 md:leading-2 lg:text-[15px] md:text-[12px] text-[10px] font-medium font-[roboto]"
                        style="word-spacing: 10px;">Attach few images for quick quotation</p>
 
+                    @if ($errors->any())
+                        <div class="alert alert-danger">
+                            <ul>
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
+                    @if(session('success'))
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            {{ session('success') }}
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    @endif
 
-                    <form action="" class="mt-4 grid lg:grid-cols-2 gap-2">
+                    <form action="{{route('appointment.store')}}" method="post" class="mt-4 grid lg:grid-cols-2 gap-2">
+                        @csrf
                         <div class="w-full flex flex-col gap-1">
                             <label for="" class="text-[#eeb21c] text-md font-normal">Name</label>
-                            <input type="text" placeholder="Your Name" class="text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]">
+                            <input type="text" name="name" placeholder="Your Name" class="text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]">
                         </div>
                         <div class="w-full flex flex-col gap-1">
                             <label for="" class="text-[#eeb21c] text-md font-normal">Email</label>
-                            <input type="email" placeholder="Your Email" class="text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]">
+                            <input type="email" name="email" placeholder="Your Email" class="text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]">
                         </div>
                         <div class="w-full flex flex-col gap-1">
                             <label for="" class="text-[#eeb21c] text-md font-normal">Phone</label>
-                            <input type="number" placeholder="Your Phone" class="text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]">
+                            <input type="number" name="number" placeholder="Your Phone" class="text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]">
                         </div>
                         <div class="w-full flex flex-col gap-1">
                             <label for="" class="text-[#eeb21c] text-md font-normal">Message</label>
-                            <textarea placeholder="Your Phone" rows="1" class="text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]"></textarea>
+                            <textarea placeholder="Your Phone" name="msg" rows="1" class="text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]"></textarea>
                         </div>
                         <div class="w-full flex flex-col gap-1 mt-6">
                             <button type="submit"

@@ -49,7 +49,7 @@
             </ul>
         </div>
         <div class="flex gap-10 items-center">
-            <a href="{{route('home')}}"
+            <a href="{{route('contact')}}"
                class="lg:text-[17px] md:text-[17px] text-[14px] text-white bg-[#eeb21c] px-4 lg:py-2 md:py-2 py-1 font-semibold rounded-full border-[1px] border-[#eeb21c] hover:bg-white hover:text-[#eeb21c]  transition ease-in duration-2000">
                 Get Free Estimate
             </a>
