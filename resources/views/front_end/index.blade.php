@@ -202,7 +202,7 @@
             </div>
         </div>
     </div>
-    </div>>
+    </div>
     {{--appointment section ends here    --}}
 
 
