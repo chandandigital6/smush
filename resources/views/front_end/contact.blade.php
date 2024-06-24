@@ -172,7 +172,7 @@
                             <textarea placeholder="Your Phone" rows="1" class="text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]"></textarea>
                         </div>
                         <div class="w-full flex flex-col gap-1 mt-6">
-                            <button
+                            <button type="submit"
                                class="lg:text-[25px] md:text-[20px] text-[14px] w-max text-white bg-[#eeb21c] px-12 lg:py-2 md:py-2 py-1 font-bold rounded-md border-[1px] border-[#eeb21c] hover:bg-white hover:text-[#eeb21c]  transition ease-in duration-2000">
                                 Submit
                             </button>

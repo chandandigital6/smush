@@ -79,6 +79,7 @@ Route::post('store-password',[AuthController::class,'store_password'])->name('st
 
 Route::post('appointment/store',[AppointmentController::class,'store'])->name('appointment.store');
 
+Route::get('service/show/{service}',[ServiceController::class,'show'])->name('service.show');
 
 Route::get('dashboard', [AuthController::class, 'dashboard'])
     ->middleware(['auth'])
@@ -122,7 +123,7 @@ Route::group(['middleware' => ['auth']],function (){
     Route::post('service/update/{service}',[ServiceController::class,'update'])->name('service.update');
     Route::get('service/delete/{service}',[ServiceController::class,'delete'])->name('service.delete');
     Route::get('service/duplicate/{service}',[ServiceController::class,'duplicate'])->name('service.duplicate');
-    Route::get('service/show/{service}',[ServiceController::class,'show'])->name('service.show');
+
 
     // Plans
 
