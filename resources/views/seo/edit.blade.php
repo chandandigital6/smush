@@ -86,7 +86,7 @@
                         <label for="">Select Page</label>
                         <select name="page" class="form-control" id="">
                             <option value="">select page</option>
-                            @foreach(['about-us', 'blog','contact-us','index' ] as $page)
+                            @foreach(['about-us', 'blog', 'contact-us','index','smash_repair','bumper_repair','scratch_repair','dent_repair','services' ] as $page)
                                 <option value="{{ $page }}" {{ $seo->page == $page ? 'selected' : '' }}>{{ $page }}</option>
                             @endforeach
                         </select>

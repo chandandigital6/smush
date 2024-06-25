@@ -38,7 +38,7 @@ Route::get('/contact',[HomeController::class,'contact'])->name('contact');
 //Route::get('/testimonial',[HomeController::class,'testimonial'])->name('testimonial');
 //Route::get('/price',[HomeController::class,'price'])->name('price');
 //Route::get('/appointment',[HomeController::class,'appointment'])->name('appointment');
-//Route::get('/blog',[HomeController::class,'blog'])->name('blog');
+Route::get('/smash_repair',[HomeController::class,'smash_repair'])->name('smash-repair');
 Route::get('/blog/{blogs}',[HomeController::class,'blogDetails'])->name('blog-details');
 
 

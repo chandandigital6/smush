@@ -30,24 +30,34 @@
         </div>
         <div id="menuList" class="lg:w-max md:w-max lg:static md:static absolute top-[100%] left-0 w-full z-50 bg-white lg:flex md:flex hidden">
             <ul class="uppercase flex lg:flex-row md:flex-row flex-col lg:gap-12 md:gap-6">
-                <a href="{{route('home')}}"
-                   class="{{Route::currentRouteName()=='home'?'lg:text-[#eeb21c] md:text-[#eeb21c] text-[#677294] hover:text-[#15AEF1]':'lg:text-[#15AEF1] md:text-[#15AEF1] text-[#677294] hover:text-[#eeb21c]'}}       lg:font-semibold md:font-semibold font-normal  text-[16px]   transition ease-in duration-2000">
+                <a href="{{ route('home') }}"
+                   class="{{ Route::currentRouteName() == 'home' ? 'lg:text-[#eeb21c] md:text-[#eeb21c] text-[#677294] hover:text-[#15AEF1]' : 'lg:text-[#15AEF1] md:text-[#15AEF1] text-[#677294] hover:text-[#eeb21c]' }} lg:font-semibold md:font-semibold font-normal text-[16px] transition ease-in duration-2000">
                     <li class="lg:py-0 md:py-0 py-4 lg:px-0 md:px-0 px-6 lg:border-t-[0px] md:border-t-[0px] border-t-[1px] border-t-[#15AEF1]/50">Home</li>
                 </a>
-                <a href="{{route('about')}}"
-                   class="{{Route::currentRouteName()=='about'?'lg:text-[#eeb21c] md:text-[#eeb21c] text-[#677294] hover:text-[#15AEF1]':'lg:text-[#15AEF1] md:text-[#15AEF1] text-[#677294] hover:text-[#eeb21c]'}}  lg:font-semibold md:font-semibold font-normal  text-[16px]    transition ease-in duration-2000">
+                <a href="{{ route('about') }}"
+                   class="{{ Route::currentRouteName() == 'about' ? 'lg:text-[#eeb21c] md:text-[#eeb21c] text-[#677294] hover:text-[#15AEF1]' : 'lg:text-[#15AEF1] md:text-[#15AEF1] text-[#677294] hover:text-[#eeb21c]' }} lg:font-semibold md:font-semibold font-normal text-[16px] transition ease-in duration-2000">
                     <li class="lg:py-0 md:py-0 py-4 lg:px-0 md:px-0 px-6 lg:border-t-[0px] md:border-t-[0px] border-t-[1px] border-t-[#15AEF1]/50">About</li>
                 </a>
-                <a href="{{route('services')}}"
-                   class="{{Route::currentRouteName()=='services'?'lg:text-[#eeb21c] md:text-[#eeb21c] text-[#677294] hover:text-[#15AEF1]':'lg:text-[#15AEF1] md:text-[#15AEF1] text-[#677294] hover:text-[#eeb21c]'}}  lg:font-semibold md:font-semibold font-normal  text-[16px]    transition ease-in duration-2000">
-                    <li class="lg:py-0 md:py-0 py-4 lg:px-0 md:px-0 px-6 lg:border-t-[0px] md:border-t-[0px] border-t-[1px] border-t-[#15AEF1]/50">Services</li>
-                </a>
-                <a href="{{route('contact')}}"
-                   class="{{Route::currentRouteName()=='contact'?'lg:text-[#eeb21c] md:text-[#eeb21c] text-[#677294] hover:text-[#15AEF1]':'lg:text-[#15AEF1] md:text-[#15AEF1] text-[#677294] hover:text-[#eeb21c]'}}  lg:font-semibold md:font-semibold font-normal  text-[16px]    transition ease-in duration-2000">
+                <div class="relative group">
+                    <a href="{{ route('services') }}"
+                       class="{{ Route::currentRouteName() == 'services' ? 'lg:text-[#eeb21c] md:text-[#eeb21c] text-[#677294] hover:text-[#15AEF1]' : 'lg:text-[#15AEF1] md:text-[#15AEF1] text-[#677294] hover:text-[#eeb21c]' }} lg:font-semibold md:font-semibold font-normal text-[16px] transition ease-in duration-2000">
+                        <li class="lg:py-0 md:py-0 py-4 lg:px-0 md:px-0 px-6 lg:border-t-[0px] md:border-t-[0px] border-t-[1px] border-t-[#15AEF1]/50">Services</li>
+                    </a>
+                    <!-- Dropdown Menu -->
+                    <ul class="absolute left-0 mt-2 w-48 bg-white border border-gray-200 rounded-md shadow-lg opacity-0 group-hover:opacity-100 group-hover:block hidden transition ease-in duration-200">
+                        <li class="px-4 py-2 hover:bg-gray-100">
+                            <a href="{{ route('smash-repair') }}" class="text-gray-700">Smash Repair</a>
+                        </li>
+                        <!-- Add more dropdown items here -->
+                    </ul>
+                </div>
+                <a href="{{ route('contact') }}"
+                   class="{{ Route::currentRouteName() == 'contact' ? 'lg:text-[#eeb21c] md:text-[#eeb21c] text-[#677294] hover:text-[#15AEF1]' : 'lg:text-[#15AEF1] md:text-[#15AEF1] text-[#677294] hover:text-[#eeb21c]' }} lg:font-semibold md:font-semibold font-normal text-[16px] transition ease-in duration-2000">
                     <li class="lg:py-0 md:py-0 py-4 lg:px-0 md:px-0 px-6 lg:border-t-[0px] md:border-t-[0px] lg:border-b-[0px] md:border-b-[0px] border-t-[1px] border-b-[1px] border-[#15AEF1]/50">Contact</li>
                 </a>
             </ul>
         </div>
+
         <div class="flex gap-10 items-center">
             <a href="{{route('contact')}}"
                 class="lg:text-[17px] md:text-[17px] text-[14px] text-white bg-[#eeb21c] px-4 lg:py-2 md:py-2 py-1 font-semibold rounded-full border-[1px] border-[#eeb21c] hover:bg-white hover:text-[#eeb21c]  transition ease-in duration-2000">

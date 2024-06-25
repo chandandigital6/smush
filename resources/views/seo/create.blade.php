@@ -93,6 +93,11 @@
                             <option value="blog">blog</option>
                             <option value="contact-us">contact-us</option>
                             <option value="index">index</option>
+                            <option value="smash_repair">smash_repair</option>
+                            <option value="bumper_repair">bumper_repair</option>
+                            <option value="scratch_repair">scratch_repair</option>
+                            <option value="dent_repair">dent_repair</option>
+                            <option value="services">services</option>
 
                         </select>
                     </div>
@@ -107,6 +112,7 @@
                         <label for="service_id">Service</label>
                         <select name="service_id" class="form-control @error('service_id') is-invalid @enderror">
                             @foreach($services as $service)
+                                <option value="">Select</option>
                                 <option value="{{ $service->id }}">{{ $service->title }}</option>
                             @endforeach
                         </select>

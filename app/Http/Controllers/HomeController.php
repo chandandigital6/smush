@@ -51,35 +51,29 @@ class HomeController extends Controller
           $seos = Seo::where('page', 'contact_us')->get();
           return view('front_end.contact',compact('seos'));
       }
-//      public function price(){
-//          $teams=Team::all();
-//          $plans=Plan::all();
-//          return view('front.price',compact('plans','teams'));
-//      }
-//      public function team(){
-//          $teams=Team::all();
-//          return view('front.team',compact('teams'));
-//      }
-      public function testimonial(){
-          $testimonials=Testimonial::all();
-          return view('front.testimonial',compact('testimonials'));
-      }
-      public function appointment(){
-          return view('front.appointment');
-      }
 
-    public function blog(){
-        $seos = Seo::where('page', 'blog')->get();
-        $blogs=Blog::all();
-        return view('front.blog',compact('blogs','seos'));
-    }
+
+
+
     public function blogDetails(Blog $blogs){
 
 //        dd($blogs);
 //       $categories = Blog::all();
         $recentPosts = Blog::orderBy('created_at', 'desc')->take(5)->get();
-//
+        $seos = Seo::where('page', 'blog')->get();
         // Pass the data to the view
         return view('front_end.blogDetails', compact('blogs', 'recentPosts','seos'));
+    }
+
+
+    public function smash_repair()
+    {
+        $seos = Seo::where('page', 'smash_repair')->get();
+        $services = Service::where('title','smash_repair')->with(['video', 'gallery'])->get();
+//        dd($services);
+        $testimonials = Testimonial::all();
+        $chooseUs = ChoseUs::all();
+        $otherServices=Service::all();
+        return view('front_end.smash_repair', compact('seos','services','testimonials','chooseUs','otherServices'));
     }
 }
