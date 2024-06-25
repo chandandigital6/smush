@@ -6,6 +6,8 @@ use App\Http\Requests\ServiceRequest;
 use App\Models\ChoseUs;
 use App\Models\ClientLogo;
 use App\Models\Service;
+use App\Models\ServiceGallery;
+use App\Models\ServiceVideo;
 use Illuminate\Http\Request;
 
 class ServiceController extends Controller
@@ -67,12 +69,14 @@ class ServiceController extends Controller
     }
 
 
-    public function show(Service $service){
+    public function show(Service $service,$title){
 //          dd($service);
-        $logos=ClientLogo::all();
+//        $logos=ClientLogo::all();
         $chooseUs=ChoseUs::all();
         $services=Service::all();
-        return view('front_end.servicesDetail',compact('service','logos','chooseUs','services'));
+        $serviceGallery = ServiceGallery::where('service_id', $service->id)->get();
+        $serviceVideo= ServiceVideo::where('service_id', $service->id)->get();
+        return view('front_end.servicesDetail',compact('service','serviceGallery','chooseUs','services','serviceVideo'));
     }
 
 }

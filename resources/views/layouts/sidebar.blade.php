@@ -120,12 +120,12 @@
                 </li>
 
                 <li class="nav-item">
-                    {{-- <a href="{{route('faq.index')}}" class="nav-link">
+                     <a href="{{route('gallery.index')}}" class="nav-link">
                         <i class="nav-icon 	fa fa-fan"></i>
                         <p>
-                            FAQs
+                            ServiceGallery
                         </p>
-                    </a> --}}
+                    </a>
                 </li>
 
 
@@ -139,12 +139,12 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    {{-- <a href="{{route('counter.index')}}" class="nav-link">
+                     <a href="{{route('serviceVideo.index')}}" class="nav-link">
                         <i class="nav-icon fa fa-bug"></i>
                         <p>
-                          Counter
+                          ServiceVideo
                         </p>
-                    </a> --}}
+                    </a>
                 </li>
                 <li class="nav-item">
                     <a href="{{route('logout')}}" class="nav-link">

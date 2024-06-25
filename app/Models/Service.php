@@ -9,4 +9,14 @@ class Service extends Model
 {
     use HasFactory;
     protected $guarded=['id'];
+
+    public function gallery()
+    {
+        return $this->hasMany(ServiceGallery::class);
+    }
+
+    public function video()
+    {
+        return $this->hasMany(ServiceVideo::class);
+    }
 }

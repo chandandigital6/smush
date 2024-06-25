@@ -11,6 +11,8 @@ use App\Http\Controllers\ClientController;
 use App\Http\Controllers\CounterController;
 use App\Http\Controllers\PlanCOntroller;
 use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\ServiceGalleryController;
+use App\Http\Controllers\ServiceVideoController;
 use App\Http\Controllers\TeamController;
 use App\Http\Controllers\TestimonialController;
 use Illuminate\Support\Facades\Route;
@@ -79,7 +81,7 @@ Route::post('store-password',[AuthController::class,'store_password'])->name('st
 
 Route::post('appointment/store',[AppointmentController::class,'store'])->name('appointment.store');
 
-Route::get('service/show/{service}',[ServiceController::class,'show'])->name('service.show');
+Route::get('service/show/{service}/{title}',[ServiceController::class,'show'])->name('service.show');
 
 Route::get('dashboard', [AuthController::class, 'dashboard'])
     ->middleware(['auth'])
@@ -202,6 +204,8 @@ Route::group(['middleware' => ['auth']],function (){
 
 
 
+
+
     // logo
 
     Route::get('logo/index',[ClientController::class,'index'])->name('logo.index');
@@ -211,6 +215,32 @@ Route::group(['middleware' => ['auth']],function (){
     Route::post('logo/update/{logo}',[ClientController::class,'update'])->name('logo.update');
     Route::get('logo/delete/{logo}',[ClientController::class,'delete'])->name('logo.delete');
     Route::get('logo/duplicate/{logo}',[ClientController::class,'duplicate'])->name('logo.duplicate');
+
+// serviceGallery
+
+
+    Route::get('gallery/index',[ServiceGalleryController::class,'index'])->name('gallery.index');
+    Route::get('gallery/create',[ServiceGalleryController::class,'create'])->name('gallery.create');
+    Route::post('gallery/store',[ServiceGalleryController::class,'store'])->name('gallery.store');
+    Route::get('gallery/edit/{gallery}',[ServiceGalleryController::class,'edit'])->name('gallery.edit');
+    Route::post('gallery/update/{gallery}',[ServiceGalleryController::class,'update'])->name('gallery.update');
+    Route::get('gallery/delete/{gallery}',[ServiceGalleryController::class,'delete'])->name('gallery.delete');
+    Route::get('gallery/duplicate/{gallery}',[ServiceGalleryController::class,'duplicate'])->name('gallery.duplicate');
+
+
+
+    //service videoa
+
+
+    Route::get('serviceVideo/index',[ServiceVideoController::class,'index'])->name('serviceVideo.index');
+    Route::get('serviceVideo/create',[ServiceVideoController::class,'create'])->name('serviceVideo.create');
+    Route::post('serviceVideo/store',[ServiceVideoController::class,'store'])->name('serviceVideo.store');
+    Route::get('serviceVideo/edit/{serviceVideo}',[ServiceVideoController::class,'edit'])->name('serviceVideo.edit');
+    Route::post('serviceVideo/update/{serviceVideo}',[ServiceVideoController::class,'update'])->name('serviceVideo.update');
+    Route::get('serviceVideo/delete/{serviceVideo}',[ServiceVideoController::class,'delete'])->name('serviceVideo.delete');
+    Route::get('serviceVideo/duplicate/{serviceVideo}',[ServiceVideoController::class,'duplicate'])->name('serviceVideo.duplicate');
+
+
 });
 
 
