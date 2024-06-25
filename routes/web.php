@@ -16,6 +16,7 @@ use App\Http\Controllers\ServiceGalleryController;
 use App\Http\Controllers\ServiceVideoController;
 use App\Http\Controllers\TeamController;
 use App\Http\Controllers\TestimonialController;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
@@ -253,6 +254,43 @@ Route::group(['middleware' => ['auth']],function (){
     Route::get('seo/delete/{seo}',[SeoController::class,'delete'])->name('seo.delete');
     Route::get('seo/duplicate/{seo}',[SeoController::class,'duplicate'])->name('seo.duplicate');
 
+});
+
+
+
+
+
+
+
+
+
+Route::get('/foo', function () {
+    $exitCode = Artisan::call('storage:link');
+    if ($exitCode === 0) {
+        return 'Success';
+    } else {
+        return 'Failed'; // You can customize this message as needed
+    }
+});
+
+Route::get('/migrate', function () {
+    $exitCode = Artisan::call('migrate:fresh', ['--seed' => true]);
+    if ($exitCode === 0) {
+        return 'Migration successful';
+    } else {
+        return 'Migration failed'; // You can customize this message as needed
+
+    }
+});
+
+Route::get('/onlyMigrate', function () {
+    $exitCode = Artisan::call('migrate');
+    if ($exitCode === 0) {
+        return 'Migration successful';
+    } else {
+        return 'Migration failed'; // You can customize this message as needed
+
+    }
 });
 
 
