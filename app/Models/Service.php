@@ -19,4 +19,10 @@ class Service extends Model
     {
         return $this->hasMany(ServiceVideo::class);
     }
+
+
+    public function seo()
+    {
+        return $this->hasMany(Seo::class);
+    }
 }

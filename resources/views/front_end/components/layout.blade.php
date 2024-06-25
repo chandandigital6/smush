@@ -17,10 +17,32 @@
     <style>
         @import "https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&amp;display=swap";
     </style>
+
+      <title>{{ $seos->first()->title ?? 'Default title' }}</title>
+    <meta name="description" content="{{ $seos->first()->description ?? 'Default Description' }}">
+    <link rel="canonical" href="{{ $seos->first()->canonical ?? url()->current() }}">
+    <!-- Open Graph data -->
+    <meta property="og:title" content="{{ $seos->first()->og_title ?? 'Default OG Title' }}">
+    <meta property="og:description" content="{{ $seos->first()->og_description ?? 'Default OG Description' }}">
+    <meta property="og:type" content="{{ $seos->first()->og_type ?? 'website' }}">
+    <meta property="og:url" content="{{ $seos->first()->og_url ?? url()->current() }}">
+    <meta property="og:image" content="{{ $seos->first()->og_image ?? asset('default-image.jpg') }}">
+    <meta property="og:site_name" content="{{ $seos->first()->og_site_name ?? 'Default Site Name' }}">
+    <meta property="og:locale" content="{{ $seos->first()->og_locale ?? 'en_US' }}">
+    <!-- Twitter data -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ $seos->first()->og_title ?? 'Default Twitter Title' }}">
+    <meta name="twitter:description" content="{{ $seos->first()->og_description ?? 'Default Twitter Description' }}">
+    <meta name="twitter:image" content="{{ $seos->first()->og_image ?? asset('default-image.jpg') }}">
 </head>
 <body class="font-roboto">
 @include('front_end.components.header')
 @yield('content')
 @include('front_end.components.footer')
+
+
+<script type="application/ld+json">
+    {!! $seos->first()->schema_js ?? '{}' !!}
+</script>
 </body>
 </html>

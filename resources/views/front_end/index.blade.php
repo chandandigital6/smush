@@ -1,4 +1,4 @@
-@extends('front_end.components.layout')
+@extends('front_end.components.layout',['seos' => $seos])
 @section('content')
 
     {{-- slider section start here --}}

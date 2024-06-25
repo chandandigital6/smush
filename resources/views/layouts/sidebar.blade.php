@@ -128,21 +128,29 @@
                     </a>
                 </li>
 
-
+                <li class="nav-item">
+                     <a href="{{route('serviceVideo.index')}}" class="nav-link">
+                        <i class="nav-icon fa fa-bug"></i>
+                        <p>
+                          ServiceVideo
+                        </p>
+                    </a>
+                </li>
 
                 <li class="nav-item">
-                     <a href="{{route('logo.index')}}" class="nav-link">
+                    <a href="{{route('logo.index')}}" class="nav-link">
                         <i class="nav-icon fa fa-podcast"></i>
                         <p>
                             Client Logo
                         </p>
                     </a>
                 </li>
+
                 <li class="nav-item">
-                     <a href="{{route('serviceVideo.index')}}" class="nav-link">
-                        <i class="nav-icon fa fa-bug"></i>
+                    <a href="{{route('seo.index')}}" class="nav-link">
+                        <i class="nav-icon fa fa-podcast"></i>
                         <p>
-                          ServiceVideo
+                            Seo
                         </p>
                     </a>
                 </li>

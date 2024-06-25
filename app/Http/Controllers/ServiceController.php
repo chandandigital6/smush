@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\ServiceRequest;
 use App\Models\ChoseUs;
 use App\Models\ClientLogo;
+use App\Models\Seo;
 use App\Models\Service;
 use App\Models\ServiceGallery;
 use App\Models\ServiceVideo;
@@ -76,7 +77,8 @@ class ServiceController extends Controller
         $services=Service::all();
         $serviceGallery = ServiceGallery::where('service_id', $service->id)->get();
         $serviceVideo= ServiceVideo::where('service_id', $service->id)->get();
-        return view('front_end.servicesDetail',compact('service','serviceGallery','chooseUs','services','serviceVideo'));
+        $seos= Seo::where('service_id', $service->id)->get();
+        return view('front_end.servicesDetail',compact('service','serviceGallery','chooseUs','services','serviceVideo','seos'));
     }
 
 }

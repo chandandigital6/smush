@@ -10,6 +10,7 @@ use App\Http\Controllers\ChooseController;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\CounterController;
 use App\Http\Controllers\PlanCOntroller;
+use App\Http\Controllers\SeoController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\ServiceGalleryController;
 use App\Http\Controllers\ServiceVideoController;
@@ -240,6 +241,17 @@ Route::group(['middleware' => ['auth']],function (){
     Route::get('serviceVideo/delete/{serviceVideo}',[ServiceVideoController::class,'delete'])->name('serviceVideo.delete');
     Route::get('serviceVideo/duplicate/{serviceVideo}',[ServiceVideoController::class,'duplicate'])->name('serviceVideo.duplicate');
 
+
+    //seo
+
+
+    Route::get('seo/index',[SeoController::class,'index'])->name('seo.index');
+    Route::get('seo/create',[SeoController::class,'create'])->name('seo.create');
+    Route::post('seo/store',[SeoController::class,'store'])->name('seo.store');
+    Route::get('seo/edit/{seo}',[SeoController::class,'edit'])->name('seo.edit');
+    Route::post('seo/update/{seo}',[SeoController::class,'update'])->name('seo.update');
+    Route::get('seo/delete/{seo}',[SeoController::class,'delete'])->name('seo.delete');
+    Route::get('seo/duplicate/{seo}',[SeoController::class,'duplicate'])->name('seo.duplicate');
 
 });
 

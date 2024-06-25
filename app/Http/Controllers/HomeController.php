@@ -9,6 +9,7 @@ use App\Models\ChoseUs;
 use App\Models\ClientLogo;
 use App\Models\Counter;
 use App\Models\Plan;
+use App\Models\Seo;
 use App\Models\Service;
 use App\Models\Team;
 use App\Models\Testimonial;
@@ -24,7 +25,8 @@ class HomeController extends Controller
        $testimonials=Testimonial::all();
        $blog=Blog::all();
        $logos=ClientLogo::all();
-        return view('front_end.index',compact('banners','about','plan','testimonials','blog','logos'));
+        $seos = Seo::where('page', 'index')->get();
+        return view('front_end.index',compact('seos','banners','about','plan','testimonials','blog','logos'));
 
       }
       public function about(){
@@ -34,17 +36,20 @@ class HomeController extends Controller
           $chooseUs=ChoseUs::all();
           $testimonials=Testimonial::all();
           $logos=ClientLogo::all();
-          return view('front_end.about',compact('about','teams' ,'counters','chooseUs','testimonials','logos'));
+          $seos = Seo::where('page', 'about-us')->get();
+          return view('front_end.about',compact('about','teams' ,'counters','chooseUs','testimonials','logos','seos'));
       }
       public function services(){
           $services=Service::all();
           $testimonials=Testimonial::all();
           $chooseUs=ChoseUs::all();
           $logos=ClientLogo::all();
-          return view('front_end.services',compact('services','testimonials','chooseUs','logos'));
+          $seos = Seo::where('page', 'services')->get();
+          return view('front_end.services',compact('services','testimonials','chooseUs','logos','seos'));
       }
       public function contact(){
-          return view('front_end.contact');
+          $seos = Seo::where('page', 'contact_us')->get();
+          return view('front_end.contact',compact('seos'));
       }
 //      public function price(){
 //          $teams=Team::all();
@@ -64,15 +69,17 @@ class HomeController extends Controller
       }
 
     public function blog(){
+        $seos = Seo::where('page', 'blog')->get();
         $blogs=Blog::all();
-        return view('front.blog',compact('blogs'));
+        return view('front.blog',compact('blogs','seos'));
     }
     public function blogDetails(Blog $blogs){
+
 //        dd($blogs);
 //       $categories = Blog::all();
         $recentPosts = Blog::orderBy('created_at', 'desc')->take(5)->get();
 //
         // Pass the data to the view
-        return view('front_end.blogDetails', compact('blogs', 'recentPosts'));
+        return view('front_end.blogDetails', compact('blogs', 'recentPosts','seos'));
     }
 }
