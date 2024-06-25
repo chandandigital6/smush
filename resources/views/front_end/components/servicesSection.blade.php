@@ -27,7 +27,7 @@
                 {!! $shortDescription !!} ...
             </p>
 
-            <a href="{{route('service.show', ['service' => $service->id,'title'=>$service->title])}}"
+            <a href="{{route('service.show', ['title'=>$service->title])}}"
                class="mt-6 lg:text-[25px] md:text-[20px] text-[14px] w-max text-white bg-[#15aef1] px-4 lg:py-2 md:py-2 py-1 font-bold rounded-md border-[1px] border-[#15aef1] hover:bg-white hover:text-[#15aef1]  transition ease-in duration-2000">
                 LEARN MORE
             </a>

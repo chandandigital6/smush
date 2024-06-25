@@ -52,7 +52,7 @@
                     </h2>
 
                     @foreach($services as $service)
-                        <a href="{{route('service.show', ['service' => $service->id,'title'=>$service->title])}}" class="uppercase text-[15px] text-white font-normal font-[roboto] mt-1 hover:text-[#eeb21c] transition ease-in duration-2000 hover:scale-95">
+                        <a href="{{route('service.show', ['title'=>$service->title])}}" class="uppercase text-[15px] text-white font-normal font-[roboto] mt-1 hover:text-[#eeb21c] transition ease-in duration-2000 hover:scale-95">
                             {{ $service->title }}
                         </a>
                     @endforeach

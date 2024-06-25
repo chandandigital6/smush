@@ -70,9 +70,10 @@ class ServiceController extends Controller
     }
 
 
-    public function show(Service $service,$title){
+    public function show($title){
 //          dd($service);
 //        $logos=ClientLogo::all();
+        $service = Service::where('title', $title)->first();
         $chooseUs=ChoseUs::all();
         $services=Service::all();
         $serviceGallery = ServiceGallery::where('service_id', $service->id)->get();

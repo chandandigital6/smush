@@ -82,7 +82,7 @@ Route::post('store-password',[AuthController::class,'store_password'])->name('st
 
 Route::post('appointment/store',[AppointmentController::class,'store'])->name('appointment.store');
 
-Route::get('service/show/{service}/{title}',[ServiceController::class,'show'])->name('service.show');
+Route::get('/{title}',[ServiceController::class,'show'])->name('service.show');
 
 Route::get('dashboard', [AuthController::class, 'dashboard'])
     ->middleware(['auth'])
