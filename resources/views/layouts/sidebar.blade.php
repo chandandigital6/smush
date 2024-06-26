@@ -52,14 +52,22 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                     <a href="{{route('appointment.index')}}" class="nav-link">
-                        <i class="nav-icon fa fa-american-sign-language-interpreting"></i>
+                    <a href="{{route('chose.index')}}" class="nav-link">
+                        <i class="nav-icon 	fa fa-fax"></i>
                         <p>
-                            Appointment
+                            ChooseUs
                         </p>
                     </a>
                 </li>
 
+                <li class="nav-item">
+                    <a href="{{route('serviceTitle.index')}}" class="nav-link">
+                        <i class="nav-icon 	fa fa-bullseye"></i>
+                        <p>
+                            ServicesTitle
+                        </p>
+                    </a>
+                </li>
                 <li class="nav-item">
                      <a href="{{route('service.index')}}" class="nav-link">
                         <i class="nav-icon 	fa fa-bullseye"></i>
@@ -78,49 +86,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{route('testimonial.index')}}" class="nav-link">
-                        <i class="nav-icon 	fa fa-fax"></i>
-                        <p>
-                            Testimonials
-                        </p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="{{route('chose.index')}}" class="nav-link">
-                        <i class="nav-icon 	fa fa-fax"></i>
-                        <p>
-                            ChooseUs
-                        </p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                     <a href="{{route('team.index')}}" class="nav-link">
-                        <i class="nav-icon fa fa-group"></i>
-                        <p>
-                            Team Member
-                        </p>
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                     <a href="{{route('blogs.index')}}" class="nav-link">
-                        <i class="nav-icon fa fa-asterisk"></i>
-                        <p>
-                            Blog
-                        </p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                     <a href="{{route('counter.index')}}" class="nav-link">
-                        <i class="nav-icon fa fa-cog"></i>
-                        <p>
-                          Counter
-                        </p>
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                     <a href="{{route('gallery.index')}}" class="nav-link">
+                    <a href="{{route('gallery.index')}}" class="nav-link">
                         <i class="nav-icon 	fa fa-fan"></i>
                         <p>
                             ServiceGallery
@@ -129,10 +95,19 @@
                 </li>
 
                 <li class="nav-item">
-                     <a href="{{route('serviceVideo.index')}}" class="nav-link">
+                    <a href="{{route('serviceVideo.index')}}" class="nav-link">
                         <i class="nav-icon fa fa-bug"></i>
                         <p>
-                          ServiceVideo
+                            ServiceVideo
+                        </p>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="{{route('serviceChoose.index')}}" class="nav-link">
+                        <i class="nav-icon fa fa-bug"></i>
+                        <p>
+                            ServiceChooseUs
                         </p>
                     </a>
                 </li>
@@ -142,6 +117,49 @@
                         <i class="nav-icon fa fa-podcast"></i>
                         <p>
                             Client Logo
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{route('testimonial.index')}}" class="nav-link">
+                        <i class="nav-icon 	fa fa-fax"></i>
+                        <p>
+                            Testimonials
+                        </p>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                     <a href="{{route('team.index')}}" class="nav-link">
+                        <i class="nav-icon fa fa-group"></i>
+                        <p>
+                            Team Member
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{route('appointment.index')}}" class="nav-link">
+                        <i class="nav-icon fa fa-american-sign-language-interpreting"></i>
+                        <p>
+                            Appointment
+                        </p>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="{{route('counter.index')}}" class="nav-link">
+                        <i class="nav-icon fa fa-cog"></i>
+                        <p>
+                            Counter
+                        </p>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                     <a href="{{route('blogs.index')}}" class="nav-link">
+                        <i class="nav-icon fa fa-asterisk"></i>
+                        <p>
+                            Blog
                         </p>
                     </a>
                 </li>

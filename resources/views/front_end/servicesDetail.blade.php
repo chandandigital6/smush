@@ -253,7 +253,7 @@
     <div class="w-full  relative py-10"
          style="background-image: url({{asset('asset/images/bac.png')}})">
         <div class="w-full px-4 flex justify-center">
-            @foreach($chooseUs as $choos)
+            @foreach($serviceChooseUs as $choos)
 
 
                 <div class="lg:w-[70%] md:w-[80%] sm:w-[90%] w-full rounded-[50px]"

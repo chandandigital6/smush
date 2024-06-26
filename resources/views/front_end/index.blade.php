@@ -108,15 +108,18 @@
     <div class="w-full  relative py-6 rounded-t-[50px]"
          style="background-image: url({{asset('asset/images/bac.png')}});box-shadow: 0px 0px 20px 1px #15aef173">
         <div class="w-full px-4 flex justify-center">
+            @foreach($serviceTitle as $title)
+
+
             <div class="lg:w-[70%] md:w-[80%] sm:w-[90%] w-full flex flex-col items-center gap-6 py-[5px]">
-                <h2 class="lg:text-[50px] md:text-[40px] sm:text-[35px] text-[30px] text-[#EEB21C] font-bold">WHAT WE
-                    OFFER</h2>
+                <h2 class="lg:text-[50px] md:text-[40px] sm:text-[35px] text-[30px] text-[#EEB21C] font-bold">
+
+                {{$title->title}}
+                </h2>
                 <div class="max-w-[600px]">
                     <p class="text-black lg:leading-7 md:leading-2 lg:text-[16px] md:text-[13px] text-[12px] font-medium font-[roboto] text-center"
                        style="word-spacing: 10px;">
-                        Restore your car's pristine finish with our expert scratch repair services. Our skilled
-                        technicians use advanced techniques to remove scratches and blemishes, ensuring your vehicle
-                        looks as good as new. Satisfaction guaranteed.
+                       {!! $title->msg !!}
                     </p>
                 </div>
 
@@ -125,6 +128,7 @@
 
 
             </div>
+            @endforeach
 
         </div>
         <div class="w-full lg:col-span-3 md:col-span-2 sm:col-span-2 col-span-2 flex justify-center ">

@@ -124,19 +124,27 @@
 
 
         <div class="w-full px-4 flex justify-center">
-            <div class="lg:w-[70%] md:w-[80%] sm:w-[90%] w-full flex flex-col items-center gap-6 py-[5px]">
-                <h2 class="lg:text-[50px] md:text-[40px] sm:text-[35px] text-[30px] text-[#EEB21C] font-bold">WHAT WE
-                    OFFER</h2>
-                <div class="max-w-[600px]">
-                    <p class="text-black lg:leading-7 md:leading-2 lg:text-[16px] md:text-[13px] text-[12px] font-medium font-[roboto] text-center"
-                       style="word-spacing: 10px;">
-                        Restore your car's pristine finish with our expert scratch repair services. Our skilled
-                        technicians use advanced techniques to remove scratches and blemishes, ensuring your vehicle
-                        looks as good as new. Satisfaction guaranteed.
-                    </p>
+            @foreach($serviceTitle as $title)
+
+
+                <div class="lg:w-[70%] md:w-[80%] sm:w-[90%] w-full flex flex-col items-center gap-6 py-[5px]">
+                    <h2 class="lg:text-[50px] md:text-[40px] sm:text-[35px] text-[30px] text-[#EEB21C] font-bold">
+
+                        {{$title->title}}
+                    </h2>
+                    <div class="max-w-[600px]">
+                        <p class="text-black lg:leading-7 md:leading-2 lg:text-[16px] md:text-[13px] text-[12px] font-medium font-[roboto] text-center"
+                           style="word-spacing: 10px;">
+                            {!! $title->msg !!}
+                        </p>
+                    </div>
+
+
+                    @include('front_end.components.servicesSection')
+
+
                 </div>
-                @include('front_end.components.servicesSection')
-            </div>
+            @endforeach
         </div>
     </div>
     {{--what we offer section ends here    --}}

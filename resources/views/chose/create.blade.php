@@ -1,7 +1,7 @@
 @extends('layouts.aap')
 @section('content')
     <div class="container mt-5">
-        <h1>Create plans</h1>
+        <h1>Create </h1>
 
         @if ($errors->any())
             <div class="alert alert-danger">

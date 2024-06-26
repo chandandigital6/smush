@@ -25,4 +25,10 @@ class Service extends Model
     {
         return $this->hasMany(Seo::class);
     }
+
+
+    public function choose()
+    {
+        return $this->hasMany(ServiceChoose::class);
+    }
 }

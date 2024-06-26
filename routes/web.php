@@ -11,8 +11,10 @@ use App\Http\Controllers\ClientController;
 use App\Http\Controllers\CounterController;
 use App\Http\Controllers\PlanCOntroller;
 use App\Http\Controllers\SeoController;
+use App\Http\Controllers\ServiceChooseController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\ServiceGalleryController;
+use App\Http\Controllers\ServiceTitleController;
 use App\Http\Controllers\ServiceVideoController;
 use App\Http\Controllers\TeamController;
 use App\Http\Controllers\TestimonialController;
@@ -39,7 +41,7 @@ Route::get('/contact',[HomeController::class,'contact'])->name('contact');
 //Route::get('/testimonial',[HomeController::class,'testimonial'])->name('testimonial');
 //Route::get('/price',[HomeController::class,'price'])->name('price');
 //Route::get('/appointment',[HomeController::class,'appointment'])->name('appointment');
-Route::get('/smash_repair',[HomeController::class,'smash_repair'])->name('smash-repair');
+//Route::get('/smash_repair',[HomeController::class,'smash_repair'])->name('smash-repair');
 Route::get('/blog/{blogs}',[HomeController::class,'blogDetails'])->name('blog-details');
 
 
@@ -112,6 +114,16 @@ Route::group(['middleware' => ['auth']],function (){
     Route::get('service/delete/{service}',[ServiceController::class,'delete'])->name('service.delete');
     Route::get('service/duplicate/{service}',[ServiceController::class,'duplicate'])->name('service.duplicate');
 
+
+    //servicesTitle
+
+    Route::get('serviceTitle/index',[ServiceTitleController::class,'index'])->name('serviceTitle.index');
+    Route::get('serviceTitle/create',[ServiceTitleController::class,'create'])->name('serviceTitle.create');
+    Route::post('serviceTitle/store',[ServiceTitleController::class,'store'])->name('serviceTitle.store');
+    Route::get('serviceTitle/edit/{serviceTitle}',[ServiceTitleController::class,'edit'])->name('serviceTitle.edit');
+    Route::post('serviceTitle/update/{serviceTitle}',[ServiceTitleController::class,'update'])->name('serviceTitle.update');
+    Route::get('serviceTitle/delete/{serviceTitle}',[ServiceTitleController::class,'delete'])->name('serviceTitle.delete');
+    Route::get('serviceTitle/duplicate/{serviceTitle}',[ServiceTitleController::class,'duplicate'])->name('serviceTitle.duplicate');
 
     // Plans
 
@@ -190,6 +202,15 @@ Route::group(['middleware' => ['auth']],function (){
 
 
 
+//Servicechoose
+
+    Route::get('serviceChoose/index',[ServiceChooseController::class,'index'])->name('serviceChoose.index');
+    Route::get('serviceChoose/create',[ServiceChooseController::class,'create'])->name('serviceChoose.create');
+    Route::post('serviceChoose/store',[ServiceChooseController::class,'store'])->name('serviceChoose.store');
+    Route::get('serviceChoose/edit/{serviceChoose}',[ServiceChooseController::class,'edit'])->name('serviceChoose.edit');
+    Route::post('serviceChoose/update/{serviceChoose}',[ServiceChooseController::class,'update'])->name('serviceChoose.update');
+    Route::get('serviceChoose/delete/{serviceChoose}',[ServiceChooseController::class,'delete'])->name('serviceChoose.delete');
+    Route::get('serviceChoose/duplicate/{serviceChoose}',[ServiceChooseController::class,'duplicate'])->name('serviceChoose.duplicate');
 
 
     // logo

@@ -11,6 +11,7 @@ use App\Models\Counter;
 use App\Models\Plan;
 use App\Models\Seo;
 use App\Models\Service;
+use App\Models\ServiceTitle;
 use App\Models\Team;
 use App\Models\Testimonial;
 use http\Client;
@@ -26,7 +27,8 @@ class HomeController extends Controller
        $blog=Blog::all();
        $logos=ClientLogo::all();
         $seos = Seo::where('page', 'index')->get();
-        return view('front_end.index',compact('seos','banners','about','plan','testimonials','blog','logos'));
+        $serviceTitle=ServiceTitle::all();
+        return view('front_end.index',compact('seos','banners','about','plan','testimonials','blog','logos','serviceTitle'));
 
       }
       public function about(){
@@ -45,7 +47,8 @@ class HomeController extends Controller
           $chooseUs=ChoseUs::all();
           $logos=ClientLogo::all();
           $seos = Seo::where('page', 'services')->get();
-          return view('front_end.services',compact('services','testimonials','chooseUs','logos','seos'));
+          $serviceTitle=ServiceTitle::all();
+          return view('front_end.services',compact('services','testimonials','chooseUs','logos','seos','serviceTitle'));
       }
       public function contact(){
           $seos = Seo::where('page', 'contact_us')->get();
@@ -66,14 +69,16 @@ class HomeController extends Controller
     }
 
 
-    public function smash_repair()
-    {
-        $seos = Seo::where('page', 'smash_repair')->get();
-        $services = Service::where('title','smash_repair')->with(['video', 'gallery'])->get();
-//        dd($services);
-        $testimonials = Testimonial::all();
-        $chooseUs = ChoseUs::all();
-        $otherServices=Service::all();
-        return view('front_end.smash_repair', compact('seos','services','testimonials','chooseUs','otherServices'));
-    }
+//    public function smash_repair()
+//    {
+//        $seos = Seo::where('page', 'smash_repair')->get();
+//        $services = Service::where('title','smash_repair')->with(['video', 'gallery'])->get();
+////        dd($services);
+//        $testimonials = Testimonial::all();
+//        $chooseUs = ChoseUs::all();
+//        $otherServices=Service::all();
+//        return view('front_end.smash_repair', compact('seos','services','testimonials','chooseUs','otherServices'));
+//    }
+
+
 }
