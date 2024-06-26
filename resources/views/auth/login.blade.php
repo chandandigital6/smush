@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="icon" href="{{asset('logo.jpg')}}" type="image/x-icon">
+    <link rel="icon" href="{{asset('asset/images/mainLogo.png')}}" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="{{ asset('asset/plugins/icheck-bootstrap/icheck-bootstrap.min.css') }}">
@@ -56,7 +56,7 @@
 <body class="hold-transition login-page">
 <div class="login-box">
     <div class="login-logo">
-        <a href="#"><b>Real</b>Victory</a>
+        <a href="#"><b>Mobile</b>SmashRepair</a>
     </div>
     <div class="card login-card-body">
         <p class="login-box-msg">Sign in to start your session</p>
