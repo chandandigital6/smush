@@ -96,16 +96,16 @@
     {{--what we offer section start here--}}
     <div class="w-full  relative py-6 lg:pt-[250px] md:pt-[200px] sm:pt-[180px] pt-[100px]"
          style="background-image: url({{asset('asset/images/bac.png')}});">
-        <div class="w-full h-max absolute -top-[50px] left-0 px-4 flex justify-center z-50 ">
+        <div class="w-full h-max absolute -top-[50px] left-0 px-4 flex justify-center z-50 py-4 ">
             <div
-                class=" lg:w-[1000px] lg:h-[250px] md:h-[200px] sm:h-[180px] h-[100px] bg-white px-2 rounded-lg shadow-md shadow-gray-400 flex justify-between items-center gap-4">
+                class=" lg:w-[1000px] lg:h-[250px] md:h-[200px] sm:h-[200px] h-[120px] bg-white px-2 rounded-lg shadow-md shadow-gray-400 flex justify-between items-center gap-4">
                 <div>
                     <img class="lg:w-52 md:w-48 sm:w-40 w-24 h-auto" src="{{asset('asset/images/yeelowcar.png')}}"
                          alt="">
                 </div>
                 <div class="flex flex-col gap-1 items-center py-2">
-                    <span class="font-bold lg:text-[34px] md:text-[21px] sm:text-[17px] text-[1px]">GET YOUR FREE ESTIMATE NOW</span>
-                    <span class="font-bold lg:text-[23px] md:text-[15px] sm:text-[10px] text-[8px] text-[#EEB21C]">SIMPLY SEND US PHOTOS OF THE DAMAGE!"</span>
+                    <span class="font-bold lg:text-[34px] md:text-[21px] sm:text-[17px] text-[8px]">GET YOUR FREE ESTIMATE NOW</span>
+                    <span class="font-bold lg:text-[23px] md:text-[15px] sm:text-[10px] text-[8px] text-[#EEB21C] text-center">SIMPLY SEND US PHOTOS OF THE DAMAGE!"</span>
                     <h5 class="font-bold lg:text-[30px] md:text-[20px] sm:text-[17px] text-[10px]">
                         quote@mobilesmashrepair.com</h5>
                     <h5 class="font-bold lg:text-[30px] md:text-[20px] sm:text-[17px] text-[10px]">OR</h5>

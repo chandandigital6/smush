@@ -1,5 +1,5 @@
 <div class="w-full bg-[#EEB21C] px-4 flex justify-center">
-    <div class="lg:w-[70%] md:w-[80%] sm:w-[90%] w-full flex justify-between py-[2px]">
+    <div class="lg:w-[80%] md:w-[80%] sm:w-[90%] w-full flex justify-between py-[2px]">
         <div class="flex lg:gap-10 md:gap-10 sm:gap-10 gap-4 text-[20px]">
             <a href="" class="text-white hover:text-[#15AEF1] transition ease-in duration-2000 "><i
                     class="fa-brands fa-instagram"></i></a>
@@ -21,7 +21,7 @@
     </div>
 </div>
 <div class="w-full flex justify-center sticky top-0 z-50 bg-white shadow shadow-md shadow-gray-300">
-    <div class="lg:w-[70%] md:w-[80%] sm:w-[90%] w-full flex justify-between items-center py-[5px] relative px-4">
+    <div class="lg:w-[80%] md:w-[80%] sm:w-[90%] w-full flex justify-between items-center py-[5px] relative px-4">
         <div class="w-max">
             <a href="{{route('home')}}">
                 <img class="h-auto lg:w-full md:w-[70px] sm:w-[60px] w-[50px]"
@@ -43,13 +43,13 @@
                        class="{{ Route::currentRouteName() == 'services' ? 'lg:text-[#eeb21c] md:text-[#eeb21c] text-[#677294] hover:text-[#15AEF1]' : 'lg:text-[#15AEF1] md:text-[#15AEF1] text-[#677294] hover:text-[#eeb21c]' }} lg:font-semibold md:font-semibold font-normal text-[16px] transition ease-in duration-2000">
                         <li class="lg:py-0 md:py-0 py-4 lg:px-0 md:px-0 px-6 lg:border-t-[0px] md:border-t-[0px] border-t-[1px] border-t-[#15AEF1]/50">Services</li>
                     </a>
-                    <!-- Dropdown Menu -->
-                    <ul class="absolute left-0 mt-2 w-48 bg-white border border-gray-200 rounded-md shadow-lg opacity-0 group-hover:opacity-100 group-hover:block hidden transition ease-in duration-200">
-                        <li class="px-4 py-2 hover:bg-gray-100">
-                            <a href="{{ route('smash-repair') }}" class="text-gray-700">Smash Repair</a>
-                        </li>
-                        <!-- Add more dropdown items here -->
-                    </ul>
+{{--                    <!-- Dropdown Menu -->--}}
+{{--                    <ul class="absolute left-0 mt-2 w-48 bg-white border border-gray-200 rounded-md shadow-lg opacity-0 group-hover:opacity-100 group-hover:block hidden transition ease-in duration-200">--}}
+{{--                        <li class="px-4 py-2 hover:bg-gray-100">--}}
+{{--                            <a href="{{ route('smash-repair') }}" class="text-gray-700">Smash Repair</a>--}}
+{{--                        </li>--}}
+{{--                        <!-- Add more dropdown items here -->--}}
+{{--                    </ul>--}}
                 </div>
                 <a href="{{ route('contact') }}"
                    class="{{ Route::currentRouteName() == 'contact' ? 'lg:text-[#eeb21c] md:text-[#eeb21c] text-[#677294] hover:text-[#15AEF1]' : 'lg:text-[#15AEF1] md:text-[#15AEF1] text-[#677294] hover:text-[#eeb21c]' }} lg:font-semibold md:font-semibold font-normal text-[16px] transition ease-in duration-2000">

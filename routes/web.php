@@ -43,29 +43,13 @@ Route::get('/smash_repair',[HomeController::class,'smash_repair'])->name('smash-
 Route::get('/blog/{blogs}',[HomeController::class,'blogDetails'])->name('blog-details');
 
 
-//Route::get('/', function () {
-//    return view('front_end.index');
-//})->name('home');
 
-
-//Route::get('/about', function () {
-//    return view('front_end.about');
-//})->name('about');
-
-
-//Route::get('/services', function () {
-//    return view('front_end.services');
-//})->name('services');
 
 
 Route::get('/services-detail', function () {
     return view('front_end.servicesDetail');
 })->name('services-detail');
 
-//
-//Route::get('/contact', function () {
-//    return view('front_end.contact');
-//})->name('contact');
 
 
 
@@ -85,18 +69,18 @@ Route::post('appointment/store',[AppointmentController::class,'store'])->name('a
 
 Route::get('/{title}',[ServiceController::class,'show'])->name('service.show');
 
-Route::get('dashboard', [AuthController::class, 'dashboard'])
+Route::get('run/dashboard', [AuthController::class, 'dashboard'])
     ->middleware(['auth'])
     ->name('auth.dashboard');
 
 Route::group(['middleware' => ['auth']],function (){
-    Route::get('index',[BannerController::class,'index'])->name('banner.index');
-    Route::get('create',[BannerController::class,'create'])->name('banner.create');
-    Route::post('store',[BannerController::class,'store'])->name('banner.store');
-    Route::get('edit/{banner}',[BannerController::class,'edit'])->name('banner.edit');
-    Route::get('delete/{banner}',[BannerController::class,'delete'])->name('banner.delete');
-    Route::get('duplicate/{banner}',[BannerController::class,'duplicate'])->name('banner.duplicate');
-    Route::post('update/{banner}',[BannerController::class,'update'])->name('banner.update');
+    Route::get('banner/index',[BannerController::class,'index'])->name('banner.index');
+    Route::get('banner/create',[BannerController::class,'create'])->name('banner.create');
+    Route::post('banner/store',[BannerController::class,'store'])->name('banner.store');
+    Route::get('banner/edit/{banner}',[BannerController::class,'edit'])->name('banner.edit');
+    Route::get('banner/delete/{banner}',[BannerController::class,'delete'])->name('banner.delete');
+    Route::get('banner/duplicate/{banner}',[BannerController::class,'duplicate'])->name('banner.duplicate');
+    Route::post('banner/update/{banner}',[BannerController::class,'update'])->name('banner.update');
 
       //  about
 
@@ -257,14 +241,7 @@ Route::group(['middleware' => ['auth']],function (){
 });
 
 
-
-
-
-
-
-
-
-Route::get('/foo', function () {
+Route::get('run/foo', function () {
     $exitCode = Artisan::call('storage:link');
     if ($exitCode === 0) {
         return 'Success';
@@ -273,7 +250,7 @@ Route::get('/foo', function () {
     }
 });
 
-Route::get('/migrate', function () {
+Route::get('run/migrate', function () {
     $exitCode = Artisan::call('migrate:fresh', ['--seed' => true]);
     if ($exitCode === 0) {
         return 'Migration successful';
@@ -283,7 +260,7 @@ Route::get('/migrate', function () {
     }
 });
 
-Route::get('/onlyMigrate', function () {
+Route::get('run/onlyMigrate', function () {
     $exitCode = Artisan::call('migrate');
     if ($exitCode === 0) {
         return 'Migration successful';
