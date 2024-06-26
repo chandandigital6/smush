@@ -42,7 +42,7 @@
     {{--about section start here--}}
     <div class="w-full  relative lg:pt-[250px] md:pt-[200px] sm:pt-[180px] pt-[100px]"
          style="background-image: url({{asset('asset/images/bac.png')}})">
-        <div class="w-full h-max absolute -top-[50px] left-0 px-4 flex justify-center z-50 py-4 ">
+        <div class="w-full h-max absolute -top-[50px] left-0 px-4 flex justify-center z-50 py-5 ">
             <div
                 class=" lg:w-[1000px] lg:h-[250px] md:h-[200px] sm:h-[200px] h-[120px] bg-white px-2 rounded-lg shadow-md shadow-gray-400 flex justify-between items-center gap-4">
                 <div>
@@ -144,7 +144,7 @@
     {{--appointment section start here    --}}
 
     <div class="w-full  relative  bg-no-repeat bg-center bg-cover "
-         style="background-image: url({{asset('assets/images/image1.png')}});">
+         style="background-image: url({{asset('asset/images/image2.png')}});">
         <div class="w-full px-4 flex justify-center py-6 bg-black/70">
             <div class="lg:w-[70%] md:w-[80%] sm:w-[90%] w-full flex flex-col items-center gap-6 py-[5px]">
 
