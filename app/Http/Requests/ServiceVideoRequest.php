@@ -23,7 +23,7 @@ class ServiceVideoRequest extends FormRequest
     {
         return [
             'title' => 'nullable|string|max:255',
-            'youtube_url' => 'nullable|url|max:255',
+            'youtube_url_embed' => 'nullable',
             'service_id' => 'required|exists:services,id',
         ];
     }

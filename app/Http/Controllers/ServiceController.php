@@ -31,11 +31,21 @@ class ServiceController extends Controller
 
     public function store(ServiceRequest $request){
 //        dd($request);
-        $service=Service::create($request->all());
-        $image = $request->file('image')->store('public/service');
+        $validatedData = $request->validated();
 
-        $service->image = str_replace('public/', '', $image);
-        $service->save();
+        // Handle image uploads
+        $imageFields = ['image', 'service_image',];
+
+        foreach ($imageFields as $field) {
+            if ($request->hasFile($field)) {
+                $imagePath = $request->file($field)->store('public/service');
+                // Save the image path without 'public/' prefix
+                $validatedData[$field] = str_replace('public/', '', $imagePath);
+            }
+        }
+
+        // Create the About model instance with the validated data
+        Service::create($validatedData);
         return redirect()->route('service.index')->with('success', 'Service  created successfully.');
     }
 
@@ -44,17 +54,24 @@ class ServiceController extends Controller
         return view('service.edit',compact('service'));
     }
 
-    public function update(Service $service , ServiceRequest $request){
-        $serviceData = $request->all();
+    public function update(ServiceRequest $request, Service $service)
+    {
+        $validatedData = $request->validated();
 
-        if ($request->hasFile('image')) {
-            $imagePath = $request->file('image')->store('public/service');
-            $serviceData['image'] = str_replace('public/', '', $imagePath);
+        // Handle image uploads
+        $imageFields = ['image', 'service_image'];
+
+        foreach ($imageFields as $field) {
+            if ($request->hasFile($field)) {
+                $imagePath = $request->file($field)->store('public/service');
+                // Save the image path without 'public/' prefix
+                $validatedData[$field] = str_replace('public/', '', $imagePath);
+            }
         }
 
-        $service->update($serviceData);
+        $service->update($validatedData);
 
-        return redirect()->route('service.index')->with('success', 'service item successfully updated');
+        return redirect()->route('service.index')->with('success', 'Service item successfully updated');
     }
 
 

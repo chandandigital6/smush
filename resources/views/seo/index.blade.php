@@ -58,8 +58,8 @@
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
 
-                                        <td>{{ $seo->og_title }}</td>
-                                        <td>{{ $seo->og_description }}</td>
+                                        <td>{{ $seo->title }}</td>
+                                        <td>{{ $seo->description }}</td>
                                         <td>{{ $seo->service ? $seo->service->title : 'n/a' }}</td>
 
 

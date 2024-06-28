@@ -5,7 +5,7 @@
                     class="fa-brands fa-instagram"></i></a>
             <a href="" class="text-white hover:text-[#15AEF1] transition ease-in duration-2000 "><i
                     class="fa-brands fa-facebook"></i></a>
-            <a href="" class="text-white hover:text-[#15AEF1] transition ease-in duration-2000 "><i
+            <a href="https://www.youtube.com/@MobileSmashRepair" class="text-white hover:text-[#15AEF1] transition ease-in duration-2000 "><i
                     class="fa-brands fa-youtube"></i></a>
         </div>
         <div class="flex gap-2 items-center gap-4">

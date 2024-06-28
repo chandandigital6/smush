@@ -24,7 +24,7 @@ class ServiceGalleryRequest extends FormRequest
         return [
             //
             'title' => 'nullable|string|max:255',
-            'msg' => 'nullable|string|max:255',
+            'msg' => 'nullable',
 //            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
             'service_id' => 'required|exists:services,id',
         ];

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\ClientLogo;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class ClientController extends Controller
 {
@@ -28,7 +29,7 @@ class ClientController extends Controller
         $validatedData = $request->validate([
             'image.*' => 'nullable|image',
             'title' => 'required|string|max:255',
-            'msg' => 'nullable|string|max:255',
+            'msg' => 'nullable',
 //            'category_id' => 'required|exists:categories,id',
             // Use 'images.*' instead of 'image_path.*' for multiple images
             // Add validation rules for other fields if needed
@@ -118,4 +119,27 @@ class ClientController extends Controller
         $productDuplicate->save();
         return redirect()->back();
     }
+
+    public function removeImage(Request $request)
+    {
+        $imagePath = $request->input('image');
+
+        // Get the current logo instance
+        $logo = ClientLogo::find(1); // Replace with your logic to get the correct instance
+
+        // Remove the image from the storage
+        Storage::delete('public/' . $imagePath);
+
+        // Update the image field in the database
+        $images = explode(',', $logo->image);
+        if(($key = array_search($imagePath, $images)) !== false) {
+            unset($images[$key]);
+        }
+        $logo->image = implode(',', $images);
+        $logo->save();
+
+        return redirect()->back()->with('success', 'Image removed successfully.');
+    }
+
+
 }

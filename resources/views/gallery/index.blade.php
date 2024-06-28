@@ -60,7 +60,7 @@
                                         <td>{{ $loop->iteration }}</td>
                                         <td>{{$gallery->service->title}}</td>
                                         <td>{{ $gallery->title }}</td>
-                                        <td>{{$gallery->msg}}</td>
+                                        <td>{!! $gallery->msg !!}</td>
                                         <td>
                                             @if (is_string($gallery->image) && !empty($gallery->image))
                                                 @php

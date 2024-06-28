@@ -91,7 +91,10 @@
                             @endforeach
                         </select>
                     </div>
-
+                    <div class="form-group">
+                        <label for="schema_js">Schema js :</label>
+                        <textarea class="form-control textarea" id="schema_js" name="schema_js" placeholder="Enter the meta schema_js">{{$seo->schema_js}}</textarea>
+                    </div>
                     <div class="form-group">
                         <label for="service_id">Service</label>
                         <select name="service_id" class="form-control @error('service_id') is-invalid @enderror">

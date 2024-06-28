@@ -26,7 +26,9 @@
 
             <div class="form-group">
                 <label for="msg">Message</label>
-                <input type="text" name="msg" class="form-control @error('msg') is-invalid @enderror" value="{{ old('msg', $gallery->msg) }}">
+                <textarea name="msg" id="msg" cols="30" rows="10" class="textarea">{{$gallery->msg}}</textarea>
+
+                {{--                <input type="text" name="msg" class="form-control @error('msg') is-invalid @enderror" value="{{ old('msg', $gallery->msg) }}">--}}
                 @error('msg')
                 <div class="invalid-feedback">{{ $message }}</div>
                 @enderror

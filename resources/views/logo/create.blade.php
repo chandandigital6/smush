@@ -22,7 +22,8 @@
             </div>
             <div class="form-group">
                 <label for="msg">Message</label>
-                <input type="text" class="form-control" id="msg" name="msg" value="{{ old('msg') }}">
+                <textarea name="msg" id="msg" cols="30" rows="10" class="textarea"></textarea>
+{{--                <input type="text" class="form-control" id="msg" name="msg" value="{{ old('msg') }}">--}}
             </div>
             <div class="form-group">
                 <label for="images">Images</label>

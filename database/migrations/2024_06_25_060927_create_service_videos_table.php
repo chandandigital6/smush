@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('service_videos', function (Blueprint $table) {
             $table->id();
             $table->string('title')->nullable();
-            $table->string('youtube_url')->nullable();
+            $table->text('youtube_url_embed')->nullable();
             $table->foreignId('service_id')->constrained('services')->onDelete('cascade');
             $table->timestamps();
         });

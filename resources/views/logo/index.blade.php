@@ -57,7 +57,7 @@
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
                                         <td>{{ $logo->title }}</td>
-                                        <td>{{$logo->msg}}</td>
+                                        <td>{!! $logo->msg !!}</td>
                                         <td>
                                             @if (is_string($logo->image) && !empty($logo->image))
                                                 @php

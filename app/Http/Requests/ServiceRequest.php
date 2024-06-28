@@ -25,10 +25,9 @@ class ServiceRequest extends FormRequest
             'title' => 'required|string|max:255',
             'heading' => 'nullable|string|max:255',
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'service_image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'description' => 'nullable',
-//            'service_appointment_title' => 'nullable|string|max:255',
-//            'service_appointment_text' => 'nullable|string|max:255',
-//            'service_appointment_number' => 'nullable|string|max:255',
+
         ];
     }
 }

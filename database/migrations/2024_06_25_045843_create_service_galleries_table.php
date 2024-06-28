@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('service_galleries', function (Blueprint $table) {
             $table->id();
             $table->string('title')->nullable();
-            $table->string('msg')->nullable();
+            $table->text('msg')->nullable();
             $table->text('image')->nullable();
             $table->foreignId('service_id')->constrained('services')->onDelete('cascade');
             $table->timestamps();

@@ -59,7 +59,14 @@
                         </p>
                     </a>
                 </li>
-
+                <li class="nav-item">
+                    <a href="{{route('counter.index')}}" class="nav-link">
+                        <i class="nav-icon fa fa-cog"></i>
+                        <p>
+                            AboutUsCounter
+                        </p>
+                    </a>
+                </li>
                 <li class="nav-item">
                     <a href="{{route('serviceTitle.index')}}" class="nav-link">
                         <i class="nav-icon 	fa fa-bullseye"></i>
@@ -116,7 +123,7 @@
                     <a href="{{route('logo.index')}}" class="nav-link">
                         <i class="nav-icon fa fa-podcast"></i>
                         <p>
-                            Client Logo
+                          HomeGallery
                         </p>
                     </a>
                 </li>
@@ -129,14 +136,14 @@
                     </a>
                 </li>
 
-                <li class="nav-item">
-                     <a href="{{route('team.index')}}" class="nav-link">
-                        <i class="nav-icon fa fa-group"></i>
-                        <p>
-                            Team Member
-                        </p>
-                    </a>
-                </li>
+{{--                <li class="nav-item">--}}
+{{--                     <a href="{{route('team.index')}}" class="nav-link">--}}
+{{--                        <i class="nav-icon fa fa-group"></i>--}}
+{{--                        <p>--}}
+{{--                            Team Member--}}
+{{--                        </p>--}}
+{{--                    </a>--}}
+{{--                </li>--}}
                 <li class="nav-item">
                     <a href="{{route('appointment.index')}}" class="nav-link">
                         <i class="nav-icon fa fa-american-sign-language-interpreting"></i>
@@ -146,14 +153,7 @@
                     </a>
                 </li>
 
-                <li class="nav-item">
-                    <a href="{{route('counter.index')}}" class="nav-link">
-                        <i class="nav-icon fa fa-cog"></i>
-                        <p>
-                            Counter
-                        </p>
-                    </a>
-                </li>
+
 
                 <li class="nav-item">
                      <a href="{{route('blogs.index')}}" class="nav-link">

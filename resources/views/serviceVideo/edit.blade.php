@@ -29,7 +29,9 @@
 
                             <div class="form-group">
                                 <label for="youtube_url">YouTube URL</label>
-                                <input type="url" name="youtube_url" class="form-control @error('youtube_url') is-invalid @enderror" value="{{ old('youtube_url', $serviceVideo->youtube_url) }}">
+                                <textarea type="text" name="youtube_url_embed" id="youtube_url_embed" cols="30" rows="10" class="textarea">{{$serviceVideo->youtube_url}}</textarea>
+
+                                {{--                                <input type="url" name="youtube_url" class="form-control @error('youtube_url') is-invalid @enderror" value="{{ old('youtube_url', $serviceVideo->youtube_url) }}">--}}
                                 @error('youtube_url')
                                 <div class="invalid-feedback">{{ $message }}</div>
                                 @enderror

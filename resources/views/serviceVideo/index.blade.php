@@ -44,10 +44,9 @@
                         <div class="table-responsive">
                             <table class="table table-striped">
                                 <thead>
-                                <tr>
-                                    <th>ID</th>
+                                <tr><th>ID</th>
                                     <th>Title</th>
-                                    <th>Url</th>
+                                    <th>YouTube Embed Code</th>
                                     <th>serviceName</th>
 
                                     <th>Action</th>
@@ -58,7 +57,27 @@
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
                                         <td>{{ $serviceVideo->title }}</td>
-                                        <td>{{$serviceVideo->youtube_url}}</td>
+{{--                                        <td>--}}
+{{--                                            <iframe width="560" height="315" src="{{ $serviceVideo->youtube_url_embed }}" frameborder="0" allowfullscreen></iframe>--}}
+
+{{--                                        </td>--}}
+                                        <td>
+                                            @if($serviceVideo->youtube_url_embed)
+                                                @php
+                                                    $youtubeUrl = $serviceVideo->youtube_url_embed;
+                                                    // Ensure it's an embed URL format
+                                                    if (strpos($youtubeUrl, 'embed') === false) {
+                                                        // If it's not in embed format, try to convert it
+                                                        if (strpos($youtubeUrl, 'watch?v=') !== false) {
+                                                            $youtubeUrl = str_replace('watch?v=', 'embed/', $youtubeUrl);
+                                                        }
+                                                    }
+                                                @endphp
+                                                <div class="embed-responsive embed-responsive-16by9">
+                                                    <iframe class="embed-responsive-item" src="{{ $youtubeUrl }}" allowfullscreen></iframe>
+                                                </div>
+                                            @endif
+                                        </td>
                                         <td>{{$serviceVideo->service->title}}</td>
 {{--                                                                                <td>{!! $serviceVideo->description !!}</td>--}}
 {{--                                                                                <td><img src="{{ asset('storage/'.$serviceVideo->image) }}" alt="{{ $serviceVideo->title }}" style="max-width: 100px;"></td>--}}

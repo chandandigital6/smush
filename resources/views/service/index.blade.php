@@ -52,7 +52,7 @@
 {{--                                    <th>service_appointment_title</th>--}}
 {{--                                    <th>service_appointment_text</th>--}}
 {{--                                    <th>service_appointment_number</th>--}}
-                                    <th>Image</th>
+                                    <th>ImageIcon</th>
                                     <th>Action</th>
                                 </tr>
                                 </thead>

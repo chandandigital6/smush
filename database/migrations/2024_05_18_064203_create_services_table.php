@@ -16,10 +16,9 @@ return new class extends Migration
             $table->string('title');
             $table->string('heading')->nullable();
             $table->string('image')->nullable();
+            $table->string('service_image')->nullable();
             $table->text('description')->nullable();
-//            $table->string('service_appointment_title')->nullable();
-//            $table->string('service_appointment_text')->nullable();
-//            $table->string('service_appointment_number')->nullable();
+
             $table->timestamps();
         });
     }

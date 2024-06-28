@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('client_logos', function (Blueprint $table) {
             $table->id();
             $table->string('title')->nullable();
-            $table->string('msg')->nullable();
+            $table->text('msg')->nullable();
             $table->text('image')->nullable();
             $table->timestamps();
         });

@@ -222,6 +222,8 @@ Route::group(['middleware' => ['auth']],function (){
     Route::post('logo/update/{logo}',[ClientController::class,'update'])->name('logo.update');
     Route::get('logo/delete/{logo}',[ClientController::class,'delete'])->name('logo.delete');
     Route::get('logo/duplicate/{logo}',[ClientController::class,'duplicate'])->name('logo.duplicate');
+    Route::delete('/remove-image', [ClientController::class, 'removeImage'])->name('remove.image');
+
 
 // serviceGallery
 

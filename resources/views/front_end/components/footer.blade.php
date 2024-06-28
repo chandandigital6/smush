@@ -37,8 +37,10 @@
                             class="fa-brands fa-instagram"></i></a>
                     <a href="" class="text-white hover:text-[#eeb21c] transition ease-in duration-2000 "><i
                             class="fa-brands fa-facebook"></i></a>
-                    <a href="" class="text-white hover:text-[#eeb21c] transition ease-in duration-2000 "><i
+                    <a href="https://www.youtube.com/@MobileSmashRepair" class="text-white hover:text-[#eeb21c] transition ease-in duration-2000 "><i
                             class="fa-brands fa-youtube"></i></a>
+                    <a href="https://wa.me/+61449599000" class="text-white hover:text-[#eeb21c] transition ease-in duration-2000 "><i
+                            class="fa-brands fa-whatsapp"></i></a>
                 </div>
             </div>
             <div class="w-full grid grid-cols-2 gap-2">
@@ -53,7 +55,7 @@
 
                     @foreach($services as $service)
                         <a href="{{route('service.show', ['title'=>$service->title])}}" class="uppercase text-[15px] text-white font-normal font-[roboto] mt-1 hover:text-[#eeb21c] transition ease-in duration-2000 hover:scale-95">
-                            {{ $service->title }}
+                            {{ $service->heading }}
                         </a>
                     @endforeach
                 </div>
