@@ -221,7 +221,7 @@
         <div class="w-full  flex justify-center">
             <div class=" w-full flex flex-col items-center gap-6 py-24 px-4" style="background-image: url({{asset('asset/images/Rectangle43.png')}});background-repeat: no-repeat; background-size: cover">
                 <h2 class="lg:text-[50px] md:text-[40px] sm:text-[35px] text-[30px] text-white font-bold">WHAT OUR CLIENTS SAY</h2>
-                <div class="swiffy-slider slider-item-show3 slider-nav-dark slider-nav-autoplay">
+                <div class="swiffy-slider slider-item-show3 slider-nav-dark slider-nav-autoplay mt-12">
                     <ul class="slider-container">
                         {{-- make copy of this li for dynamic slider --}}
                         @foreach($testimonials as $testimonial)
@@ -233,6 +233,7 @@
                                     <p class="text-black  text-[14px] font-normal font-[roboto] mt-2"
                                        style="word-spacing: 10px;">
                                         {{$testimonial->msg}}
+
                                     </p>
                                     <h6 class="text-black font-bold font-[roboto] mt-2">{{$testimonial->name}}</h6>
                                     <div>
@@ -268,9 +269,7 @@
             </div>
         </div>
     </div>
-
     {{--our clients section ends here    --}}
-
 
     <div class="w-full  relative py-6">
         <div class="w-full px-4 flex justify-center">
