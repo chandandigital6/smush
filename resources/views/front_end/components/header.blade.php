@@ -1,5 +1,5 @@
 <div class="w-full bg-[#EEB21C] px-4 flex justify-center">
-    <div class="lg:w-[80%] md:w-[80%] sm:w-[90%] w-full flex justify-between py-[2px]">
+    <div class="lg:w-[90%] md:w-[80%] sm:w-[90%] w-full flex justify-between py-[2px]">
         <div class="flex lg:gap-10 md:gap-10 sm:gap-10 gap-4 text-[20px]">
             <a href="" class="text-white hover:text-[#15AEF1] transition ease-in duration-2000 "><i
                     class="fa-brands fa-instagram"></i></a>
@@ -21,7 +21,7 @@
     </div>
 </div>
 <div class="w-full flex justify-center sticky top-0 z-50 bg-white shadow shadow-md shadow-gray-300">
-    <div class="lg:w-[80%] md:w-[80%] sm:w-[90%] w-full flex justify-between items-center py-[5px] relative px-4">
+    <div class="lg:w-[90%] md:w-[80%] sm:w-[90%] w-full flex justify-between items-center py-[5px] relative px-4">
         <div class="w-max">
             <a href="{{route('home')}}">
                 <img class="h-auto lg:w-full md:w-[70px] sm:w-[60px] w-[50px]"
