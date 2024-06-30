@@ -48,59 +48,43 @@
     {{--about section start here--}}
     <div class="w-full  relative lg:pt-[250px] md:pt-[200px] sm:pt-[180px] pt-[100px]"
          style="background-image: url({{asset('asset/images/bac.png')}})">
-        <div class="w-full h-max absolute -top-[50px] left-0 px-4 flex justify-center z-50 ">
-            <div
-                class=" lg:w-[1000px] lg:h-[250px] md:h-[200px] sm:h-[180px] h-[100px] bg-white px-2 rounded-lg shadow-md shadow-gray-400 flex justify-between items-center gap-4">
-                <div>
-                    <img class="lg:w-52 md:w-48 sm:w-40 w-24 h-auto" src="{{asset('asset/images/yeelowcar.png')}}"
-                         alt="">
-                </div>
-                <div class="flex flex-col gap-1 items-center py-2">
-                    <span class="font-bold lg:text-[34px] md:text-[21px] sm:text-[17px] text-[1px]">GET YOUR FREE ESTIMATE NOW</span>
-                    <span class="font-bold lg:text-[23px] md:text-[15px] sm:text-[10px] text-[8px] text-[#EEB21C]">SIMPLY SEND US PHOTOS OF THE DAMAGE!"</span>
-                    <h5 class="font-bold lg:text-[30px] md:text-[20px] sm:text-[17px] text-[10px]">
-                        quote@mobilesmashrepair.com</h5>
-                    <h5 class="font-bold lg:text-[30px] md:text-[20px] sm:text-[17px] text-[10px]">OR</h5>
-                    <a href="{{route('contact')}}"
-                       class=" lg:text-[14px] md:text-[14px] sm:text-[14px] text-[7px] w-max text-white bg-[#15aef1] px-4 lg:py-2 md:py-2 py-1 font-bold rounded-full border-[1px] border-[#15aef1] hover:bg-white hover:text-[#15aef1]  transition ease-in duration-2000">
-                        CLICK HERE
-                    </a>
-                </div>
-                <div>
-                    <img class="lg:w-52 md:w-48 sm:w-40 w-24 h-auto" src="{{asset('asset/images/bluecar.png')}}"
-                         alt="">
-                </div>
-            </div>
-        </div>
+        @include('front_end.components.carSection')
 
 
 
         <div class="w-full px-4 flex justify-center">
-            <div class="lg:w-[70%] md:w-[80%] sm:w-[90%] w-full grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-4 py-[5px]">
-                @foreach($services as $service)
+            @foreach($about as $aboutUs)
+
+
+                <div
+                    class="lg:w-[90%] md:w-[90%] sm:w-[90%] w-full grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-4 py-[5px]">
                     <div class="w-full flex flex-col gap-6 p-2">
-                        <h2 class="uppercase font-bold lg:text-[40px] md:text-[30px] text-[25px]">
-                            <span class="text-[#15AEF1]">{{ $service->heading }}</span>
-                        </h2>
+                        <h2 class="uppercase font-bold lg:text-[30px] md:text-[30px] text-[25px] text-left">{{$aboutUs->title}} <span
+                                class="text-[#15AEF1]">{{$aboutUs->heading}}</span></h2>
+                        <div class="w-full  justify-center items-center lg:hidden md:hidden flex">
+                            <img src="{{asset('storage/'.$aboutUs->image)}}" alt="">
+                        </div>
+
                         <p class="text-black lg:leading-7 md:leading-2 lg:text-[18px] md:text-[13px] text-[12px] font-medium font-[roboto]"
                            style="word-spacing: 10px;">
-                            {!! $service->description !!}
+                            {!! $aboutUs->description !!}
                         </p>
 
-                        {{-- Example of linking to contact page --}}
-                        <a href="{{ route('contact') }}"
-                           class="lg:text-[25px] md:text-[20px] text-[14px] w-max text-white bg-[#15aef1] px-4 lg:py-2 md:py-2 py-1 font-bold rounded-md border-[1px] border-[#15aef1] hover:bg-white hover:text-[#15aef1] transition ease-in duration-2000">
+
+
+                        <a href="{{route('about')}}"
+                           class="lg:text-[25px] md:text-[20px] text-[14px] w-max text-white bg-[#15aef1] px-4 lg:py-2 md:py-2 py-1 font-bold rounded-md border-[1px] border-[#15aef1] hover:bg-white hover:text-[#15aef1]  transition ease-in duration-2000">
                             LEARN MORE
                         </a>
                     </div>
-                    <div class="w-full flex justify-center items-center">
-                        <img src="{{ asset('storage/' . $service->image) }}" alt="{{ $service->heading }}">
+                    <div class="w-full justify-center items-center lg:flex md:flex hidden">
+                        <img src="{{asset('storage/'.$aboutUs->image)}}" alt="">
                     </div>
-                @endforeach
-            </div>
+                </div>
+            @endforeach
         </div>
-
     </div>
+
     {{--about section ends here    --}}
 
 
@@ -126,39 +110,37 @@
     {{--stats section ends here    --}}
 
     {{--our gallery section start here--}}
-    <div class="w-full relative py-6">
+    <div class="w-full relative py-6 px-5">
         <div class="w-full flex justify-center">
-            @foreach($services as $service)
-                @if ($service->gallery)
-                    @foreach($service->gallery as $logo)
-                        <div class="w-full flex flex-col items-center gap-6 py-[5px]">
-                            <h2 class="lg:text-[50px] md:text-[40px] sm:text-[35px] text-[30px] text-[#EEB21C] font-bold">{{ $logo->title }}</h2>
-                            <div class="max-w-[600px]">
-                                <p class="text-black lg:leading-7 md:leading-2 lg:text-[16px] md:text-[13px] text-[12px] font-medium font-[roboto] text-center" style="word-spacing: 10px;">
-                                    {{ $logo->msg }}
-                                </p>
-                            </div>
-                            <div class="swiffy-slider slider-nav-autoplay slider-item-show4">
-                                <ul class="slider-container">
-                                    @if (is_string($logo->image) && !empty($logo->image))
-                                        @php
-                                            $imagePaths = explode(',', $logo->image);
-                                        @endphp
-                                        @foreach($imagePaths as $imagePath)
-                                            <li class="w-full relative">
-                                                <img src="{{ asset('storage/'.$imagePath) }}" alt="{{ $logo->title }}" class="w-full lg:h-[550px] md:h-[500px] sm:h-[400px] h-[300px] object-cover">
-                                            </li>
-                                        @endforeach
-                                    @endif
-                                </ul>
-                            </div>
-                        </div>
-                    @endforeach
-                @endif
+            @foreach($logos as $logo)
+                <div class="w-full flex flex-col items-center gap-6 py-[5px]">
+                    <h2 class="lg:text-[50px] md:text-[40px] sm:text-[35px] text-[30px] text-[#EEB21C] font-bold">{{ $logo->title }}</h2>
+                    <div class="max-w-[600px]">
+                        <p class="text-black lg:leading-7 md:leading-2 lg:text-[16px] md:text-[13px] text-[12px] font-medium font-[roboto] text-center"
+                           style="word-spacing: 10px;">{{ $logo->msg }}</p>
+                    </div>
+                    <div class="swiffy-slider slider-nav-autoplay slider-item-show3">
+                        <ul class="slider-container">
+                            @if (is_string($logo->image) && !empty($logo->image))
+                                @php
+                                    $imagePaths = explode(',', $logo->image);
+                                @endphp
+                                @foreach($imagePaths as $imagePath)
+                                    <li class="w-full relative">
+                                        <img src="{{ asset('storage/'.$imagePath) }}" alt="{{ $logo->title }}" class="w-full lg:h-[550px] md:h-[450px] sm:h-[400px] h-[300px] ">
+                                    </li>
+                                @endforeach
+
+                            @endif
+                        </ul>
+                        <button type="button" class="slider-nav"></button>
+                        <button type="button" class="slider-nav slider-nav-next"></button>
+                    </div>
+                </div>
             @endforeach
         </div>
-
     </div>
+
     {{--our gallery section ends here    --}}
 
 
@@ -167,7 +149,7 @@
         <div class="w-full px-4 flex justify-center">
             @foreach($services as $service)
                 @foreach($service->video as $serviceVideo)
-                    <div class="lg:w-[80%] md:w-[80%] sm:w-[90%] w-full rounded-[50px] overflow-hidden">
+                    <div class="lg:w-[90%] md:w-[90%] sm:w-[90%] w-full rounded-[50px] overflow-hidden">
                         @php
                             $youtubeUrl = $serviceVideo->youtube_url;
                             // Convert watch URL to embed URL if needed
@@ -196,7 +178,7 @@
             @foreach($chooseUs as $choos)
 
 
-                <div class="lg:w-[80%] md:w-[80%] sm:w-[90%] w-full rounded-[50px]"
+                <div class="lg:w-[90%] md:w-[90%] sm:w-[90%] w-full rounded-[50px]"
                      style="background-image: url({{asset('asset/images/Rectangle56.png')}});box-shadow: 0px 0px 10px 1px #25a8df">
                     <div class="w-full flex flex-col items-center gap-2 p-2 bg-[#25a8df]/90 rounded-[50px]">
                         <h2 class=" lg:text-[45px] md:text-[40px] text-center sm:text-[35px] text-[25px] text-white font-bold">
@@ -295,7 +277,7 @@
     <div class="w-full  relative py-6 rounded-t-[50px]"
          style="background-image: url({{asset('asset/images/bac.png')}});">
         <div class="w-full px-4 flex justify-center">
-            <div class="lg:w-[80%] md:w-[80%] sm:w-[90%] w-full flex flex-col items-center gap-6 py-[5px]">
+            <div class="lg:w-[90%] md:w-[90%] sm:w-[90%] w-full flex flex-col items-center gap-6 py-[5px]">
                 <h2 class="lg:text-[50px] md:text-[40px] sm:text-[35px] text-[30px] text-[#EEB21C] font-bold">OTHER SERVICES</h2>
                 <div class="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 grid-cols-1 gap-4">
                     @foreach($otherServices->take(3) as $service)
@@ -331,7 +313,7 @@
 
     <div class="w-full  relative py-6">
         <div class="w-full px-4 flex justify-center">
-            <div class="lg:w-[80%] md:w-[80%] sm:w-[90%] w-full">
+            <div class="lg:w-[90%] md:w-[90%] sm:w-[90%] w-full">
                 <div class="w-full grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-4 mt-6">
                     <div class="flex flex-col gap-2">
                         <div class="flex gap-4">

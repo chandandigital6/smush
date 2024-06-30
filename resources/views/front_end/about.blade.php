@@ -56,7 +56,7 @@
 
 
                 <div
-                    class="lg:w-[80%] md:w-[80%] sm:w-[90%] w-full grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-4 py-[5px]">
+                    class="lg:w-[90%] md:w-[90%] sm:w-[90%] w-full grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-4 py-[5px]">
                     <div class="w-full flex flex-col gap-6 p-2">
                         <h2 class="uppercase font-bold lg:text-[30px] md:text-[30px] text-[25px] text-left">{{$aboutUs->title}} <span
                                 class="text-[#15AEF1]">{{$aboutUs->heading}}</span></h2>
@@ -91,7 +91,7 @@
          style="background-image: url({{asset('asset/images/Rectangle79.png')}})">
         <div class="w-full flex justify-center bg-[#eeb21ce8]">
             <div
-                class="lg:w-[80%] md:w-[90%] sm:w-[90%] w-full grid lg:grid-cols-3 grid-cols-1 gap-4 pt-[5px] px-4 lg:py-0 py-2">
+                class="lg:w-[90%] md:w-[90%] sm:w-[90%] w-full grid lg:grid-cols-3 grid-cols-1 gap-4 pt-[5px] px-4 lg:py-0 py-2">
               @foreach($counters as $counter)
 
 
@@ -120,7 +120,7 @@
             @foreach($chooseUs as $choos)
 
 
-            <div class="lg:w-[80%] md:w-[80%] sm:w-[90%] w-full rounded-[50px]"
+            <div class="lg:w-[90%] md:w-[90%] sm:w-[90%] w-full rounded-[50px]"
                  style="background-image: url({{asset('asset/images/Rectangle56.png')}});box-shadow: 0px 0px 10px 1px #25a8df">
                 <div class="w-full flex flex-col items-center gap-2 p-2 bg-[#25a8df]/90 rounded-[50px]">
                     <h2 class=" lg:text-[45px] md:text-[40px] text-center sm:text-[35px] text-[25px] text-white font-bold">
@@ -178,7 +178,7 @@
         </div>
         <div class="w-full px-4 flex justify-center">
 
-            <div class="lg:w-[70%] md:w-[80%] sm:w-[90%] w-full">
+            <div class="lg:w-[90%] md:w-[90%] sm:w-[90%] w-full">
                 <div class="w-full grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-4 mt-6">
                     <div class="flex flex-col gap-2">
                         <div class="flex gap-4">

@@ -48,7 +48,7 @@
 
         <div class="w-full px-4 flex justify-center">
             <div
-                class="lg:w-[80%] md:w-[80%] sm:w-[90%] w-full grid grid-cols-1 gap-4 py-[5px]">
+                class="lg:w-[90%] md:w-[90%] sm:w-[90%] w-full grid grid-cols-1 gap-4 py-[5px]">
                 <div class="w-full flex justify-center items-center">
                     <img src="{{asset('storage/'.$blogs->image)}}" alt="">
                 </div>

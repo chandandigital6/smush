@@ -46,7 +46,7 @@
 
         <div class="w-full px-4 flex justify-center">
                 <div
-                    class="lg:w-[80%] md:w-[80%] sm:w-[90%] w-full grid grid-cols-1 gap-4 py-[5px]">
+                    class="lg:w-[90%] md:w-[90%] sm:w-[90%] w-full grid grid-cols-1 gap-4 py-[5px]">
                     <div class="w-full flex flex-col  p-2">
                         <h2 class="uppercase font-bold lg:text-[30px] md:text-[30px] text-[25px] text-left mb-6"><span
                                 class="text-[#15AEF1]">Our Terms and Conditions</span></h2>

@@ -55,7 +55,7 @@
             @foreach($serviceTitle as $title)
 
 
-                <div class="lg:w-[80%] md:w-[80%] sm:w-[90%] w-full flex flex-col items-center gap-6 py-[5px]">
+                <div class="lg:w-[90%] md:w-[90%] sm:w-[90%] w-full flex flex-col items-center gap-6 py-[5px]">
                     <h2 class="lg:text-[50px] md:text-[40px] sm:text-[35px] text-[30px] text-[#EEB21C] font-bold">
 
                         {{$title->title}}
@@ -85,7 +85,7 @@
             @foreach($chooseUs as $choos)
 
 
-                <div class="lg:w-[80%] md:w-[80%] sm:w-[90%] w-full rounded-[50px]"
+                <div class="lg:w-[90%] md:w-[90%] sm:w-[90%] w-full rounded-[50px]"
                      style="background-image: url({{asset('asset/images/Rectangle56.png')}});box-shadow: 0px 0px 10px 1px #25a8df">
                     <div class="w-full flex flex-col items-center gap-2 p-2 bg-[#25a8df]/90 rounded-[50px]">
                         <h2 class=" lg:text-[45px] md:text-[40px] text-center sm:text-[35px] text-[25px] text-white font-bold">
@@ -143,7 +143,7 @@
         </div>
         <div class="w-full px-4 flex justify-center">
 
-            <div class="lg:w-[80%] md:w-[80%] sm:w-[90%] w-full">
+            <div class="lg:w-[90%] md:w-[90%] sm:w-[90%] w-full">
                 <div class="w-full grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-4 mt-6">
                     <div class="flex flex-col gap-2">
                         <div class="flex gap-4">
@@ -182,7 +182,7 @@
 
 
     {{--our gallery section start here--}}
-    <div class="w-full relative py-6">
+    <div class="w-full relative py-6 px-5">
         <div class="w-full flex justify-center">
             @foreach($logos as $logo)
                 <div class="w-full flex flex-col items-center gap-6 py-[5px]">
@@ -191,7 +191,7 @@
                         <p class="text-black lg:leading-7 md:leading-2 lg:text-[16px] md:text-[13px] text-[12px] font-medium font-[roboto] text-center"
                            style="word-spacing: 10px;">{{ $logo->msg }}</p>
                     </div>
-                    <div class="swiffy-slider slider-nav-autoplay slider-item-show4">
+                    <div class="swiffy-slider slider-nav-autoplay slider-item-show3">
                         <ul class="slider-container">
                             @if (is_string($logo->image) && !empty($logo->image))
                                 @php
@@ -199,9 +199,10 @@
                                 @endphp
                                 @foreach($imagePaths as $imagePath)
                                     <li class="w-full relative">
-                                        <img src="{{ asset('storage/'.$imagePath) }}" alt="{{ $logo->title }}" class="w-full lg:h-[550px] md:h-[500px] sm:h-[400px] h-[300px] object-cover">
+                                        <img src="{{ asset('storage/'.$imagePath) }}" alt="{{ $logo->title }}" class="w-full lg:h-[550px] md:h-[450px] sm:h-[400px] h-[300px] ">
                                     </li>
                                 @endforeach
+
                             @endif
                         </ul>
                         <button type="button" class="slider-nav"></button>
@@ -211,15 +212,16 @@
             @endforeach
         </div>
     </div>
+
     {{--our gallery section ends here    --}}
 
 
     {{--our clients section start here--}}
     <div class="w-full  relative py-6">
         <div class="w-full  flex justify-center">
-            <div class=" w-full flex flex-col items-center gap-6 py-10 px-4" style="background-image: url({{asset('asset/images/Rectangle43.png')}})">
+            <div class=" w-full flex flex-col items-center gap-6 py-24 px-4" style="background-image: url({{asset('asset/images/Rectangle43.png')}});background-repeat: no-repeat; background-size: cover">
                 <h2 class="lg:text-[50px] md:text-[40px] sm:text-[35px] text-[30px] text-white font-bold">WHAT OUR CLIENTS SAY</h2>
-                <div class="swiffy-slider slider-item-show3 slider-nav-dark">
+                <div class="swiffy-slider slider-item-show3 slider-nav-dark slider-nav-autoplay">
                     <ul class="slider-container">
                         {{-- make copy of this li for dynamic slider --}}
                         @foreach($testimonials as $testimonial)
@@ -266,12 +268,13 @@
             </div>
         </div>
     </div>
+
     {{--our clients section ends here    --}}
 
 
     <div class="w-full  relative py-6">
         <div class="w-full px-4 flex justify-center">
-            <div class="lg:w-[80%] md:w-[80%] sm:w-[90%] w-full">
+            <div class="lg:w-[90%] md:w-[90%] sm:w-[90%] w-full">
                 <div class="w-full grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-4 mt-6">
                     <div class="flex flex-col gap-2">
                         <div class="flex gap-4">

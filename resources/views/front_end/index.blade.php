@@ -51,7 +51,7 @@
 
 
                 <div
-                    class="lg:w-[80%] md:w-[80%] sm:w-[90%] w-full grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-4 py-[5px]">
+                    class="lg:w-[90%] md:w-[90%] sm:w-[90%] w-full grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-4 py-[5px]">
                     <div class="w-full flex flex-col gap-6 p-2">
                         <h2 class="uppercase font-bold lg:text-[30px] md:text-[30px] text-[25px] text-left">{{$aboutUs->title}} <span
                                 class="text-[#15AEF1]">{{$aboutUs->heading}}</span></h2>
@@ -88,7 +88,7 @@
             @foreach($serviceTitle as $title)
 
 
-            <div class="lg:w-[80%] md:w-[80%] sm:w-[90%] w-full flex flex-col items-center gap-6 py-[5px]">
+            <div class="lg:w-[90%] md:w-[90%] sm:w-[90%] w-full flex flex-col items-center gap-6 py-[5px]">
                 <h2 class="lg:text-[50px] md:text-[40px] sm:text-[35px] text-[30px] text-[#EEB21C] font-bold">
 
                 {{$title->title}}
@@ -166,7 +166,7 @@
     <div class="w-full  relative  bg-no-repeat bg-center bg-cover "
          style="background-image: url({{asset('asset/images/gettech.jpg')}});">
         <div class="w-full px-4 flex justify-center py-6 bg-black/70">
-            <div class="lg:w-[80%] md:w-[80%] sm:w-[90%] w-full flex flex-col items-center gap-6 py-[5px]">
+            <div class="lg:w-[90%] md:w-[90%] sm:w-[90%] w-full flex flex-col items-center gap-6 py-[5px]">
 
                 <div class="grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-1 grid-cols-1 gap-4 items-center">
                     @foreach($plan->take(1) as $plans)
@@ -324,7 +324,7 @@
     {{--blogs section start here--}}
     <div class="w-full  relative py-6">
         <div class="w-full  flex justify-center">
-            <div class=" lg:w-[80%] md:w-[80%] sm:w-[90%] w-full w-full flex flex-col items-center py-[5px] px-4">
+            <div class=" lg:w-[90%] md:w-[90%] sm:w-[90%] w-full w-full flex flex-col items-center py-[5px] px-4">
                 <h2 class="lg:text-[50px] md:text-[40px] sm:text-[35px] text-[30px] text-[#EEB21C] font-bold">POSTS FROM THE BLOG</h2>
                 <div class="max-w-[600px]">
                     <p class="text-black lg:text-[16px] md:text-[13px] text-[12px] font-medium font-[roboto] text-center"
