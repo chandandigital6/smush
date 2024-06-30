@@ -18,6 +18,7 @@ use App\Http\Controllers\ServiceTitleController;
 use App\Http\Controllers\ServiceVideoController;
 use App\Http\Controllers\TeamController;
 use App\Http\Controllers\TestimonialController;
+use App\Models\Blog;
 use App\Models\Seo;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
@@ -55,9 +56,15 @@ Route::get('/services-detail', function () {
 Route::get('/terms_and_conditions', function () {
     return view('front_end.terms_and_conditions')->with('seos',$seos = Seo::where('page', 'index')->get());
 })->name('terms_and_conditions');
+
 Route::get('/privacy-policy', function () {
     return view('front_end.privacy-policy')->with('seos',$seos = Seo::where('page', 'index')->get());
 })->name('privacy-policy');
+
+Route::get('/all-blogs', function () {
+    $blog=Blog::all();
+    return view('front_end.all-blogs')->with('seos',$seos = Seo::where('page', 'index')->get())->with('blog', $blog);
+})->name('all-blogs');
 
 
 

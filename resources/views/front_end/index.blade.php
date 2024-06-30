@@ -364,6 +364,13 @@
 
                 </div>
 
+                <div class="max-w-[600px] mt-6">
+                    <a href="{{route('all-blogs')}}"
+                       class="lg:text-[20px] md:text-[18px] text-[14px] w-max text-white bg-[#15aef1] px-4 lg:py-2 md:py-2 py-1 font-bold rounded-md border-[1px] border-[#15aef1] hover:bg-white hover:text-[#15aef1]  transition ease-in duration-2000">
+                        SHOW MORE
+                    </a>
+                </div>
+
 
             </div>
         </div>
