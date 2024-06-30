@@ -66,10 +66,10 @@
 
 
 
-                        {{--                        <a href="{{route('contact')}}"--}}
-                        {{--                           class="lg:text-[25px] md:text-[20px] text-[14px] w-max text-white bg-[#15aef1] px-4 lg:py-2 md:py-2 py-1 font-bold rounded-md border-[1px] border-[#15aef1] hover:bg-white hover:text-[#15aef1]  transition ease-in duration-2000">--}}
-                        {{--                            LEARN MORE--}}
-                        {{--                        </a>--}}
+                                                <a href="{{route('about')}}"
+                                                   class="lg:text-[25px] md:text-[20px] text-[14px] w-max text-white bg-[#15aef1] px-4 lg:py-2 md:py-2 py-1 font-bold rounded-md border-[1px] border-[#15aef1] hover:bg-white hover:text-[#15aef1]  transition ease-in duration-2000">
+                                                    LEARN MORE
+                                                </a>
                     </div>
                     <div class="w-full justify-center items-center lg:flex md:flex hidden">
                         <img src="{{asset('storage/'.$aboutUs->image)}}" alt="">
