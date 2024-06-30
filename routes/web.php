@@ -18,6 +18,7 @@ use App\Http\Controllers\ServiceTitleController;
 use App\Http\Controllers\ServiceVideoController;
 use App\Http\Controllers\TeamController;
 use App\Http\Controllers\TestimonialController;
+use App\Models\Seo;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
@@ -51,6 +52,12 @@ Route::get('/blog/{blogs}',[HomeController::class,'blogDetails'])->name('blog-de
 Route::get('/services-detail', function () {
     return view('front_end.servicesDetail');
 })->name('services-detail');
+Route::get('/terms_and_conditions', function () {
+    return view('front_end.terms_and_conditions')->with('seos',$seos = Seo::where('page', 'index')->get());
+})->name('terms_and_conditions');
+Route::get('/privacy-policy', function () {
+    return view('front_end.privacy-policy')->with('seos',$seos = Seo::where('page', 'index')->get());
+})->name('privacy-policy');
 
 
 
