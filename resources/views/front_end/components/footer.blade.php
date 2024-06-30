@@ -1,5 +1,5 @@
 <div class="w-full bg-[#EEB21C] px-4 flex justify-center bg-no-repeat bg-cover bg-center" style="background-image: url({{asset('asset/images/Rectangle51.png')}})">
-    <div class="lg:w-[70%] md:w-[80%] sm:w-[90%] w-full flex flex-col justify-between py-10">
+    <div class="lg:w-[80%] md:w-[80%] sm:w-[90%] w-full flex flex-col justify-between py-10">
         <div class="flex gap-4 items-center w-full">
             <div class="w-max">
                 <a href="{{route('contact')}}">
