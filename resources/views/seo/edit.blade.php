@@ -87,6 +87,7 @@
                         <select name="page" class="form-control" id="">
                             <option value="">select page</option>
                             @foreach(['about-us', 'blog', 'contact-us','index','smash_repair','bumper_repair','scratch_repair','dent_repair','services' ] as $page)
+
                                 <option value="{{ $page }}" {{ $seo->page == $page ? 'selected' : '' }}>{{ $page }}</option>
                             @endforeach
                         </select>
@@ -98,6 +99,7 @@
                     <div class="form-group">
                         <label for="service_id">Service</label>
                         <select name="service_id" class="form-control @error('service_id') is-invalid @enderror">
+                            <option value="">select</option>
                             @foreach($services as $service)
                                 <option value="{{ $service->id }}" {{ $seo->service_id == $service->id ? 'selected' : '' }}>{{ $service->title }}</option>
                             @endforeach
