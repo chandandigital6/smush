@@ -241,7 +241,7 @@
                         <p class="text-black lg:leading-7 md:leading-2 lg:text-[16px] md:text-[13px] text-[12px] font-medium font-[roboto] text-center"
                            style="word-spacing: 10px;">{{ $logo->msg }}</p>
                     </div>
-                    <div class="swiffy-slider slider-nav-autoplay slider-item-show4">
+                    <div class="swiffy-slider slider-nav-autoplay slider-item-show3">
                         <ul class="slider-container">
                             @if (is_string($logo->image) && !empty($logo->image))
                                 @php
@@ -249,9 +249,10 @@
                                 @endphp
                                 @foreach($imagePaths as $imagePath)
                                     <li class="w-full relative">
-                                        <img src="{{ asset('storage/'.$imagePath) }}" alt="{{ $logo->title }}" class="w-full lg:h-[550px] md:h-[500px] sm:h-[400px] h-[300px] object-cover">
+                                        <img src="{{ asset('storage/'.$imagePath) }}" alt="{{ $logo->title }}" class="w-full lg:h-[550px] md:h-[450px] sm:h-[400px] h-[300px] ">
                                     </li>
                                 @endforeach
+
                             @endif
                         </ul>
                         <button type="button" class="slider-nav"></button>

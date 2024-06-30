@@ -55,7 +55,7 @@
             @foreach($serviceTitle as $title)
 
 
-                <div class="lg:w-[70%] md:w-[80%] sm:w-[90%] w-full flex flex-col items-center gap-6 py-[5px]">
+                <div class="lg:w-[80%] md:w-[80%] sm:w-[90%] w-full flex flex-col items-center gap-6 py-[5px]">
                     <h2 class="lg:text-[50px] md:text-[40px] sm:text-[35px] text-[30px] text-[#EEB21C] font-bold">
 
                         {{$title->title}}
@@ -85,7 +85,7 @@
             @foreach($chooseUs as $choos)
 
 
-                <div class="lg:w-[70%] md:w-[80%] sm:w-[90%] w-full rounded-[50px]"
+                <div class="lg:w-[80%] md:w-[80%] sm:w-[90%] w-full rounded-[50px]"
                      style="background-image: url({{asset('asset/images/Rectangle56.png')}});box-shadow: 0px 0px 10px 1px #25a8df">
                     <div class="w-full flex flex-col items-center gap-2 p-2 bg-[#25a8df]/90 rounded-[50px]">
                         <h2 class=" lg:text-[45px] md:text-[40px] text-center sm:text-[35px] text-[25px] text-white font-bold">
@@ -143,7 +143,7 @@
         </div>
         <div class="w-full px-4 flex justify-center">
 
-            <div class="lg:w-[70%] md:w-[80%] sm:w-[90%] w-full">
+            <div class="lg:w-[80%] md:w-[80%] sm:w-[90%] w-full">
                 <div class="w-full grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-4 mt-6">
                     <div class="flex flex-col gap-2">
                         <div class="flex gap-4">
@@ -271,7 +271,7 @@
 
     <div class="w-full  relative py-6">
         <div class="w-full px-4 flex justify-center">
-            <div class="lg:w-[70%] md:w-[80%] sm:w-[90%] w-full">
+            <div class="lg:w-[80%] md:w-[80%] sm:w-[90%] w-full">
                 <div class="w-full grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-4 mt-6">
                     <div class="flex flex-col gap-2">
                         <div class="flex gap-4">

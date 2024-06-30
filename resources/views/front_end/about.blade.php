@@ -47,7 +47,6 @@
     {{--about section start here--}}
     <div class="w-full  relative lg:pt-[250px] md:pt-[200px] sm:pt-[180px] pt-[100px]"
          style="background-image: url({{asset('asset/images/bac.png')}})">
-
         @include('front_end.components.carSection')
 
 
@@ -57,9 +56,9 @@
 
 
                 <div
-                    class="lg:w-[70%] md:w-[80%] sm:w-[90%] w-full grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-4 py-[5px]">
+                    class="lg:w-[80%] md:w-[80%] sm:w-[90%] w-full grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-4 py-[5px]">
                     <div class="w-full flex flex-col gap-6 p-2">
-                        <h2 class="uppercase font-bold lg:text-[40px] md:text-[30px] text-[25px] text-left">{{$aboutUs->title}} <span
+                        <h2 class="uppercase font-bold lg:text-[30px] md:text-[30px] text-[25px] text-left">{{$aboutUs->title}} <span
                                 class="text-[#15AEF1]">{{$aboutUs->heading}}</span></h2>
                         <div class="w-full  justify-center items-center lg:hidden md:hidden flex">
                             <img src="{{asset('storage/'.$aboutUs->image)}}" alt="">
@@ -72,10 +71,10 @@
 
 
 
-{{--                        <a href="{{route('contact')}}"--}}
-{{--                           class="lg:text-[25px] md:text-[20px] text-[14px] w-max text-white bg-[#15aef1] px-4 lg:py-2 md:py-2 py-1 font-bold rounded-md border-[1px] border-[#15aef1] hover:bg-white hover:text-[#15aef1]  transition ease-in duration-2000">--}}
-{{--                            LEARN MORE--}}
-{{--                        </a>--}}
+                        {{--                        <a href="{{route('contact')}}"--}}
+                        {{--                           class="lg:text-[25px] md:text-[20px] text-[14px] w-max text-white bg-[#15aef1] px-4 lg:py-2 md:py-2 py-1 font-bold rounded-md border-[1px] border-[#15aef1] hover:bg-white hover:text-[#15aef1]  transition ease-in duration-2000">--}}
+                        {{--                            LEARN MORE--}}
+                        {{--                        </a>--}}
                     </div>
                     <div class="w-full justify-center items-center lg:flex md:flex hidden">
                         <img src="{{asset('storage/'.$aboutUs->image)}}" alt="">
@@ -121,7 +120,7 @@
             @foreach($chooseUs as $choos)
 
 
-            <div class="lg:w-[70%] md:w-[80%] sm:w-[90%] w-full rounded-[50px]"
+            <div class="lg:w-[80%] md:w-[80%] sm:w-[90%] w-full rounded-[50px]"
                  style="background-image: url({{asset('asset/images/Rectangle56.png')}});box-shadow: 0px 0px 10px 1px #25a8df">
                 <div class="w-full flex flex-col items-center gap-2 p-2 bg-[#25a8df]/90 rounded-[50px]">
                     <h2 class=" lg:text-[45px] md:text-[40px] text-center sm:text-[35px] text-[25px] text-white font-bold">
