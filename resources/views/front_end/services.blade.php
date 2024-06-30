@@ -143,37 +143,6 @@
         </div>
         <div class="w-full px-4 flex justify-center">
 
-            <div class="lg:w-[90%] md:w-[90%] sm:w-[90%] w-full">
-                <div class="w-full grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-4 mt-6">
-                    <div class="flex flex-col gap-2">
-                        <div class="flex gap-4">
-                            <ul class="flex flex-col gap-4 lg:pl-32 md:pl-32 pl-8"
-                                style="list-style-image: url({{asset('asset/images/Arrow.png')}});">
-                                <li>
-                                    <p class="text-black lg:leading-7 md:leading-2 lg:text-[24px] md:text-[13px] text-[12px] font-bold font-[roboto]"
-                                       style="word-spacing: 3px;">Perfect color matching</p>
-                                </li>
-                                <li>
-                                    <p class="text-black lg:leading-7 md:leading-2 lg:text-[24px] md:text-[13px] text-[12px] font-bold font-[roboto]"
-                                       style="word-spacing: 3px;">No impact on your car insurance</p>
-                                </li>
-                                <li>
-                                    <p class="text-black lg:leading-7 md:leading-2 lg:text-[24px] md:text-[13px] text-[12px] font-bold font-[roboto]"
-                                       style="word-spacing: 3px;">Trade qualified and courteous tradesman</p>
-                                </li>
-
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="w-full flex justify-center items-center">
-                        <a href="{{route('contact')}}"
-                           class="lg:text-[20px] md:text-[18px] text-[14px] w-max text-white bg-[#EEB21C] px-4 lg:py-2 md:py-2 py-1 font-bold rounded-md border-[1px] border-[#EEB21C] hover:bg-white hover:text-[#EEB21C]  transition ease-in duration-2000">
-                            GET FREE ESTIMATE
-                        </a>
-                    </div>
-
-                </div>
-            </div>
 
         </div>
     </div>
@@ -306,5 +275,6 @@
             </div>
         </div>
     </div>
+
 
 @endsection

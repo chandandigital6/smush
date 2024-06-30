@@ -71,7 +71,7 @@ class ClientController extends Controller
         $validatedData = $request->validate([
             'image.*' => 'nullable|image',
             'title' => 'required|string|max:255',
-            'msg' => 'nullable|string|max:255',
+            'msg' => 'nullable',
             // Add validation rules for other fields if needed
         ]);
 

@@ -29,7 +29,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="Number">Number:</label>
-                                <input type="number" class="form-control" id="number" name="number" required>
+                                <input type="text" class="form-control" id="number" name="number" required>
                             </div>
 {{--                            <div class="form-group">--}}
 

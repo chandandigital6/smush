@@ -97,7 +97,7 @@
 
                 <div class="w-full flex flex-col items-center gap-2 px-2">
                     <h2 class="uppercase lg:text-[40px] md:text-[35px] text-center sm:text-[30px] text-[25px] text-white font-bold">
-                        {{$counter->number}}+</h2>
+                        {{$counter->number}}</h2>
                     <span
                         class=" uppercase lg:text-[20px] md:text-[20px] text-[14px] w-max text-white bg-[#15aef1] p-8 font-bold lg:rounded-t-[50px] rounded-md border-[1px] border-[#15aef1] transition ease-in duration-2000">
                       {{$counter->title}}
