@@ -62,21 +62,10 @@
 
 {{--                                        </td>--}}
                                         <td>
-                                            @if($serviceVideo->youtube_url_embed)
-                                                @php
-                                                    $youtubeUrl = $serviceVideo->youtube_url_embed;
-                                                    // Ensure it's an embed URL format
-                                                    if (strpos($youtubeUrl, 'embed') === false) {
-                                                        // If it's not in embed format, try to convert it
-                                                        if (strpos($youtubeUrl, 'watch?v=') !== false) {
-                                                            $youtubeUrl = str_replace('watch?v=', 'embed/', $youtubeUrl);
-                                                        }
-                                                    }
-                                                @endphp
-                                                <div class="embed-responsive embed-responsive-16by9">
-                                                    <iframe class="embed-responsive-item" src="{{ $youtubeUrl }}" allowfullscreen></iframe>
-                                                </div>
-                                            @endif
+{{--                                            @if($serviceVideo->youtube_url_embed)--}}
+                                                <iframe width="668" height="376" src="{{$serviceVideo->youtube_url_embed}}" title="Libaas [Slowed + Reverb] - Kaka | Ginni Kapoor | Punjabi Lofi Song | Chillwithbeats | Textaudio" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+{{--                                            @endif--}}
                                         </td>
                                         <td>{{$serviceVideo->service->title}}</td>
 {{--                                                                                <td>{!! $serviceVideo->description !!}</td>--}}

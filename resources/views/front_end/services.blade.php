@@ -242,7 +242,7 @@
 
     <div class="w-full  relative py-6">
         <div class="w-full px-4 flex justify-center">
-            <div class="lg:w-[90%] md:w-[90%] sm:w-[90%] w-full">
+            <div class="lg:w-[80%] md:w-[80%] sm:w-[90%] w-full">
                 <div class="w-full grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-4 mt-6">
                     <div class="flex flex-col gap-2">
                         <div class="flex gap-4">
@@ -250,15 +250,16 @@
                                 style="list-style-image: url({{asset('asset/images/Arrow.png')}});">
                                 <li>
                                     <p class="text-black lg:leading-7 md:leading-2 lg:text-[24px] md:text-[13px] text-[12px] font-bold font-[roboto]"
-                                       style="word-spacing: 3px;">Perfect color matching</p>
+                                       style="word-spacing: 3px;">Flawless color match</p>
                                 </li>
                                 <li>
                                     <p class="text-black lg:leading-7 md:leading-2 lg:text-[24px] md:text-[13px] text-[12px] font-bold font-[roboto]"
-                                       style="word-spacing: 3px;">No impact on your car insurance</p>
+                                       style="word-spacing: 3px;">Insurance-safe
+                                    </p>
                                 </li>
                                 <li>
                                     <p class="text-black lg:leading-7 md:leading-2 lg:text-[24px] md:text-[13px] text-[12px] font-bold font-[roboto]"
-                                       style="word-spacing: 3px;">Trade qualified and courteous tradesman</p>
+                                       style="word-spacing: 3px;">Professionally certified technicians</p>
                                 </li>
 
                             </ul>
