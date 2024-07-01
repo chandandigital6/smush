@@ -108,7 +108,7 @@
 
                         <div class="w-full flex flex-col gap-1">
                             <label for="" class="text-[#eeb21c] text-md font-normal">Message</label>
-                            <textarea placeholder="Your Phone" name="msg" rows="1" class="text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]"></textarea>
+                            <textarea placeholder="Your message" name="msg" rows="1" class="text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]"></textarea>
                         </div>
                         <div class="w-full flex flex-col gap-1 mt-6">
                             <button type="submit"
