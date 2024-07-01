@@ -28,9 +28,31 @@ class AppointmentController extends Controller
 
     public function store(AppointmentRequest $request){
 //        dd($request);
-        $appointment=Appointment::create($request->all());
-        if($appointment){
-            Mail::to($request->email)->send(new AppointmentCreated($appointment));
+        $validated = $request->validated();
+
+        // Handle file uploads
+        $imagePaths = [];
+        if ($request->hasFile('car_image')) {
+            foreach ($request->file('car_image') as $image) {
+                $imagePath = $image->store('public/car_images');
+                $imagePaths[] = str_replace('public/', '', $imagePath);
+            }
+        }
+
+        // Save appointment
+        $appointment = Appointment::create([
+            'name' => $validated['name'],
+            'email' => $validated['email'],
+            'number' => $validated['number'],
+            'msg' => $validated['msg'],
+            'car_name' => $validated['car_name'],
+            'car_model' => $validated['car_model'],
+            'car_image' => implode(',', $imagePaths), // Store as comma-separated string
+        ]);
+
+        // Send email if the appointment is created
+        if ($appointment) {
+            Mail::to($appointment->email)->send(new AppointmentCreated($appointment));
         }
         return redirect()->back()->with('success', 'Appointment  created successfully.');
     }

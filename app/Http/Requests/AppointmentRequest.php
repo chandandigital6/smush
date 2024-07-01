@@ -22,13 +22,13 @@ class AppointmentRequest extends FormRequest
     public function rules(): array
     {
         return [
-//            'service' => 'nullable|string|max:255',
-//            'doctor' => 'nullable|string|max:255',
             'name' => 'required|string|max:255',
             'email' => 'nullable|email|max:255',
-            'number' => 'required|string|max:255',
-//            'date' => 'nullable|date',
-//            'time' => 'nullable',
+            'number' => 'required|string|max:15',
+            'msg' => 'nullable|string',
+            'car_name' => 'nullable|string|max:255',
+            'car_model' => 'nullable|string|max:255',
+            'car_image.*' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ];
     }
 }

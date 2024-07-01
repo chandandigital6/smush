@@ -79,11 +79,11 @@
                         </div>
                     @endif
 
-                    <form action="{{route('appointment.store')}}" method="post" class="mt-4 grid lg:grid-cols-2 gap-2">
+                    <form action="{{route('appointment.store')}}" method="post" class="mt-4 grid lg:grid-cols-2 gap-2" enctype="multipart/form-data">
                         @csrf
                         <div class="w-full flex flex-col gap-1">
                             <label for="" class="text-[#eeb21c] text-md font-normal">Name</label>
-                            <input type="text" name="name" placeholder="Your Name" class="text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]">
+                            <input type="text" name="name" placeholder="Your full name" class="text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]">
                         </div>
                         <div class="w-full flex flex-col gap-1">
                             <label for="" class="text-[#eeb21c] text-md font-normal">Email</label>
@@ -93,6 +93,19 @@
                             <label for="" class="text-[#eeb21c] text-md font-normal">Phone</label>
                             <input type="number" name="number" placeholder="Your Phone" class="text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]">
                         </div>
+                        <div class="w-full flex flex-col gap-1">
+                            <label for="" class="text-[#eeb21c] text-md font-normal">Car Name</label>
+                            <input type="text" name="car_name" placeholder="Your car name" class="text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]">
+                        </div>
+                        <div class="w-full flex flex-col gap-1">
+                            <label for="" class="text-[#eeb21c] text-md font-normal">Car Model</label>
+                            <input type="text" name="car_model" placeholder="Your car model" class="text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]">
+                        </div>
+                        <div class="w-full flex flex-col gap-1">
+                            <label for="car_images" class="text-[#eeb21c] text-md font-normal">Damage Image</label>
+                            <input type="file" name="car_image[]" id="car_images" placeholder="Your car image" class="text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]" multiple>
+                        </div>
+
                         <div class="w-full flex flex-col gap-1">
                             <label for="" class="text-[#eeb21c] text-md font-normal">Message</label>
                             <textarea placeholder="Your Phone" name="msg" rows="1" class="text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]"></textarea>

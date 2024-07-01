@@ -50,6 +50,7 @@
                                     <th>email</th>
                                     <th>number</th>
                                     <th>Massage</th>
+                                    <th>Car Images</th>
                                     <th>Action</th>
                                 </tr>
                                 </thead>
@@ -57,31 +58,38 @@
                                 @forelse ($appointmentData as $appointment)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
-
-
-                                        <td>{{$appointment->name}}</td>
-                                        <td>{{$appointment->email}}</td>
-                                        <td>{{$appointment->number}}</td>
-                                        <td>{{$appointment->msg}}</td>
+                                        <td>{{ $appointment->name }}</td>
+                                        <td>{{ $appointment->email }}</td>
+                                        <td>{{ $appointment->number }}</td>
+                                        <td>{{ $appointment->msg }}</td>
+                                        <td>
+                                            @if (is_string($appointment->car_image) && !empty($appointment->car_image))
+                                                @php
+                                                    $car_imagePaths = explode(',', $appointment->car_image);
+                                                @endphp
+                                                @foreach ($car_imagePaths as $car_imagePath)
+                                                    <img src="{{ asset('storage/'.$car_imagePath) }}" alt="Car Image" style="max-width: 100px;">
+                                                @endforeach
+                                            @endif
+                                        </td>
                                         <td>
                                             <a href="{{ route('appointment.delete', $appointment->id) }}" class="btn btn-danger">Delete</a>
-                                            <!-- Add delete button if needed -->
                                             <a href="{{ route('appointment.duplicate', $appointment->id) }}" class="btn btn-warning">Duplicate</a>
-
                                         </td>
                                     </tr>
                                 @empty
                                     <tr>
-                                        <td colspan="5">No posts found</td>
+                                        <td colspan="7">No appointments found</td>
                                     </tr>
                                 @endforelse
+
                                 </tbody>
                             </table>
                         </div>
                     </div>
 
                     <div class="card-footer">
-                        <!-- Pagination links can be added here if needed -->
+           {{$appointmentData->links()}}
                     </div>
                 </div>
             </div>

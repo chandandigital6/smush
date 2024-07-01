@@ -15,9 +15,12 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('email')->nullable();
-//            $table->string('service')->nullable();
             $table->string('number');
             $table->text('msg')->nullable();
+            $table->string('car_name')->nullable();
+            $table->string('car_model')->nullable();
+            $table->text('car_image')->nullable();
+
             $table->timestamps();
         });
     }

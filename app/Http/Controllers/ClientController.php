@@ -30,9 +30,6 @@ class ClientController extends Controller
             'image.*' => 'nullable|image',
             'title' => 'required|string|max:255',
             'msg' => 'nullable',
-//            'category_id' => 'required|exists:categories,id',
-            // Use 'images.*' instead of 'image_path.*' for multiple images
-            // Add validation rules for other fields if needed
         ]);
 
         $logo = new ClientLogo();
