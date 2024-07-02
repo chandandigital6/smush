@@ -28,7 +28,7 @@ class AppointmentRequest extends FormRequest
             'msg' => 'nullable|string',
             'car_name' => 'nullable|string|max:255',
             'car_model' => 'nullable|string|max:255',
-            'car_image.*' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+//            'car_image.*' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ];
     }
 }
