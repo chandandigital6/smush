@@ -51,7 +51,7 @@ class HomeController extends Controller
           return view('front_end.services',compact('services','testimonials','chooseUs','logos','seos','serviceTitle'));
       }
       public function contact(){
-          $seos = Seo::where('page', 'contact_us')->get();
+          $seos = Seo::where('page', 'contact-us')->get();
           return view('front_end.contact',compact('seos'));
       }
 

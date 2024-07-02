@@ -223,26 +223,36 @@
             <div class="lg:w-[80%] md:w-[80%] sm:w-[90%] w-full flex flex-col items-center gap-6 py-[5px]">
                 <h2 class="lg:text-[50px] md:text-[40px] sm:text-[35px] text-[30px] text-[#EEB21C] font-bold">OTHER SERVICES</h2>
                 <div class="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 grid-cols-1 gap-4">
-                    @foreach($services->take(3) as $service)
+                        @foreach($services->take(6) as $service)
 
+                        @php
+                            // Split the description into an array of words
+                            $words = explode(' ', strip_tags($service->description)); // Use strip_tags to remove any HTML tags
+
+                            // Get the first 20 words
+                            $first20Words = array_slice($words, 0, 20);
+
+                            // Join the first 20 words back into a string
+                            $shortDescription = implode(' ', $first20Words);
+                        @endphp
 
                         <div class="bg-white rounded-3xl px-[20px] py-[30px] flex flex-col items-center"
-                             style="box-shadow: 0px 0px 10px 1px #eeb21ca8;">
-                            <img src="{{asset('storage/'.$service->image)}}" alt="">
-                            <h2 class="uppercase lg:text-[35px] md:text-[30px] text-center sm:text-[25px] text-[20px] text-[#15AEF1] font-bold">
-                                {{$service->heading}}</h2>
-                            <p class="text-black lg:leading-7 md:leading-2 lg:text-[16px] md:text-[13px] text-[12px] font-medium font-[roboto] text-center"
-                               style="word-spacing: 10px;">
-                                {!! $service->description !!}
-                            </p>
+                                 style="box-shadow: 0px 0px 10px 1px #eeb21ca8;">
+                                <img src="{{asset('storage/'.$service->image)}}" alt="">
+                                <h2 class="uppercase lg:text-[35px] md:text-[30px] text-center sm:text-[25px] text-[20px] text-[#15AEF1] font-bold">
+                                    {{$service->heading}}</h2>
+                                <p class="text-black lg:leading-7 md:leading-2 lg:text-[16px] md:text-[13px] text-[12px] font-medium font-[roboto] text-center"
+                                   style="word-spacing: 10px;">
+                                    {!! $shortDescription !!}
+                                </p>
 
-                            <a href="{{route('service.show', ['title'=>$service->title])}}"
-                               class="mt-6 lg:text-[25px] md:text-[20px] text-[14px] w-max text-white bg-[#15aef1] px-4 lg:py-2 md:py-2 py-1 font-bold rounded-md border-[1px] border-[#15aef1] hover:bg-white hover:text-[#15aef1]  transition ease-in duration-2000">
-                                LEARN MORE
-                            </a>
-                        </div>
+                                <a href="{{route('service.show', ['title'=>$service->title])}}"
+                                   class="mt-6 lg:text-[25px] md:text-[20px] text-[14px] w-max text-white bg-[#15aef1] px-4 lg:py-2 md:py-2 py-1 font-bold rounded-md border-[1px] border-[#15aef1] hover:bg-white hover:text-[#15aef1]  transition ease-in duration-2000">
+                                    LEARN MORE
+                                </a>
+                            </div>
 
-                    @endforeach
+                        @endforeach
 
 
 

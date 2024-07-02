@@ -93,10 +93,6 @@
                             <option value="blog">blog</option>
                             <option value="contact-us">contact-us</option>
                             <option value="index">index</option>
-                            <option value="smash_repair">smash_repair</option>
-                            <option value="bumper_repair">bumper_repair</option>
-                            <option value="scratch_repair">scratch_repair</option>
-                            <option value="dent_repair">dent_repair</option>
                             <option value="services">services</option>
 
                         </select>

@@ -33,9 +33,9 @@
                 </a>
 
                 <div class="flex mt-2 pl-4 gap-4 text-[25px]">
-                    <a href="" class="text-white hover:text-[#eeb21c] transition ease-in duration-2000 "><i
+                    <a href="https://www.instagram.com/mobilesmashrepair?igsh=NHgzbW0xcWE0anFn" class="text-white hover:text-[#eeb21c] transition ease-in duration-2000 "><i
                             class="fa-brands fa-instagram"></i></a>
-                    <a href="" class="text-white hover:text-[#eeb21c] transition ease-in duration-2000 "><i
+                    <a href="https://www.facebook.com/profile.php?id=61561452425522&mibextid=LQQJ4d" class="text-white hover:text-[#eeb21c] transition ease-in duration-2000 "><i
                             class="fa-brands fa-facebook"></i></a>
                     <a href="https://www.youtube.com/@MobileSmashRepair" class="text-white hover:text-[#eeb21c] transition ease-in duration-2000 "><i
                             class="fa-brands fa-youtube"></i></a>

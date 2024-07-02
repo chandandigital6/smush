@@ -1,9 +1,9 @@
 <div class="w-full bg-[#EEB21C] px-4 flex justify-center">
     <div class="lg:w-[90%] md:w-[80%] sm:w-[90%] w-full flex justify-between py-[2px]">
         <div class="flex lg:gap-10 md:gap-10 sm:gap-10 gap-4 text-[20px]">
-            <a href="" class="text-white hover:text-[#15AEF1] transition ease-in duration-2000 "><i
+            <a href="https://www.instagram.com/mobilesmashrepair?igsh=NHgzbW0xcWE0anFn" class="text-white hover:text-[#15AEF1] transition ease-in duration-2000 "><i
                     class="fa-brands fa-instagram"></i></a>
-            <a href="" class="text-white hover:text-[#15AEF1] transition ease-in duration-2000 "><i
+            <a href="https://www.facebook.com/profile.php?id=61561452425522&mibextid=LQQJ4d" class="text-white hover:text-[#15AEF1] transition ease-in duration-2000 "><i
                     class="fa-brands fa-facebook"></i></a>
             <a href="https://www.youtube.com/@MobileSmashRepair" class="text-white hover:text-[#15AEF1] transition ease-in duration-2000 "><i
                     class="fa-brands fa-youtube"></i></a>
