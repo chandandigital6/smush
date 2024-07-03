@@ -2,54 +2,54 @@
 @section('content')
 
     {{--slider section start here--}}
-    <div class="swiffy-slider ">
-        <ul class="slider-container">
-            {{-- make copy of this li for dynamic slider --}}
-            <li class="w-full  relative">
-                <img src="{{asset('asset/images/image2.png')}}"
-                     class="w-full lg:h-[550px] md:h-[500px] sm:h-[400px] h-[300px] object-cover">
-                <div class="absolute top-0 left-0 w-full h-full bg-black/70 flex justify-center items-center px-4">
-                    <div class="w-max h-max flex flex-col items-center gap-4">
-                        <span class="uppercase text-[#EEB21C] text-[22px] font-bold">ANY KIND OF CAR YOU WILL GET</span>
-                        <div class="lg:w-[1000px] md:w-[700px] sm:w-[500px] w-[350px] text-center">
-                            <p class="uppercase text-white font-bold lg:text-[80px] md:text-[60px] sm:text-[40px] text-[30px]">
-                                contact us</p>
-                        </div>
-                        <div class="flex gap-4">
-                            <a href="{{route('services')}}"
-                               class="lg:text-[25px] md:text-[20px] text-[14px] text-white bg-[#eeb21c] px-4 lg:py-2 md:py-2 py-1 font-bold rounded-md border-[1px] border-[#eeb21c] hover:bg-white hover:text-[#eeb21c]  transition ease-in duration-2000">
-                                SERVICES
-                            </a>
-                            <a href="{{route('contact')}}"
-                               class="lg:text-[25px] md:text-[20px] text-[14px] text-white bg-[#15aef1] px-4 lg:py-2 md:py-2 py-1 font-bold rounded-md border-[1px] border-[#15aef1] hover:bg-white hover:text-[#15aef1]  transition ease-in duration-2000">
-                                ENQUIRY
-                            </a>
-                        </div>
-                    </div>
-                </div>
+{{--    <div class="swiffy-slider ">--}}
+{{--        <ul class="slider-container">--}}
+{{--            --}}{{-- make copy of this li for dynamic slider --}}
+{{--            <li class="w-full  relative">--}}
+{{--                <img src="{{asset('asset/images/image2.png')}}"--}}
+{{--                     class="w-full lg:h-[550px] md:h-[500px] sm:h-[400px] h-[300px] object-cover">--}}
+{{--                <div class="absolute top-0 left-0 w-full h-full bg-black/70 flex justify-center items-center px-4">--}}
+{{--                    <div class="w-max h-max flex flex-col items-center gap-4">--}}
+{{--                        <span class="uppercase text-[#EEB21C] text-[22px] font-bold">ANY KIND OF CAR YOU WILL GET</span>--}}
+{{--                        <div class="lg:w-[1000px] md:w-[700px] sm:w-[500px] w-[350px] text-center">--}}
+{{--                            <p class="uppercase text-white font-bold lg:text-[80px] md:text-[60px] sm:text-[40px] text-[30px]">--}}
+{{--                                contact us</p>--}}
+{{--                        </div>--}}
+{{--                        <div class="flex gap-4">--}}
+{{--                            <a href="{{route('services')}}"--}}
+{{--                               class="lg:text-[25px] md:text-[20px] text-[14px] text-white bg-[#eeb21c] px-4 lg:py-2 md:py-2 py-1 font-bold rounded-md border-[1px] border-[#eeb21c] hover:bg-white hover:text-[#eeb21c]  transition ease-in duration-2000">--}}
+{{--                                SERVICES--}}
+{{--                            </a>--}}
+{{--                            <a href="{{route('contact')}}"--}}
+{{--                               class="lg:text-[25px] md:text-[20px] text-[14px] text-white bg-[#15aef1] px-4 lg:py-2 md:py-2 py-1 font-bold rounded-md border-[1px] border-[#15aef1] hover:bg-white hover:text-[#15aef1]  transition ease-in duration-2000">--}}
+{{--                                ENQUIRY--}}
+{{--                            </a>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
 
-            </li>
-            {{--slider copy ends here--}}
-
-
+{{--            </li>--}}
+{{--            --}}{{--slider copy ends here--}}
 
 
 
 
-        </ul>
+
+
+{{--        </ul>--}}
 
 {{--        <button type="button" class="slider-nav"></button>--}}
 {{--        <button type="button" class="slider-nav slider-nav-next"></button>--}}
 
 
-    </div>
+{{--    </div>--}}
     {{--slider section ends here--}}
 
 
     {{--about section start here--}}
     <div class="w-full  relative lg:pt-[250px] md:pt-[200px] sm:pt-[180px] pt-[100px]"
          style="background-image: url({{asset('asset/images/bac.png')}})">
-        @include('front_end.components.carSection')
+{{--        @include('front_end.components.carSection')--}}
 
 
 
@@ -90,8 +90,8 @@
                             <input type="email" name="email" placeholder="Your Email" class="text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]">
                         </div>
                         <div class="w-full flex flex-col gap-1">
-                            <label for="" class="text-[#eeb21c] text-md font-normal">Phone</label>
-                            <input type="number" name="number" placeholder="Your Phone" class="text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]">
+                            <label for="" class="text-[#eeb21c] text-md font-normal">Mobile Number</label>
+                            <input type="number" name="number" placeholder="Your number" class="text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]">
                         </div>
 {{--                        <div class="w-full flex flex-col gap-1">--}}
 {{--                            <label for="" class="text-[#eeb21c] text-md font-normal"> Any Make</label>--}}
