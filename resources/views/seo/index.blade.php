@@ -83,6 +83,7 @@
 
                     <div class="card-footer">
                         <!-- Pagination links can be added here if needed -->
+                        {{$seoData->links()}}
                     </div>
                 </div>
             </div>

@@ -47,26 +47,25 @@
 
 
         <div class="w-full px-4 flex justify-center">
-            <div
-                class="lg:w-[90%] md:w-[90%] sm:w-[90%] w-full grid grid-cols-1 gap-4 py-[5px]">
+            <div class="lg:w-[90%] md:w-[90%] sm:w-[90%] w-full grid grid-cols-1 gap-4 py-5">
                 <div class="w-full flex justify-center items-center">
-                    <img src="{{asset('storage/'.$blogs->image)}}" alt="">
+                    <img src="{{ asset('storage/'.$blogs->image) }}" alt="Blog Image" class="rounded-lg shadow-lg">
                 </div>
-                <div class="w-full flex flex-col gap-6 p-2">
-                    <h2 class="uppercase font-bold lg:text-[40px] md:text-[30px] text-[25px]"> <span
-                            class="text-[#15AEF1]">{{$blogs->title}}</span></h2>
-                    <p class="text-black lg:leading-7 md:leading-2 lg:text-[18px] md:text-[13px] text-[12px] font-medium font-[roboto]"
-                       style="word-spacing: 10px;">
-
-             {!! $blogs->description !!}
-
+                <div class="w-full flex flex-col gap-6 p-4 bg-white rounded-lg shadow-md">
+                    <h2 class="uppercase font-bold text-[#15AEF1] lg:text-5xl md:text-4xl text-3xl">
+                        {{ $blogs->title }}
+                    </h2>
+                    <p class="text-gray-800 lg:leading-8 md:leading-7 lg:text-lg md:text-base text-sm font-medium font-roboto" style="word-spacing: 2px;">
+                        {!! $blogs->description !!}
                     </p>
-
+                    <div class="flex flex-col gap-2">
+                        <h3 class="text-lg font-semibold text-gray-600">Categories: {{ $blogs->categories }}</h3>
+                        <h3 class="text-lg font-semibold text-gray-600">Author: {{ $blogs->author_name }}</h3>
+                    </div>
                 </div>
-
             </div>
         </div>
-    </div>
+
     {{--about section ends here    --}}
 
 

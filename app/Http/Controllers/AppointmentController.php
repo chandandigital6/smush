@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\AppointmentRequest;
 use App\Mail\AppointmentCreated;
+use App\Mail\AdminAppointmentNotification;
 use App\Models\Appointment;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
@@ -52,8 +53,15 @@ class AppointmentController extends Controller
 
         // Send email if the appointment is created
         if ($appointment) {
+            // Send email to the user
             Mail::to($appointment->email)->send(new AppointmentCreated($appointment));
+
+            // Send email to the admin
+            $adminEmail = 'mobilesmashrepair87@gmail.com';
+
+            Mail::to($adminEmail)->send(new AdminAppointmentNotification($appointment));
         }
+
         return redirect()->back()->with('success', 'Appointment  created successfully.');
     }
 
