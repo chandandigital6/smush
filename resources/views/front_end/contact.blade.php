@@ -57,9 +57,9 @@
             <div class="lg:w-[90%] md:w-[90%] sm:w-[90%] w-full grid lg:grid-cols-3 md:grid-cols-3 grid-cols-1 gap-4 py-[5px]">
                 <div class="w-full flex flex-col  p-2 lg:col-span-2 md:col-span-2">
                     <h2 class="uppercase font-bold lg:text-[30px] md:text-[20px] text-[20px]"> <span
-                            class="text-[#15AEF1]">Send Us A Message</span></h2>
+                            class="text-[#15AEF1]">MAKE YOUR INQUIRY NOW</span></h2>
                     <p class="text-black lg:leading-7 md:leading-2 lg:text-[15px] md:text-[12px] text-[10px] font-medium font-[roboto]"
-                       style="word-spacing: 10px;">Attach few images for quick quotation</p>
+                       style="word-spacing: 10px;"></p>
 
                     @if ($errors->any())
                         <div class="alert alert-danger">
