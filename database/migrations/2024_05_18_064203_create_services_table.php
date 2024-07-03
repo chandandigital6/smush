@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('image')->nullable();
             $table->string('service_image')->nullable();
             $table->text('description')->nullable();
+            $table->enum('status',[1,0])->default(1);
 
             $table->timestamps();
         });

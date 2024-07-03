@@ -81,4 +81,10 @@ class HomeController extends Controller
 //    }
 
 
+   public function thank(){
+       $seos = Seo::where('page', 'thank-you')->get();
+        return view('front_end.components.thankYouPAge',compact('seos'));
+   }
+
+
 }

@@ -39,7 +39,7 @@ Route::get('/',[HomeController::class,'index'])->name('home');
 Route::get('/about',[HomeController::class,'about'])->name('about');
 Route::get('/services',[HomeController::class,'services'])->name('services');
 Route::get('/contact',[HomeController::class,'contact'])->name('contact');
-//Route::get('/team',[HomeController::class,'team'])->name('team');
+Route::get('/thankYou',[HomeController::class,'thank'])->name('home.thank');
 //Route::get('/testimonial',[HomeController::class,'testimonial'])->name('testimonial');
 //Route::get('/price',[HomeController::class,'price'])->name('price');
 //Route::get('/appointment',[HomeController::class,'appointment'])->name('appointment');
