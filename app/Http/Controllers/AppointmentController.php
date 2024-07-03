@@ -11,17 +11,25 @@ use Illuminate\Support\Facades\Mail;
 
 class AppointmentController extends Controller
 {
-    public function index(Request $request){
+    public function index(Request $request)
+    {
         $keyword = $request->input('keyword');
+        $sort_by = $request->input('sort_by', 'created_at'); // Default sort column
+        $sort_order = $request->input('sort_order', 'desc'); // Default sort order
+
         $appointment = Appointment::query();
 
         if (!empty($keyword)) {
             $appointment->where('title', 'like', "%$keyword%");
         }
+
+        $appointment->orderBy($sort_by, $sort_order);
+
         $appointmentData = $appointment->paginate(5);
 
-        return view('appointment.index',compact('appointmentData'));
+        return view('appointment.index', compact('appointmentData', 'sort_by', 'sort_order'));
     }
+
 
 //    public function create(){
 //        return view('appointment.create');
@@ -46,7 +54,7 @@ class AppointmentController extends Controller
             'email' => $validated['email'],
             'number' => $validated['number'],
             'msg' => $validated['msg'],
-            'car_name' => $validated['car_name'],
+//            'car_name' => $validated['car_name'],
             'car_model' => $validated['car_model'],
             'car_image' => implode(',', $imagePaths), // Store as comma-separated string
         ]);
