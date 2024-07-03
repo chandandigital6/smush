@@ -41,7 +41,7 @@
                 Our team will be in touch with you shortly regarding your inquiry.
             </p>
             <p class="text-[#666] text-[18px] mb-6">
-                We have received your information. Our team will contact you shortly.
+                We have received your information.
             </p>
             <a href="{{ route('home') }}"
                class="text-white bg-[#eeb21c] px-6 py-3 font-bold rounded-md border-[1px] border-[#eeb21c] hover:bg-white hover:text-[#eeb21c] transition ease-in duration-200">

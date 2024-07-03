@@ -90,8 +90,9 @@ class AppointmentController extends Controller
 
     }
     public function duplicate(Appointment $appointment){
-        $productDuplicate=$appointment->replicate();
-        $productDuplicate->save();
-        return redirect()->back();
+        return view('appointment.show',compact('appointment'));
+//        $productDuplicate=$appointment->replicate();
+//        $productDuplicate->save();
+//        return redirect()->back();
     }
 }

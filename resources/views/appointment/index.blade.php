@@ -74,7 +74,7 @@
                                         </td>
                                         <td>
                                             <a href="{{ route('appointment.delete', $appointment->id) }}" class="btn btn-danger">Delete</a>
-                                            <a href="{{ route('appointment.duplicate', $appointment->id) }}" class="btn btn-warning">Duplicate</a>
+                                            <a href="{{ route('appointment.duplicate', $appointment->id) }}" class="btn btn-warning">show</a>
                                         </td>
                                     </tr>
                                 @empty

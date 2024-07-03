@@ -93,13 +93,13 @@
                             <label for="" class="text-[#eeb21c] text-md font-normal">Phone</label>
                             <input type="number" name="number" placeholder="Your Phone" class="text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]">
                         </div>
-                        <div class="w-full flex flex-col gap-1">
-                            <label for="" class="text-[#eeb21c] text-md font-normal"> Any Make</label>
+{{--                        <div class="w-full flex flex-col gap-1">--}}
+{{--                            <label for="" class="text-[#eeb21c] text-md font-normal"> Any Make</label>--}}
 {{--                            <select name="" id="">--}}
 {{--                                <option value=""></option>--}}
 {{--                            </select>--}}
-                            <input type="text" name="car_name" placeholder=" Any Make" class="text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]">
-                        </div>
+{{--                            <input type="text" name="car_name" placeholder=" Any Make" class="text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]">--}}
+{{--                        </div>--}}
                         <div class="w-full flex flex-col gap-1">
                             <label for="" class="text-[#eeb21c] text-md font-normal">Car Model</label>
                             <input type="text" name="car_model" placeholder="Your car model" class="text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]">
