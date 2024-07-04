@@ -56,7 +56,7 @@
                                 <tbody>
                                 @forelse ($seoData as $seo)
                                     <tr>
-                                        <td>{{ $loop->iteration }}</td>
+                                        <td>{{ $seo->id }}</td>
 
                                         <td>{{ $seo->title }}</td>
                                         <td>{{ $seo->description }}</td>

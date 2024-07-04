@@ -55,7 +55,7 @@
                                 <tbody>
                                 @forelse ($testimonialData as $testimonial)
                                     <tr>
-                                        <td>{{ $loop->iteration }}</td>
+                                        <td>{{ $testimonial->id }}</td>
                                         <td>{{ $testimonial->name }}</td>
                                         <td>{{$testimonial->msg}}</td>
 
@@ -80,6 +80,7 @@
 
                     <div class="card-footer">
                         <!-- Pagination links can be added here if needed -->
+                        {{$testimonialData->links()}}
                     </div>
                 </div>
             </div>

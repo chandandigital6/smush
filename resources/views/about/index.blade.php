@@ -56,7 +56,7 @@
                                 <tbody>
                                 @forelse ($aboutData as $about)
                                     <tr>
-                                        <td>{{ $loop->iteration }}</td>
+                                        <td>{{ $about->id }}</td>
                                         <td>{{ $about->title }}</td>
                                         <td>{{$about->heading}}</td>
                                         <td>{!! $about->description !!}</td>
@@ -81,6 +81,7 @@
 
                     <div class="card-footer">
                         <!-- Pagination links can be added here if needed -->
+                        {{$aboutData->links()}}
                     </div>
                 </div>
             </div>

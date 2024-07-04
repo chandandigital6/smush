@@ -53,6 +53,7 @@ Route::get('/blog/{blogs}',[HomeController::class,'blogDetails'])->name('blog-de
 Route::get('/services-detail', function () {
     return view('front_end.servicesDetail');
 })->name('services-detail');
+
 Route::get('/terms_and_conditions', function () {
     return view('front_end.terms_and_conditions')->with('seos',$seos = Seo::where('page', 'index')->get());
 })->name('terms_and_conditions');

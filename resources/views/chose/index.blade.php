@@ -58,7 +58,7 @@
                                 <tbody>
                                 @forelse ($choseData as $chose)
                                     <tr>
-                                        <td>{{ $loop->iteration }}</td>
+                                        <td>{{ $chose->id }}</td>
                                         <td>{{ $chose->title }}</td>
 {{--                                                                                <td>{{$chose->price}}</td>--}}
                                         <td>{!! $chose->heading !!}</td>

@@ -92,7 +92,7 @@ class ServiceController extends Controller
 //        $logos=ClientLogo::all();
         $service = Service::where('title', $title)->first();
 
-        $services=Service::all();
+        $services=Service::where('status' ,1)->get();
         $serviceGallery = ServiceGallery::where('service_id', $service->id)->get();
         $serviceVideo= ServiceVideo::where('service_id', $service->id)->get();
         $serviceChooseUs=ServiceChoose::where('service_id', $service->id)->get();

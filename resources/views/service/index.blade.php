@@ -49,24 +49,20 @@
                                     <th>Title</th>
                                     <th>Heading</th>
                                     <th>msg</th>
-{{--                                    <th>service_appointment_title</th>--}}
-{{--                                    <th>service_appointment_text</th>--}}
-{{--                                    <th>service_appointment_number</th>--}}
                                     <th>ImageIcon</th>
+                                    <th>Status</th>
                                     <th>Action</th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 @forelse ($serviceData as $service)
                                     <tr>
-                                        <td>{{ $loop->iteration }}</td>
+                                        <td>{{ $service->id }}</td>
                                         <td>{{ $service->title }}</td>
                                         <td>{{$service->heading}}</td>
                                         <td>{!! $service->description !!}</td>
-{{--                                        <td>{{$service->service_appointment_title}}</td>--}}
-{{--                                        <td>{{$service->service_appointment_text}}</td>--}}
-{{--                                        <td>{{$service->service_appointment_number}}</td>--}}
                                         <td><img src="{{ asset('storage/'.$service->image) }}" alt="{{ $service->title }}" style="max-width: 100px;"></td>
+                                       <td>{{$service->status == 1 ? 'active' : 'inactive'}}</td>
                                         <td>
                                             <a href="{{ route('service.edit', $service->id) }}" class="btn btn-primary">Edit</a>
                                             <a href="{{ route('service.delete', $service->id) }}" class="btn btn-danger">Delete</a>

@@ -1,7 +1,7 @@
 <div class="w-full grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 grid-cols-1 gap-4">
     @php
-        $services=\App\Models\Service::all();
 
+   $services=\App\Models\Service::where('status' ,1)->get();
     @endphp
     @foreach($services as $service)
         @php

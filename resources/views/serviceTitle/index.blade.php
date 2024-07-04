@@ -56,7 +56,7 @@
                                 <tbody>
                                 @forelse ($serviceTitleData as $serviceTitle)
                                     <tr>
-                                        <td>{{ $loop->iteration }}</td>
+                                        <td>{{ $serviceTitle->id }}</td>
                                         <td>{{ $serviceTitle->title }}</td>
                                         <td>{!! $serviceTitle->msg !!}</td>
                                         {{--                                        <td>{!! $serviceTitle->description !!}</td>--}}
@@ -81,6 +81,7 @@
 
                     <div class="card-footer">
                         <!-- Pagination links can be added here if needed -->
+                        {{$serviceTitleData->links()}}
                     </div>
                 </div>
             </div>

@@ -58,7 +58,7 @@
                                 <tbody>
                                 @forelse ($serviceChooseData as $serviceChoose)
                                     <tr>
-                                        <td>{{ $loop->iteration }}</td>
+                                        <td>{{ $serviceChoose->id }}</td>
                                         <td>{{ $serviceChoose->title }}</td>
                                         {{--                                                                                <td>{{$serviceChoose->price}}</td>--}}
                                         <td>{!! $serviceChoose->heading !!}</td>

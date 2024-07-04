@@ -27,6 +27,7 @@ class ServiceRequest extends FormRequest
             'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'service_image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'description' => 'nullable',
+            'status' => 'required|in:1,0',
 
         ];
     }

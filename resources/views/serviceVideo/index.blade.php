@@ -55,7 +55,7 @@
                                 <tbody>
                                 @forelse ($serviceVideoData as $serviceVideo)
                                     <tr>
-                                        <td>{{ $loop->iteration }}</td>
+                                        <td>{{ $serviceVideo->id }}</td>
                                         <td>{{ $serviceVideo->title }}</td>
 {{--                                        <td>--}}
 {{--                                            <iframe width="560" height="315" src="{{ $serviceVideo->youtube_url_embed }}" frameborder="0" allowfullscreen></iframe>--}}
@@ -90,6 +90,7 @@
 
                     <div class="card-footer">
                         <!-- Pagination links can be added here if needed -->
+                        {{$serviceVideoData->links()}}
                     </div>
                 </div>
             </div>

@@ -42,7 +42,8 @@ class HomeController extends Controller
           return view('front_end.about',compact('about','teams' ,'counters','chooseUs','testimonials','logos','seos'));
       }
       public function services(){
-          $services=Service::all();
+          $services=Service::where('status' ,1)->get();
+//          dd($services);
           $testimonials=Testimonial::all();
           $chooseUs=ChoseUs::all();
           $logos=ClientLogo::all();

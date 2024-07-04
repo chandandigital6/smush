@@ -58,7 +58,7 @@
                                 <tbody>
                                 @forelse ($blogData as $blog)
                                     <tr>
-                                        <td>{{ $loop->iteration }}</td>
+                                        <td>{{ $blog->id }}</td>
                                         <td>{{ $blog->title }}</td>
                                         <td>{{$blog->short_description}}</td>
                                         <td>{!! $blog->description !!}</td>

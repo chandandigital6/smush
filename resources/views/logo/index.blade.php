@@ -55,7 +55,7 @@
                                 <tbody>
                                 @forelse ($logoData as $logo)
                                     <tr>
-                                        <td>{{ $loop->iteration }}</td>
+                                        <td>{{ $logo->id }}</td>
                                         <td>{{ $logo->title }}</td>
                                         <td>{!! $logo->msg !!}</td>
                                         <td>
@@ -90,6 +90,7 @@
 
                     <div class="card-footer">
                         <!-- Pagination links can be added here if needed -->
+                        {{$logoData->links()}}
                     </div>
                 </div>
             </div>

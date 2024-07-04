@@ -57,7 +57,7 @@
                                 @forelse ($galleryData as $gallery)
                                     <tr>
 
-                                        <td>{{ $loop->iteration }}</td>
+                                        <td>{{ $gallery->id }}</td>
                                         <td>{{$gallery->service->title}}</td>
                                         <td>{{ $gallery->title }}</td>
                                         <td>{!! $gallery->msg !!}</td>
