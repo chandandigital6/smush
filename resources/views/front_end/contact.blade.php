@@ -106,7 +106,8 @@
                         </div>
                         <div class="w-full flex flex-col gap-1">
                             <label for="car_images" class="text-[#eeb21c] text-md font-normal">Damage Image</label>
-                            <input type="file" name="car_image[]" id="car_images" placeholder="Your car image" class="text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]" multiple>
+                            <input type="file" name="car_image[]" id="car_images" class="text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]" multiple accept="image/*">
+                            <div id="image-preview" class="mt-2 grid grid-cols-2 gap-2"></div>
                         </div>
 
                         <div class="w-full flex flex-col gap-1">
@@ -164,6 +165,93 @@
         </div>
     </div>
     {{--about section ends here    --}}
+
+{{--    <script>--}}
+{{--        let selectedFiles = [];--}}
+
+{{--        document.getElementById('car_images').addEventListener('change', function(event) {--}}
+{{--            const files = event.target.files;--}}
+{{--            const previewContainer = document.getElementById('image-preview');--}}
+{{--            const hiddenInput = document.getElementById('car_images_data');--}}
+
+{{--            // Add selected files to the array--}}
+{{--            Array.from(files).forEach(file => {--}}
+{{--                selectedFiles.push(file);--}}
+
+{{--                const reader = new FileReader();--}}
+{{--                reader.onload = function(e) {--}}
+{{--                    const img = document.createElement('img');--}}
+{{--                    img.src = e.target.result;--}}
+{{--                    img.alt = file.name;--}}
+{{--                    img.classList.add('w-full', 'h-auto', 'border', 'border-[#eeb21c]', 'rounded-md', 'mt-2');--}}
+{{--                    previewContainer.appendChild(img);--}}
+{{--                };--}}
+{{--                reader.readAsDataURL(file);--}}
+{{--            });--}}
+
+{{--            // Update the hidden input with the file names--}}
+{{--            hiddenInput.value = JSON.stringify(selectedFiles.map(file => file.name));--}}
+{{--        });--}}
+
+{{--        document.getElementById('appointment-form').addEventListener('submit', function(event) {--}}
+{{--            event.preventDefault();--}}
+
+{{--            const formData = new FormData(this);--}}
+{{--            selectedFiles.forEach(file => {--}}
+{{--                formData.append('car_image[]', file);--}}
+{{--            });--}}
+
+{{--            fetch(this.action, {--}}
+{{--                method: this.method,--}}
+{{--                headers: {--}}
+{{--                    'X-CSRF-TOKEN': '{{ csrf_token() }}'--}}
+{{--                },--}}
+{{--                body: formData--}}
+{{--            }).then(response => response.json()).then(data => {--}}
+{{--                console.log(data);--}}
+{{--                // Handle the response as needed--}}
+{{--            }).catch(error => {--}}
+{{--                console.error('Error:', error);--}}
+{{--            });--}}
+{{--        });--}}
+{{--    </script>--}}
+
+
+
+        <script>
+        let selectedFiles = [];
+
+        document.getElementById('car_images').addEventListener('change', function(event) {
+            const files = event.target.files;
+            const previewContainer = document.getElementById('image-preview');
+            const hiddenInput = document.getElementById('car_images_data');
+
+            Array.from(files).forEach(file => {
+                selectedFiles.push(file);
+
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const img = document.createElement('img');
+                    img.src = e.target.result;
+                    img.alt = file.name;
+                    img.classList.add('w-full', 'h-auto', 'border', 'border-[#eeb21c]', 'rounded-md', 'mt-2');
+                    previewContainer.appendChild(img);
+                };
+                reader.readAsDataURL(file);
+            });
+
+            updateHiddenInput();
+        });
+
+        function updateHiddenInput() {
+            const hiddenInput = document.getElementById('car_images_data');
+            hiddenInput.value = JSON.stringify(selectedFiles.map(file => file.name));
+        }
+    </script>
+
+
+
+
 
 
 
