@@ -50,6 +50,7 @@
                                     <th>Title</th>
                                     <th>Massage</th>
                                     <th>Image</th>
+                                    <th>Status</th>
                                     <th>Action</th>
                                 </tr>
                                 </thead>
@@ -72,6 +73,7 @@
                                             @endif
 
                                         </td>
+                                        <td>{{$gallery->status ==1 ? 'active':'inactive'}}</td>
 {{--                                                                                <td><img src="{{ asset('storage/'.$gallery->image) }}" alt="{{ $gallery->title }}" style="max-width: 100px;"></td>--}}
                                         <td>
                                             <a href="{{ route('gallery.edit', $gallery->id) }}" class="btn btn-primary">Edit</a>

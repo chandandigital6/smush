@@ -29,6 +29,7 @@ return new class extends Migration
             $table->string('f_3_title')->nullable();
             $table->text('f_3_msg')->nullable();
             $table->foreignId('service_id')->nullable()->constrained('services')->onDelete('cascade');
+            $table->enum('status',[1,0])->default('1');
             $table->timestamps();
         });
     }

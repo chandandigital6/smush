@@ -27,7 +27,7 @@ class ServiceVideoController extends Controller
     }
 
     public function store(ServiceVideoRequest $request){
-//        dd($request);
+//        dd($request->all());
         $serviceVideo=ServiceVideo::create($request->all());
 //        $image = $request->file('image')->store('public/serviceVideo');
 //

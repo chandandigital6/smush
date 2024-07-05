@@ -30,7 +30,7 @@
                             <div class="form-group">
                                 <label for="youtube_url">YouTube URL</label>
 {{--                                <textarea type="text" name="youtube_url_embed" id="youtube_url_embed" cols="30" rows="10" class="textarea"></textarea>--}}
-                                <input type="url" name="youtube_url" class="form-control @error('youtube_url_embed') is-invalid @enderror" value="{{ old('youtube_url_embed') }}">
+                                <input type="url" name="youtube_url_embed" class="form-control @error('youtube_url_embed') is-invalid @enderror" value="{{ old('youtube_url_embed') }}">
                                 @error('youtube_url')
                                 <div class="invalid-feedback">{{ $message }}</div>
                                 @enderror
@@ -44,6 +44,17 @@
                                     @endforeach
                                 </select>
                                 @error('service_id')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
+                            </div>
+
+                            <div class="form-group">
+                                <label for="status">Status</label>
+                                <select id="status" name="status" class="form-control @error('status') is-invalid @enderror">
+                                    <option value="1" {{ old('status') == 1 ? 'selected' : '' }}>Active</option>
+                                    <option value="0" {{ old('status') == 0 ? 'selected' : '' }}>Inactive</option>
+                                </select>
+                                @error('status')
                                 <div class="invalid-feedback">{{ $message }}</div>
                                 @enderror
                             </div>

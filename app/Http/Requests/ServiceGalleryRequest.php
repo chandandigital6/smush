@@ -27,6 +27,7 @@ class ServiceGalleryRequest extends FormRequest
             'msg' => 'nullable',
 //            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
             'service_id' => 'required|exists:services,id',
+            'status' => 'required|in:1,0',
         ];
     }
 }

@@ -48,7 +48,7 @@
                                     <th>Title</th>
                                     <th>YouTube Embed Code</th>
                                     <th>serviceName</th>
-
+                                    <th>Status</th>
                                     <th>Action</th>
                                 </tr>
                                 </thead>
@@ -63,11 +63,12 @@
 {{--                                        </td>--}}
                                         <td>
 {{--                                            @if($serviceVideo->youtube_url_embed)--}}
-                                                <iframe width="668" height="376" src="{{$serviceVideo->youtube_url_embed}}" title="Libaas [Slowed + Reverb] - Kaka | Ginni Kapoor | Punjabi Lofi Song | Chillwithbeats | Textaudio" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                                <iframe width="668" height="376" src="https://www.youtube.com/watch?v=39pU8oJuGOE&ab_channel=GameB%C3%A0i%C4%90%E1%BB%95iTh%C6%B0%E1%BB%9Fng" title="Libaas [Slowed + Reverb] - Kaka | Ginni Kapoor | Punjabi Lofi Song | Chillwithbeats | Textaudio" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 {{--                                            @endif--}}
                                         </td>
                                         <td>{{$serviceVideo->service->title}}</td>
+                                        <td>{{$serviceVideo->status ==1 ? 'active': 'inactive'}}</td>
 {{--                                                                                <td>{!! $serviceVideo->description !!}</td>--}}
 {{--                                                                                <td><img src="{{ asset('storage/'.$serviceVideo->image) }}" alt="{{ $serviceVideo->title }}" style="max-width: 100px;"></td>--}}
                                         <td>

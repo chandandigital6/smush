@@ -47,11 +47,10 @@
                                 <tr>
                                     <th>ID</th>
                                     <th>Title</th>
-                                    {{--                                    <th>price</th>--}}
                                     <th>heading</th>
-                                    {{--                                    <th> Feature 2</th>--}}
-                                    {{--                                    <th>Feature 3</th>--}}
                                     <th>Image</th>
+                                    <th>ServiceName</th>
+                                    <th>Status</th>
                                     <th>Action</th>
                                 </tr>
                                 </thead>
@@ -60,11 +59,10 @@
                                     <tr>
                                         <td>{{ $serviceChoose->id }}</td>
                                         <td>{{ $serviceChoose->title }}</td>
-                                        {{--                                                                                <td>{{$serviceChoose->price}}</td>--}}
                                         <td>{!! $serviceChoose->heading !!}</td>
-                                        {{--                                                                                <td>{{$serviceChoose->fe_2}}</td>--}}
-                                        {{--                                                                                <td>{{$serviceChoose->fe_3}}</td>--}}
                                         <td><img src="{{ asset('storage/'.$serviceChoose->image) }}" alt="{{ $serviceChoose->title }}" style="max-width: 100px;"></td>
+                                     <td>{{$serviceChoose->service->title}}</td>
+                                        <td>{{$serviceChoose->status == 1 ? 'active':'inactive'}}</td>
                                         <td>
                                             <a href="{{ route('serviceChoose.edit', $serviceChoose->id) }}" class="btn btn-primary">Edit</a>
                                             <a href="{{ route('serviceChoose.delete', $serviceChoose->id) }}" class="btn btn-danger">Delete</a>

@@ -38,6 +38,7 @@ class ServiceChooseRequest extends FormRequest
             'f_3_title' => 'nullable|string|max:255',
             'f_3_msg' => 'nullable|string',
             'service_id' => 'nullable|exists:services,id',
+            'status' => 'required|in:1,0',
         ];
     }
 }

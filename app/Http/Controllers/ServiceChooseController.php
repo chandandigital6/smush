@@ -53,6 +53,7 @@ class ServiceChooseController extends Controller
     }
 
     public function update(ServiceChoose $serviceChoose , ServiceChooseRequest $request){
+
         $serviceChooseData = $request->all();
 
         if ($request->hasFile('image')) {

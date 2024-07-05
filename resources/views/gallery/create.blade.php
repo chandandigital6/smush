@@ -42,6 +42,17 @@
                 @enderror
             </div>
 
+            <div class="form-group">
+                <label for="status">Status</label>
+                <select id="status" name="status" class="form-control @error('status') is-invalid @enderror">
+                    <option value="1" {{ old('status') == 1 ? 'selected' : '' }}>Active</option>
+                    <option value="0" {{ old('status') == 0 ? 'selected' : '' }}>Inactive</option>
+                </select>
+                @error('status')
+                <div class="invalid-feedback">{{ $message }}</div>
+                @enderror
+            </div>
+
 
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>

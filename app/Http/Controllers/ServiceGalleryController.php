@@ -64,11 +64,13 @@ class ServiceGalleryController extends Controller
 
     public function update(ServiceGalleryRequest $request, $id)
     {
+//        dd($request->all());
         $gallery = ServiceGallery::findOrFail($id);
         $data = $request->validated();
 
         $gallery->title = $data['title'];
         $gallery->msg = $data['msg'];
+        $gallery->status = $data['status'];
         $gallery->service_id = $data['service_id'];
 
         if ($request->hasFile('image')) {

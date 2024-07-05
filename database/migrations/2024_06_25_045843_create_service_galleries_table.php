@@ -17,6 +17,7 @@ return new class extends Migration
             $table->text('msg')->nullable();
             $table->text('image')->nullable();
             $table->foreignId('service_id')->constrained('services')->onDelete('cascade');
+            $table->enum('status',[1,0])->default('1');
             $table->timestamps();
         });
     }

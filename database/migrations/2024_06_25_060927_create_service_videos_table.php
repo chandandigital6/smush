@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('title')->nullable();
             $table->text('youtube_url_embed')->nullable();
             $table->foreignId('service_id')->constrained('services')->onDelete('cascade');
+            $table->enum('status',[1,0])->default('1');
             $table->timestamps();
         });
     }
