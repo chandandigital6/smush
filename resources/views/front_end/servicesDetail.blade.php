@@ -2,8 +2,8 @@
 @section('content')
 
     {{--slider section start here--}}
-    <div class="swiffy-slider ">
-        <ul class="slider-container">
+    <div class="swiffy-slider " id="top-inquiry-form">
+        <ul class="slider-container" >
             {{-- make copy of this li for dynamic slider --}}
             <li class="w-full  relative">
                 <img src="{{asset('asset/images/image2.png')}}"
@@ -21,42 +21,44 @@
                                class="lg:text-[25px] md:text-[20px] text-[14px] text-white bg-[#eeb21c] px-4 lg:py-2 md:py-2 py-1 font-bold rounded-md border-[1px] border-[#eeb21c] hover:bg-white hover:text-[#eeb21c] transition ease-in duration-200">
                                 SERVICES
                             </a>
-                            <a href="{{route('contact')}}"
+                            <a href="#top-inquiry-form"
                                class="lg:text-[25px] md:text-[20px] text-[14px] text-white bg-[#15aef1] px-4 lg:py-2 md:py-2 py-1 font-bold rounded-md border-[1px] border-[#15aef1] hover:bg-white hover:text-[#15aef1] transition ease-in duration-200">
                                 ENQUIRY
                             </a>
                         </div>
                     </div>
-                    <div class="ml-40 flex flex-col items-center">
+                    <div class="ml-40 flex flex-col items-center" id="top-inquiry-form">
+                        <span class="uppercase text-[#ffffff] text-[26px] font-bold">MAKE YOUR INQUIRY NOW</span>
+                        <span class="uppercase text-[#EEB21C] text-[20px] font-bold">10% off on your first repair + Free Touch ups included</span>
                         <form action="{{route('appointment.store')}}" method="post" class="mt-4 grid lg:grid-cols-2 gap-4" enctype="multipart/form-data">
                             @csrf
                             <div class="w-full flex flex-col gap-1">
-                                <label for="name" class="text-[#eeb21c] text-md font-normal">Name</label>
-                                <input type="text" name="name" id="name" placeholder="Your full name" class="text-gray-600 bg-transparent border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c] rounded-md">
+                                <label for="name" class="text-[#ffffff] text-md font-normal">Name</label>
+                                <input type="text" name="name" id="name" placeholder="Your full name" class="text-gray-600 bg-[#ffffff] border-[1px] border-[#ffffff]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c] rounded-md">
                             </div>
                             <div class="w-full flex flex-col gap-1">
-                                <label for="email" class="text-[#eeb21c] text-md font-normal">Email</label>
-                                <input type="email" name="email" id="email" placeholder="Your Email" class="text-gray-600 bg-transparent border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c] rounded-md">
+                                <label for="email" class="text-[#ffffff] text-md font-normal">Email</label>
+                                <input type="email" name="email" id="email" placeholder="Your Email" class="text-gray-600 bg-[#ffffff] border-[1px] border-[#ffffff]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#ffffff] rounded-md">
                             </div>
                             <div class="w-full flex flex-col gap-1">
-                                <label for="number" class="text-[#eeb21c] text-md font-normal">Mobile Number</label>
-                                <input type="text" name="number" id="number" placeholder="Your number" class="text-gray-600 bg-transparent border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c] rounded-md">
+                                <label for="number" class="text-[#ffffff] text-md font-normal">Mobile Number</label>
+                                <input type="text" name="number" id="number" placeholder="Your number" class="text-gray-600 bg-[#ffffff] border-[1px] border-[#ffffff]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#ffffff] rounded-md">
                             </div>
                             <div class="w-full flex flex-col gap-1">
-                                <label for="car_model" class="text-[#eeb21c] text-md font-normal">Car Model</label>
-                                <input type="text" name="car_model" id="car_model" placeholder="Your car model" class="text-gray-600 bg-transparent border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c] rounded-md">
+                                <label for="car_model" class="text-[#ffffff] text-md font-normal">Car Model</label>
+                                <input type="text" name="car_model" id="car_model" placeholder="Your car model" class="text-gray-600 bg-[#ffffff] border-[1px] border-[#ffffff]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#ffffff] rounded-md">
                             </div>
                             <div class="w-full flex flex-col gap-1">
-                                <label for="car_images" class="text-[#eeb21c] text-md font-normal">Damage Image</label>
-                                <input type="file" name="car_image[]" id="car_images" class="text-gray-600 bg-transparent border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c] rounded-md" multiple accept="image/*">
+                                <label for="car_images" class="text-[#ffffff] text-md font-normal">Damage Image</label>
+                                <input type="file" name="car_image[]" id="car_images" class="text-gray-600 bg-[#ffffff] border-[1px] border-[#ffffff]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#ffffff] rounded-md" multiple accept="image/*">
                                 <div id="image-preview" class="mt-2 grid grid-cols-2 gap-2"></div>
                             </div>
                             <div class="w-full flex flex-col gap-1">
-                                <label for="msg" class="text-[#eeb21c] text-md font-normal">Message</label>
-                                <textarea name="msg" id="msg" placeholder="Your message" rows="1" class="text-gray-600 bg-transparent border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c] rounded-md"></textarea>
+                                <label for="msg" class="text-[#ffffff] text-md font-normal">Message</label>
+                                <textarea name="msg" id="msg" placeholder="Your message" rows="1" class="text-gray-600 bg-[#ffffff] border-[1px] border-[#ffffff]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#ffffff] rounded-md"></textarea>
                             </div>
                             <div class="w-full flex flex-col gap-1 ">
-                                <button type="submit" class="lg:text-[20px] md:text-[20px] text-[14px] w-max text-white bg-[#eeb21c] px-8 lg:py-2 md:py-2 py-1 font-bold rounded-md border-[1px] border-[#eeb21c] hover:bg-white hover:text-[#eeb21c] transition ease-in duration-200">
+                                <button type="submit" class="lg:text-[20px] md:text-[20px] text-[14px] w-max text-white bg-[#eeb21c] px-8 lg:py-2 md:py-2 py-1 font-bold rounded-md border-[1px] border-[#ffffff] hover:bg-white hover:text-[#eeb21c] transition ease-in duration-200">
                                     Submit
                                 </button>
                             </div>
@@ -93,8 +95,7 @@
                 <div class="w-full flex flex-col gap-6 p-2">
                     <h2 class="uppercase font-bold lg:text-[40px] md:text-[30px] text-[25px]"> <span
                             class="text-[#15AEF1]">{{$service->heading}}</span></h2>
-                    <p class="text-black lg:leading-7 md:leading-2 lg:text-[18px] md:text-[13px] text-[12px] font-medium font-[montserrat]"
-                       style="word-spacing: 10px;">
+                    <p class="text-black lg:leading-7 md:leading-2 lg:text-[20px] md:text-[18px] text-[16px] font-medium font-[montserrat]">
 
                         {!! $service->description !!}
 
@@ -119,16 +120,16 @@
     {{--stats section start here--}}
     <div class="w-full  relative  bg-no-repeat bg-center bg-cover"
          style="background-image: url({{asset('asset/images/Rectangle79.png')}})">
-        <div class="w-full flex justify-center bg-[#eeb21ce8]">
+        <div class="w-full flex justify-center bg-[#eeb21ce8] p-10">
             <div class="lg:w-[90%] md:w-[90%] sm:w-[90%] w-full flex flex-col items-center gap-4 pt-[5px] px-4 py-2">
                 <div class="w-full flex flex-col items-center px-2">
-                    <h2 class="uppercase lg:text-[35px] md:text-[30px] text-center sm:text-[25px] text-[20px] text-black font-bold">
+                    <h2 class="uppercase lg:text-[52px] md:text-[30px] text-center sm:text-[25px] text-[20px] text-black font-bold">
                         Contact us for a FREE smash</h2>
-                    <h2 class="uppercase lg:text-[35px] md:text-[30px] text-center sm:text-[25px] text-[20px] text-black font-bold">
+                    <h2 class="uppercase lg:text-[52px] md:text-[30px] text-center sm:text-[25px] text-[20px] text-black font-bold">
                         repair quote today!
                     </h2>
-                    <a href="{{ route('contact') }}"
-                       class="uppercase lg:text-[20px] md:text-[20px] text-[14px] w-max text-[#eeb52a] bg-white px-4 py-2 font-bold rounded-md border-[1px] border-[#eeb21ce8] transition duration-200 ease-in-out hover:text-white hover:bg-[#15aef1]">
+                    <a href="#top-inquiry-form"
+                       class="uppercase lg:text-[32px] md:text-[32px] text-[18px] w-max text-[#eeb52a] bg-white px-12 py-4 font-bold rounded-xl border-[1px] border-[#eeb21ce8] transition duration-200 ease-in-out hover:text-white hover:bg-[#15aef1]">
                         GET FREE ESTIMATE
                     </a>
 
@@ -146,7 +147,7 @@
                     <h2 class="lg:text-[50px] md:text-[40px] sm:text-[35px] text-[30px] text-[#EEB21C] font-bold">{{ $logo->title }}</h2>
                     <div class="max-w-[600px]">
                         <p class="text-black lg:leading-7 md:leading-2 lg:text-[16px] md:text-[13px] text-[12px] font-medium font-[montserrat] text-center"
-                           style="word-spacing: 10px;">{{ $logo->msg }}</p>
+                           >{{ $logo->msg }}</p>
                     </div>
                     <div class="swiffy-slider slider-nav-autoplay slider-item-show4">
                         <ul class="slider-container">
@@ -214,7 +215,7 @@
                                             <h2 class="uppercase  lg:text-[30px] md:text-[25px]  sm:text-[20px] text-[20px] text-white font-bold">
                                                 {{$choos->f_title}}</h2>
                                             <p class="text-white lg:leading-7 md:leading-2 lg:text-[18px] md:text-[13px] text-[12px] font-normal font-[montserrat]"
-                                               style="word-spacing: 3px;">
+                                               >
                                                 {!! $choos->f_msg !!}
 
                                             </p>
@@ -223,8 +224,7 @@
                                         <li>
                                             <h2 class="uppercase lg:text-[30px] md:text-[25px]  sm:text-[20px] text-[20px] text-white font-bold">
                                                 {{$choos->f_1_title}}</h2>
-                                            <p class="text-white lg:leading-7 md:leading-2 lg:text-[18px] md:text-[13px] text-[12px] font-normal font-[montserrat]"
-                                               style="word-spacing: 3px;">
+                                            <p class="text-white lg:leading-7 md:leading-2 lg:text-[18px] md:text-[13px] text-[12px] font-normal font-[montserrat]">
                                                 {!! $choos->f_1_msg !!}
                                             </p>
 
@@ -233,7 +233,7 @@
                                             <h2 class="uppercase lg:text-[30px] md:text-[25px]  sm:text-[20px] text-[20px] text-white font-bold">
                                                 {{$choos->f_2_title}}</h2>
                                             <p class="text-white lg:leading-7 md:leading-2 lg:text-[18px] md:text-[13px] text-[12px] font-normal font-[montserrat]"
-                                               style="word-spacing: 3px;">
+                                               >
                                                 {!! $choos->f_2_msg !!}
                                             </p>
 
@@ -279,8 +279,8 @@
                                 <img src="{{asset('storage/'.$service->image)}}" alt="">
                                 <h2 class="uppercase lg:text-[35px] md:text-[30px] text-center sm:text-[25px] text-[20px] text-[#15AEF1] font-bold">
                                     {{$service->heading}}</h2>
-                                <p class="text-black lg:leading-7 md:leading-2 lg:text-[16px] md:text-[13px] text-[12px] font-medium font-[montserrat] text-center"
-                                   style="word-spacing: 10px;">
+                                <p class="text-black lg:leading-7 md:leading-2 lg:text-[20px] md:text-[18px] text-[16px] font-medium font-[montserrat] text-center"
+                                   >
                                     {!! $shortDescription !!}
                                 </p>
 
@@ -317,23 +317,23 @@
                                 style="list-style-image: url({{asset('asset/images/Arrow.png')}});">
                                 <li>
                                     <p class="text-black lg:leading-7 md:leading-2 lg:text-[24px] md:text-[13px] text-[12px] font-bold font-[montserrat]"
-                                       style="word-spacing: 3px;">Flawless color match</p>
+                                    >Flawless color match</p>
                                 </li>
                                 <li>
                                     <p class="text-black lg:leading-7 md:leading-2 lg:text-[24px] md:text-[13px] text-[12px] font-bold font-[montserrat]"
-                                       style="word-spacing: 3px;">Insurance-safe
+                                       >Insurance-safe
                                     </p>
                                 </li>
                                 <li>
                                     <p class="text-black lg:leading-7 md:leading-2 lg:text-[24px] md:text-[13px] text-[12px] font-bold font-[montserrat]"
-                                       style="word-spacing: 3px;">Professionally certified technicians</p>
+                                       >Professionally certified technicians</p>
                                 </li>
 
                             </ul>
                         </div>
                     </div>
                     <div class="w-full flex justify-center items-center">
-                        <a href="{{route('contact')}}"
+                        <a href="#top-inquiry-form"
                            class="lg:text-[20px] md:text-[18px] text-[14px] w-max text-white bg-[#EEB21C] px-4 lg:py-2 md:py-2 py-1 font-bold rounded-md border-[1px] border-[#EEB21C] hover:bg-white hover:text-[#EEB21C]  transition ease-in duration-2000">
                             GET FREE ESTIMATE
                         </a>
