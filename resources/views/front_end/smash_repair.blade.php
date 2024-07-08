@@ -65,7 +65,7 @@
                             <img src="{{asset('storage/'.$aboutUs->image)}}" alt="">
                         </div>
 
-                        <p class="text-black lg:leading-7 md:leading-2 lg:text-[18px] md:text-[13px] text-[12px] font-medium font-[roboto]"
+                        <p class="text-black lg:leading-7 md:leading-2 lg:text-[18px] md:text-[13px] text-[12px] font-medium font-[montserrat]"
                            style="word-spacing: 10px;">
                             {!! $aboutUs->description !!}
                         </p>
@@ -116,7 +116,7 @@
                 <div class="w-full flex flex-col items-center gap-6 py-[5px]">
                     <h2 class="lg:text-[50px] md:text-[40px] sm:text-[35px] text-[30px] text-[#EEB21C] font-bold">{{ $logo->title }}</h2>
                     <div class="max-w-[600px]">
-                        <p class="text-black lg:leading-7 md:leading-2 lg:text-[16px] md:text-[13px] text-[12px] font-medium font-[roboto] text-center"
+                        <p class="text-black lg:leading-7 md:leading-2 lg:text-[16px] md:text-[13px] text-[12px] font-medium font-[montserrat] text-center"
                            style="word-spacing: 10px;">{{ $logo->msg }}</p>
                     </div>
                     <div class="swiffy-slider slider-nav-autoplay slider-item-show3">
@@ -198,7 +198,7 @@
                                         <li>
                                             <h2 class="uppercase  lg:text-[30px] md:text-[25px]  sm:text-[20px] text-[20px] text-white font-bold">
                                                 {{$choos->f_title}}</h2>
-                                            <p class="text-white lg:leading-7 md:leading-2 lg:text-[18px] md:text-[13px] text-[12px] font-normal font-[roboto]"
+                                            <p class="text-white lg:leading-7 md:leading-2 lg:text-[18px] md:text-[13px] text-[12px] font-normal font-[montserrat]"
                                                style="word-spacing: 3px;">
                                                 {!! $choos->f_msg !!}
 
@@ -208,7 +208,7 @@
                                         <li>
                                             <h2 class="uppercase lg:text-[30px] md:text-[25px]  sm:text-[20px] text-[20px] text-white font-bold">
                                                 {{$choos->f_1_title}}</h2>
-                                            <p class="text-white lg:leading-7 md:leading-2 lg:text-[18px] md:text-[13px] text-[12px] font-normal font-[roboto]"
+                                            <p class="text-white lg:leading-7 md:leading-2 lg:text-[18px] md:text-[13px] text-[12px] font-normal font-[montserrat]"
                                                style="word-spacing: 3px;">
                                                 {!! $choos->f_1_msg !!}
                                             </p>
@@ -217,7 +217,7 @@
                                         <li>
                                             <h2 class="uppercase lg:text-[30px] md:text-[25px]  sm:text-[20px] text-[20px] text-white font-bold">
                                                 {{$choos->f_2_title}}</h2>
-                                            <p class="text-white lg:leading-7 md:leading-2 lg:text-[18px] md:text-[13px] text-[12px] font-normal font-[roboto]"
+                                            <p class="text-white lg:leading-7 md:leading-2 lg:text-[18px] md:text-[13px] text-[12px] font-normal font-[montserrat]"
                                                style="word-spacing: 3px;">
                                                 {!! $choos->f_2_msg !!}
                                             </p>
@@ -243,15 +243,15 @@
                             <ul class="flex flex-col gap-4 lg:pl-32 md:pl-32 pl-8"
                                 style="list-style-image: url({{asset('asset/images/Arrow.png')}});">
                                 <li>
-                                    <p class="text-black lg:leading-7 md:leading-2 lg:text-[24px] md:text-[13px] text-[12px] font-bold font-[roboto]"
+                                    <p class="text-black lg:leading-7 md:leading-2 lg:text-[24px] md:text-[13px] text-[12px] font-bold font-[montserrat]"
                                        style="word-spacing: 3px;">Perfect color matching</p>
                                 </li>
                                 <li>
-                                    <p class="text-black lg:leading-7 md:leading-2 lg:text-[24px] md:text-[13px] text-[12px] font-bold font-[roboto]"
+                                    <p class="text-black lg:leading-7 md:leading-2 lg:text-[24px] md:text-[13px] text-[12px] font-bold font-[montserrat]"
                                        style="word-spacing: 3px;">No impact on your car insurance</p>
                                 </li>
                                 <li>
-                                    <p class="text-black lg:leading-7 md:leading-2 lg:text-[24px] md:text-[13px] text-[12px] font-bold font-[roboto]"
+                                    <p class="text-black lg:leading-7 md:leading-2 lg:text-[24px] md:text-[13px] text-[12px] font-bold font-[montserrat]"
                                        style="word-spacing: 3px;">Trade qualified and courteous tradesman</p>
                                 </li>
 
@@ -288,7 +288,7 @@
                             <img src="{{asset('storage/'.$service->image)}}" alt="">
                             <h2 class="uppercase lg:text-[35px] md:text-[30px] text-center sm:text-[25px] text-[20px] text-[#15AEF1] font-bold">
                                 {{$service->heading}}</h2>
-                            <p class="text-black lg:leading-7 md:leading-2 lg:text-[16px] md:text-[13px] text-[12px] font-medium font-[roboto] text-center"
+                            <p class="text-black lg:leading-7 md:leading-2 lg:text-[16px] md:text-[13px] text-[12px] font-medium font-[montserrat] text-center"
                                style="word-spacing: 10px;">
                                 {!! $service->description !!}
                             </p>
@@ -320,15 +320,15 @@
                             <ul class="flex flex-col gap-4 lg:pl-32 md:pl-32 pl-8"
                                 style="list-style-image: url({{asset('asset/images/Arrow.png')}});">
                                 <li>
-                                    <p class="text-black lg:leading-7 md:leading-2 lg:text-[24px] md:text-[13px] text-[12px] font-bold font-[roboto]"
+                                    <p class="text-black lg:leading-7 md:leading-2 lg:text-[24px] md:text-[13px] text-[12px] font-bold font-[montserrat]"
                                        style="word-spacing: 3px;">Perfect color matching</p>
                                 </li>
                                 <li>
-                                    <p class="text-black lg:leading-7 md:leading-2 lg:text-[24px] md:text-[13px] text-[12px] font-bold font-[roboto]"
+                                    <p class="text-black lg:leading-7 md:leading-2 lg:text-[24px] md:text-[13px] text-[12px] font-bold font-[montserrat]"
                                        style="word-spacing: 3px;">No impact on your car insurance</p>
                                 </li>
                                 <li>
-                                    <p class="text-black lg:leading-7 md:leading-2 lg:text-[24px] md:text-[13px] text-[12px] font-bold font-[roboto]"
+                                    <p class="text-black lg:leading-7 md:leading-2 lg:text-[24px] md:text-[13px] text-[12px] font-bold font-[montserrat]"
                                        style="word-spacing: 3px;">Trade qualified and courteous tradesman</p>
                                 </li>
 

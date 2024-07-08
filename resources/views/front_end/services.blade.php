@@ -61,7 +61,7 @@
                         {{$title->title}}
                     </h2>
                     <div class="max-w-[600px]">
-                        <p class="text-black lg:leading-7 md:leading-2 lg:text-[16px] md:text-[13px] text-[12px] font-medium font-[roboto] text-center"
+                        <p class="text-black lg:leading-7 md:leading-2 lg:text-[16px] md:text-[13px] text-[12px] font-medium font-[montserrat] text-center"
                            style="word-spacing: 10px;">
                             {!! $title->msg !!}
                         </p>
@@ -105,7 +105,7 @@
                                         <li>
                                             <h2 class="uppercase  lg:text-[30px] md:text-[25px]  sm:text-[20px] text-[20px] text-white font-bold">
                                                 {{$choos->f_title}}</h2>
-                                            <p class="text-white lg:leading-7 md:leading-2 lg:text-[18px] md:text-[13px] text-[12px] font-normal font-[roboto]"
+                                            <p class="text-white lg:leading-7 md:leading-2 lg:text-[18px] md:text-[13px] text-[12px] font-normal font-[montserrat]"
                                                style="word-spacing: 3px;">
                                                 {!! $choos->f_msg !!}
 
@@ -115,7 +115,7 @@
                                         <li>
                                             <h2 class="uppercase lg:text-[30px] md:text-[25px]  sm:text-[20px] text-[20px] text-white font-bold">
                                                 {{$choos->f_1_title}}</h2>
-                                            <p class="text-white lg:leading-7 md:leading-2 lg:text-[18px] md:text-[13px] text-[12px] font-normal font-[roboto]"
+                                            <p class="text-white lg:leading-7 md:leading-2 lg:text-[18px] md:text-[13px] text-[12px] font-normal font-[montserrat]"
                                                style="word-spacing: 3px;">
                                                 {!! $choos->f_1_msg !!}
                                             </p>
@@ -124,7 +124,7 @@
                                         <li>
                                             <h2 class="uppercase lg:text-[30px] md:text-[25px]  sm:text-[20px] text-[20px] text-white font-bold">
                                                 {{$choos->f_2_title}}</h2>
-                                            <p class="text-white lg:leading-7 md:leading-2 lg:text-[18px] md:text-[13px] text-[12px] font-normal font-[roboto]"
+                                            <p class="text-white lg:leading-7 md:leading-2 lg:text-[18px] md:text-[13px] text-[12px] font-normal font-[montserrat]"
                                                style="word-spacing: 3px;">
                                                 {!! $choos->f_2_msg !!}
                                             </p>
@@ -157,7 +157,7 @@
                 <div class="w-full flex flex-col items-center gap-6 py-[5px]">
                     <h2 class="lg:text-[50px] md:text-[40px] sm:text-[35px] text-[30px] text-[#EEB21C] font-bold">{{ $logo->title }}</h2>
                     <div class="max-w-[600px]">
-                        <p class="text-black lg:leading-7 md:leading-2 lg:text-[16px] md:text-[13px] text-[12px] font-medium font-[roboto] text-center"
+                        <p class="text-black lg:leading-7 md:leading-2 lg:text-[16px] md:text-[13px] text-[12px] font-medium font-[montserrat] text-center"
                            style="word-spacing: 10px;">{{ $logo->msg }}</p>
                     </div>
                     <div class="swiffy-slider slider-nav-autoplay slider-item-show3">
@@ -199,12 +199,12 @@
                             <li class="w-full  relative">
                                 <div class="bg-white flex flex-col  p-4">
                                     <i class="fa-solid fa-quote-left text-[#eeb21c] text-[30px]"></i>
-                                    <p class="text-black  text-[14px] font-normal font-[roboto] mt-2"
+                                    <p class="text-black  text-[14px] font-normal font-[montserrat] mt-2"
                                        style="word-spacing: 10px;">
                                         {{$testimonial->msg}}
 
                                     </p>
-                                    <h6 class="text-black font-bold font-[roboto] mt-2">{{$testimonial->name}}</h6>
+                                    <h6 class="text-black font-bold font-[montserrat] mt-2">{{$testimonial->name}}</h6>
                                     <div>
                                         <i class="fa fa-star text-[#eeb21c] text-sm"></i>
                                         <i class="fa fa-star text-[#eeb21c] text-sm"></i>
@@ -249,16 +249,16 @@
                             <ul class="flex flex-col gap-4 lg:pl-32 md:pl-32 pl-8"
                                 style="list-style-image: url({{asset('asset/images/Arrow.png')}});">
                                 <li>
-                                    <p class="text-black lg:leading-7 md:leading-2 lg:text-[24px] md:text-[13px] text-[12px] font-bold font-[roboto]"
+                                    <p class="text-black lg:leading-7 md:leading-2 lg:text-[24px] md:text-[13px] text-[12px] font-bold font-[montserrat]"
                                        style="word-spacing: 3px;">Flawless color match</p>
                                 </li>
                                 <li>
-                                    <p class="text-black lg:leading-7 md:leading-2 lg:text-[24px] md:text-[13px] text-[12px] font-bold font-[roboto]"
+                                    <p class="text-black lg:leading-7 md:leading-2 lg:text-[24px] md:text-[13px] text-[12px] font-bold font-[montserrat]"
                                        style="word-spacing: 3px;">Insurance-safe
                                     </p>
                                 </li>
                                 <li>
-                                    <p class="text-black lg:leading-7 md:leading-2 lg:text-[24px] md:text-[13px] text-[12px] font-bold font-[roboto]"
+                                    <p class="text-black lg:leading-7 md:leading-2 lg:text-[24px] md:text-[13px] text-[12px] font-bold font-[montserrat]"
                                        style="word-spacing: 3px;">Professionally certified technicians</p>
                                 </li>
 

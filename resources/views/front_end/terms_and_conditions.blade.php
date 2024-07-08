@@ -52,32 +52,32 @@
                                 class="text-[#15AEF1]">Our Terms and Conditions</span></h2>
 
 
-                        <p class="text-black lg:leading-7 md:leading-2 lg:text-[18px] md:text-[13px] text-[12px] font-normal font-[roboto]"
+                        <p class="text-black lg:leading-7 md:leading-2 lg:text-[18px] md:text-[13px] text-[12px] font-normal font-[montserrat]"
                            style="word-spacing: 10px;">
                            <strong class="text-[#15AEF1]"> Cookies:</strong> By browsing our website, Mobile Smash Repair, you consent to our use of cookies as described in our privacy policy.
                         </p>
-                        <p class="text-black lg:leading-7 md:leading-2 lg:text-[18px] md:text-[13px] text-[12px] font-normal font-[roboto]"
+                        <p class="text-black lg:leading-7 md:leading-2 lg:text-[18px] md:text-[13px] text-[12px] font-normal font-[montserrat]"
                            style="word-spacing: 10px;">
                             <strong class="text-[#15AEF1]"> Copyright:</strong> All content on Mobile Smash Repair is owned by Mobile Smash Repair or its licensors and is protected under copyright law.
                         </p>
-                        <p class="text-black lg:leading-7 md:leading-2 lg:text-[18px] md:text-[13px] text-[12px] font-normal font-[roboto]"
+                        <p class="text-black lg:leading-7 md:leading-2 lg:text-[18px] md:text-[13px] text-[12px] font-normal font-[montserrat]"
                            style="word-spacing: 10px;">
                             <strong class="text-[#15AEF1]"> Restrictions:</strong> You are prohibited from republishing, reproducing, duplicating, selling, or renting any material from
                             <a href="www.mobilesmashrepair.com" class="text-[#15AEF1]">www.mobilesmashrepair.com</a>
                         </p>
-                        <p class="text-black lg:leading-7 md:leading-2 lg:text-[18px] md:text-[13px] text-[12px] font-normal font-[roboto]"
+                        <p class="text-black lg:leading-7 md:leading-2 lg:text-[18px] md:text-[13px] text-[12px] font-normal font-[montserrat]"
                            style="word-spacing: 10px;">
                             <strong class="text-[#15AEF1]"> Linking Terms:</strong> We reserve the right to request the removal of any links to our website at our discretion. By continuing to link to our website, you agree to comply with these terms.
                         </p>
-                        <p class="text-black lg:leading-7 md:leading-2 lg:text-[18px] md:text-[13px] text-[12px] font-normal font-[roboto]"
+                        <p class="text-black lg:leading-7 md:leading-2 lg:text-[18px] md:text-[13px] text-[12px] font-normal font-[montserrat]"
                            style="word-spacing: 10px;">
                             <strong class="text-[#15AEF1]"> IFrames:</strong> You are not permitted to create frames around our web pages or use techniques that alter the visual presentation of our website without prior written approval.
                         </p>
-                        <p class="text-black lg:leading-7 md:leading-2 lg:text-[18px] md:text-[13px] text-[12px] font-normal font-[roboto]"
+                        <p class="text-black lg:leading-7 md:leading-2 lg:text-[18px] md:text-[13px] text-[12px] font-normal font-[montserrat]"
                            style="word-spacing: 10px;">
                             <strong class="text-[#15AEF1]"> Link Removal:</strong> If you find any objectionable links on our website, please notify us. While we may consider removing them, we are not obligated to do so.
                         </p>
-                        <p class="text-black lg:leading-7 md:leading-2 lg:text-[18px] md:text-[13px] text-[12px] font-normal font-[roboto]"
+                        <p class="text-black lg:leading-7 md:leading-2 lg:text-[18px] md:text-[13px] text-[12px] font-normal font-[montserrat]"
                            style="word-spacing: 10px;">
                             <strong class="text-[#15AEF1]"> Accuracy Disclaimer:</strong> Although we strive to ensure the accuracy and completeness of the information on our website, we cannot guarantee it and cannot promise uninterrupted availability.
                         </p>

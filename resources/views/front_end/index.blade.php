@@ -59,8 +59,8 @@
                             <img src="{{asset('storage/'.$aboutUs->image)}}" alt="">
                         </div>
 
-                        <p class="text-black lg:leading-7 md:leading-2 lg:text-[18px] md:text-[13px] text-[12px] font-medium font-[roboto]"
-                           style="word-spacing: 10px;">
+                        <p class="text-black lg:leading-7 md:leading-2 lg:text-[18px] md:text-[13px] text-[12px] font-medium font-[montserrat]"
+                            style="font-family: montserrat;">
                             {!! $aboutUs->description !!}
                         </p>
 
@@ -94,8 +94,8 @@
                 {{$title->title}}
                 </h2>
                 <div class="max-w-[600px]">
-                    <p class="text-black lg:leading-7 md:leading-2 lg:text-[16px] md:text-[13px] text-[12px] font-medium font-[roboto] text-center"
-                       style="word-spacing: 10px;">
+                    <p class="text-black lg:leading-7 md:leading-2 lg:text-[16px] md:text-[13px] text-[12px] font-medium font-[montserrat] text-center"
+                       >
                        {!! $title->msg !!}
                     </p>
                 </div>
@@ -127,8 +127,8 @@
                                 {{$service->heading}}
 
                             </h2>
-                            <p class="text-black lg:leading-7 md:leading-2 lg:text-[16px] md:text-[13px] text-[12px] font-medium font-[roboto] text-center"
-                               style="word-spacing: 10px;">
+                            <p class="text-black lg:leading-7 md:leading-2 lg:text-[16px] md:text-[13px] text-[12px] font-medium font-[montserrat] text-center"
+                               >
                                 {!! $shortDescription !!} ...
                             </p>
 
@@ -176,8 +176,8 @@
                                             <img src="{{asset('storage/'.$plans->image)}}" alt="">
                                             <h2 class="uppercase lg:text-[30px] md:text-[25px] text-center sm:text-[20px] text-[15px] text-white font-bold">
                                                 {{$plans->title}}</h2>
-                                            <p class="text-white lg:leading-7 md:leading-2 lg:text-[16px] md:text-[13px] text-[12px] font-medium font-[roboto] text-center"
-                                               style="word-spacing: 10px;">
+                                            <p class="text-white lg:leading-7 md:leading-2 lg:text-[16px] md:text-[13px] text-[12px] font-medium font-[montserrat] text-center"
+                                               >
                                                 {!! $plans->msg !!}
                                             </p>
 
@@ -194,8 +194,8 @@
 
                         <h2 class="uppercase lg:text-[30px] md:text-[25px] text-center sm:text-[20px] text-[15px] text-white font-bold">
                             {{$plans->title}}</h2>
-                        <p class="text-white lg:leading-7 md:leading-2 lg:text-[16px] md:text-[13px] text-[12px] font-medium font-[roboto] text-center"
-                           style="word-spacing: 10px;">
+                        <p class="text-white lg:leading-7 md:leading-2 lg:text-[16px] md:text-[13px] text-[12px] font-medium font-[montserrat] text-center"
+                           >
                             {!! $plans->msg !!}
                         </p>
 
@@ -213,8 +213,8 @@
                                 <img src="{{asset('storage/'.$plans->image)}}" alt="">
                                 <h2 class="uppercase lg:text-[30px] md:text-[25px] text-center sm:text-[20px] text-[15px] text-white font-bold">
                                     {{$plans->title}}</h2>
-                                <p class="text-white lg:leading-7 md:leading-2 lg:text-[16px] md:text-[13px] text-[12px] font-medium font-[roboto] text-center"
-                                   style="word-spacing: 10px;">
+                                <p class="text-white lg:leading-7 md:leading-2 lg:text-[16px] md:text-[13px] text-[12px] font-medium font-[montserrat] text-center"
+                                   >
                                     {!! $plans->msg !!}
                                 </p>
 
@@ -238,8 +238,8 @@
                 <div class="w-full flex flex-col items-center gap-6 py-[5px]">
                     <h2 class="lg:text-[50px] md:text-[40px] sm:text-[35px] text-[30px] text-[#EEB21C] font-bold">{{ $logo->title }}</h2>
                     <div class="max-w-[600px]">
-                        <p class="text-black lg:leading-7 md:leading-2 lg:text-[16px] md:text-[13px] text-[12px] font-medium font-[roboto] text-center"
-                           style="word-spacing: 10px;">{{ $logo->msg }}</p>
+                        <p class="text-black lg:leading-7 md:leading-2 lg:text-[16px] md:text-[13px] text-[12px] font-medium font-[montserrat] text-center"
+                           >{{ $logo->msg }}</p>
                     </div>
                     <div class="swiffy-slider slider-nav-autoplay slider-item-show3">
                         <ul class="slider-container">
@@ -269,9 +269,9 @@
     {{--our clients section start here--}}
     <div class="w-full  relative py-6">
         <div class="w-full  flex justify-center">
-            <div class=" w-full flex flex-col items-center gap-6 py-24 px-4" style="background-image: url({{asset('asset/images/Rectangle43.png')}});background-repeat: no-repeat; background-size: cover">
+            <div class=" w-full flex flex-col items-center gap-6 py-4 px-4" style="background-image: url({{asset('asset/images/Rectangle43.png')}});background-repeat: no-repeat; background-size: cover">
                 <h2 class="lg:text-[50px] md:text-[40px] sm:text-[35px] text-[30px] text-white font-bold">WHAT OUR CLIENTS SAY</h2>
-                <div class="swiffy-slider slider-item-show3 slider-nav-dark slider-nav-autoplay mt-12">
+                <div class="swiffy-slider slider-item-show3 slider-nav-dark slider-nav-autoplay mt-6">
                     <ul class="slider-container">
                         {{-- make copy of this li for dynamic slider --}}
                         @foreach($testimonials as $testimonial)
@@ -280,12 +280,11 @@
                         <li class="w-full  relative">
                             <div class="bg-white flex flex-col  p-4">
                                 <i class="fa-solid fa-quote-left text-[#eeb21c] text-[30px]"></i>
-                                <p class="text-black  text-[14px] font-normal font-[roboto] mt-2"
-                                       style="word-spacing: 10px;">
+                                <p class="text-black  text-[14px] font-normal font-[montserrat] mt-2">
                                     {{$testimonial->msg}}
 
                                 </p>
-                                 <h6 class="text-black font-bold font-[roboto] mt-2">{{$testimonial->name}}</h6>
+                                 <h6 class="text-black font-bold font-[montserrat] mt-2">{{$testimonial->name}}</h6>
                                 <div>
                                     <i class="fa fa-star text-[#eeb21c] text-sm"></i>
                                     <i class="fa fa-star text-[#eeb21c] text-sm"></i>
@@ -302,9 +301,6 @@
                         {{--slider copy ends here--}}
 
                         @endforeach
-
-
-
 
 
                     </ul>
@@ -328,8 +324,8 @@
             <div class=" lg:w-[90%] md:w-[90%] sm:w-[90%] w-full w-full flex flex-col items-center py-[5px] px-4">
                 <h2 class="lg:text-[50px] md:text-[40px] sm:text-[35px] text-[30px] text-[#EEB21C] font-bold">POSTS FROM THE BLOG</h2>
                 <div class="max-w-[600px]">
-                    <p class="text-black lg:text-[16px] md:text-[13px] text-[12px] font-medium font-[roboto] text-center"
-                       style="word-spacing: 10px;">See our updates, news and new coming features</p>
+                    <p class="text-black lg:text-[16px] md:text-[13px] text-[12px] font-medium font-[montserrat] text-center"
+                       >See our updates, news and new coming features</p>
                 </div>
                 <div class="swiffy-slider slider-nav-autoplay slider-item-show3 mt-6">
                     <ul class="slider-container">

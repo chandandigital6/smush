@@ -52,40 +52,40 @@
                             class="text-[#15AEF1]">Our Privacy Policies</span></h2>
 
 
-                    <p class="text-black lg:leading-7 md:leading-2 lg:text-[18px] md:text-[13px] text-[12px] font-normal font-[roboto]"
+                    <p class="text-black lg:leading-7 md:leading-2 lg:text-[18px] md:text-[13px] text-[12px] font-normal font-[montserrat]"
                        style="word-spacing: 10px;">
                         At Mobile Smash Repair, safeguarding your privacy is our utmost priority. We do not rent or lease customer data, and our policy is meticulously crafted to protect the personal information collected through
                         <a href="www.mobilesmashrepair.com" class="text-[#15AEF1]">www.mobilesmashrepair.com</a> or directly from you.
                     </p>
-                    <p class="text-black lg:leading-7 md:leading-2 lg:text-[18px] md:text-[13px] text-[12px] font-normal font-[roboto]"
+                    <p class="text-black lg:leading-7 md:leading-2 lg:text-[18px] md:text-[13px] text-[12px] font-normal font-[montserrat]"
                        style="word-spacing: 10px;">
                         We encourage you to review our policy, and please feel free to reach out with any questions or concerns you might have.
                     </p>
-                    <p class="text-black lg:leading-7 md:leading-2 lg:text-[18px] md:text-[13px] text-[12px] font-normal font-[roboto]"
+                    <p class="text-black lg:leading-7 md:leading-2 lg:text-[18px] md:text-[13px] text-[12px] font-normal font-[montserrat]"
                        style="word-spacing: 10px;">
                         <strong class="text-[#15AEF1]"> Personal Information:</strong> We gather various types of personal data, as detailed on our website. If we acquire your information from a third party, we handle it in line with this Privacy Policy.
                     </p>
-                    <p class="text-black lg:leading-7 md:leading-2 lg:text-[18px] md:text-[13px] text-[12px] font-normal font-[roboto]"
+                    <p class="text-black lg:leading-7 md:leading-2 lg:text-[18px] md:text-[13px] text-[12px] font-normal font-[montserrat]"
                        style="word-spacing: 10px;">
                         <strong class="text-[#15AEF1]"> Use of Personal Information:</strong> Your personal data is used for multiple purposes, including marketing, maintaining internal records, and communicating with you.
                     </p>
-                    <p class="text-black lg:leading-7 md:leading-2 lg:text-[18px] md:text-[13px] text-[12px] font-normal font-[roboto]"
+                    <p class="text-black lg:leading-7 md:leading-2 lg:text-[18px] md:text-[13px] text-[12px] font-normal font-[montserrat]"
                        style="word-spacing: 10px;">
                         <strong class="text-[#15AEF1]"> Disclosure of Personal Information:</strong> We may disclose your personal data when necessary to deliver products or services or as required by law. When sharing your information with third parties, we ensure they adhere to our privacy policy.
                     </p>
-                    <p class="text-black lg:leading-7 md:leading-2 lg:text-[18px] md:text-[13px] text-[12px] font-normal font-[roboto]"
+                    <p class="text-black lg:leading-7 md:leading-2 lg:text-[18px] md:text-[13px] text-[12px] font-normal font-[montserrat]"
                        style="word-spacing: 10px;">
                         <strong class="text-[#15AEF1]"> Security and Storage:</strong> We are dedicated to protecting the information you provide.
                     </p>
-                    <p class="text-black lg:leading-7 md:leading-2 lg:text-[18px] md:text-[13px] text-[12px] font-normal font-[roboto]"
+                    <p class="text-black lg:leading-7 md:leading-2 lg:text-[18px] md:text-[13px] text-[12px] font-normal font-[montserrat]"
                        style="word-spacing: 10px;">
                         <strong class="text-[#15AEF1]"> Policy Updates:</strong> We may periodically update this privacy statement to ensure it complies with current regulations. Any changes will be posted on our website.
                     </p>
-                    <p class="text-black lg:leading-7 md:leading-2 lg:text-[18px] md:text-[13px] text-[12px] font-normal font-[roboto]"
+                    <p class="text-black lg:leading-7 md:leading-2 lg:text-[18px] md:text-[13px] text-[12px] font-normal font-[montserrat]"
                        style="word-spacing: 10px;">
                         <strong class="text-[#15AEF1]"> Complaints: </strong> If you believe we have breached Australian Privacy Principles, please contact us via email to lodge a complaint.
                     </p>
-                    <p class="text-black lg:leading-7 md:leading-2 lg:text-[18px] md:text-[13px] text-[12px] font-normal font-[roboto]"
+                    <p class="text-black lg:leading-7 md:leading-2 lg:text-[18px] md:text-[13px] text-[12px] font-normal font-[montserrat]"
                        style="word-spacing: 10px;">
                         <strong class="text-[#15AEF1]"> Email Notifications: </strong> We may use your email address to send you information about special offers, products, or services. You'll only receive emails if you've given us permission, and each email will include an option to unsubscribe from our mailing list.
                     </p>

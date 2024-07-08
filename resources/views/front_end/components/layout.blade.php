@@ -88,7 +88,7 @@
     @endif
 
 </head>
-<body class="font-roboto relative">
+<body class="font-montserrat">
 
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-54PDXK3Z"
@@ -100,8 +100,8 @@
 @include('front_end.components.footer')
 
 <div class="w-max h-max fixed right-4 bottom-4">
-    <a  href="https://wa.me/+61449599000" class="text-[#56eb6c] text-[70px] hover:text-[#eeb21c] transition ease-in duration-2000 "><i
-            class="fa-brands fa-whatsapp"></i>
+    <a  href="https://wa.me/+61449599000" class="text-[#56eb6c] text-[70px] hover:text-[#eeb21c] transition ease-in duration-2000 ">
+        <img src="{{asset('asset/img/icon/whatsapp.png')}}" alt="" style="width: 80px; height: auto;">
     </a>
 </div>
 

@@ -55,7 +55,7 @@
                     <h2 class="uppercase font-bold text-[#15AEF1] lg:text-5xl md:text-4xl text-3xl">
                         {{ $blogs->title }}
                     </h2>
-                    <p class="text-gray-800 lg:leading-8 md:leading-7 lg:text-lg md:text-base text-sm font-medium font-roboto" style="word-spacing: 2px;">
+                    <p class="text-gray-800 lg:leading-8 md:leading-7 lg:text-lg md:text-base text-sm font-medium font-montserrat" style="word-spacing: 2px;">
                         {!! $blogs->description !!}
                     </p>
                     <div class="flex flex-col gap-2">

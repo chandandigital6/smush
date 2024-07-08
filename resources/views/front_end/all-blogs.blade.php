@@ -44,7 +44,7 @@
             <div class=" lg:w-[90%] md:w-[90%] sm:w-[90%] w-full w-full flex flex-col items-center py-[5px] px-4">
                 <h2 class="lg:text-[50px] md:text-[40px] sm:text-[35px] text-[30px] text-[#EEB21C] font-bold">POSTS FROM THE BLOG</h2>
                 <div class="max-w-[600px]">
-                    <p class="text-black lg:text-[16px] md:text-[13px] text-[12px] font-medium font-[roboto] text-center"
+                    <p class="text-black lg:text-[16px] md:text-[13px] text-[12px] font-medium font-[montserrat] text-center"
                        style="word-spacing: 10px;">See our updates, news and new coming features</p>
                 </div>
 

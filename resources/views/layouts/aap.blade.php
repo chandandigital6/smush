@@ -31,6 +31,8 @@
     <!-- Google Font: Source Sans Pro -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 
+    <script src="https://cdn.tailwindcss.com"></script>
+
         <style>
         .nav-item a.active {
             color: #ffffff !important; /* Change color to your desired highlight color */
@@ -124,7 +126,7 @@
 <script src="{{asset('asset/dist/js/demo.js')}}"></script>
 
 
-{{--<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>--}}
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
     $(document).ready(function(){
         var currentUrl = window.location.href;
@@ -137,11 +139,8 @@
         });
     });
 
-</script>
-<script>
     $(document).ready(function(){
         var currentUrl = window.location.href;
-
         $(".nav-item a").each(function(){
             if ($(this).attr("href") == currentUrl) {
                 var pageTitle = $(this).text();
@@ -150,6 +149,7 @@
         });
     });
 </script>
+
 
 </body>
 

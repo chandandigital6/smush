@@ -2,7 +2,6 @@
 
 @section('content')
 
-
     <div class="container mt-5">
         <div class="row justify-content-center">
             <div class="col-md-12">
@@ -73,8 +72,10 @@
                                             @endif
                                         </td>
                                         <td>
-                                            <a href="{{ route('appointment.delete', $appointment->id) }}" class="btn btn-danger">Delete</a>
-                                            <a href="{{ route('appointment.duplicate', $appointment->id) }}" class="btn btn-warning">show</a>
+                                            <div class="btn-group">
+                                                <a href="{{ route('appointment.delete', $appointment->id) }}" class="btn btn-danger">Delete</a>
+                                                <a href="{{ route('appointment.duplicate', $appointment->id) }}" class="btn btn-warning">show</a>
+                                            </div>
                                         </td>
                                     </tr>
                                 @empty
