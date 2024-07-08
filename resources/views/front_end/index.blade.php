@@ -60,7 +60,7 @@
                         </div>
 
                         <p class="text-black lg:leading-7 md:leading-2 lg:text-[18px] md:text-[13px] text-[12px] font-medium font-[montserrat]"
-                            style="font-family: montserrat;">
+                            style="font-family: montserrat!important;">
                             {!! $aboutUs->description !!}
                         </p>
 

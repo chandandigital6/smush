@@ -95,7 +95,7 @@ class ServiceController extends Controller
         $services=Service::where('status' ,1)->get();
 //        $serviceGallery = ServiceGallery::where('service_id', $service->id)->get();
         $serviceGallery = ServiceGallery::where('service_id', $service->id)
-            ->where('status', '1')
+//            ->where('status', '1')
             ->get();
 //     dd($serviceGallery);
         $serviceVideo= ServiceVideo::where('service_id', $service->id)->where('status', '1')
