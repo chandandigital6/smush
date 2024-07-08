@@ -102,7 +102,7 @@ class ServiceController extends Controller
 //            ->where('status', '1')
             ->get();
         $serviceChooseUs=ServiceChoose::where('service_id', $service->id)
-            ->where('status', '1')
+//            ->where('status', '1')
             ->get();
 //        dd($chooseUs);
         $seos= Seo::where('service_id', $service->id)->get();
