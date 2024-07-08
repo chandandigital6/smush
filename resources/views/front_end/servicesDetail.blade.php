@@ -89,7 +89,7 @@
 
         <div class="w-full flex justify-center">
             <div
-                class="lg:w-[90%] md:w-[80%] sm:w-[90%] w-full grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-4 py-[5px]">
+                class="lg:w-[90%] md:w-[90%] sm:w-[90%] w-full grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-4 py-[5px]">
                 <div class="w-full flex flex-col gap-6 p-2">
                     <h2 class="uppercase font-bold lg:text-[40px] md:text-[30px] text-[25px]"> <span
                             class="text-[#15AEF1]">{{$service->heading}}</span></h2>
@@ -120,7 +120,7 @@
     <div class="w-full  relative  bg-no-repeat bg-center bg-cover"
          style="background-image: url({{asset('asset/images/Rectangle79.png')}})">
         <div class="w-full flex justify-center bg-[#eeb21ce8]">
-            <div class="lg:w-[80%] md:w-[90%] sm:w-[90%] w-full flex flex-col items-center gap-4 pt-[5px] px-4 py-2">
+            <div class="lg:w-[90%] md:w-[90%] sm:w-[90%] w-full flex flex-col items-center gap-4 pt-[5px] px-4 py-2">
                 <div class="w-full flex flex-col items-center px-2">
                     <h2 class="uppercase lg:text-[35px] md:text-[30px] text-center sm:text-[25px] text-[20px] text-black font-bold">
                         Contact us for a FREE smash</h2>
@@ -193,7 +193,7 @@
             @foreach($serviceChooseUs as $choos)
 
 
-                <div class="lg:w-[80%] md:w-[80%] sm:w-[90%] w-full rounded-[50px]"
+                <div class="lg:w-[90%] md:w-[90%] sm:w-[90%] w-full rounded-[50px]"
                      style="background-image: url({{asset('asset/images/Rectangle56.png')}});box-shadow: 0px 0px 10px 1px #25a8df">
                     <div class="w-full flex flex-col items-center gap-2 p-2 bg-[#25a8df]/90 rounded-[50px]">
                         <h2 class=" lg:text-[45px] md:text-[40px] text-center sm:text-[35px] text-[25px] text-white font-bold">
@@ -258,7 +258,7 @@
     <div class="w-full  relative py-6 rounded-t-[50px]"
          style="background-image: url({{asset('asset/images/bac.png')}});">
         <div class="w-full px-4 flex justify-center">
-            <div class="lg:w-[80%] md:w-[80%] sm:w-[90%] w-full flex flex-col items-center gap-6 py-[5px]">
+            <div class="lg:w-[90%] md:w-[90%] sm:w-[90%] w-full flex flex-col items-center gap-6 py-[5px]">
                 <h2 class="lg:text-[50px] md:text-[40px] sm:text-[35px] text-[30px] text-[#EEB21C] font-bold">OTHER SERVICES</h2>
                 <div class="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 grid-cols-1 gap-4">
                         @foreach($services->take(6) as $service)
@@ -309,7 +309,7 @@
 
     <div class="w-full  relative py-6">
         <div class="w-full px-4 flex justify-center">
-            <div class="lg:w-[80%] md:w-[80%] sm:w-[90%] w-full">
+            <div class="lg:w-[90%] md:w-[90%] sm:w-[90%] w-full">
                 <div class="w-full grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-4 mt-6">
                     <div class="flex flex-col gap-2">
                         <div class="flex gap-4">
