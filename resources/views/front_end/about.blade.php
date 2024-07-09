@@ -121,7 +121,7 @@
 
 
             <div class="lg:w-[90%] md:w-[90%] sm:w-[90%] w-full rounded-[50px]"
-                 style="background-image: url({{asset('asset/images/Rectangle56.png')}});box-shadow: 0px 0px 10px 1px #25a8df">
+                 style="background-image: url({{asset('asset/images/Rectangle56.jpg')}});box-shadow: 0px 0px 10px 1px #25a8df">
                 <div class="w-full flex flex-col items-center gap-2 p-2 bg-[#25a8df]/90 rounded-[50px]">
                     <h2 class=" lg:text-[45px] md:text-[40px] text-center sm:text-[35px] text-[25px] text-white font-bold">
                         {{$choos->title}}</h2>
