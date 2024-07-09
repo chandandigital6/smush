@@ -6,7 +6,7 @@
         <ul class="slider-container">
             <li class="w-full relative">
                 <!-- Image height remains unchanged -->
-                <img src="{{ asset('asset/images/image2.png') }}" class="w-full lg:h-[600px] md:h-[550px] sm:h-[500px] h-[400px] object-cover">
+                <img src="{{ asset('asset/images/image2.jpg') }}" class="w-full lg:h-[600px] md:h-[550px] sm:h-[500px] h-[400px] object-cover">
                 <div class="absolute top-0 left-0 w-full h-full bg-black/70 flex justify-center items-center px-4">
                     <div class="container mx-auto flex flex-col lg:flex-row items-center justify-between gap-6 px-4">
                         <div class="w-full lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left">
@@ -87,7 +87,7 @@
 
     {{--about section start here--}}
     <div class="w-full  relative lg:pt-[250px] md:pt-[200px] sm:pt-[180px] pt-[100px]"
-         style="background-image: url({{asset('asset/images/bac.png')}})">
+         style="background-image: url()">
 
         @include('front_end.components.carSection')
 
