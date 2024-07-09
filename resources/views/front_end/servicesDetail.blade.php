@@ -176,6 +176,56 @@
     {{--stats section ends here    --}}
 
 
+    {{--our clients section start here--}}
+    <div class="w-full  relative py-6">
+        <div class="w-full  flex justify-center">
+            <div class=" w-full flex flex-col items-center gap-6 py-4 px-4" style="background-image: url({{asset('asset/images/Rectangle43.jpg')}});background-repeat: no-repeat; background-size: cover">
+                <h2 class="lg:text-[50px] md:text-[40px] sm:text-[35px] text-[30px] text-white font-bold">WHAT OUR CLIENTS SAY</h2>
+                <div class="swiffy-slider slider-item-show3 slider-nav-dark slider-nav-autoplay mt-6">
+                    <ul class="slider-container">
+                        {{-- make copy of this li for dynamic slider --}}
+                        @foreach($testimonials as $testimonial)
+
+
+                            <li class="w-full  relative">
+                                <div class="bg-white flex flex-col  p-4">
+                                    <i class="fa-solid fa-quote-left text-[#eeb21c] text-[30px]"></i>
+                                    <p class="text-black  text-[14px] font-normal font-[montserrat] mt-2">
+                                        {{$testimonial->msg}}
+
+                                    </p>
+                                    <h6 class="text-black font-bold font-[montserrat] mt-2">{{$testimonial->name}}</h6>
+                                    <div>
+                                        <i class="fa fa-star text-[#eeb21c] text-sm"></i>
+                                        <i class="fa fa-star text-[#eeb21c] text-sm"></i>
+                                        <i class="fa fa-star text-[#eeb21c] text-sm"></i>
+                                        <i class="fa fa-star text-[#eeb21c] text-sm"></i>
+                                        <i class="fa fa-star text-[#eeb21c] text-sm"></i>
+                                    </div>
+
+                                    <div class="w-full h-4 mt-6 mb-4 bg-[#eeb21c]">
+
+                                    </div>
+                                </div>
+                            </li>
+                            {{--slider copy ends here--}}
+
+                        @endforeach
+
+
+                    </ul>
+
+                    <button type="button" class="slider-nav"></button>
+                    <button type="button" class="slider-nav slider-nav-next"></button>
+
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    {{--our clients section ends here    --}}
 
 
 {{--    about --}}

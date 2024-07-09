@@ -277,28 +277,28 @@
                         @foreach($testimonials as $testimonial)
 
 
-                        <li class="w-full  relative">
-                            <div class="bg-white flex flex-col  p-4">
-                                <i class="fa-solid fa-quote-left text-[#eeb21c] text-[30px]"></i>
-                                <p class="text-black  text-[14px] font-normal font-[montserrat] mt-2">
-                                    {{$testimonial->msg}}
+                            <li class="w-full  relative">
+                                <div class="bg-white flex flex-col  p-4">
+                                    <i class="fa-solid fa-quote-left text-[#eeb21c] text-[30px]"></i>
+                                    <p class="text-black  text-[14px] font-normal font-[montserrat] mt-2">
+                                        {{$testimonial->msg}}
 
-                                </p>
-                                 <h6 class="text-black font-bold font-[montserrat] mt-2">{{$testimonial->name}}</h6>
-                                <div>
-                                    <i class="fa fa-star text-[#eeb21c] text-sm"></i>
-                                    <i class="fa fa-star text-[#eeb21c] text-sm"></i>
-                                    <i class="fa fa-star text-[#eeb21c] text-sm"></i>
-                                    <i class="fa fa-star text-[#eeb21c] text-sm"></i>
-                                    <i class="fa fa-star text-[#eeb21c] text-sm"></i>
+                                    </p>
+                                    <h6 class="text-black font-bold font-[montserrat] mt-2">{{$testimonial->name}}</h6>
+                                    <div>
+                                        <i class="fa fa-star text-[#eeb21c] text-sm"></i>
+                                        <i class="fa fa-star text-[#eeb21c] text-sm"></i>
+                                        <i class="fa fa-star text-[#eeb21c] text-sm"></i>
+                                        <i class="fa fa-star text-[#eeb21c] text-sm"></i>
+                                        <i class="fa fa-star text-[#eeb21c] text-sm"></i>
+                                    </div>
+
+                                    <div class="w-full h-4 mt-6 mb-4 bg-[#eeb21c]">
+
+                                    </div>
                                 </div>
-
-                                <div class="w-full h-4 mt-6 mb-4 bg-[#eeb21c]">
-
-                                </div>
-                            </div>
-                        </li>
-                        {{--slider copy ends here--}}
+                            </li>
+                            {{--slider copy ends here--}}
 
                         @endforeach
 
