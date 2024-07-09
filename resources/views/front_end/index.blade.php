@@ -83,7 +83,7 @@
 
     {{--what we offer section start here--}}
     <div class="w-full  relative py-6 rounded-t-[50px]"
-         style="background-image: url({{asset('asset/images/bac.png')}});box-shadow: 0px 0px 20px 1px #15aef173">
+         style="background-image: url();box-shadow: 0px 0px 20px 1px #15aef173">
         <div class="w-full px-4 flex justify-center">
             @foreach($serviceTitle as $title)
 
