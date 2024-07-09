@@ -327,7 +327,7 @@
                     <p class="text-black lg:text-[16px] md:text-[16px] text-[16px] font-medium font-[montserrat] text-center"
                        >See our updates, news and new coming features</p>
                 </div>
-                <div class="swiffy-slider slider-nav-autoplay slider-item-show3 mt-6">
+                <div class="swiffy-slider  slider-item-show3 mt-6">
                     <ul class="slider-container">
                         {{-- make copy of this li for dynamic slider --}}
                         @foreach($blog as $blogs)
