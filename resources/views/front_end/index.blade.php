@@ -176,7 +176,7 @@
                                             <img src="{{asset('storage/'.$plans->image)}}" alt="">
                                             <h2 class="uppercase lg:text-[30px] md:text-[25px] text-center sm:text-[20px] text-[15px] text-white font-bold">
                                                 {{$plans->title}}</h2>
-                                            <p class="text-white lg:leading-7 md:leading-2 lg:text-[16px] md:text-[13px] text-[12px] font-medium font-[montserrat] text-center"
+                                            <p class="text-white lg:leading-7 md:leading-2 lg:text-[16px] md:text-[16px] text-[16px] font-medium font-[montserrat] text-center"
                                                >
                                                 {!! $plans->msg !!}
                                             </p>
@@ -194,7 +194,7 @@
 
                         <h2 class="uppercase lg:text-[30px] md:text-[25px] text-center sm:text-[20px] text-[15px] text-white font-bold">
                             {{$plans->title}}</h2>
-                        <p class="text-white lg:leading-7 md:leading-2 lg:text-[16px] md:text-[13px] text-[12px] font-medium font-[montserrat] text-center"
+                        <p class="text-white lg:leading-7 md:leading-2 lg:text-[16px] md:text-[16px] text-[16px] font-medium font-[montserrat] text-center"
                            >
                             {!! $plans->msg !!}
                         </p>
@@ -213,7 +213,7 @@
                                 <img src="{{asset('storage/'.$plans->image)}}" alt="">
                                 <h2 class="uppercase lg:text-[30px] md:text-[25px] text-center sm:text-[20px] text-[15px] text-white font-bold">
                                     {{$plans->title}}</h2>
-                                <p class="text-white lg:leading-7 md:leading-2 lg:text-[16px] md:text-[13px] text-[12px] font-medium font-[montserrat] text-center"
+                                <p class="text-white lg:leading-7 md:leading-2 lg:text-[16px] md:text-[16px] text-[16px] font-medium font-[montserrat] text-center"
                                    >
                                     {!! $plans->msg !!}
                                 </p>
@@ -238,7 +238,7 @@
                 <div class="w-full flex flex-col items-center gap-6 py-[5px]">
                     <h2 class="lg:text-[50px] md:text-[40px] sm:text-[35px] text-[30px] text-[#EEB21C] font-bold">{{ $logo->title }}</h2>
                     <div class="max-w-[600px]">
-                        <p class="text-black lg:leading-7 md:leading-2 lg:text-[16px] md:text-[13px] text-[12px] font-medium font-[montserrat] text-center"
+                        <p class="text-black lg:leading-7 md:leading-2 lg:text-[16px] md:text-[16px] text-[16px] font-medium font-[montserrat] text-center"
                            >{{ $logo->msg }}</p>
                     </div>
                     <div class="swiffy-slider  slider-item-show3">
@@ -324,7 +324,7 @@
             <div class=" lg:w-[90%] md:w-[90%] sm:w-[90%] w-full w-full flex flex-col items-center py-[5px] px-4">
                 <h2 class="lg:text-[50px] md:text-[40px] sm:text-[35px] text-[30px] text-[#EEB21C] font-bold">POSTS FROM THE BLOG</h2>
                 <div class="max-w-[600px]">
-                    <p class="text-black lg:text-[16px] md:text-[13px] text-[12px] font-medium font-[montserrat] text-center"
+                    <p class="text-black lg:text-[16px] md:text-[16px] text-[16px] font-medium font-[montserrat] text-center"
                        >See our updates, news and new coming features</p>
                 </div>
                 <div class="swiffy-slider slider-nav-autoplay slider-item-show3 mt-6">
