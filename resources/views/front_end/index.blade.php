@@ -41,7 +41,7 @@
 
     {{--about section start here--}}
     <div class="w-full  relative lg:pt-[250px] md:pt-[200px] sm:pt-[180px] pt-[100px]"
-         style="background-image: url({{asset('asset/images/bac.png')}})">
+         style="background-image: url()">
         @include('front_end.components.carSection')
 
 
