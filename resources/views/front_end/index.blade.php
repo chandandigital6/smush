@@ -269,7 +269,7 @@
     {{--our clients section start here--}}
     <div class="w-full  relative py-6">
         <div class="w-full  flex justify-center">
-            <div class=" w-full flex flex-col items-center gap-6 py-4 px-4" style="background-image: url({{asset('asset/images/Rectangle43.png')}});background-repeat: no-repeat; background-size: cover">
+            <div class=" w-full flex flex-col items-center gap-6 py-4 px-4" style="background-image: url({{asset('asset/images/Rectangle43.jpg')}});background-repeat: no-repeat; background-size: cover">
                 <h2 class="lg:text-[50px] md:text-[40px] sm:text-[35px] text-[30px] text-white font-bold">WHAT OUR CLIENTS SAY</h2>
                 <div class="swiffy-slider slider-item-show3 slider-nav-dark slider-nav-autoplay mt-6">
                     <ul class="slider-container">

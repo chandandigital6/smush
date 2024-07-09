@@ -6,7 +6,7 @@
         <ul class="slider-container">
             {{-- make copy of this li for dynamic slider --}}
             <li class="w-full  relative">
-                <img src="{{asset('asset/images/image2.png')}}"
+                <img src="{{asset('asset/images/image2.jpg')}}"
                      class="w-full lg:h-[550px] md:h-[500px] sm:h-[400px] h-[300px] object-cover">
                 <div class="absolute top-0 left-0 w-full h-full bg-black/70 flex justify-center items-center px-4">
                     <div class="w-max h-max flex flex-col items-center gap-4">
