@@ -2,83 +2,87 @@
 @section('content')
 
     {{--slider section start here--}}
-    <div class="swiffy-slider " id="top-inquiry-form">
-        <ul class="slider-container" >
-            {{-- make copy of this li for dynamic slider --}}
-            <li class="w-full  relative">
-                <img src="{{asset('asset/images/image2.png')}}"
-                     class="w-full lg:h-[500px] md:h-[450px] sm:h-[400px] h-[300px] object-cover">
+    <div class="swiffy-slider" id="top-inquiry-form" style="width: 100%;">
+        <ul class="slider-container">
+            <li class="w-full relative">
+                <!-- Image height remains unchanged -->
+                <img src="{{ asset('asset/images/image2.png') }}" class="w-full lg:h-[600px] md:h-[550px] sm:h-[500px] h-[400px] object-cover">
                 <div class="absolute top-0 left-0 w-full h-full bg-black/70 flex justify-center items-center px-4">
-                    <div class="w-max h-max flex flex-col gap-4 items-center text-center">
-                        <span class="uppercase text-[#EEB21C] text-[22px] font-bold">ANY KIND OF CAR YOU WILL GET</span>
-                        <div class="w-full max-w-lg">
-                            <p class="uppercase text-white font-bold text-[5vw] lg:text-[80px] md:text-[60px] sm:text-[40px] text-[30px]">
-                                {{$service->heading}}
-                            </p>
+                    <div class="container mx-auto flex flex-col lg:flex-row items-center justify-between gap-6 px-4">
+                        <div class="w-full lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left">
+                            <div class="flex flex-col gap-4">
+
+                                <span class="uppercase text-white lg:text-[40px] text-[20px] font-bold">ANY KIND OF CAR YOU WILL GET</span>
+                                <div class="w-full max-w-lg">
+                                    <p class="uppercase text-white font-bold text-[24px] sm:text-[36px] md:text-[50px] lg:text-[70px] text-[4vw]">
+                                        {{ $service->heading }}
+                                    </p>
+                                </div>
+                                <div class="flex gap-4 justify-center lg:justify-start">
+                                    <a href="{{ route('services') }}" class="text-[14px] sm:text-[16px] md:text-[18px] lg:text-[36px] text-white bg-[#eeb21c] px-4 py-1 font-bold rounded-md border-[1px] border-[#eeb21c] hover:bg-white hover:text-[#eeb21c] transition ease-in duration-200"> <!-- Reduced padding and text size -->
+                                        SERVICES
+                                    </a>
+                                    <a href="#top-inquiry-form" class="text-[14px] sm:text-[16px] md:text-[18px] lg:text-[36px] text-white bg-[#15aef1] px-4 py-1 font-bold rounded-md border-[1px] border-[#15aef1] hover:bg-white hover:text-[#15aef1] transition ease-in duration-200"> <!-- Reduced padding and text size -->
+                                        ENQUIRY
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="flex gap-4 justify-center">
-                            <a href="{{route('services')}}"
-                               class="lg:text-[25px] md:text-[20px] text-[14px] text-white bg-[#eeb21c] px-4 lg:py-2 md:py-2 py-1 font-bold rounded-md border-[1px] border-[#eeb21c] hover:bg-white hover:text-[#eeb21c] transition ease-in duration-200">
-                                SERVICES
-                            </a>
-                            <a href="#top-inquiry-form"
-                               class="lg:text-[25px] md:text-[20px] text-[14px] text-white bg-[#15aef1] px-4 lg:py-2 md:py-2 py-1 font-bold rounded-md border-[1px] border-[#15aef1] hover:bg-white hover:text-[#15aef1] transition ease-in duration-200">
-                                ENQUIRY
-                            </a>
+                        <div class="w-full lg:w-1/2 mt-4 lg:mt-0">
+                            <div class="flex flex-col items-center">
+                                <form action="{{ route('appointment.store') }}" method="post" class="mt-2 space-y-3 bg-black/50 rounded-md px-3 py-2" enctype="multipart/form-data"> <!-- Reduced padding -->
+                                    <span class="uppercase text-[#ffffff] text-[18px] lg:text-[26px] text-center font-bold">MAKE YOUR INQUIRY NOW</span> <!-- Reduced text size -->
+                                    <br>
+                                    <span class="uppercase text-[#EEB21C] text-[14px] lg:text-[16px] font-bold">10% off on your first repair + Free Touch ups included</span> <!-- Reduced text size -->
+                                    @csrf
+
+                                    <div class="flex flex-col lg:flex-row gap-2 w-full">
+                                        <div class="flex flex-col gap-1 w-full lg:w-1/2">
+                                            <label for="name" class="text-[#ffffff] text-sm font-normal">Name</label> <!-- Reduced text size -->
+                                            <input type="text" name="name" id="name" placeholder="Your full name" class="text-gray-600 bg-[#ffffff] border-[1px] border-[#ffffff]/70 px-2 py-1 focus:outline-none focus:ring-0 focus:border-[#eeb21c] rounded-md"> <!-- Reduced padding -->
+                                        </div>
+                                        <div class="flex flex-col gap-1 w-full lg:w-1/2">
+                                            <label for="email" class="text-[#ffffff] text-sm font-normal">Email</label> <!-- Reduced text size -->
+                                            <input type="email" name="email" id="email" placeholder="Your Email" class="text-gray-600 bg-[#ffffff] border-[1px] border-[#ffffff]/70 px-2 py-1 focus:outline-none focus:ring-0 focus:border-[#ffffff] rounded-md"> <!-- Reduced padding -->
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-col lg:flex-row gap-2 w-full"> <!-- Reduced gap -->
+                                        <div class="flex flex-col gap-1 w-full lg:w-1/2"> <!-- Reduced gap -->
+                                            <label for="number" class="text-[#ffffff] text-sm font-normal">Mobile Number</label> <!-- Reduced text size -->
+                                            <input type="text" name="number" id="number" placeholder="Your number" class="text-gray-600 bg-[#ffffff] border-[1px] border-[#ffffff]/70 px-2 py-1 focus:outline-none focus:ring-0 focus:border-[#ffffff] rounded-md"> <!-- Reduced padding -->
+                                        </div>
+                                        <div class="flex flex-col gap-1 w-full lg:w-1/2"> <!-- Reduced gap -->
+                                            <label for="car_model" class="text-[#ffffff] text-sm font-normal">Car Model</label> <!-- Reduced text size -->
+                                            <input type="text" name="car_model" id="car_model" placeholder="Your car model" class="text-gray-600 bg-[#ffffff] border-[1px] border-[#ffffff]/70 px-2 py-1 focus:outline-none focus:ring-0 focus:border-[#ffffff] rounded-md"> <!-- Reduced padding -->
+                                        </div>
+                                    </div>
+                                    <div class="w-full flex flex-col gap-1"> <!-- Reduced gap -->
+                                        <label for="car_images" class="text-[#ffffff] text-sm font-normal">Damage Image</label> <!-- Reduced text size -->
+                                        <input type="file" name="car_image[]" id="car_images" class="text-gray-600 bg-[#ffffff] border-[1px] border-[#ffffff]/70 px-2 py-1 focus:outline-none focus:ring-0 focus:border-[#ffffff] rounded-md" multiple accept="image/*"> <!-- Reduced padding -->
+                                        <div id="image-preview" class="mt-1 grid grid-cols-2 gap-1"></div> <!-- Reduced gap -->
+                                    </div>
+                                    <div class="w-full flex flex-col gap-1"> <!-- Reduced gap -->
+                                        <label for="msg" class="text-[#ffffff] text-sm font-normal">Message</label> <!-- Reduced text size -->
+                                        <textarea name="msg" id="msg" placeholder="Your message" rows="2" class="text-gray-600 bg-[#ffffff] border-[1px] border-[#ffffff]/70 px-2 py-1 focus:outline-none focus:ring-0 focus:border-[#ffffff] rounded-md"></textarea> <!-- Reduced padding -->
+                                    </div>
+                                    <div class="w-full flex flex-col gap-1"> <!-- Reduced gap -->
+                                        <button type="submit" class="text-[14px] sm:text-[16px] md:text-[18px] lg:text-[18px] w-max text-white bg-[#eeb21c] px-4 py-1 font-bold rounded-md border-[1px] border-[#ffffff] hover:bg-white hover:text-[#eeb21c] transition ease-in duration-200"> <!-- Reduced text size and padding -->
+                                            Submit
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
-                    </div>
-                    <div class="ml-40 flex flex-col items-center" id="top-inquiry-form">
-                        <span class="uppercase text-[#ffffff] text-[26px] font-bold">MAKE YOUR INQUIRY NOW</span>
-                        <span class="uppercase text-[#EEB21C] text-[20px] font-bold">10% off on your first repair + Free Touch ups included</span>
-                        <form action="{{route('appointment.store')}}" method="post" class="mt-4 grid lg:grid-cols-2 gap-4" enctype="multipart/form-data">
-                            @csrf
-                            <div class="w-full flex flex-col gap-1">
-                                <label for="name" class="text-[#ffffff] text-md font-normal">Name</label>
-                                <input type="text" name="name" id="name" placeholder="Your full name" class="text-gray-600 bg-[#ffffff] border-[1px] border-[#ffffff]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c] rounded-md">
-                            </div>
-                            <div class="w-full flex flex-col gap-1">
-                                <label for="email" class="text-[#ffffff] text-md font-normal">Email</label>
-                                <input type="email" name="email" id="email" placeholder="Your Email" class="text-gray-600 bg-[#ffffff] border-[1px] border-[#ffffff]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#ffffff] rounded-md">
-                            </div>
-                            <div class="w-full flex flex-col gap-1">
-                                <label for="number" class="text-[#ffffff] text-md font-normal">Mobile Number</label>
-                                <input type="text" name="number" id="number" placeholder="Your number" class="text-gray-600 bg-[#ffffff] border-[1px] border-[#ffffff]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#ffffff] rounded-md">
-                            </div>
-                            <div class="w-full flex flex-col gap-1">
-                                <label for="car_model" class="text-[#ffffff] text-md font-normal">Car Model</label>
-                                <input type="text" name="car_model" id="car_model" placeholder="Your car model" class="text-gray-600 bg-[#ffffff] border-[1px] border-[#ffffff]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#ffffff] rounded-md">
-                            </div>
-                            <div class="w-full flex flex-col gap-1">
-                                <label for="car_images" class="text-[#ffffff] text-md font-normal">Damage Image</label>
-                                <input type="file" name="car_image[]" id="car_images" class="text-gray-600 bg-[#ffffff] border-[1px] border-[#ffffff]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#ffffff] rounded-md" multiple accept="image/*">
-                                <div id="image-preview" class="mt-2 grid grid-cols-2 gap-2"></div>
-                            </div>
-                            <div class="w-full flex flex-col gap-1">
-                                <label for="msg" class="text-[#ffffff] text-md font-normal">Message</label>
-                                <textarea name="msg" id="msg" placeholder="Your message" rows="1" class="text-gray-600 bg-[#ffffff] border-[1px] border-[#ffffff]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#ffffff] rounded-md"></textarea>
-                            </div>
-                            <div class="w-full flex flex-col gap-1 ">
-                                <button type="submit" class="lg:text-[20px] md:text-[20px] text-[14px] w-max text-white bg-[#eeb21c] px-8 lg:py-2 md:py-2 py-1 font-bold rounded-md border-[1px] border-[#ffffff] hover:bg-white hover:text-[#eeb21c] transition ease-in duration-200">
-                                    Submit
-                                </button>
-                            </div>
-                        </form>
                     </div>
                 </div>
-
             </li>
-
-
         </ul>
-
-
-
-        {{--        <button type="button" class="slider-nav"></button>--}}
-        {{--        <button type="button" class="slider-nav slider-nav-next"></button>--}}
-
-
     </div>
-    {{--slider section ends here--}}
+    {{--slider section end here--}}
+
+
+
+
 
 
     {{--about section start here--}}
@@ -208,39 +212,36 @@
                                 <img src="{{asset('storage/'.$choos->image)}}" alt="">
                             </div>
                             <div class="flex flex-col gap-4">
-                                <div class="flex gap-2">
-                                    <ul class="flex flex-col gap-8 pl-8"
-                                        style="list-style-image: url({{asset('storage/'.$choos->f_image)}});">
+                                <div class="flex flex-col md:flex-row gap-2">
+                                    <ul class="flex flex-col gap-8 pl-8 list-disc" style="list-style-image: url({{ asset('storage/' . $choos->f_image) }});">
                                         <li>
-                                            <h2 class="uppercase  lg:text-[30px] md:text-[25px]  sm:text-[20px] text-[20px] text-white font-bold">
-                                                {{$choos->f_title}}</h2>
-                                            <p class="text-white lg:leading-7 md:leading-2 lg:text-[18px] md:text-[13px] text-[12px] font-normal font-[montserrat]"
-                                               >
+                                            <h2 class="uppercase text-white font-bold lg:text-[30px] md:text-[25px] sm:text-[20px] text-[20px]">
+                                                {{$choos->f_title}}
+                                            </h2>
+                                            <p class="text-white font-normal lg:text-[18px] md:text-[13px] text-[12px] leading-7 font-[montserrat]">
                                                 {!! $choos->f_msg !!}
-
                                             </p>
-
                                         </li>
                                         <li>
-                                            <h2 class="uppercase lg:text-[30px] md:text-[25px]  sm:text-[20px] text-[20px] text-white font-bold">
-                                                {{$choos->f_1_title}}</h2>
-                                            <p class="text-white lg:leading-7 md:leading-2 lg:text-[18px] md:text-[13px] text-[12px] font-normal font-[montserrat]">
+                                            <h2 class="uppercase text-white font-bold lg:text-[30px] md:text-[25px] sm:text-[20px] text-[20px]">
+                                                {{$choos->f_1_title}}
+                                            </h2>
+                                            <p class="text-white font-normal lg:text-[18px] md:text-[13px] text-[12px] leading-7 font-[montserrat]">
                                                 {!! $choos->f_1_msg !!}
                                             </p>
-
                                         </li>
                                         <li>
-                                            <h2 class="uppercase lg:text-[30px] md:text-[25px]  sm:text-[20px] text-[20px] text-white font-bold">
-                                                {{$choos->f_2_title}}</h2>
-                                            <p class="text-white lg:leading-7 md:leading-2 lg:text-[18px] md:text-[13px] text-[12px] font-normal font-[montserrat]"
-                                               >
+                                            <h2 class="uppercase text-white font-bold lg:text-[30px] md:text-[25px] sm:text-[20px] text-[20px]">
+                                                {{$choos->f_2_title}}
+                                            </h2>
+                                            <p class="text-white font-normal lg:text-[18px] md:text-[13px] text-[12px] leading-7 font-[montserrat]">
                                                 {!! $choos->f_2_msg !!}
                                             </p>
-
                                         </li>
                                     </ul>
                                 </div>
                             </div>
+
                         </div>
 
 
@@ -338,47 +339,57 @@
                             GET FREE ESTIMATE
                         </a>
                     </div>
-
-
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="ml-40 flex flex-col items-center mb-4">
-        <form action="{{route('appointment.store')}}" method="post" class="mt-4 grid lg:grid-cols-2 gap-4" enctype="multipart/form-data">
+    <div class="flex flex-col items-center mb-4">
+        <form action="{{route('appointment.store')}}" method="post" class="mt-4 grid lg:grid-cols-2 gap-2" enctype="multipart/form-data">
             @csrf
             <div class="w-full flex flex-col gap-1">
-                <label for="name" class="text-[#eeb21c] text-md font-normal">Name</label>
-                <input type="text" name="name" id="name" placeholder="Your full name" class="text-gray-600 bg-transparent border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c] rounded-md">
+                <label for="" class="text-[#eeb21c] text-md font-normal">Name</label>
+                <input type="text" name="name" placeholder="Your full name" class="text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]">
             </div>
             <div class="w-full flex flex-col gap-1">
-                <label for="email" class="text-[#eeb21c] text-md font-normal">Email</label>
-                <input type="email" name="email" id="email" placeholder="Your Email" class="text-gray-600 bg-transparent border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c] rounded-md">
+                <label for="" class="text-[#eeb21c] text-md font-normal">Email</label>
+                <input type="email" name="email" placeholder="Your Email" class="text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]">
             </div>
             <div class="w-full flex flex-col gap-1">
-                <label for="number" class="text-[#eeb21c] text-md font-normal">Mobile Number</label>
-                <input type="text" name="number" id="number" placeholder="Your number" class="text-gray-600 bg-transparent border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c] rounded-md">
+                <label for="" class="text-[#eeb21c] text-md font-normal">Mobile Number</label>
+                <input type="number" name="number" placeholder="Your number" class="text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]">
             </div>
+            {{--                        <div class="w-full flex flex-col gap-1">--}}
+            {{--                            <label for="" class="text-[#eeb21c] text-md font-normal"> Any Make</label>--}}
+            {{--                            <select name="" id="">--}}
+            {{--                                <option value=""></option>--}}
+            {{--                            </select>--}}
+            {{--                            <input type="text" name="car_name" placeholder=" Any Make" class="text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]">--}}
+            {{--                        </div>--}}
             <div class="w-full flex flex-col gap-1">
-                <label for="car_model" class="text-[#eeb21c] text-md font-normal">Car Model</label>
-                <input type="text" name="car_model" id="car_model" placeholder="Your car model" class="text-gray-600 bg-transparent border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c] rounded-md">
+                <label for="" class="text-[#eeb21c] text-md font-normal">Car Model</label>
+                <input type="text" name="car_model" placeholder="Your car model" class="text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]">
             </div>
             <div class="w-full flex flex-col gap-1">
                 <label for="car_images" class="text-[#eeb21c] text-md font-normal">Damage Image</label>
-                <input type="file" name="car_image[]" id="car_images" class="text-gray-600 bg-transparent border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c] rounded-md" multiple accept="image/*">
+                <input type="file" name="car_image[]" id="car_images" class="text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]" multiple accept="image/*">
                 <div id="image-preview" class="mt-2 grid grid-cols-2 gap-2"></div>
             </div>
+
             <div class="w-full flex flex-col gap-1">
-                <label for="msg" class="text-[#eeb21c] text-md font-normal">Message</label>
-                <textarea name="msg" id="msg" placeholder="Your message" rows="1" class="text-gray-600 bg-transparent border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c] rounded-md"></textarea>
+                <label for="" class="text-[#eeb21c] text-md font-normal">Message</label>
+                <textarea placeholder="Your message" name="msg" rows="1" class="text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]"></textarea>
             </div>
-            <div class="w-full flex flex-col gap-1 ">
-                <button type="submit" class="lg:text-[20px] md:text-[20px] text-[14px] w-max text-white bg-[#eeb21c] px-8 lg:py-2 md:py-2 py-1 font-bold rounded-md border-[1px] border-[#eeb21c] hover:bg-white hover:text-[#eeb21c] transition ease-in duration-200">
+            <div class="w-full flex flex-col gap-1 mt-6">
+                <button type="submit"
+                        class="lg:text-[25px] md:text-[20px] text-[14px] w-max text-white bg-[#eeb21c] px-12 lg:py-2 md:py-2 py-1 font-bold rounded-md border-[1px] border-[#eeb21c] hover:bg-white hover:text-[#eeb21c]  transition ease-in duration-2000">
                     Submit
                 </button>
             </div>
+
+
         </form>
+
     </div>
 
 
