@@ -15,14 +15,14 @@
             $shortDescription = implode(' ', $first20Words);
         @endphp
 
-        <div class="w-full bg-white rounded-3xl px-[20px] py-[30px] flex flex-col items-center"
+        <div class="w-full bg-white rounded-3xl px-[20px] py-[30px] flex flex-col items-center "
              style="box-shadow: 0px 0px 10px 1px #eeb21ca8;">
             <img src="{{asset('storage/'.$service->image)}}" alt="">
             <h2 class="uppercase lg:text-[35px] md:text-[30px] text-center sm:text-[25px] text-[20px] text-[#15AEF1] font-bold">
                 {{$service->heading}}
 
             </h2>
-            <p class="text-black lg:leading-7 md:leading-2 lg:text-[16px] md:text-[13px] text-[12px] font-medium font-[roboto] text-center"
+            <p class="text-black lg:leading-7 md:leading-2 lg:text-[16px] md:text-[16px] text-[16px] font-medium font-[roboto] text-center"
                style="word-spacing: 10px;">
                 {!! $shortDescription !!} ...
             </p>

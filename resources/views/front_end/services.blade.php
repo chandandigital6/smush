@@ -6,7 +6,7 @@
         <ul class="slider-container">
             {{-- make copy of this li for dynamic slider --}}
             <li class="w-full  relative">
-                <img src="{{asset('asset/images/image2.png')}}"
+                <img src="{{asset('asset/images/image2.jpg')}}"
                      class="w-full lg:h-[550px] md:h-[500px] sm:h-[400px] h-[300px] object-cover">
                 <div class="absolute top-0 left-0 w-full h-full bg-black/70 flex justify-center items-center px-4">
                     <div class="w-max h-max flex flex-col items-center gap-4">
@@ -61,7 +61,7 @@
                         {{$title->title}}
                     </h2>
                     <div class="max-w-[600px]">
-                        <p class="text-black lg:leading-7 md:leading-2 lg:text-[16px] md:text-[13px] text-[12px] font-medium font-[montserrat] text-center"
+                        <p class="text-black lg:leading-7 md:leading-2 lg:text-[16px] md:text-[16px] text-[16px] font-medium font-[montserrat] text-center"
                            style="word-spacing: 10px;">
                             {!! $title->msg !!}
                         </p>
@@ -80,13 +80,13 @@
 
     {{--about section start here--}}
     <div class="w-full  relative py-10"
-         style="background-image: url({{asset('asset/images/bac.png')}})">
+         style="background-image: url()">
         <div class="w-full px-4 flex justify-center">
             @foreach($chooseUs as $choos)
 
 
                 <div class="lg:w-[90%] md:w-[90%] sm:w-[90%] w-full rounded-[50px]"
-                     style="background-image: url({{asset('asset/images/Rectangle56.png')}});box-shadow: 0px 0px 10px 1px #25a8df">
+                     style="background-image: url({{asset('asset/images/Rectangle56.jpg')}});box-shadow: 0px 0px 10px 1px #25a8df">
                     <div class="w-full flex flex-col items-center gap-2 p-2 bg-[#25a8df]/90 rounded-[50px]">
                         <h2 class=" lg:text-[45px] md:text-[40px] text-center sm:text-[35px] text-[25px] text-white font-bold">
                             {{$choos->title}}</h2>
@@ -188,7 +188,7 @@
     {{--our clients section start here--}}
     <div class="w-full  relative py-6">
         <div class="w-full  flex justify-center">
-            <div class=" w-full flex flex-col items-center gap-6 py-24 px-4" style="background-image: url({{asset('asset/images/Rectangle43.png')}});background-repeat: no-repeat; background-size: cover">
+            <div class=" w-full flex flex-col items-center gap-6 py-24 px-4" style="background-image: url({{asset('asset/images/Rectangle43.jpg')}});background-repeat: no-repeat; background-size: cover">
                 <h2 class="lg:text-[50px] md:text-[40px] sm:text-[35px] text-[30px] text-white font-bold">WHAT OUR CLIENTS SAY</h2>
                 <div class="swiffy-slider slider-item-show3 slider-nav-dark slider-nav-autoplay mt-12">
                     <ul class="slider-container">
