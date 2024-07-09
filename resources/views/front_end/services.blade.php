@@ -157,10 +157,10 @@
                 <div class="w-full flex flex-col items-center gap-6 py-[5px]">
                     <h2 class="lg:text-[50px] md:text-[40px] sm:text-[35px] text-[30px] text-[#EEB21C] font-bold">{{ $logo->title }}</h2>
                     <div class="max-w-[600px]">
-                        <p class="text-black lg:leading-7 md:leading-2 lg:text-[16px] md:text-[13px] text-[12px] font-medium font-[montserrat] text-center"
+                        <p class="text-black lg:leading-7 md:leading-2 lg:text-[16px] md:text-[16px] text-[16px] font-medium font-[montserrat] text-center"
                            style="word-spacing: 10px;">{{ $logo->msg }}</p>
                     </div>
-                    <div class="swiffy-slider slider-nav-autoplay slider-item-show3">
+                    <div class="swiffy-slider  slider-item-show3">
                         <ul class="slider-container">
                             @if (is_string($logo->image) && !empty($logo->image))
                                 @php
