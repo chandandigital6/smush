@@ -150,7 +150,7 @@
                 <div class="w-full flex flex-col items-center gap-6 py-[5px]">
                     <h2 class="lg:text-[50px] md:text-[40px] sm:text-[35px] text-[30px] text-[#EEB21C] font-bold">{{ $logo->title }}</h2>
                     <div class="max-w-[600px]">
-                        <p class="text-black lg:leading-7 md:leading-2 lg:text-[16px] md:text-[13px] text-[12px] font-medium font-[montserrat] text-center"
+                        <p class="text-black lg:leading-7 md:leading-2 lg:text-[16px] md:text-[16px] text-[16px] font-medium font-[montserrat] text-center"
                            >{{ $logo->msg }}</p>
                     </div>
                     <div class="swiffy-slider slider-nav-autoplay slider-item-show4">
@@ -193,13 +193,13 @@
 
     {{--about section start here--}}
     <div class="w-full  relative py-10"
-         style="background-image: url({{asset('asset/images/bac.png')}})">
+         style="background-image: url()">
         <div class="w-full px-4 flex justify-center">
             @foreach($serviceChooseUs as $choos)
 
 
                 <div class="lg:w-[90%] md:w-[90%] sm:w-[90%] w-full rounded-[50px]"
-                     style="background-image: url({{asset('asset/images/Rectangle56.png')}});box-shadow: 0px 0px 10px 1px #25a8df">
+                     style="background-image: url({{asset('asset/images/Rectangle56.jpg')}});box-shadow: 0px 0px 10px 1px #25a8df">
                     <div class="w-full flex flex-col items-center gap-2 p-2 bg-[#25a8df]/90 rounded-[50px]">
                         <h2 class=" lg:text-[45px] md:text-[40px] text-center sm:text-[35px] text-[25px] text-white font-bold">
                             {{$choos->title}}</h2>
@@ -218,7 +218,7 @@
                                             <h2 class="uppercase text-white font-bold lg:text-[30px] md:text-[25px] sm:text-[20px] text-[20px]">
                                                 {{$choos->f_title}}
                                             </h2>
-                                            <p class="text-white font-normal lg:text-[18px] md:text-[13px] text-[12px] leading-7 font-[montserrat]">
+                                            <p class="text-white font-normal lg:text-[18px] md:text-[16px] text-[16px] leading-7 font-[montserrat]">
                                                 {!! $choos->f_msg !!}
                                             </p>
                                         </li>
@@ -226,7 +226,7 @@
                                             <h2 class="uppercase text-white font-bold lg:text-[30px] md:text-[25px] sm:text-[20px] text-[20px]">
                                                 {{$choos->f_1_title}}
                                             </h2>
-                                            <p class="text-white font-normal lg:text-[18px] md:text-[13px] text-[12px] leading-7 font-[montserrat]">
+                                            <p class="text-white font-normal lg:text-[18px] md:text-[16px] text-[16px] leading-7 font-[montserrat]">
                                                 {!! $choos->f_1_msg !!}
                                             </p>
                                         </li>
@@ -234,7 +234,7 @@
                                             <h2 class="uppercase text-white font-bold lg:text-[30px] md:text-[25px] sm:text-[20px] text-[20px]">
                                                 {{$choos->f_2_title}}
                                             </h2>
-                                            <p class="text-white font-normal lg:text-[18px] md:text-[13px] text-[12px] leading-7 font-[montserrat]">
+                                            <p class="text-white font-normal lg:text-[18px] md:text-[16px] text-[16px] leading-7 font-[montserrat]">
                                                 {!! $choos->f_2_msg !!}
                                             </p>
                                         </li>
@@ -257,7 +257,7 @@
 
     {{--what we offer section start here--}}
     <div class="w-full  relative py-6 rounded-t-[50px]"
-         style="background-image: url({{asset('asset/images/bac.png')}});">
+         style="background-image: url();">
         <div class="w-full px-4 flex justify-center">
             <div class="lg:w-[90%] md:w-[90%] sm:w-[90%] w-full flex flex-col items-center gap-6 py-[5px]">
                 <h2 class="lg:text-[50px] md:text-[40px] sm:text-[35px] text-[30px] text-[#EEB21C] font-bold">OTHER SERVICES</h2>
