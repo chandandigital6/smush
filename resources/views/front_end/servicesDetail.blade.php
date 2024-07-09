@@ -117,55 +117,9 @@
 
 
 
-        <div class="w-full flex justify-center">
-            <div
-                class="lg:w-[90%] md:w-[90%] sm:w-[90%] w-full grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-4 py-[5px]">
-                <div class="w-full flex flex-col gap-6 p-2">
-                    <h2 class="uppercase font-bold lg:text-[40px] md:text-[30px] text-[25px]"> <span
-                            class="text-[#15AEF1]">{{$service->heading}}</span></h2>
-                    <p class="text-black lg:leading-7 md:leading-2 lg:text-[20px] md:text-[18px] text-[16px] font-medium font-[montserrat]">
 
-                        {!! $service->description !!}
-
-                    </p>
-
-
-
-                    {{--                    <a href="{{route('contact')}}"--}}
-                    {{--                       class="lg:text-[25px] md:text-[20px] text-[14px] w-max text-white bg-[#15aef1] px-4 lg:py-2 md:py-2 py-1 font-bold rounded-md border-[1px] border-[#15aef1] hover:bg-white hover:text-[#15aef1]  transition ease-in duration-2000">--}}
-                    {{--                        LEARN MORE--}}
-                    {{--                    </a>--}}
-                </div>
-                <div class="w-full flex justify-center items-center">
-                    <img src="{{asset('storage/'.$service->service_image)}}" alt="">
-                </div>
-            </div>
-        </div>
     </div>
     {{--about section ends here    --}}
-
-
-    {{--stats section start here--}}
-    <div class="w-full  relative  bg-no-repeat bg-center bg-cover"
-         style="background-image: url({{asset('asset/images/Rectangle79.png')}})">
-        <div class="w-full flex justify-center bg-[#eeb21ce8] p-10">
-            <div class="lg:w-[90%] md:w-[90%] sm:w-[90%] w-full flex flex-col items-center gap-4 pt-[5px] px-4 py-2">
-                <div class="w-full flex flex-col items-center px-2">
-                    <h2 class="uppercase lg:text-[52px] md:text-[30px] text-center sm:text-[25px] text-[20px] text-black font-bold">
-                        Contact us for a FREE smash</h2>
-                    <h2 class="uppercase lg:text-[52px] md:text-[30px] text-center sm:text-[25px] text-[20px] text-black font-bold">
-                        repair quote today!
-                    </h2>
-                    <a href="#top-inquiry-form"
-                       class="uppercase lg:text-[32px] md:text-[32px] text-[18px] w-max text-[#eeb52a] bg-white px-12 py-4 font-bold rounded-xl border-[1px] border-[#eeb21ce8] transition duration-200 ease-in-out hover:text-white hover:bg-[#15aef1]">
-                        GET FREE ESTIMATE
-                    </a>
-
-                </div>
-            </div>
-        </div>
-    </div>
-    {{--stats section ends here    --}}
 
     {{--our gallery section start here--}}
     <div class="w-full relative py-6">
@@ -175,7 +129,7 @@
                     <h2 class="lg:text-[50px] md:text-[40px] sm:text-[35px] text-[30px] text-[#EEB21C] font-bold">{{ $logo->title }}</h2>
                     <div class="max-w-[600px]">
                         <p class="text-black lg:leading-7 md:leading-2 lg:text-[16px] md:text-[16px] text-[16px] font-medium font-[montserrat] text-center"
-                           >{{ $logo->msg }}</p>
+                        >{{ $logo->msg }}</p>
                     </div>
                     <div class="swiffy-slider slider-nav-autoplay slider-item-show4">
                         <ul class="slider-container">
@@ -199,6 +153,57 @@
     </div>
     {{--our gallery section ends here    --}}
 
+    {{--stats section start here--}}
+    <div class="w-full  relative  bg-no-repeat bg-center bg-cover"
+         style="background-image: url({{asset('asset/images/Rectangle79.png')}})">
+        <div class="w-full flex justify-center bg-[#eeb21ce8] p-10">
+            <div class="lg:w-[90%] md:w-[90%] sm:w-[90%] w-full flex flex-col items-center gap-4 pt-[5px] px-4 py-2">
+                <div class="w-full flex flex-col items-center px-2">
+                    <h2 class="uppercase lg:text-[52px] md:text-[30px] text-center sm:text-[25px] text-[20px] text-black font-bold">
+                        Contact us for a FREE smash</h2>
+                    <h2 class="uppercase lg:text-[52px] md:text-[30px] text-center sm:text-[25px] text-[20px] text-black font-bold">
+                        repair quote today!
+                    </h2>
+                    <a href="#top-inquiry-form"
+                       class="uppercase lg:text-[32px] md:text-[32px] text-[18px] w-max text-[#eeb52a] bg-white px-12 py-4 font-bold rounded-xl border-[1px] border-[#eeb21ce8] transition duration-200 ease-in-out hover:text-white hover:bg-[#15aef1]">
+                        GET FREE ESTIMATE
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    {{--stats section ends here    --}}
+
+
+
+
+{{--    about --}}
+
+    <div class="w-full flex justify-center">
+        <div
+            class="lg:w-[90%] md:w-[90%] sm:w-[90%] w-full grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-4 py-[5px]">
+            <div class="w-full flex flex-col gap-6 p-2">
+                <h2 class="uppercase font-bold lg:text-[40px] md:text-[30px] text-[25px]"> <span
+                        class="text-[#15AEF1]">{{$service->heading}}</span></h2>
+                <p class="text-black lg:leading-7 md:leading-2 lg:text-[20px] md:text-[18px] text-[16px] font-medium font-[montserrat]">
+
+                    {!! $service->description !!}
+
+                </p>
+
+
+
+                {{--                    <a href="{{route('contact')}}"--}}
+                {{--                       class="lg:text-[25px] md:text-[20px] text-[14px] w-max text-white bg-[#15aef1] px-4 lg:py-2 md:py-2 py-1 font-bold rounded-md border-[1px] border-[#15aef1] hover:bg-white hover:text-[#15aef1]  transition ease-in duration-2000">--}}
+                {{--                        LEARN MORE--}}
+                {{--                    </a>--}}
+            </div>
+            <div class="w-full flex justify-center items-center">
+                <img src="{{asset('storage/'.$service->service_image)}}" alt="">
+            </div>
+        </div>
+    </div>
 
     {{--    youtube video section--}}
     <div class="w-full relative py-10">
