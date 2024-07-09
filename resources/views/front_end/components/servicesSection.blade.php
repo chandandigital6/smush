@@ -22,7 +22,7 @@
                 {{$service->heading}}
 
             </h2>
-            <p class="text-black lg:leading-7 md:leading-2 lg:text-[16px] md:text-[16px] text-[16px] font-medium font-[roboto] text-center"
+            <p class="text-black lg:leading-7 md:leading-2 lg:text-[16px] md:text-[16px] text-[16px] font-medium font-[montserrat] text-center"
                style="word-spacing: 10px;">
                 {!! $shortDescription !!} ...
             </p>
