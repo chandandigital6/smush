@@ -94,7 +94,7 @@
                 {{$title->title}}
                 </h2>
                 <div class="max-w-[600px]">
-                    <p class="text-black lg:leading-7 md:leading-2 lg:text-[16px] md:text-[13px] text-[12px] font-medium font-[montserrat] text-center"
+                    <p class="text-black lg:leading-7 md:leading-2 lg:text-[16px] md:text-[16px] text-[16px] font-medium font-[montserrat] text-center"
                        >
                        {!! $title->msg !!}
                     </p>
@@ -127,7 +127,7 @@
                                 {{$service->heading}}
 
                             </h2>
-                            <p class="text-black lg:leading-7 md:leading-2 lg:text-[16px] md:text-[13px] text-[12px] font-medium font-[montserrat] text-center"
+                            <p class="text-black lg:leading-7 md:leading-2 lg:text-[16px] md:text-[16px] text-[16px] font-medium font-[montserrat] text-center"
                                >
                                 {!! $shortDescription !!} ...
                             </p>
