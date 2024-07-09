@@ -87,11 +87,7 @@
         <meta name="twitter:image" content="{{ $seo->og_image }}">
     @endif
 
-    <style>
-        * {
-            border: 1px solid black!important;
-        }
-    </style>
+
 
 </head>
 <body class="font-montserrat">
