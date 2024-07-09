@@ -241,7 +241,7 @@
                         <p class="text-black lg:leading-7 md:leading-2 lg:text-[16px] md:text-[13px] text-[12px] font-medium font-[montserrat] text-center"
                            >{{ $logo->msg }}</p>
                     </div>
-                    <div class="swiffy-slider slider-nav-autoplay slider-item-show3">
+                    <div class="swiffy-slider  slider-item-show3">
                         <ul class="slider-container">
                             @if (is_string($logo->image) && !empty($logo->image))
                                 @php
