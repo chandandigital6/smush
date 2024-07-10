@@ -17,17 +17,15 @@
         }
 
         .new-main {
-            display: grid;
-            place-items: center;
-            min-height: 100vh;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
             gap: 2rem;
             /* Adjust the gap between sliders */
         }
 
         .new-container {
             position: relative;
-            display: grid;
-            place-items: center;
             overflow: hidden;
             border-radius: 1rem;
             --position: 50%;
@@ -101,6 +99,7 @@
             pointer-events: none;
             box-shadow: 1px 1px 1px hsl(0, 50%, 2%, .5);
         }
+
 
         /* Responsive Layout */
         @media (min-width: 768px) {
@@ -343,20 +342,20 @@
     {{-- our gallery section ends here    --}}
 
     {{-- OUR WORK START --}}
-
     <div class="mt-10 mb-10">
-        <div class="mx-auto w-8/12">
-            <h1 class="text-center font-montrasst font-bold text-5xl text-yellow-500">OUR WORK</h1>
-            <p class="text-center font-montrasst">Experience the magic of Mobile Smash Company's car repair services -
-                where we transform damaged vehicles into showroom-ready masterpieces. Our skilled technicians and
-                cutting-edge techniques guarantee jaw-dropping results, leaving your car looking better than ever before.
+        <div class="mx-auto w-full sm:w-10/12 md:w-8/12 mb-9">
+            <h1 class="text-center font-montrasst font-bold text-3xl sm:text-4xl md:text-5xl text-yellow-500">OUR WORK</h1>
+            <p class="text-center mt-7 font-montrasst text-sm sm:text-base md:text-lg">
+                Experience the magic of Mobile Smash Company's car repair services - where we transform damaged vehicles
+                into showroom-ready masterpieces. Our skilled technicians and cutting-edge techniques guarantee jaw-dropping
+                results, leaving your car looking better than ever before.
             </p>
         </div>
 
         <div class="new-gallery">
-            <main class="new-main">
+            <main class="new-main flex flex-wrap justify-center">
                 <!-- First Pair of Sliders -->
-                <div class="new-container">
+                <div class="new-container w-full md:w-1/3 p-2">
                     <div class="new-image-container">
                         <img class="new-image-before new-slider-image" src="{{ asset('asset/images/Rectangle 42.png') }}"
                             alt="color photo" />
@@ -388,7 +387,39 @@
                 </div>
 
                 <!-- Second Pair of Sliders -->
-                <div class="new-container">
+                <div class="new-container w-full md:w-1/3 p-2">
+                    <div class="new-image-container">
+                        <img class="new-image-before new-slider-image" src="{{ asset('asset/images/Rectangle 42.png') }}"
+                            alt="color photo" />
+                        <img class="new-image-after new-slider-image" src="{{ asset('asset/images/Rectangle 41.png') }}"
+                            alt="black and white" />
+                    </div>
+                    <input type="range" min="0" max="100" value="50"
+                        aria-label="Percentage of before photo shown" class="new-slider" />
+                    <div class="new-slider-line" aria-hidden="true"></div>
+                    <div class="new-slider-button" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                            viewBox="0 0 256 256">
+                            <rect width="256" height="256" fill="none"></rect>
+                            <line x1="128" y1="40" x2="128" y2="216" fill="none"
+                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16">
+                            </line>
+                            <line x1="96" y1="128" x2="16" y2="128" fill="none"
+                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16">
+                            </line>
+                            <polyline points="48 160 16 128 48 96" fill="none" stroke="currentColor"
+                                stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
+                            <line x1="160" y1="128" x2="240" y2="128" fill="none"
+                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16">
+                            </line>
+                            <polyline points="208 96 240 128 208 160" fill="none" stroke="currentColor"
+                                stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Third Pair of Sliders -->
+                <div class="new-container w-full md:w-1/3 p-2">
                     <div class="new-image-container">
                         <img class="new-image-before new-slider-image" src="{{ asset('asset/images/Rectangle 42.png') }}"
                             alt="color photo" />
@@ -501,31 +532,30 @@
 
     {{-- 3 SIMPLE STEPS START --}}
 
-    <div class="bg-gray-100 p-10">
+    <div class="bg-gray-100 p-4 sm:p-6 md:p-10">
         <div class="max-w-6xl mx-auto text-center">
-            <h2 class="text-3xl font-bold text-pink-600 mb-4">3 SIMPLE STEPS</h2>
-            <h1 class="text-4xl font-bold mb-6">UPLOAD YOUR PHOTOS TO GET A FAST QUOTE</h1>
-            <p class="text-lg mb-10">Just follow the prompts and you'll be done within minutes!</p>
+            <h2 class="text-xl sm:text-2xl md:text-3xl font-bold text-pink-600 mb-2 sm:mb-4">3 SIMPLE STEPS</h2>
+            <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">UPLOAD YOUR PHOTOS TO GET A FAST QUOTE</h1>
+            <p class="text-base sm:text-lg mb-6 sm:mb-10">Just follow the prompts and you'll be done within minutes!</p>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="relative p-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+                <div class="relative p-2 sm:p-4 md:p-6">
                     <img src="{{ asset('asset/images/1.jpg') }}" alt="Take a Photo"
-                        class="w-full sm:w-72 lg:w-96 h-80 object-cover transition duration-300 transform hover:scale-105">
+                        class="w-full h-auto sm:h-60 md:h-72 lg:h-80 object-fit transition duration-300 transform hover:scale-105">
                 </div>
 
-                <div class="relative p-6">
+                <div class="relative p-2 sm:p-4 md:p-6">
                     <img src="{{ asset('asset/images/2.jpg') }}" alt="Submit Quote Request"
-                        class="w-full sm:w-72 lg:w-96 h-80 object-cover transition duration-300 transform hover:scale-105">
+                        class="w-full h-auto sm:h-60 md:h-72 lg:h-80 object-fit transition duration-300 transform hover:scale-105">
                 </div>
 
-                <div class="relative p-6">
+                <div class="relative p-2 sm:p-4 md:p-6">
                     <img src="{{ asset('asset/images/3.jpg') }}" alt="We'll Call You"
-                        class="w-full sm:w-72 lg:w-96 h-80 object-cover transition duration-300 transform hover:scale-105">
+                        class="w-full h-auto sm:h-60 md:h-72 lg:h-80 object-fit transition duration-300 transform hover:scale-105">
                 </div>
             </div>
         </div>
     </div>
-
 
     {{-- 3 SIMPLE STEPS END --}}
 
