@@ -1,33 +1,201 @@
 @extends('front_end.components.layout', ['seos' => $seos])
 @section('content')
+    <style>
+        @media (min-width: 767px) and (max-width: 1023px) {
+            #top-inquiry-form img {
+                height: 800px;
+                /* Set your desired height */
+            }
+        }
+
+        .new-gallery,
+        .new-gallery::after,
+        .new-gallery::before {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .new-main {
+            display: grid;
+            place-items: center;
+            min-height: 100vh;
+            gap: 2rem;
+            /* Adjust the gap between sliders */
+        }
+
+        .new-container {
+            position: relative;
+            display: grid;
+            place-items: center;
+            overflow: hidden;
+            border-radius: 1rem;
+            --position: 50%;
+            width: 100%;
+            /* Ensure each container takes full width */
+            max-width: 400px;
+            /* Adjust maximum width as needed */
+            margin: 0 auto;
+            /* Center align on larger screens */
+        }
+
+        .new-image-container {
+            max-width: 100%;
+            /* Ensure images don't overflow */
+            max-height: 90vh;
+            aspect-ratio: 1/1;
+            position: relative;
+            /* Ensure positioning within the container */
+        }
+
+        .new-slider-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: left;
+        }
+
+        .new-image-before {
+            position: absolute;
+            inset: 0;
+            width: var(--position);
+            /* filter: grayscale(100%) */
+        }
+
+        .new-slider {
+            position: absolute;
+            inset: 0;
+            cursor: pointer;
+            opacity: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .new-slider:focus-visible~.new-slider-button {
+            outline: 5px solid black;
+            outline-offset: 3px;
+        }
+
+        .new-slider-line {
+            position: absolute;
+            inset: 0;
+            width: .2rem;
+            height: 100%;
+            background-color: #fff;
+            left: var(--position);
+            transform: translateX(-50%);
+            pointer-events: none;
+        }
+
+        .new-slider-button {
+            position: absolute;
+            background-color: #fff;
+            color: black;
+            padding: .5rem;
+            border-radius: 100vw;
+            display: grid;
+            place-items: center;
+            top: 50%;
+            left: var(--position);
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+            box-shadow: 1px 1px 1px hsl(0, 50%, 2%, .5);
+        }
+
+        /* Responsive Layout */
+        @media (min-width: 768px) {
+            .new-main {
+                grid-template-columns: repeat(2, 1fr);
+                /* Two columns layout */
+                gap: 2rem;
+                /* Adjust gap between columns */
+            }
+        }
+
+        @media (max-width: 400px) {
+            .sm\\:w-400 {
+                width: 100%;
+            }
+
+            .p-12 {
+                padding: 8px;
+            }
+
+            .text-4xl {
+                font-size: 1.5rem;
+            }
+
+            .px-4 {
+                padding-left: 8px;
+                padding-right: 8px;
+            }
+
+            .py-2 {
+                padding-top: 4px;
+                padding-bottom: 4px;
+            }
+
+            .mt-4 {
+                margin-top: 2px;
+            }
+
+            .mt-6 {
+                margin-top: 4px;
+            }
+        }
+
+        @media (max-width: 250px) {
+            .p-12 {
+                padding: 4px;
+            }
+
+            .text-4xl {
+                font-size: 1.25rem;
+            }
+
+            .px-4 {
+                padding-left: 4px;
+                padding-right: 4px;
+            }
+
+            .py-2 {
+                padding-top: 2px;
+                padding-bottom: 2px;
+            }
+
+            .mt-4 {
+                margin-top: 1px;
+            }
+
+            .mt-6 {
+                margin-top: 2px;
+            }
+        }
+    </style>
     {{-- slider section start here --}}
     <div class="swiffy-slider" id="top-inquiry-form" style="width: 100%;">
         <ul class="slider-container">
             <li class="w-full relative">
                 <img src="{{ asset('asset/images/image2.jpg') }}"
-                    class="w-full lg:h-[600px] md:h-[550px] sm:h-[1000px] h-[800px] object-cover" alt="Slider Image">
+                    class="w-full lg:h-[600px] md:h-[400px] sm:h-[1000px] h-[800px] object-cover" alt="Slider Image">
                 <div class="absolute top-0 left-0 w-full h-full bg-black/70 flex justify-center items-center px-4">
                     <div class="container mx-auto flex flex-col lg:flex-row items-center justify-between gap-4 px-4">
                         <div class="w-full lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left">
                             <div class="flex flex-col gap-2">
-                                <span class="uppercase text-white lg:text-[40px] text-[20px] font-bold">ANY KIND OF CAR YOU
-                                    WILL GET</span>
                                 <div class="w-full max-w-lg">
                                     <p
                                         class="uppercase text-white font-bold text-[24px] sm:text-[20px] md:text-[30px] lg:text-[70px]">
                                         {{ $service->heading }}
                                     </p>
                                 </div>
-                                <div class="flex gap-2 justify-center lg:justify-start">
-                                    <a href="{{ route('services') }}"
-                                        class="text-[14px] sm:text-[12px] md:text-[14px] lg:text-[36px] text-white bg-[#eeb21c] px-3 py-1 font-bold rounded-md border-[1px] border-[#eeb21c] hover:bg-white hover:text-[#eeb21c] transition ease-in duration-200">
-                                        SERVICES
-                                    </a>
-                                    <a href="#top-inquiry-form"
-                                        class="text-[14px] sm:text-[12px] md:text-[14px] lg:text-[36px] text-white bg-[#15aef1] px-3 py-1 font-bold rounded-md border-[1px] border-[#15aef1] hover:bg-white hover:text-[#15aef1] transition ease-in duration-200">
-                                        ENQUIRY
-                                    </a>
-                                </div>
+                                <ul class="list-disc text-yellow-500 ml-5 text-left">
+                                    <li><span class="text-white lg:text-[26px] text-[20px] font-bold">Flawless color
+                                            match</span></li>
+                                    <li><span class="text-white lg:text-[26px] text-[20px] font-bold">Insurance-safe</span>
+                                    </li>
+                                    <li><span class="text-white lg:text-[26px] text-[20px] font-bold">Professionally
+                                            certified technicians</span></li>
+                                </ul>
                             </div>
                         </div>
                         <div class="w-full lg:w-1/2 mt-4 lg:mt-0">
@@ -43,7 +211,6 @@
                                         class="uppercase text-[#EEB21C] text-[12px] lg:text-[14px] font-bold sm:text-[10px]">10%
                                         off on your first repair + Free Touch ups included</span>
                                     @csrf
-
                                     <div class="flex flex-col gap-1 w-full md:flex-row md:gap-2">
                                         <div class="flex flex-col gap-1 w-full md:w-1/2">
                                             <label for="name"
@@ -107,7 +274,7 @@
     {{-- about section start here --}}
     <div class="w-full  relative lg:pt-[250px] md:pt-[200px] sm:pt-[180px] pt-[100px]" style="background-image: url()">
 
-        <div class="w-full h-max absolute -top-[50px] left-0 px-4 flex justify-center z-50 py-4 ">
+        <div class="w-full h-max absolute -top-[50px] left-0 px-4 flex justify-center z-10 py-4 ">
             <div
                 class=" lg:w-[1000px] lg:h-[250px] md:h-[200px] sm:h-[200px] h-[120px] bg-white px-2 rounded-lg shadow-md shadow-gray-400 flex justify-between items-center gap-0">
                 <div>
@@ -175,10 +342,91 @@
     </div>
     {{-- our gallery section ends here    --}}
 
+    {{-- OUR WORK START --}}
+
+    <div class="mt-10 mb-10">
+        <div class="mx-auto w-8/12">
+            <h1 class="text-center font-montrasst font-bold text-5xl text-yellow-500">OUR WORK</h1>
+            <p class="text-center font-montrasst">Experience the magic of Mobile Smash Company's car repair services -
+                where we transform damaged vehicles into showroom-ready masterpieces. Our skilled technicians and
+                cutting-edge techniques guarantee jaw-dropping results, leaving your car looking better than ever before.
+            </p>
+        </div>
+
+        <div class="new-gallery">
+            <main class="new-main">
+                <!-- First Pair of Sliders -->
+                <div class="new-container">
+                    <div class="new-image-container">
+                        <img class="new-image-before new-slider-image" src="{{ asset('asset/images/Rectangle 42.png') }}"
+                            alt="color photo" />
+                        <img class="new-image-after new-slider-image" src="{{ asset('asset/images/Rectangle 41.png') }}"
+                            alt="black and white" />
+                    </div>
+                    <input type="range" min="0" max="100" value="50"
+                        aria-label="Percentage of before photo shown" class="new-slider" />
+                    <div class="new-slider-line" aria-hidden="true"></div>
+                    <div class="new-slider-button" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                            viewBox="0 0 256 256">
+                            <rect width="256" height="256" fill="none"></rect>
+                            <line x1="128" y1="40" x2="128" y2="216" fill="none"
+                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16">
+                            </line>
+                            <line x1="96" y1="128" x2="16" y2="128" fill="none"
+                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16">
+                            </line>
+                            <polyline points="48 160 16 128 48 96" fill="none" stroke="currentColor"
+                                stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
+                            <line x1="160" y1="128" x2="240" y2="128" fill="none"
+                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16">
+                            </line>
+                            <polyline points="208 96 240 128 208 160" fill="none" stroke="currentColor"
+                                stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Second Pair of Sliders -->
+                <div class="new-container">
+                    <div class="new-image-container">
+                        <img class="new-image-before new-slider-image" src="{{ asset('asset/images/Rectangle 42.png') }}"
+                            alt="color photo" />
+                        <img class="new-image-after new-slider-image" src="{{ asset('asset/images/Rectangle 41.png') }}"
+                            alt="black and white" />
+                    </div>
+                    <input type="range" min="0" max="100" value="50"
+                        aria-label="Percentage of before photo shown" class="new-slider" />
+                    <div class="new-slider-line" aria-hidden="true"></div>
+                    <div class="new-slider-button" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                            viewBox="0 0 256 256">
+                            <rect width="256" height="256" fill="none"></rect>
+                            <line x1="128" y1="40" x2="128" y2="216" fill="none"
+                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16">
+                            </line>
+                            <line x1="96" y1="128" x2="16" y2="128" fill="none"
+                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16">
+                            </line>
+                            <polyline points="48 160 16 128 48 96" fill="none" stroke="currentColor"
+                                stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
+                            <line x1="160" y1="128" x2="240" y2="128" fill="none"
+                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16">
+                            </line>
+                            <polyline points="208 96 240 128 208 160" fill="none" stroke="currentColor"
+                                stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
+                        </svg>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    {{-- OUR WORK END --}}
 
     {{-- stats section start here --}}
     <div class="w-full  relative  bg-no-repeat bg-center bg-cover"
-        style="background-image: url({{ asset('asset/images/Rectangle79.png') }})">
+        style="background-image: url({{ asset('asset/images/Rectangle79.jpg') }})">
         <div class="w-full flex justify-center bg-[#eeb21ce8] p-10">
             <div class="lg:w-[90%] md:w-[90%] sm:w-[90%] w-full flex flex-col items-center gap-4 pt-[5px] px-4 py-2">
                 <div class="w-full flex flex-col items-center px-2">
@@ -252,30 +500,32 @@
     {{-- our clients section ends here    --}}
 
     {{-- 3 SIMPLE STEPS START --}}
+
     <div class="bg-gray-100 p-10">
-        <div class="max-w-4xl mx-auto text-center">
+        <div class="max-w-6xl mx-auto text-center">
             <h2 class="text-3xl font-bold text-pink-600 mb-4">3 SIMPLE STEPS</h2>
             <h1 class="text-4xl font-bold mb-6">UPLOAD YOUR PHOTOS TO GET A FAST QUOTE</h1>
             <p class="text-lg mb-10">Just follow the prompts and you'll be done within minutes!</p>
-    
+
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="relative p-6">
-                    <img src="{{ asset('asset/images/image2.jpg') }}" alt="Take a Photo"
-                        class="w-full h-80 object-cover transition duration-300 transform hover:scale-105">
+                    <img src="{{ asset('asset/images/1.jpg') }}" alt="Take a Photo"
+                        class="w-full sm:w-72 lg:w-96 h-80 object-cover transition duration-300 transform hover:scale-105">
                 </div>
-    
+
                 <div class="relative p-6">
-                    <img src="{{ asset('asset/images/image2.jpg') }}" alt="Submit Quote Request"
-                        class="w-full h-80 object-cover transition duration-300 transform hover:scale-105">
+                    <img src="{{ asset('asset/images/2.jpg') }}" alt="Submit Quote Request"
+                        class="w-full sm:w-72 lg:w-96 h-80 object-cover transition duration-300 transform hover:scale-105">
                 </div>
-    
+
                 <div class="relative p-6">
-                    <img src="{{ asset('asset/images/image2.jpg') }}" alt="We'll Call You"
-                        class="w-full h-80 object-cover transition duration-300 transform hover:scale-105">
+                    <img src="{{ asset('asset/images/3.jpg') }}" alt="We'll Call You"
+                        class="w-full sm:w-72 lg:w-96 h-80 object-cover transition duration-300 transform hover:scale-105">
                 </div>
             </div>
         </div>
     </div>
+
 
     {{-- 3 SIMPLE STEPS END --}}
 
@@ -485,43 +735,66 @@
         </div>
     </div>
 
+    {{-- MAKE YOUR INQUIRY NOW START --}}
+
     <div class="flex flex-col items-center justify-center mb-4">
-        <h1 class="text-center text-white text-4xl font-bold mb-6">MAKE YOUR INQUIRY NOW</h1>
-        <form action="{{ route('appointment.store') }}" method="post" class="mt-4 grid lg:grid-cols-2 gap-2 p-8 bg-[#15AEF1] rounded-lg" enctype="multipart/form-data">
-           
-            @csrf
-              
-            <div class="w-full flex flex-col gap-1">
-                <label for="" class="text-white text-md font-normal">Name</label>
-                <input type="text" name="name" placeholder="Your full name" class="text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]">
-            </div>
-            <div class="w-full flex flex-col gap-1">
-                <label for="" class="text-white text-md font-normal">Email</label>
-                <input type="email" name="email" placeholder="Your Email" class="text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]">
-            </div>
-            <div class="w-full flex flex-col gap-1">
-                <label for="" class="text-white text-md font-normal">Mobile Number</label>
-                <input type="number" name="number" placeholder="Your number" class="text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]">
-            </div>
-            <div class="w-full flex flex-col gap-1">
-                <label for="" class="text-white text-md font-normal">Car Model</label>
-                <input type="text" name="car_model" placeholder="Your car model" class="text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]">
-            </div>
-            <div class="w-full flex flex-col gap-1">
-                <label for="car_images" class="text-white text-md font-normal">Damage Image</label>
-                <input type="file" name="car_image[]" id="car_images" class="text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]" multiple accept="image/*">
-                <div id="image-preview" class="mt-2 grid grid-cols-2 gap-2"></div>
-            </div>
-            <div class="w-full flex flex-col gap-1">
-                <label for="" class="text-white text-md font-normal">Message</label>
-                <textarea placeholder="Your message" name="msg" rows="1" class="text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]"></textarea>
-            </div>
-            <div class="w-full flex flex-col gap-1 mt-6">
-                <button type="submit" class="lg:text-[25px] md:text-[20px] text-[14px] w-max text-white bg-[#eeb21c] px-12 lg:py-2 md:py-2 py-1 font-bold rounded-md border-[1px] border-[#eeb21c] hover:bg-white hover:text-[#eeb21c] transition ease-in duration-2000">
-                    Submit
-                </button>
-            </div>
-        </form>
+        <div class="bg-[#15AEF1] rounded-lg p-12">
+            <h1 class="text-center text-4xl text-white font-bold mb-6 self-center w-full font-montserrat">MAKE YOUR INQUIRY
+                NOW</h1>
+            <form action="{{ route('appointment.store') }}" method="post" class="mt-4 grid lg:grid-cols-2 gap-2"
+                enctype="multipart/form-data">
+                @csrf
+
+                <div class="w-full sm:w-400 flex flex-col gap-1">
+                    <label for="name" class="text-white text-md font-normal font-montserrat">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your full name"
+                        class="text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]">
+                </div>
+                <div class="w-full sm:w-400 flex flex-col gap-1">
+                    <label for="email" class="text-white text-md font-normal font-montserrat">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email"
+                        class="text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]">
+                </div>
+                <div class="w-full sm:w-400 flex flex-col gap-1">
+                    <label for="number" class="text-white text-md font-normal font-montserrat">Mobile Number</label>
+                    <input type="number" id="number" name="number" placeholder="Your number"
+                        class="text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]">
+                </div>
+                <div class="w-full sm:w-400 flex flex-col gap-1">
+                    <label for="car_model" class="text-white text-md font-normal font-montserrat">Car Model</label>
+                    <input type="text" id="car_model" name="car_model" placeholder="Your car model"
+                        class="text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]">
+                </div>
+                <div class="w-full sm:w-400 flex flex-col gap-1">
+                    <label for="car_images" class="text-white text-md font-normal font-montserrat">Damage Image</label>
+                    <input type="file" id="car_images" name="car_image[]"
+                        class="text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]"
+                        multiple accept="image/*">
+                    <div id="image-preview" class="mt-2 grid grid-cols-2 gap-2"></div>
+                </div>
+                <div class="w-full sm:w-400 flex flex-col gap-1">
+                    <label for="msg" class="text-white text-md font-normal font-montserrat">Message</label>
+                    <textarea id="msg" placeholder="Your message" name="msg" rows="1"
+                        class="text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]"></textarea>
+                </div>
+                <div class="w-full sm:w-400 flex flex-col gap-1 mt-6">
+                    <button type="submit"
+                        class="lg:text-[25px] md:text-[20px] text-[14px] w-max text-white bg-[#eeb21c] px-12 lg:py-2 md:py-2 py-1 font-bold rounded-md border-[1px] border-[#eeb21c] hover:bg-white hover:text-[#eeb21c] transition ease-in duration-2000">
+                        Submit
+                    </button>
+                </div>
+            </form>
+        </div>
     </div>
-    
+
+    {{-- MAKE YOUR INQUIRY NOW END --}}
+
+    <script>
+        document.querySelectorAll('.new-slider').forEach((slider, index) => {
+            const container = slider.closest('.new-container');
+            slider.addEventListener('input', (e) => {
+                container.style.setProperty('--position', `${e.target.value}%`);
+            });
+        });
+    </script>
 @endsection
