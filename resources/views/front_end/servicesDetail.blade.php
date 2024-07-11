@@ -197,71 +197,76 @@
                                 </ul>
                             </div>
                         </div>
+
                         <div class="w-full lg:w-1/2 mt-4 lg:mt-0">
                             <div class="flex flex-col items-center w-full">
                                 <form action="{{ route('appointment.store') }}" method="post"
-                                    class="mt-2 space-y-2 bg-black/50 rounded-md px-2 py-1 sm:space-y-1 sm:px-1 sm:py-1 md:space-y-1 md:px-1 md:py-1 lg:py-2"
+                                    class="w-[95%] sm:w-[90%] md:w-[80%] lg:w-full mt-2 space-y-2 bg-black/50 rounded-md px-2 py-1 sm:space-y-1 sm:px-2 sm:py-2 md:space-y-1 md:px-3 md:py-3 lg:py-4"
                                     enctype="multipart/form-data">
                                     <span
-                                        class="uppercase text-[#ffffff] text-[16px] lg:text-[20px] text-center font-bold sm:text-[14px]">MAKE
-                                        YOUR INQUIRY NOW</span>
+                                        class="uppercase text-[#ffffff] text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] text-center font-bold">
+                                        MAKE YOUR INQUIRY NOW
+                                    </span>
                                     <br>
                                     <span
-                                        class="uppercase text-[#EEB21C] text-[12px] lg:text-[14px] font-bold sm:text-[10px]">10%
-                                        off on your first repair + Free Touch ups included</span>
+                                        class="uppercase text-[#EEB21C] text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] font-bold">
+                                        10% off on your first repair + Free Touch ups included
+                                    </span>
                                     @csrf
-                                    <div class="flex flex-col gap-1 w-full md:flex-row md:gap-2">
+                                    <div class="flex flex-col gap-2 w-full md:flex-row md:gap-4">
                                         <div class="flex flex-col gap-1 w-full md:w-1/2">
                                             <label for="name"
-                                                class="text-[#ffffff] text-xs font-normal sm:text-xs">Name</label>
+                                                class="text-[#ffffff] text-xs sm:text-sm md:text-base">Name</label>
                                             <input type="text" name="name" id="name" placeholder="Your full name"
-                                                class="text-gray-600 bg-[#ffffff] border-[1px] border-[#ffffff]/70 px-1 py-0.5 sm:px-1 sm:py-0.5 focus:outline-none focus:ring-0 focus:border-[#eeb21c] rounded-md">
+                                                class="text-gray-600 bg-[#ffffff] border-[1px] border-[#ffffff]/70 px-1 py-0.5 sm:px-2 sm:py-1 md:px-4 md:py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c] rounded-md">
                                         </div>
                                         <div class="flex flex-col gap-1 w-full md:w-1/2">
                                             <label for="email"
-                                                class="text-[#ffffff] text-xs font-normal sm:text-xs">Email</label>
+                                                class="text-[#ffffff] text-xs sm:text-sm md:text-base">Email</label>
                                             <input type="email" name="email" id="email" placeholder="Your Email"
-                                                class="text-gray-600 bg-[#ffffff] border-[1px] border-[#ffffff]/70 px-1 py-0.5 sm:px-1 sm:py-0.5 focus:outline-none focus:ring-0 focus:border-[#ffffff] rounded-md">
+                                                class="text-gray-600 bg-[#ffffff] border-[1px] border-[#ffffff]/70 px-1 py-0.5 sm:px-2 sm:py-1 md:px-4 md:py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c] rounded-md">
                                         </div>
                                     </div>
-                                    <div class="flex flex-col gap-1 w-full md:flex-row md:gap-2">
+                                    <div class="flex flex-col gap-2 w-full md:flex-row md:gap-4">
                                         <div class="flex flex-col gap-1 w-full md:w-1/2">
                                             <label for="number"
-                                                class="text-[#ffffff] text-xs font-normal sm:text-xs">Mobile Number</label>
+                                                class="text-[#ffffff] text-xs sm:text-sm md:text-base">Mobile Number</label>
                                             <input type="text" name="number" id="number" placeholder="Your number"
-                                                class="text-gray-600 bg-[#ffffff] border-[1px] border-[#ffffff]/70 px-1 py-0.5 sm:px-1 sm:py-0.5 focus:outline-none focus:ring-0 focus:border-[#ffffff] rounded-md">
+                                                class="text-gray-600 bg-[#ffffff] border-[1px] border-[#ffffff]/70 px-1 py-0.5 sm:px-2 sm:py-1 md:px-4 md:py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c] rounded-md">
                                         </div>
                                         <div class="flex flex-col gap-1 w-full md:w-1/2">
-                                            <label for="car_model" class="text-[#ffffff] text-xs font-normal sm:text-xs">Car
-                                                Model</label>
+                                            <label for="car_model"
+                                                class="text-[#ffffff] text-xs sm:text-sm md:text-base">Car Model</label>
                                             <input type="text" name="car_model" id="car_model"
                                                 placeholder="Your car model"
-                                                class="text-gray-600 bg-[#ffffff] border-[1px] border-[#ffffff]/70 px-1 py-0.5 sm:px-1 sm:py-0.5 focus:outline-none focus:ring-0 focus:border-[#ffffff] rounded-md">
+                                                class="text-gray-600 bg-[#ffffff] border-[1px] border-[#ffffff]/70 px-1 py-0.5 sm:px-2 sm:py-1 md:px-4 md:py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c] rounded-md">
                                         </div>
                                     </div>
                                     <div class="w-full flex flex-col gap-1">
-                                        <label for="car_images" class="text-[#ffffff] text-xs font-normal sm:text-xs">Damage
-                                            Image</label>
+                                        <label for="car_images"
+                                            class="text-[#ffffff] text-xs sm:text-sm md:text-base">Damage Image</label>
                                         <input type="file" name="car_image[]" id="car_images"
-                                            class="text-gray-600 bg-[#ffffff] border-[1px] border-[#ffffff]/70 px-1 py-0.5 sm:px-1 sm:py-0.5 focus:outline-none focus:ring-0 focus:border-[#ffffff] rounded-md"
+                                            class="text-gray-600 bg-[#ffffff] border-[1px] border-[#ffffff]/70 px-1 py-0.5 sm:px-2 sm:py-1 md:px-4 md:py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c] rounded-md"
                                             multiple accept="image/*">
                                         <div id="image-preview" class="mt-1 grid grid-cols-2 gap-1"></div>
                                     </div>
                                     <div class="w-full flex flex-col gap-1">
                                         <label for="msg"
-                                            class="text-[#ffffff] text-xs font-normal sm:text-xs">Message</label>
+                                            class="text-[#ffffff] text-xs sm:text-sm md:text-base">Message</label>
                                         <textarea name="msg" id="msg" placeholder="Your message" rows="2"
-                                            class="text-gray-600 bg-[#ffffff] border-[1px] border-[#ffffff]/70 px-1 py-0.5 sm:px-1 sm:py-0.5 focus:outline-none focus:ring-0 focus:border-[#ffffff] rounded-md"></textarea>
+                                            class="text-gray-600 bg-[#ffffff] border-[1px] border-[#ffffff]/70 px-1 py-0.5 sm:px-2 sm:py-1 md:px-4 md:py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c] rounded-md"></textarea>
                                     </div>
                                     <div class="w-full flex flex-col gap-1">
                                         <button type="submit"
-                                            class="text-[12px] sm:text-[14px] md:text-[16px] lg:text-[16px] w-max text-white bg-[#eeb21c] px-3 py-0.5 sm:px-2 sm:py-0.5 font-bold rounded-md border-[1px] border-[#ffffff] hover:bg-white hover:text-[#eeb21c] transition ease-in duration-200">
+                                            class="text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] w-max text-white bg-[#eeb21c] px-2 py-1 sm:px-3 sm:py-1 md:px-4 md:py-2 font-bold rounded-md border-[1px] border-[#ffffff] hover:bg-white hover:text-[#eeb21c] transition ease-in duration-200">
                                             Submit
                                         </button>
                                     </div>
                                 </form>
                             </div>
                         </div>
+
+
                     </div>
                 </div>
             </li>
@@ -342,6 +347,7 @@
     {{-- our gallery section ends here    --}}
 
     {{-- OUR WORK START --}}
+
     <div class="mt-10 mb-10">
         <div class="mx-auto w-full sm:w-10/12 md:w-8/12 mb-9">
             <h1 class="text-center font-montrasst font-bold text-3xl sm:text-4xl md:text-5xl text-yellow-500">OUR WORK</h1>
@@ -456,47 +462,48 @@
     {{-- OUR WORK END --}}
 
     {{-- stats section start here --}}
-    <div class="w-full  relative  bg-no-repeat bg-center bg-cover"
+    <div class="w-full relative bg-no-repeat bg-center bg-cover"
         style="background-image: url({{ asset('asset/images/Rectangle79.jpg') }})">
-        <div class="w-full flex justify-center bg-[#eeb21ce8] p-10">
-            <div class="lg:w-[90%] md:w-[90%] sm:w-[90%] w-full flex flex-col items-center gap-4 pt-[5px] px-4 py-2">
+        <div class="w-full flex justify-center bg-[#eeb21ce8] p-4 sm:p-10">
+            <div
+                class="w-full lg:w-[90%] md:w-[90%] sm:w-[90%] flex flex-col items-center gap-4 pt-2 sm:pt-[5px] px-2 sm:px-4 py-2">
                 <div class="w-full flex flex-col items-center px-2">
                     <h2
-                        class="uppercase lg:text-[52px] md:text-[30px] text-center sm:text-[25px] text-[20px] text-black font-bold">
-                        Contact us for a FREE smash</h2>
+                        class="uppercase text-center text-black font-bold lg:text-[52px] md:text-[30px] sm:text-[25px] text-[18px]">
+                        Contact us for a FREE smash
+                    </h2>
                     <h2
-                        class="uppercase lg:text-[52px] md:text-[30px] text-center sm:text-[25px] text-[20px] text-black font-bold">
+                        class="uppercase text-center text-black font-bold lg:text-[52px] md:text-[30px] sm:text-[25px] text-[18px]">
                         repair quote today!
                     </h2>
                     <a href="#top-inquiry-form"
-                        class="uppercase lg:text-[32px] md:text-[32px] text-[18px] w-max text-[#eeb52a] bg-white px-12 py-4 font-bold rounded-xl border-[1px] border-[#eeb21ce8] transition duration-200 ease-in-out hover:text-white hover:bg-[#15aef1]">
+                        class="uppercase text-[#eeb52a] bg-white px-6 py-2 sm:px-12 sm:py-4 font-bold rounded-xl border-[1px] border-[#eeb21ce8] transition duration-200 ease-in-out hover:text-white hover:bg-[#15aef1] lg:text-[32px] md:text-[32px] text-[14px] sm:text-[18px]">
                         GET FREE ESTIMATE
                     </a>
-
                 </div>
             </div>
         </div>
     </div>
-    {{-- stats section ends here    --}}
+    {{-- stats section ends here --}}
 
 
     {{-- our clients section start here --}}
-    <div class="w-full  relative py-6">
-        <div class="w-full  flex justify-center">
-            <div class=" w-full flex flex-col items-center gap-6 py-4 px-4"
+    <div class="w-full relative py-6">
+        <div class="w-full flex justify-center">
+            <div class="w-full flex flex-col items-center gap-6 py-4 px-4"
                 style="background-image: url({{ asset('asset/images/Rectangle43.jpg') }});background-repeat: no-repeat; background-size: cover">
-                <h2 class="lg:text-[50px] md:text-[40px] sm:text-[35px] text-[30px] text-white font-bold">WHAT OUR CLIENTS
-                    SAY</h2>
-                <div class="swiffy-slider slider-item-show3 slider-nav-dark slider-nav-autoplay mt-6">
+                <h2 class="text-[24px] sm:text-[30px] md:text-[35px] lg:text-[40px] xl:text-[50px] text-white font-bold">
+                    WHAT OUR CLIENTS SAY
+                </h2>
+                <div class="swiffy-slider slider-item-show3 slider-nav-dark slider-nav-autoplay mt-6 relative">
                     <ul class="slider-container">
                         {{-- make copy of this li for dynamic slider --}}
                         @foreach ($testimonials as $testimonial)
-                            <li class="w-full  relative">
-                                <div class="bg-white flex flex-col  p-4">
+                            <li class="w-full relative">
+                                <div class="bg-white flex flex-col p-4">
                                     <i class="fa-solid fa-quote-left text-[#eeb21c] text-[30px]"></i>
-                                    <p class="text-black  text-[14px] font-normal font-[montserrat] mt-2">
+                                    <p class="text-black text-[14px] font-normal font-[montserrat] mt-2">
                                         {{ $testimonial->msg }}
-
                                     </p>
                                     <h6 class="text-black font-bold font-[montserrat] mt-2">{{ $testimonial->name }}</h6>
                                     <div>
@@ -506,29 +513,27 @@
                                         <i class="fa fa-star text-[#eeb21c] text-sm"></i>
                                         <i class="fa fa-star text-[#eeb21c] text-sm"></i>
                                     </div>
-
-                                    <div class="w-full h-4 mt-6 mb-4 bg-[#eeb21c]">
-
-                                    </div>
+                                    <div class="w-full h-4 mt-6 mb-4 bg-[#eeb21c]"></div>
                                 </div>
                             </li>
                             {{-- slider copy ends here --}}
                         @endforeach
-
-
                     </ul>
-
-                    <button type="button" class="slider-nav"></button>
-                    <button type="button" class="slider-nav slider-nav-next"></button>
-
-
+                    <!-- Slider Navigation Buttons -->
+                    <button type="button"
+                        class="slider-nav flex items-center justify-center w-12 h-12 bg-[#eeb21c] text-white rounded-full shadow-lg border-2 border-white absolute top-1/2 transform -translate-y-1/2 left-4 hover:bg-[#d19c1a] transition duration-300 ease-in-out focus:outline-none z-10">
+                        <i class="fa fa-arrow-left text-2xl"></i>
+                    </button>
+                    <button type="button"
+                        class="slider-nav slider-nav-next flex items-center justify-center w-12 h-12 bg-[#eeb21c] text-white rounded-full shadow-lg border-2 border-white absolute top-1/2 transform -translate-y-1/2 right-4 hover:bg-[#d19c1a] transition duration-300 ease-in-out focus:outline-none z-10">
+                        <i class="fa fa-arrow-right text-2xl"></i>
+                    </button>
                 </div>
-
-
             </div>
         </div>
     </div>
-    {{-- our clients section ends here    --}}
+    {{-- our clients section ends here --}}
+
 
     {{-- 3 SIMPLE STEPS START --}}
 
@@ -767,55 +772,56 @@
 
     {{-- MAKE YOUR INQUIRY NOW START --}}
 
-    <div class="flex flex-col items-center justify-center mb-4">
-        <div class="bg-[#15AEF1] rounded-lg p-12">
-            <h1 class="text-center text-4xl text-white font-bold mb-6 self-center w-full font-montserrat">MAKE YOUR INQUIRY
+    <div class="flex flex-col items-center justify-center mb-4 p-4 sm:p-8">
+        <div class="bg-[#15AEF1] rounded-lg p-6 sm:p-12">
+            <h1 class="text-center text-2xl sm:text-4xl text-white font-bold mb-6 w-full font-montserrat">MAKE YOUR INQUIRY
                 NOW</h1>
-            <form action="{{ route('appointment.store') }}" method="post" class="mt-4 grid lg:grid-cols-2 gap-2"
-                enctype="multipart/form-data">
+            <form action="{{ route('appointment.store') }}" method="post"
+                class="mt-4 grid gap-2 grid-cols-1 sm:grid-cols-2" enctype="multipart/form-data">
                 @csrf
 
-                <div class="w-full sm:w-400 flex flex-col gap-1">
+                <div class="w-full flex flex-col gap-1">
                     <label for="name" class="text-white text-md font-normal font-montserrat">Name</label>
                     <input type="text" id="name" name="name" placeholder="Your full name"
                         class="text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]">
                 </div>
-                <div class="w-full sm:w-400 flex flex-col gap-1">
+                <div class="w-full flex flex-col gap-1">
                     <label for="email" class="text-white text-md font-normal font-montserrat">Email</label>
                     <input type="email" id="email" name="email" placeholder="Your Email"
                         class="text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]">
                 </div>
-                <div class="w-full sm:w-400 flex flex-col gap-1">
+                <div class="w-full flex flex-col gap-1">
                     <label for="number" class="text-white text-md font-normal font-montserrat">Mobile Number</label>
                     <input type="number" id="number" name="number" placeholder="Your number"
                         class="text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]">
                 </div>
-                <div class="w-full sm:w-400 flex flex-col gap-1">
+                <div class="w-full flex flex-col gap-1">
                     <label for="car_model" class="text-white text-md font-normal font-montserrat">Car Model</label>
                     <input type="text" id="car_model" name="car_model" placeholder="Your car model"
                         class="text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]">
                 </div>
-                <div class="w-full sm:w-400 flex flex-col gap-1">
+                <div class="w-full flex flex-col gap-1">
                     <label for="car_images" class="text-white text-md font-normal font-montserrat">Damage Image</label>
                     <input type="file" id="car_images" name="car_image[]"
                         class="text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]"
                         multiple accept="image/*">
                     <div id="image-preview" class="mt-2 grid grid-cols-2 gap-2"></div>
                 </div>
-                <div class="w-full sm:w-400 flex flex-col gap-1">
+                <div class="w-full flex flex-col gap-1">
                     <label for="msg" class="text-white text-md font-normal font-montserrat">Message</label>
                     <textarea id="msg" placeholder="Your message" name="msg" rows="1"
                         class="text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]"></textarea>
                 </div>
-                <div class="w-full sm:w-400 flex flex-col gap-1 mt-6">
+                <div class="w-full flex flex-col gap-1 mt-6">
                     <button type="submit"
-                        class="lg:text-[25px] md:text-[20px] text-[14px] w-max text-white bg-[#eeb21c] px-12 lg:py-2 md:py-2 py-1 font-bold rounded-md border-[1px] border-[#eeb21c] hover:bg-white hover:text-[#eeb21c] transition ease-in duration-2000">
+                        class="text-[14px] sm:text-[20px] lg:text-[25px] w-full sm:w-max text-white bg-[#eeb21c] px-12 py-2 font-bold rounded-md border-[1px] border-[#eeb21c] hover:bg-white hover:text-[#eeb21c] transition ease-in duration-2000">
                         Submit
                     </button>
                 </div>
             </form>
         </div>
     </div>
+
 
     {{-- MAKE YOUR INQUIRY NOW END --}}
 

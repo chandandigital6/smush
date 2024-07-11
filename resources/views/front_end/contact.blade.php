@@ -48,7 +48,7 @@
 
     {{--about section start here--}}
     <div class="w-full  relative lg:pt-[250px] md:pt-[200px] sm:pt-[180px] pt-[100px]"
-         style="background-image: url({{asset('asset/images/bac.png')}})">
+         style="background-image: url({{asset('')}})">
 {{--        @include('front_end.components.carSection')--}}
 
 
@@ -79,51 +79,47 @@
                         </div>
                     @endif
 
-                    <form action="{{route('appointment.store')}}" method="post" class="mt-4 grid lg:grid-cols-2 gap-2" enctype="multipart/form-data">
+                    <form action="{{ route('appointment.store') }}" method="post" class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-2" enctype="multipart/form-data">
                         @csrf
                         <div class="w-full flex flex-col gap-1">
-                            <label for="" class="text-[#eeb21c] text-md font-normal">Name</label>
-                            <input type="text" name="name" placeholder="Your full name" class="text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]">
+                            <label for="name" class="text-[#eeb21c] text-md font-normal">Name</label>
+                            <input type="text" name="name" placeholder="Your full name"
+                                   class="text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]">
                         </div>
                         <div class="w-full flex flex-col gap-1">
-                            <label for="" class="text-[#eeb21c] text-md font-normal">Email</label>
-                            <input type="email" name="email" placeholder="Your Email" class="text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]">
+                            <label for="email" class="text-[#eeb21c] text-md font-normal">Email</label>
+                            <input type="email" name="email" placeholder="Your Email"
+                                   class="text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]">
                         </div>
                         <div class="w-full flex flex-col gap-1">
-                            <label for="" class="text-[#eeb21c] text-md font-normal">Mobile Number</label>
-                            <input type="number" name="number" placeholder="Your number" class="text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]">
+                            <label for="number" class="text-[#eeb21c] text-md font-normal">Mobile Number</label>
+                            <input type="number" name="number" placeholder="Your number"
+                                   class="text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]">
                         </div>
-{{--                        <div class="w-full flex flex-col gap-1">--}}
-{{--                            <label for="" class="text-[#eeb21c] text-md font-normal"> Any Make</label>--}}
-{{--                            <select name="" id="">--}}
-{{--                                <option value=""></option>--}}
-{{--                            </select>--}}
-{{--                            <input type="text" name="car_name" placeholder=" Any Make" class="text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]">--}}
-{{--                        </div>--}}
                         <div class="w-full flex flex-col gap-1">
-                            <label for="" class="text-[#eeb21c] text-md font-normal">Car Model</label>
-                            <input type="text" name="car_model" placeholder="Your car model" class="text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]">
+                            <label for="car_model" class="text-[#eeb21c] text-md font-normal">Car Model</label>
+                            <input type="text" name="car_model" placeholder="Your car model"
+                                   class="text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]">
                         </div>
                         <div class="w-full flex flex-col gap-1">
                             <label for="car_images" class="text-[#eeb21c] text-md font-normal">Damage Image</label>
-                            <input type="file" name="car_image[]" id="car_images" class="text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]" multiple accept="image/*">
+                            <input type="file" name="car_image[]" id="car_images"
+                                   class="text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]" multiple accept="image/*">
                             <div id="image-preview" class="mt-2 grid grid-cols-2 gap-2"></div>
                         </div>
-
                         <div class="w-full flex flex-col gap-1">
-                            <label for="" class="text-[#eeb21c] text-md font-normal">Message</label>
-                            <textarea placeholder="Your message" name="msg" rows="1" class="text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]"></textarea>
+                            <label for="msg" class="text-[#eeb21c] text-md font-normal">Message</label>
+                            <textarea placeholder="Your message" name="msg" rows="1"
+                                      class="text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]"></textarea>
                         </div>
                         <div class="w-full flex flex-col gap-1 mt-6">
                             <button type="submit"
-                               class="lg:text-[25px] md:text-[20px] text-[14px] w-max text-white bg-[#eeb21c] px-12 lg:py-2 md:py-2 py-1 font-bold rounded-md border-[1px] border-[#eeb21c] hover:bg-white hover:text-[#eeb21c]  transition ease-in duration-2000">
+                                    class="text-[14px] sm:text-[16px] md:text-[20px] lg:text-[25px] w-max text-white bg-[#eeb21c] px-8 lg:py-2 md:py-2 py-1 font-bold rounded-md border-[1px] border-[#eeb21c] hover:bg-white hover:text-[#eeb21c] transition ease-in duration-2000">
                                 Submit
                             </button>
                         </div>
-
-
                     </form>
-
+                    
                 </div>
                 <div class="w-full flex flex-col gap-6 ">
                      <div class="flex items-center gap-2">

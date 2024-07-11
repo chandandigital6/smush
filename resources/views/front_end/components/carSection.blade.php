@@ -1,4 +1,4 @@
-<div class="w-full h-max absolute -top-[50px] left-0 px-4 flex justify-center z-50 py-4 ">
+<div class="w-full h-max absolute -top-[50px] left-0 px-4 flex justify-center z-10 py-4 ">
     <div
         class=" lg:w-[1000px] lg:h-[250px] md:h-[200px] sm:h-[200px] h-[120px] bg-white px-2 rounded-lg shadow-md shadow-gray-400 flex justify-between items-center gap-0">
         <div>
