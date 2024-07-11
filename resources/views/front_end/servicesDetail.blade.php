@@ -183,7 +183,7 @@
                             <div class="flex flex-col gap-2">
                                 <div class="w-full max-w-lg">
                                     <h1
-                                        class="uppercase text-white font-bold text-[24px] sm:text-[20px] md:text-[30px] lg:text-[70px]">
+                                        class="uppercase text-white font-bold text-[24px] sm:text-[20px] md:text-[30px] lg:text-[50px]">
                                         {{ $service->heading }}
                                     </h1>
                                 </div>
