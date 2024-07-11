@@ -182,10 +182,10 @@
                         <div class="w-full lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left">
                             <div class="flex flex-col gap-2">
                                 <div class="w-full max-w-lg">
-                                    <p
+                                    <h1
                                         class="uppercase text-white font-bold text-[24px] sm:text-[20px] md:text-[30px] lg:text-[70px]">
                                         {{ $service->heading }}
-                                    </p>
+                                    </h1>
                                 </div>
                                 <ul class="list-disc text-yellow-500 ml-5 text-left">
                                     <li><span class="text-white lg:text-[26px] text-[20px] font-bold">Flawless color
