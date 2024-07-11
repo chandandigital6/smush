@@ -140,7 +140,7 @@
                                     <li>
                                         <h2 class="uppercase  lg:text-[30px] md:text-[25px]  sm:text-[20px] text-[20px] text-white font-bold">
                                           {{$choos->f_title}}</h2>
-                                        <p class="text-white lg:leading-7 md:leading-2 lg:text-[18px] md:text-[13px] text-[12px] font-normal font-[montserrat]"
+                                        <p class="text-white lg:leading-7 md:leading-2 lg:text-[18px] md:text-[16px] text-[16px] font-normal font-[montserrat]"
                                            style="word-spacing: 3px;">
                                         {!! $choos->f_msg !!}
 
@@ -150,7 +150,7 @@
                                     <li>
                                         <h2 class="uppercase lg:text-[30px] md:text-[25px]  sm:text-[20px] text-[20px] text-white font-bold">
                                             {{$choos->f_1_title}}</h2>
-                                        <p class="text-white lg:leading-7 md:leading-2 lg:text-[18px] md:text-[13px] text-[12px] font-normal font-[montserrat]"
+                                        <p class="text-white lg:leading-7 md:leading-2 lg:text-[18px] md:text-[16px] text-[16px] font-normal font-[montserrat]"
                                            style="word-spacing: 3px;">
                                             {!! $choos->f_1_msg !!}
                                         </p>
@@ -159,7 +159,7 @@
                                     <li>
                                         <h2 class="uppercase lg:text-[30px] md:text-[25px]  sm:text-[20px] text-[20px] text-white font-bold">
                                          {{$choos->f_2_title}}</h2>
-                                        <p class="text-white lg:leading-7 md:leading-2 lg:text-[18px] md:text-[13px] text-[12px] font-normal font-[montserrat]"
+                                        <p class="text-white lg:leading-7 md:leading-2 lg:text-[18px] md:text-[16px] text-[16px] font-normal font-[montserrat]"
                                            style="word-spacing: 3px;">
                                             {!! $choos->f_2_msg !!}
                                         </p>
