@@ -2,7 +2,7 @@
 @section('content')
 
     {{-- slider section start here --}}
-    <div class="swiffy-slider">
+    {{-- <div class="swiffy-slider">
         <ul class="slider-container">
             <li class="w-full relative">
                 <img src="{{asset('asset/images/Rectangle 42.png')}}"
@@ -29,7 +29,7 @@
                 </div>
             </li>
         </ul>
-    </div>
+    </div> --}}
     {{-- slider section ends here --}}
 
     {{-- Thank You section start here --}}
