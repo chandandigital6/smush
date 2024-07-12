@@ -43,7 +43,10 @@
                         $car_imagePaths = explode(',', $appointment->car_image);
                     @endphp
                     @foreach ($car_imagePaths as $car_imagePath)
-                        <img src="{{ asset('storage/'.$car_imagePath) }}" alt="Car Image" style="max-width: 500px;">
+                        <div class="mb-4">
+                            <img src="{{ asset('storage/' . $car_imagePath) }}" alt="Car Image"
+                                class="w-full max-w-full sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl h-auto mx-auto rounded-lg shadow-md">
+                        </div>
                     @endforeach
                 @endif
             </div>
@@ -53,7 +56,9 @@
                 <p>{{ $appointment->created_at->format('d-m-Y H:i') }}</p>
             </div>
 
-            <a href="{{ route('appointment.index') }}" class="text-white bg-blue-500 px-6 py-2 font-bold rounded-md border-[1px] border-blue-500 hover:bg-white hover:text-blue-500 transition ease-in duration-200">Back to Appointments</a>
+            <a href="{{ route('appointment.index') }}"
+                class="text-white bg-blue-500 px-6 py-2 font-bold rounded-md border-[1px] border-blue-500 hover:bg-white hover:text-blue-500 transition ease-in duration-200">Back
+                to Appointments</a>
         </div>
     </div>
 
