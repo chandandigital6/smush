@@ -62,15 +62,17 @@
 
 {{--                                        </td>--}}
                                         <td>
-{{--                                            @if($serviceVideo->youtube_url_embed)--}}
-                                                <iframe width="668" height="376" src="{{$serviceVideo->youtube_url_embed}}" title="Libaas [Slowed + Reverb] - Kaka | Ginni Kapoor | Punjabi Lofi Song | Chillwithbeats | Textaudio" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                            <!-- Try embedding a different video to check if embedding is allowed -->
+{{--                                            <iframe width="668" height="376" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Sample Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>--}}
 
+                                            <!-- Uncomment and use this section if embedding is allowed -->
+{{--                                            @if($serviceVideo->youtube_url_embed)--}}
+                                                <iframe width="668" height="376" src="{{ $serviceVideo->youtube_url_embed }}" title="Service Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 {{--                                            @endif--}}
                                         </td>
+
                                         <td>{{$serviceVideo->service->title}}</td>
                                         <td>{{$serviceVideo->status ==1 ? 'active': 'inactive'}}</td>
-{{--                                                                                <td>{!! $serviceVideo->description !!}</td>--}}
-{{--                                                                                <td><img src="{{ asset('storage/'.$serviceVideo->image) }}" alt="{{ $serviceVideo->title }}" style="max-width: 100px;"></td>--}}
                                         <td>
                                             <a href="{{ route('serviceVideo.edit', $serviceVideo->id) }}" class="btn btn-primary">Edit</a>
                                             <a href="{{ route('serviceVideo.delete', $serviceVideo->id) }}" class="btn btn-danger">Delete</a>

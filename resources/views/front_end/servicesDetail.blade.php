@@ -494,7 +494,7 @@
 
     {{-- 3 SIMPLE STEPS START --}}
 
-    <div class="bg-gray-100 p-4 sm:p-6 md:p-10">
+    <div class=" p-4 sm:p-6 md:p-10">
         <div class="max-w-6xl mx-auto text-center">
             <h2 class="text-xl sm:text-2xl md:text-3xl font-bold text-pink-600 mb-2 sm:mb-4">3 SIMPLE STEPS</h2>
             <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">UPLOAD YOUR PHOTOS TO GET A FAST QUOTE</h1>

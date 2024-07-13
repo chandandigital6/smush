@@ -143,7 +143,7 @@
 
                                             </p>
 
-<<<<<<< HEAD
+
                     <div class="w-full grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-1 mt-6">
                         <div class="w-full flex justify-center items-center">
                             <img src="{{asset('storage/'.$choos->image)}}" alt="">
@@ -158,7 +158,7 @@
                                         <p class="text-white lg:leading-7 md:leading-2 lg:text-[18px] md:text-[16px] text-[16px] font-normal font-[montserrat]"
                                            style="word-spacing: 3px;">
                                         {!! $choos->f_msg !!}
-=======
+
                                         </li>
                                         <li>
                                             <h2
@@ -168,7 +168,7 @@
                                                 style="word-spacing: 3px;">
                                                 {!! $choos->f_1_msg !!}
                                             </p>
->>>>>>> 96626512b6c93807eee8454ecb3750f988b73a9e
+
 
                                         </li>
                                         <li>
@@ -180,7 +180,6 @@
                                                 {!! $choos->f_2_msg !!}
                                             </p>
 
-<<<<<<< HEAD
                                     </li>
                                     <li>
                                         <h2 class="uppercase lg:text-[30px] md:text-[25px]  sm:text-[20px] text-[20px] text-white font-bold">
@@ -201,11 +200,11 @@
 
                                     </li>
                                 </ul>
-=======
+
                                         </li>
                                     </ul>
                                 </div>
->>>>>>> 96626512b6c93807eee8454ecb3750f988b73a9e
+
                             </div>
                         </div>
 
