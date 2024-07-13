@@ -89,6 +89,21 @@
                         <p>Service Choose Us</p>
                     </a>
                 </li>
+
+                <li class="nav-item">
+                    <a href="{{route('serviceHeader.index')}}" class="nav-link">
+                        <i class="nav-icon fa fa-bug"></i>
+                        <p>ServiceHeader</p>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                <a href="{{route('serviceBefore.index')}}" class="nav-link">
+                    <i class="nav-icon fa fa-bug"></i>
+                    <p>Service b/A images</p>
+                </a>
+                </li>
+
                 <li class="nav-item">
                     <a href="{{route('logo.index')}}" class="nav-link">
                         <i class="nav-icon fa fa-podcast"></i>

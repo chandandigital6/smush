@@ -176,23 +176,30 @@
                 <div class="absolute top-0 left-0 w-full h-full bg-black/70 flex justify-center items-center px-4">
                     <div class="container mx-auto flex flex-col lg:flex-row items-center justify-between gap-4 px-4">
                         <div class="w-full lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left">
+                           @foreach($serviceHeader as $serviceHead)
+
+
                             <div class="flex flex-col gap-2">
                                 <div class="w-full max-w-lg">
                                     <h1
                                         class="uppercase text-white font-bold text-[24px] sm:text-[20px] md:text-[30px] lg:text-[50px]">
-                                        {{ $service->heading }}
+                                        {{ $serviceHead->title }}
                                     </h1>
                                 </div>
                                 <ul class="list-disc text-yellow-500 ml-5 text-left">
-                                    <li><span class="text-white lg:text-[26px] text-[20px] font-bold">Flawless color
-                                            match</span></li>
-                                    <li><span class="text-white lg:text-[26px] text-[20px] font-bold">Insurance-safe</span>
+                                    <li><span class="text-white lg:text-[26px] text-[20px] font-bold">
+                                        {{$serviceHead->f}}
+                                        </span></li>
+                                    <li><span class="text-white lg:text-[26px] text-[20px] font-bold">     {{$serviceHead->f_1}} </span>
                                     </li>
-                                    <li><span class="text-white lg:text-[26px] text-[20px] font-bold">Professionally
-                                            certified technicians</span></li>
+                                    <li><span class="text-white lg:text-[26px] text-[20px] font-bold">
+
+                                               {{$serviceHead->f_2}}
+                                        </span></li>
                                 </ul>
                             </div>
                         </div>
+                        @endforeach
 
                         <div class="w-full lg:w-1/2 mt-4 lg:mt-0">
                             <div class="flex flex-col items-center w-full">
@@ -365,11 +372,14 @@
         <div class="new-gallery">
             <main class="new-main flex flex-wrap justify-center">
                 <!-- Slider Pairs -->
+                @foreach($serviceBefore as $serviceBe)
+
+
                 <div class="new-container w-full sm:w-1/2 md:w-1/3 p-2">
                     <div class="new-image-container">
-                        <img class="new-image-before new-slider-image" src="{{ asset('asset/images/Rectangle 42.png') }}"
+                        <img class="new-image-before new-slider-image" src="{{ asset('storage/'.$serviceBe->image_before) }}"
                             alt="color photo" />
-                        <img class="new-image-after new-slider-image" src="{{ asset('asset/images/Rectangle 41.png') }}"
+                        <img class="new-image-after new-slider-image" src="{{ asset('storage/'.$serviceBe->image_after) }}"
                             alt="black and white" />
                     </div>
                     <input type="range" min="0" max="100" value="50"
@@ -395,70 +405,12 @@
                         </svg>
                     </div>
                 </div>
-
+                @endforeach
                 <!-- Repeat for each additional slider -->
                 <!-- Slider Pairs -->
-                <div class="new-container w-full sm:w-1/2 md:w-1/3 p-2">
-                    <div class="new-image-container">
-                        <img class="new-image-before new-slider-image" src="{{ asset('asset/images/Rectangle 42.png') }}"
-                            alt="color photo" />
-                        <img class="new-image-after new-slider-image" src="{{ asset('asset/images/Rectangle 41.png') }}"
-                            alt="black and white" />
-                    </div>
-                    <input type="range" min="0" max="100" value="50"
-                        aria-label="Percentage of before photo shown" class="new-slider" />
-                    <div class="new-slider-line" aria-hidden="true"></div>
-                    <div class="new-slider-button" aria-hidden="true">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
-                            viewBox="0 0 256 256">
-                            <rect width="256" height="256" fill="none"></rect>
-                            <line x1="128" y1="40" x2="128" y2="216" fill="none"
-                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16">
-                            </line>
-                            <line x1="96" y1="128" x2="16" y2="128" fill="none"
-                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16">
-                            </line>
-                            <polyline points="48 160 16 128 48 96" fill="none" stroke="currentColor"
-                                stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
-                            <line x1="160" y1="128" x2="240" y2="128" fill="none"
-                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16">
-                            </line>
-                            <polyline points="208 96 240 128 208 160" fill="none" stroke="currentColor"
-                                stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
-                        </svg>
-                    </div>
-                </div>
+
                 <!-- Slider Pairs -->
-                <div class="new-container w-full sm:w-1/2 md:w-1/3 p-2">
-                    <div class="new-image-container">
-                        <img class="new-image-before new-slider-image" src="{{ asset('asset/images/Rectangle 42.png') }}"
-                            alt="color photo" />
-                        <img class="new-image-after new-slider-image" src="{{ asset('asset/images/Rectangle 41.png') }}"
-                            alt="black and white" />
-                    </div>
-                    <input type="range" min="0" max="100" value="50"
-                        aria-label="Percentage of before photo shown" class="new-slider" />
-                    <div class="new-slider-line" aria-hidden="true"></div>
-                    <div class="new-slider-button" aria-hidden="true">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
-                            viewBox="0 0 256 256">
-                            <rect width="256" height="256" fill="none"></rect>
-                            <line x1="128" y1="40" x2="128" y2="216" fill="none"
-                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16">
-                            </line>
-                            <line x1="96" y1="128" x2="16" y2="128" fill="none"
-                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16">
-                            </line>
-                            <polyline points="48 160 16 128 48 96" fill="none" stroke="currentColor"
-                                stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
-                            <line x1="160" y1="128" x2="240" y2="128" fill="none"
-                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16">
-                            </line>
-                            <polyline points="208 96 240 128 208 160" fill="none" stroke="currentColor"
-                                stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></polyline>
-                        </svg>
-                    </div>
-                </div>
+
             </main>
         </div>
     </div>

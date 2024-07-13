@@ -6,8 +6,10 @@ use App\Http\Requests\ServiceRequest;
 
 use App\Models\Seo;
 use App\Models\Service;
+use App\Models\ServiceBefore;
 use App\Models\ServiceChoose;
 use App\Models\ServiceGallery;
+use App\Models\ServiceHeader;
 use App\Models\ServiceVideo;
 use App\Models\Testimonial;
 use Illuminate\Http\Request;
@@ -94,21 +96,23 @@ class ServiceController extends Controller
         $service = Service::where('title', $title)->first();
 
         $services=Service::where('status' ,1)->get();
-//        $serviceGallery = ServiceGallery::where('service_id', $service->id)->get();
+        $serviceHeader = ServiceHeader::where('service_id', $service->id)->get();
+        $serviceBefore = ServiceBefore::where('service_id', $service->id)->get();
+//        dd($serviceBefore);
         $serviceGallery = ServiceGallery::where('service_id', $service->id)
-//            ->where('status', '1')
+         ->where('status', '1')
             ->get();
 //     dd($serviceGallery);
         $serviceVideo= ServiceVideo::where('service_id', $service->id)
-//            ->where('status', '1')
+          ->where('status', '1')
             ->get();
         $serviceChooseUs=ServiceChoose::where('service_id', $service->id)
-//            ->where('status', '1')
+           ->where('status', '1')
             ->get();
 //        dd($chooseUs);
         $testimonials=Testimonial::all();
         $seos= Seo::where('service_id', $service->id)->get();
-        return view('front_end.servicesDetail',compact('service','serviceGallery','serviceChooseUs','services','serviceVideo','seos','testimonials'));
+        return view('front_end.servicesDetail',compact('service','serviceGallery','serviceChooseUs','services','serviceVideo','seos','testimonials','serviceHeader','serviceBefore'));
     }
 
 }

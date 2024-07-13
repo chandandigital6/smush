@@ -11,9 +11,11 @@ use App\Http\Controllers\ClientController;
 use App\Http\Controllers\CounterController;
 use App\Http\Controllers\PlanCOntroller;
 use App\Http\Controllers\SeoController;
+use App\Http\Controllers\ServiceBeforController;
 use App\Http\Controllers\ServiceChooseController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\ServiceGalleryController;
+use App\Http\Controllers\ServiceHeaderController;
 use App\Http\Controllers\ServiceTitleController;
 use App\Http\Controllers\ServiceVideoController;
 use App\Http\Controllers\TeamController;
@@ -276,7 +278,28 @@ Route::group(['middleware' => ['auth']],function (){
     Route::get('seo/delete/{seo}',[SeoController::class,'delete'])->name('seo.delete');
     Route::get('seo/duplicate/{seo}',[SeoController::class,'duplicate'])->name('seo.duplicate');
 
+//servic header
+
+    Route::get('serviceHeader/index',[ServiceHeaderController::class,'index'])->name('serviceHeader.index');
+    Route::get('serviceHeader/create',[ServiceHeaderController::class,'create'])->name('serviceHeader.create');
+    Route::post('serviceHeader/store',[ServiceHeaderController::class,'store'])->name('serviceHeader.store');
+    Route::get('serviceHeader/edit/{serviceHeader}',[ServiceHeaderController::class,'edit'])->name('serviceHeader.edit');
+    Route::post('serviceHeader/update/{serviceHeader}',[ServiceHeaderController::class,'update'])->name('serviceHeader.update');
+    Route::get('serviceHeader/delete/{serviceHeader}',[ServiceHeaderController::class,'delete'])->name('serviceHeader.delete');
+    Route::get('serviceHeader/duplicate/{serviceHeader}',[ServiceHeaderController::class,'duplicate'])->name('serviceHeader.duplicate');
+
+    Route::get('serviceBefore/index',[ServiceBeforController::class,'index'])->name('serviceBefore.index');
+    Route::get('serviceBefore/create',[ServiceBeforController::class,'create'])->name('serviceBefore.create');
+    Route::post('serviceBefore/store',[ServiceBeforController::class,'store'])->name('serviceBefore.store');
+    Route::get('serviceBefore/edit/{serviceBefore}',[ServiceBeforController::class,'edit'])->name('serviceBefore.edit');
+    Route::post('serviceBefore/update/{serviceBefore}',[ServiceBeforController::class,'update'])->name('serviceBefore.update');
+    Route::get('serviceBefore/delete/{serviceBefore}',[ServiceBeforController::class,'delete'])->name('serviceBefore.delete');
+    Route::get('serviceBefore/duplicate/{serviceBefore}',[ServiceBeforController::class,'duplicate'])->name('serviceBefore.duplicate');
+
 });
+
+
+
 
 
 Route::get('run/foo', function () {
