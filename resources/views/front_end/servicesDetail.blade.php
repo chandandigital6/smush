@@ -570,65 +570,54 @@
     <div class="w-full  relative py-10" style="background-image: url()">
         <div class="w-full px-4 flex justify-center">
             @foreach ($serviceChooseUs as $choos)
-                <div class="lg:w-[90%] md:w-[90%] sm:w-[90%] w-full rounded-[50px]"
-                    style="background-image: url({{ asset('asset/images/Rectangle56.jpg') }});box-shadow: 0px 0px 10px 1px #25a8df">
-                    <div class="w-full flex flex-col items-center gap-2 p-2 bg-[#25a8df]/90 rounded-[50px]">
-                        <h2
-                            class=" lg:text-[45px] md:text-[40px] text-center sm:text-[35px] text-[25px] text-white font-bold">
-                            {{ $choos->title }}</h2>
-                        <h2
-                            class="uppercase lg:text-[45px] md:text-[40px] text-center sm:text-[35px] text-[25px] text-white font-bold">
-                            {{ $choos->heading }}</h2>
+{{--                @foreach ($chooseUs as $choos)--}}
+                    <div class="lg:w-[90%] md:w-[90%] sm:w-[90%] w-full rounded-[50px]"
+                         style="background-image: url({{ asset('asset/images/Rectangle56.jpg') }}); box-shadow: 0px 0px 10px 1px #25a8df">
+                        <div class="w-full flex flex-col items-center gap-2 p-2 bg-[#25a8df]/90 rounded-[50px]">
+                            <h2 class="lg:text-[45px] md:text-[40px] text-center sm:text-[35px] text-[25px] text-white font-bold">
+                                {{ $choos->title }}</h2>
+                            <h2 class="uppercase lg:text-[45px] md:text-[40px] text-center sm:text-[35px] text-[25px] text-white font-bold">
+                                {{ $choos->heading }}</h2>
 
-
-                        <div class="w-full grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-1 mt-6">
-                            <div class="w-full flex justify-center items-center">
-                                <img src="{{ asset('storage/' . $choos->image) }}" alt="">
-                            </div>
-                            <div class="flex flex-col gap-4">
-                                <div class="flex flex-col md:flex-row gap-2">
-                                    <ul class="flex flex-col gap-8 pl-8 list-disc"
-                                        style="list-style-image: url({{ asset('storage/'.$choos->f_1_image) }});">
-                                        <li>
-                                            <h2
-                                                class="uppercase text-white font-bold lg:text-[30px] md:text-[25px] sm:text-[20px] text-[20px]">
-                                                {{ $choos->f_title }}
-                                            </h2>
-                                            <p
-                                                class="text-white font-normal lg:text-[18px] md:text-[16px] text-[16px] leading-7 font-[montserrat]">
-                                                {!! $choos->f_msg !!}
-                                            </p>
-                                        </li>
-                                        <li>
-                                            <h2
-                                                class="uppercase text-white font-bold lg:text-[30px] md:text-[25px] sm:text-[20px] text-[20px]">
-                                                {{ $choos->f_1_title }}
-                                            </h2>
-                                            <p
-                                                class="text-white font-normal lg:text-[18px] md:text-[16px] text-[16px] leading-7 font-[montserrat]">
-                                                {!! $choos->f_1_msg !!}
-                                            </p>
-                                        </li>
-                                        <li>
-                                            <h2
-                                                class="uppercase text-white font-bold lg:text-[30px] md:text-[25px] sm:text-[20px] text-[20px]">
-                                                {{ $choos->f_2_title }}
-                                            </h2>
-                                            <p
-                                                class="text-white font-normal lg:text-[18px] md:text-[16px] text-[16px] leading-7 font-[montserrat]">
-                                                {!! $choos->f_2_msg !!}
-                                            </p>
-                                        </li>
-                                    </ul>
+                            <div class="w-full grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-1 mt-6">
+                                <div class="w-full flex justify-center items-center">
+                                    <img src="{{ asset('storage/' . $choos->image) }}" alt="">
+                                </div>
+                                <div class="flex flex-col gap-4">
+                                    <div class="flex gap-2">
+                                        <ul class="flex flex-col gap-8 pl-8"
+                                            style="list-style-image: url({{ asset('storage/' . $choos->f_1_image) }});">
+                                            <li>
+                                                <h2 class="uppercase lg:text-[30px] md:text-[25px] sm:text-[20px] text-[20px] text-white font-bold">
+                                                    {{ $choos->f_title }}</h2>
+                                                <p class="text-white lg:leading-7 md:leading-2 lg:text-[18px] md:text-[16px] text-[16px] font-normal font-[montserrat]"
+                                                   style="word-spacing: 3px;">
+                                                    {!! $choos->f_msg !!}
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <h2 class="uppercase lg:text-[30px] md:text-[25px] sm:text-[20px] text-[20px] text-white font-bold">
+                                                    {{ $choos->f_1_title }}</h2>
+                                                <p class="text-white lg:leading-7 md:leading-2 lg:text-[18px] md:text-[16px] text-[16px] font-normal font-[montserrat]"
+                                                   style="word-spacing: 3px;">
+                                                    {!! $choos->f_1_msg !!}
+                                                </p>
+                                            </li>
+                                            <li>
+                                                <h2 class="uppercase lg:text-[30px] md:text-[25px] sm:text-[20px] text-[20px] text-white font-bold">
+                                                    {{ $choos->f_2_title }}</h2>
+                                                <p class="text-white lg:leading-7 md:leading-2 lg:text-[18px] md:text-[16px] text-[16px] font-normal font-[montserrat]"
+                                                   style="word-spacing: 3px;">
+                                                    {!! $choos->f_2_msg !!}
+                                                </p>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
-
                         </div>
-
-
                     </div>
-
-                </div>
+{{--                @endforeach--}}
             @endforeach
         </div>
 
