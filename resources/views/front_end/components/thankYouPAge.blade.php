@@ -2,7 +2,7 @@
 @section('content')
 
     {{-- slider section start here --}}
-    <div class="swiffy-slider">
+    {{-- <div class="swiffy-slider">
         <ul class="slider-container">
             <li class="w-full relative">
                 <img src="{{asset('asset/images/Rectangle 42.png')}}"
@@ -29,7 +29,7 @@
                 </div>
             </li>
         </ul>
-    </div>
+    </div> --}}
     {{-- slider section ends here --}}
 
     {{-- Thank You section start here --}}
@@ -40,9 +40,9 @@
                 We appreciate your interest in our service. Your submission has been received and we will review it as soon as possible.
                 Our team will be in touch with you shortly regarding your inquiry.
             </p>
-            <p class="text-[#666] text-[18px] mb-6">
+            {{-- <p class="text-[#666] text-[18px] mb-6">
                 We have received your information.
-            </p>
+            </p> --}}
             <a href="{{ route('home') }}"
                class="text-white bg-[#eeb21c] px-6 py-3 font-bold rounded-md border-[1px] border-[#eeb21c] hover:bg-white hover:text-[#eeb21c] transition ease-in duration-200">
                 Back to Home

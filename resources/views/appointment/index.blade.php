@@ -1,10 +1,9 @@
 @extends('layouts.aap')
 
 @section('content')
-
     <div class="container mt-5">
         <div class="row justify-content-center">
-            <div class="col-md-12">
+            <div class="col-12">
                 @if(session('error'))
                     <div class="alert alert-danger alert-dismissible fade show" role="alert">
                         {{ session('error') }}
@@ -24,9 +23,9 @@
                 @endif
                 <div class="card">
                     <div class="card-header bg-primary text-white">
-                        <div class="d-flex justify-content-between align-items-center">
+                        <div class="d-flex justify-content-between align-items-center flex-wrap">
                             <h1>Appointment</h1>
-                            <a href="{{ route('appointment.create') }}" class="btn btn-light">Create new appointment</a>
+                            <a href="{{ route('appointment.create') }}" class="btn btn-light mt-2 mt-md-0">Create new appointment</a>
                         </div>
                     </div>
 
@@ -43,58 +42,56 @@
                         <div class="table-responsive">
                             <table class="table table-striped">
                                 <thead>
-                                <tr>
-                                    <th>ID</th>
-                                    <th>name</th>
-                                    <th>email</th>
-                                    <th>number</th>
-                                    <th>Massage</th>
-                                    <th>Car Images</th>
-                                    <th>Action</th>
-                                </tr>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>name</th>
+                                        <th>email</th>
+                                        <th>number</th>
+                                        <th>Massage</th>
+                                        <th>Car Images</th>
+                                        <th>Action</th>
+                                    </tr>
                                 </thead>
                                 <tbody>
-                                @forelse ($appointmentData as $appointment)
-                                    <tr>
-                                        <td>{{ $appointment->id }}</td>
-                                        <td>{{ $appointment->name }}</td>
-                                        <td>{{ $appointment->email }}</td>
-                                        <td>{{ $appointment->number }}</td>
-                                        <td>{{ $appointment->msg }}</td>
-                                        <td>
-                                            @if (is_string($appointment->car_image) && !empty($appointment->car_image))
-                                                @php
-                                                    $car_imagePaths = explode(',', $appointment->car_image);
-                                                @endphp
-                                                @foreach ($car_imagePaths as $car_imagePath)
-                                                    <img src="{{ asset('storage/'.$car_imagePath) }}" alt="Car Image" style="max-width: 100px;">
-                                                @endforeach
-                                            @endif
-                                        </td>
-                                        <td>
-                                            <div class="btn-group">
-                                                <a href="{{ route('appointment.delete', $appointment->id) }}" class="btn btn-danger">Delete</a>
-                                                <a href="{{ route('appointment.duplicate', $appointment->id) }}" class="btn btn-warning">show</a>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                @empty
-                                    <tr>
-                                        <td colspan="7">No appointments found</td>
-                                    </tr>
-                                @endforelse
-
+                                    @forelse ($appointmentData as $appointment)
+                                        <tr>
+                                            <td>{{ $appointment->id }}</td>
+                                            <td>{{ $appointment->name }}</td>
+                                            <td>{{ $appointment->email }}</td>
+                                            <td>{{ $appointment->number }}</td>
+                                            <td>{{ $appointment->msg }}</td>
+                                            <td>
+                                                @if (is_string($appointment->car_image) && !empty($appointment->car_image))
+                                                    @php
+                                                        $car_imagePaths = explode(',', $appointment->car_image);
+                                                    @endphp
+                                                    @foreach ($car_imagePaths as $car_imagePath)
+                                                        <img src="{{ asset('storage/'.$car_imagePath) }}" alt="Car Image" class="img-fluid mb-2" style="max-width: 100px;">
+                                                    @endforeach
+                                                @endif
+                                            </td>
+                                            <td>
+                                                <div class="btn-group" role="group">
+                                                    <a href="{{ route('appointment.delete', $appointment->id) }}" class="btn btn-danger">Delete</a>
+                                                    <a href="{{ route('appointment.duplicate', $appointment->id) }}" class="btn btn-warning">show</a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    @empty
+                                        <tr>
+                                            <td colspan="7">No appointments found</td>
+                                        </tr>
+                                    @endforelse
                                 </tbody>
                             </table>
                         </div>
                     </div>
 
                     <div class="card-footer">
-           {{$appointmentData->links()}}
+                        {{$appointmentData->links()}}
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
 @endsection

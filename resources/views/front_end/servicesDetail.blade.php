@@ -8,6 +8,7 @@
             }
         }
 
+
         .new-gallery,
         .new-gallery::after,
         .new-gallery::before {
@@ -20,8 +21,8 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 2rem;
-            /* Adjust the gap between sliders */
+            gap: 1rem;
+            /* Reduced gap between sliders */
         }
 
         .new-container {
@@ -30,20 +31,16 @@
             border-radius: 1rem;
             --position: 50%;
             width: 100%;
-            /* Ensure each container takes full width */
-            max-width: 400px;
-            /* Adjust maximum width as needed */
+            max-width: 350px;
+            /* Adjusted maximum width */
             margin: 0 auto;
-            /* Center align on larger screens */
         }
 
         .new-image-container {
             max-width: 100%;
-            /* Ensure images don't overflow */
             max-height: 90vh;
             aspect-ratio: 1/1;
             position: relative;
-            /* Ensure positioning within the container */
         }
 
         .new-slider-image {
@@ -57,7 +54,6 @@
             position: absolute;
             inset: 0;
             width: var(--position);
-            /* filter: grayscale(100%) */
         }
 
         .new-slider {
@@ -77,7 +73,7 @@
         .new-slider-line {
             position: absolute;
             inset: 0;
-            width: .2rem;
+            width: 0.2rem;
             height: 100%;
             background-color: #fff;
             left: var(--position);
@@ -89,7 +85,7 @@
             position: absolute;
             background-color: #fff;
             color: black;
-            padding: .5rem;
+            padding: 0.5rem;
             border-radius: 100vw;
             display: grid;
             place-items: center;
@@ -97,7 +93,7 @@
             left: var(--position);
             transform: translate(-50%, -50%);
             pointer-events: none;
-            box-shadow: 1px 1px 1px hsl(0, 50%, 2%, .5);
+            box-shadow: 1px 1px 1px hsl(0, 50%, 2%, 0.5);
         }
 
 
@@ -182,10 +178,10 @@
                         <div class="w-full lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left">
                             <div class="flex flex-col gap-2">
                                 <div class="w-full max-w-lg">
-                                    <p
-                                        class="uppercase text-white font-bold text-[24px] sm:text-[20px] md:text-[30px] lg:text-[70px]">
+                                    <h1
+                                        class="uppercase text-white font-bold text-[24px] sm:text-[20px] md:text-[30px] lg:text-[50px]">
                                         {{ $service->heading }}
-                                    </p>
+                                    </h1>
                                 </div>
                                 <ul class="list-disc text-yellow-500 ml-5 text-left">
                                     <li><span class="text-white lg:text-[26px] text-[20px] font-bold">Flawless color
@@ -257,9 +253,16 @@
                                             class="text-gray-600 bg-[#ffffff] border-[1px] border-[#ffffff]/70 px-1 py-0.5 sm:px-2 sm:py-1 md:px-4 md:py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c] rounded-md"></textarea>
                                     </div>
                                     <div class="w-full flex flex-col gap-1">
-                                        <button type="submit"
-                                            class="text-[10px] sm:text-[12px] md:text-[14px] lg:text-[16px] w-max text-white bg-[#eeb21c] px-2 py-1 sm:px-3 sm:py-1 md:px-4 md:py-2 font-bold rounded-md border-[1px] border-[#ffffff] hover:bg-white hover:text-[#eeb21c] transition ease-in duration-200">
-                                            Submit
+                                        <button type="submit" id="submitButton"
+                                            class="text-[20px] sm:text-[12px] md:text-[14px] lg:text-[16px] w-max text-white bg-[#eeb21c] px-2 py-1 sm:px-3 sm:py-1 md:px-4 md:py-2 font-bold rounded-md border-[1px] border-[#ffffff] hover:bg-white hover:text-[#eeb21c] transition ease-in duration-200 flex items-center justify-center space-x-2">
+                                            <span id="buttonText">Submit</span>
+                                            <svg id="loader" class="hidden w-5 h-5 text-white animate-spin"
+                                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                                <circle class="opacity-25" cx="12" cy="12" r="10"
+                                                    stroke="currentColor" stroke-width="4"></circle>
+                                                <path class="opacity-75" fill="currentColor"
+                                                    d="M4 12a8 8 0 018-8v4l-3 3 3 3V4a8 8 0 010 16H4a8 8 0 010-16z"></path>
+                                            </svg>
                                         </button>
                                     </div>
                                 </form>
@@ -346,12 +349,13 @@
     </div>
     {{-- our gallery section ends here    --}}
 
-    {{-- OUR WORK START --}}
-
+    <!-- OUR WORK START -->
     <div class="mt-10 mb-10">
         <div class="mx-auto w-full sm:w-10/12 md:w-8/12 mb-9">
-            <h1 class="text-center font-montrasst font-bold text-3xl sm:text-4xl md:text-5xl text-yellow-500">OUR WORK</h1>
-            <p class="text-center mt-7 font-montrasst text-sm sm:text-base md:text-lg">
+            <h1 class="lg:text-[50px] text-center md:text-[40px] sm:text-[35px] text-[30px] text-[#EEB21C] font-bold">
+                OUR WORK
+            </h1>
+            <p class="text-black mt-5 lg:leading-7 md:leading-6 text-[16px] font-medium font-[montserrat] text-center">
                 Experience the magic of Mobile Smash Company's car repair services - where we transform damaged vehicles
                 into showroom-ready masterpieces. Our skilled technicians and cutting-edge techniques guarantee jaw-dropping
                 results, leaving your car looking better than ever before.
@@ -360,8 +364,8 @@
 
         <div class="new-gallery">
             <main class="new-main flex flex-wrap justify-center">
-                <!-- First Pair of Sliders -->
-                <div class="new-container w-full md:w-1/3 p-2">
+                <!-- Slider Pairs -->
+                <div class="new-container w-full sm:w-1/2 md:w-1/3 p-2">
                     <div class="new-image-container">
                         <img class="new-image-before new-slider-image" src="{{ asset('asset/images/Rectangle 42.png') }}"
                             alt="color photo" />
@@ -392,8 +396,9 @@
                     </div>
                 </div>
 
-                <!-- Second Pair of Sliders -->
-                <div class="new-container w-full md:w-1/3 p-2">
+                <!-- Repeat for each additional slider -->
+                <!-- Slider Pairs -->
+                <div class="new-container w-full sm:w-1/2 md:w-1/3 p-2">
                     <div class="new-image-container">
                         <img class="new-image-before new-slider-image" src="{{ asset('asset/images/Rectangle 42.png') }}"
                             alt="color photo" />
@@ -423,9 +428,8 @@
                         </svg>
                     </div>
                 </div>
-
-                <!-- Third Pair of Sliders -->
-                <div class="new-container w-full md:w-1/3 p-2">
+                <!-- Slider Pairs -->
+                <div class="new-container w-full sm:w-1/2 md:w-1/3 p-2">
                     <div class="new-image-container">
                         <img class="new-image-before new-slider-image" src="{{ asset('asset/images/Rectangle 42.png') }}"
                             alt="color photo" />
@@ -458,8 +462,9 @@
             </main>
         </div>
     </div>
+    <!-- OUR WORK END -->
 
-    {{-- OUR WORK END --}}
+
 
     {{-- stats section start here --}}
     <div class="w-full relative bg-no-repeat bg-center bg-cover"
@@ -476,7 +481,7 @@
                         class="uppercase text-center text-black font-bold lg:text-[52px] md:text-[30px] sm:text-[25px] text-[18px]">
                         repair quote today!
                     </h2>
-                    <a href="#top-inquiry-form"
+                    <a href="#top-inquiry-form" onclick="slowScrollToTop()"
                         class="uppercase text-[#eeb52a] bg-white px-6 py-2 sm:px-12 sm:py-4 font-bold rounded-xl border-[1px] border-[#eeb21ce8] transition duration-200 ease-in-out hover:text-white hover:bg-[#15aef1] lg:text-[32px] md:text-[32px] text-[14px] sm:text-[18px]">
                         GET FREE ESTIMATE
                     </a>
@@ -731,7 +736,7 @@
     </div>
     {{-- what we offer section ends here    --}}
 
-    <div class="w-full  relative py-6">
+    <div class="w-full relative py-6">
         <div class="w-full px-4 flex justify-center">
             <div class="lg:w-[90%] md:w-[90%] sm:w-[90%] w-full">
                 <div class="w-full grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-4 mt-6">
@@ -755,13 +760,12 @@
                                         class="text-black lg:leading-7 md:leading-2 lg:text-[24px] md:text-[13px] text-[12px] font-bold font-[montserrat]">
                                         Professionally certified technicians</p>
                                 </li>
-
                             </ul>
                         </div>
                     </div>
                     <div class="w-full flex justify-center items-center">
-                        <a href="#top-inquiry-form"
-                            class="lg:text-[20px] md:text-[18px] text-[14px] w-max text-white bg-[#EEB21C] px-4 lg:py-2 md:py-2 py-1 font-bold rounded-md border-[1px] border-[#EEB21C] hover:bg-white hover:text-[#EEB21C]  transition ease-in duration-2000">
+                        <a href="#top-inquiry-form" onclick="slowScrollToTop()"
+                            class="lg:text-[20px] md:text-[18px] text-[14px] w-max text-white bg-[#EEB21C] px-4 lg:py-2 md:py-2 py-1 font-bold rounded-md border-[1px] border-[#EEB21C] hover:bg-white hover:text-[#EEB21C] transition ease-in duration-2000">
                             GET FREE ESTIMATE
                         </a>
                     </div>
@@ -769,6 +773,8 @@
             </div>
         </div>
     </div>
+
+
 
     {{-- MAKE YOUR INQUIRY NOW START --}}
 
@@ -830,6 +836,34 @@
             const container = slider.closest('.new-container');
             slider.addEventListener('input', (e) => {
                 container.style.setProperty('--position', `${e.target.value}%`);
+            });
+        });
+
+        function slowScrollToTop() {
+            const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            if (scrollTop > 0) {
+                window.requestAnimationFrame(slowScrollToTop);
+                window.scrollTo(0, scrollTop - scrollTop / 10);
+            }
+        }
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.querySelector('form');
+            const submitButton = document.getElementById('submitButton');
+            const loader = document.getElementById('loader');
+            const buttonText = document.getElementById('buttonText');
+
+            form.addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent the default form submission
+
+                // Disable the button and show the loader
+                submitButton.disabled = true;
+                buttonText.classList.add('hidden');
+                loader.classList.remove('hidden');
+
+                // Simulate a delay for demonstration purposes (remove this in production)
+                setTimeout(function() {
+                    form.submit(); // Submit the form after the delay
+                }, 3000);
             });
         });
     </script>
