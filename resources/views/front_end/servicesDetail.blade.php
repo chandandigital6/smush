@@ -586,7 +586,7 @@
                                 <div class="flex flex-col gap-4">
                                     <div class="flex gap-2">
                                         <ul class="flex flex-col gap-8 pl-8"
-                                            style="list-style-image: url({{ asset('storage/' . $choos->f_1_image) }});">
+                                            style="list-style-image: url({{ asset('storage/' . $choos->f_image) }});">
                                             <li>
                                                 <h2 class="uppercase lg:text-[30px] md:text-[25px] sm:text-[20px] text-[20px] text-white font-bold">
                                                     {{ $choos->f_title }}</h2>
