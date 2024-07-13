@@ -266,25 +266,25 @@
     {{--our gallery section ends here    --}}
 
 
-    {{--our clients section start here--}}
-    <div class="w-full  relative py-6">
-        <div class="w-full  flex justify-center">
-            <div class=" w-full flex flex-col items-center gap-6 py-4 px-4" style="background-image: url({{asset('asset/images/Rectangle43.jpg')}});background-repeat: no-repeat; background-size: cover">
-                <h2 class="lg:text-[50px] md:text-[40px] sm:text-[35px] text-[30px] text-white font-bold">WHAT OUR CLIENTS SAY</h2>
-                <div class="swiffy-slider slider-item-show3 slider-nav-dark slider-nav-autoplay mt-6">
+    {{-- our clients section start here --}}
+    <div class="w-full relative py-6">
+        <div class="w-full flex justify-center">
+            <div class="w-full flex flex-col items-center gap-6 py-4 px-4"
+                style="background-image: url({{ asset('asset/images/Rectangle43.jpg') }});background-repeat: no-repeat; background-size: cover">
+                <h2 class="text-[24px] sm:text-[30px] md:text-[35px] lg:text-[40px] xl:text-[50px] text-white font-bold">
+                    WHAT OUR CLIENTS SAY
+                </h2>
+                <div class="swiffy-slider slider-item-show3 slider-nav-dark slider-nav-autoplay mt-6 relative">
                     <ul class="slider-container">
                         {{-- make copy of this li for dynamic slider --}}
-                        @foreach($testimonials as $testimonial)
-
-
-                            <li class="w-full  relative">
-                                <div class="bg-white flex flex-col  p-4">
+                        @foreach ($testimonials as $testimonial)
+                            <li class="w-full relative">
+                                <div class="bg-white flex flex-col p-4">
                                     <i class="fa-solid fa-quote-left text-[#eeb21c] text-[30px]"></i>
-                                    <p class="text-black  text-[14px] font-normal font-[montserrat] mt-2">
-                                        {{$testimonial->msg}}
-
+                                    <p class="text-black text-[14px] font-normal font-[montserrat] mt-2">
+                                        {{ $testimonial->msg }}
                                     </p>
-                                    <h6 class="text-black font-bold font-[montserrat] mt-2">{{$testimonial->name}}</h6>
+                                    <h6 class="text-black font-bold font-[montserrat] mt-2">{{ $testimonial->name }}</h6>
                                     <div>
                                         <i class="fa fa-star text-[#eeb21c] text-sm"></i>
                                         <i class="fa fa-star text-[#eeb21c] text-sm"></i>
@@ -292,30 +292,26 @@
                                         <i class="fa fa-star text-[#eeb21c] text-sm"></i>
                                         <i class="fa fa-star text-[#eeb21c] text-sm"></i>
                                     </div>
-
-                                    <div class="w-full h-4 mt-6 mb-4 bg-[#eeb21c]">
-
-                                    </div>
+                                    <div class="w-full h-4 mt-6 mb-4 bg-[#eeb21c]"></div>
                                 </div>
                             </li>
-                            {{--slider copy ends here--}}
-
+                            {{-- slider copy ends here --}}
                         @endforeach
-
-
                     </ul>
-
-                    <button type="button" class="slider-nav"></button>
-                    <button type="button" class="slider-nav slider-nav-next"></button>
-
-
+                    <!-- Slider Navigation Buttons -->
+                    <button type="button"
+                        class="slider-nav flex items-center justify-center w-12 h-12 bg-[#eeb21c] text-white rounded-full shadow-lg border-2 border-white absolute top-1/2 transform -translate-y-1/2 left-4 hover:bg-[#d19c1a] transition duration-300 ease-in-out focus:outline-none z-10">
+                        <i class="fa fa-arrow-left text-2xl"></i>
+                    </button>
+                    <button type="button"
+                        class="slider-nav slider-nav-next flex items-center justify-center w-12 h-12 bg-[#eeb21c] text-white rounded-full shadow-lg border-2 border-white absolute top-1/2 transform -translate-y-1/2 right-4 hover:bg-[#d19c1a] transition duration-300 ease-in-out focus:outline-none z-10">
+                        <i class="fa fa-arrow-right text-2xl"></i>
+                    </button>
                 </div>
-
-
             </div>
         </div>
     </div>
-    {{--our clients section ends here    --}}
+    {{-- our clients section ends here --}}
 
 
     {{--blogs section start here--}}
