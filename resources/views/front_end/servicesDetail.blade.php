@@ -182,7 +182,8 @@
         font: 20px Helvetica, Arial, sans-serif;
     }
 
-    .dropzone-list {
+    .dropzone-list,
+    .dropzone-list2 {
         background: white;
     }
 
@@ -711,35 +712,44 @@
     <div class="bg-[#15AEF1] rounded-lg p-6 sm:p-12">
         <h1 class="text-center text-2xl sm:text-4xl text-white font-bold mb-6 w-full font-montserrat">MAKE YOUR INQUIRY
             NOW</h1>
-        <form action="{{ route('appointment.store') }}" method="post" class="mt-4 grid gap-2 grid-cols-1 sm:grid-cols-2" enctype="multipart/form-data">
+        <form action="{{ route('appointment.store') }}" method="post" enctype="multipart/form-data">
             @csrf
 
-            <div class="w-full flex flex-col gap-1">
-                <label for="name" class="text-white text-md font-normal font-montserrat">Name</label>
-                <input type="text" id="name" name="name" placeholder="Your full name" class="text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]">
+            <div class="mt-4 grid gap-2 grid-cols-1 sm:grid-cols-2">
+                <div class="w-full flex flex-col gap-1">
+                    <label for="name" class="text-white text-md font-normal font-montserrat">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Your full name" class="text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]">
+                </div>
+                <div class="w-full flex flex-col gap-1">
+                    <label for="email" class="text-white text-md font-normal font-montserrat">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your Email" class="text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]">
+                </div>
+                <div class="w-full flex flex-col gap-1">
+                    <label for="number" class="text-white text-md font-normal font-montserrat">Mobile Number</label>
+                    <input type="number" id="number" name="number" placeholder="Your number" class="text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]">
+                </div>
+                <div class="w-full flex flex-col gap-1">
+                    <label for="car_model" class="text-white text-md font-normal font-montserrat">Car Model</label>
+                    <input type="text" id="car_model" name="car_model" placeholder="Your car model" class="text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]">
+                </div>
+
             </div>
-            <div class="w-full flex flex-col gap-1">
-                <label for="email" class="text-white text-md font-normal font-montserrat">Email</label>
-                <input type="email" id="email" name="email" placeholder="Your Email" class="text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]">
-            </div>
-            <div class="w-full flex flex-col gap-1">
-                <label for="number" class="text-white text-md font-normal font-montserrat">Mobile Number</label>
-                <input type="number" id="number" name="number" placeholder="Your number" class="text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]">
-            </div>
-            <div class="w-full flex flex-col gap-1">
-                <label for="car_model" class="text-white text-md font-normal font-montserrat">Car Model</label>
-                <input type="text" id="car_model" name="car_model" placeholder="Your car model" class="text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]">
-            </div>
-            <div class="w-full flex flex-col gap-1">
+
+            <div class="w-full gap-1 mt-2">
                 <label for="car_images" class="text-white text-md font-normal font-montserrat">Damage Image</label>
-                <input type="file" id="car_images" name="car_image[]" class="text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]" multiple accept="image/*">
-                <div id="image-preview" class="mt-2 grid grid-cols-2 gap-2"></div>
+                {{-- dropzone element here --}}
+                <div class="dropzone-main">
+                    <div action="/appointment/image" class="dropzone" id="my-awesome-dropzone2">
+                        <div class="dz-message" data-dz-message><span>Click or drag files to this area to upload.</span><br><span class="dropzone-sub-title">You can upload up to 3 files.</span></div>
+                    </div>
+                    <div class="dropzone-list2 d-none" id="car_image_list2"></div>
+                </div>
             </div>
-            <div class="w-full flex flex-col gap-1">
+            <div class="w-full gap-1 mt-2">
                 <label for="msg" class="text-white text-md font-normal font-montserrat">Message</label>
-                <textarea id="msg" placeholder="Your message" name="msg" rows="1" class="text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]"></textarea>
+                <textarea id="msg" placeholder="Your message" name="msg" rows="4" class="w-full text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]"></textarea>
             </div>
-            <div class="w-full flex flex-col gap-1 mt-6">
+            <div class="w-full gap-1 mt-6">
                 <button type="submit" class="text-[14px] sm:text-[20px] lg:text-[25px] w-full sm:w-max text-white bg-[#eeb21c] px-12 py-2 font-bold rounded-md border-[1px] border-[#eeb21c] hover:bg-white hover:text-[#eeb21c] transition ease-in duration-2000">
                     Submit
                 </button>
@@ -828,14 +838,61 @@
         }
     };
 
+    /** dropzone initiated */
+    Dropzone.options.myAwesomeDropzone2 = {
+        maxFiles: 3,
+        paramName: "file",
+        maxFilesize: 9,
+        acceptedFiles: "image/*",
+        init: function() {
+            /** image upload success event */
+            this.on("success", function(file, response) {
+                if (response.status) {
+                    var _this = this;
+                    setTimeout(function() {
+                        _this.removeFile(file);
+                        var carImageList = document.getElementById("car_image_list2");
+
+                        carImageList.classList.remove('d-none');
+
+                        var newElement = document.createElement("div");
+                        newElement.className = "flex dropzone-item";
+                        /** add element in dropzone list */
+                        newElement.innerHTML = '<div class="me-5"><img class="dropzone-img" src="/storage/' + response.data.image + '"></div><div><p class="text-dark">asas45a4s5a4sasa54s</p><p class="dropzone-remove" onclick="removeImage(this, \'footer\')">Remove</p><input type="hidden" name="car_image[]" value="' + response.data.id + '"></div>';
+                        carImageList.appendChild(newElement);
+
+                        var childCount = carImageList.childElementCount;
+                        if (childCount >= 3) {
+                            /** hide dropzone main element if selected images are equal and more then 3 */
+                            var myAwesomeDropzone = document.getElementById("my-awesome-dropzone2");
+                            myAwesomeDropzone.classList.add('d-none');
+                        }
+                    }, 1000);
+                } else {
+                    this.removeFile(file);
+                }
+            });
+            /** image upload fail event */
+            this.on("error", function(file, response) {
+                this.removeFile(file);
+            });
+        }
+    };
+
     /** remove image on click of remove text */
-    function removeImage(element) {
+    function removeImage(element, type = 'main') {
         element.parentElement.parentElement.remove();
         var carImageList = document.getElementById("car_image_list");
+        if (type == 'footer') {
+            carImageList = document.getElementById("car_image_list2");
+        }
         var childCount = carImageList.childElementCount;
         if (childCount < 3) {
             /** show dropzone main element if selected images are less then 3 */
             var myAwesomeDropzone = document.getElementById("my-awesome-dropzone");
+            if (type == 'footer') {
+                myAwesomeDropzone = document.getElementById("my-awesome-dropzone2");
+            }
             myAwesomeDropzone.classList.remove('d-none');
             if (childCount <= 0) {
                 /** hide dropzone list element if selected images are less then 3 */
