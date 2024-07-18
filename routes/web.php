@@ -85,6 +85,7 @@ Route::get('reset-password',[AuthController::class,'reset_password'])->name('res
 Route::post('store-password',[AuthController::class,'store_password'])->name('store-password');
 
 Route::post('appointment/store',[AppointmentController::class,'store'])->name('appointment.store');
+Route::post('appointment/image',[AppointmentController::class,'image'])->name('appointment.image');
 
 Route::get('/{title}',[ServiceController::class,'show'])->name('service.show');
 

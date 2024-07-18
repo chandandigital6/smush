@@ -6,6 +6,7 @@ use App\Http\Requests\AppointmentRequest;
 use App\Mail\AppointmentCreated;
 use App\Mail\AdminAppointmentNotification;
 use App\Models\Appointment;
+use App\Models\AppointmentImage;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
@@ -31,21 +32,19 @@ class AppointmentController extends Controller
     }
 
 
-//    public function create(){
-//        return view('appointment.create');
-//    }
+    //    public function create(){
+    //        return view('appointment.create');
+    //    }
 
-    public function store(AppointmentRequest $request){
-//        dd($request);
+    public function store(AppointmentRequest $request)
+    {
+        // dd($request->all());
         $validated = $request->validated();
 
-        // Handle file uploads
-        $imagePaths = [];
-        if ($request->hasFile('car_image')) {
-            foreach ($request->file('car_image') as $image) {
-                $imagePath = $image->store('public/car_images');
-                $imagePaths[] = str_replace('public/', '', $imagePath);
-            }
+        $images = [];
+        if ($request->car_image) {
+            //get an array of image paths from apointment_images for selected images
+            $images = AppointmentImage::whereIn('id', $request->car_image)->pluck('image')->toArray();
         }
 
         // Save appointment
@@ -54,13 +53,16 @@ class AppointmentController extends Controller
             'email' => $validated['email'],
             'number' => $validated['number'],
             'msg' => $validated['msg'],
-//            'car_name' => $validated['car_name'],
+            //            'car_name' => $validated['car_name'],
             'car_model' => $validated['car_model'],
-            'car_image' => implode(',', $imagePaths), // Store as comma-separated string
+            'car_image' => implode(',', $images), // Store as comma-separated string
         ]);
 
         // Send email if the appointment is created
         if ($appointment) {
+            //delete all images which we added in appointment
+            AppointmentImage::whereIn('id', $request->car_image)->delete();
+
             // Send email to the user
             Mail::to($appointment->email)->send(new AppointmentCreated($appointment));
 
@@ -70,37 +72,52 @@ class AppointmentController extends Controller
             Mail::to($adminEmail)->send(new AdminAppointmentNotification($appointment));
         }
         return redirect()->route('home.thank')->with('success', 'Appointment  created successfully.');
-//        return redirect()->back()->with('success', 'Appointment  created successfully.');
+        //        return redirect()->back()->with('success', 'Appointment  created successfully.');
     }
 
-//    public function edit(Appointment $appointment){
-//
-//        return view('appointment.edit',compact('appointment'));
-//    }
-//
-//    public function update(Appointment $appointment , AppointmentRequest $request){
-//        $appointmentData = $request->all();
-//
-//        if ($request->hasFile('image')) {
-//            $imagePath = $request->file('image')->store('public/appointment');
-//            $appointmentData['image'] = str_replace('public/', '', $imagePath);
-//        }
-//
-//        $appointment->update($appointmentData);
-//
-//        return redirect()->route('appointment.index')->with('success', 'appointment item successfully updated');
-//    }
+    //    public function edit(Appointment $appointment){
+    //
+    //        return view('appointment.edit',compact('appointment'));
+    //    }
+    //
+    //    public function update(Appointment $appointment , AppointmentRequest $request){
+    //        $appointmentData = $request->all();
+    //
+    //        if ($request->hasFile('image')) {
+    //            $imagePath = $request->file('image')->store('public/appointment');
+    //            $appointmentData['image'] = str_replace('public/', '', $imagePath);
+    //        }
+    //
+    //        $appointment->update($appointmentData);
+    //
+    //        return redirect()->route('appointment.index')->with('success', 'appointment item successfully updated');
+    //    }
 
+    //save image in database
+    public function image(Request $request)
+    {
+        if ($request->hasFile('file')) {
+            $imagePath = $request->file('file')->store('public/car_images');
+            $imagePath = str_replace('public/', '', $imagePath);
+            $image = AppointmentImage::create([
+                'image' => $imagePath
+            ]);
+            return response()->json(['status' => true, 'message' => 'Success!', 'data' => $image]);
+        } else {
+            return response()->json(['status' => false, 'message' => 'Image is required!']);
+        }
+    }
 
-    public function delete(Appointment $appointment){
+    public function delete(Appointment $appointment)
+    {
         $appointment->delete();
-        return redirect()->route('appointment.index')->with('error','Successfully  appointment items deleted');
-
+        return redirect()->route('appointment.index')->with('error', 'Successfully  appointment items deleted');
     }
-    public function duplicate(Appointment $appointment){
-        return view('appointment.show',compact('appointment'));
-//        $productDuplicate=$appointment->replicate();
-//        $productDuplicate->save();
-//        return redirect()->back();
+    public function duplicate(Appointment $appointment)
+    {
+        return view('appointment.show', compact('appointment'));
+        //        $productDuplicate=$appointment->replicate();
+        //        $productDuplicate->save();
+        //        return redirect()->back();
     }
 }
