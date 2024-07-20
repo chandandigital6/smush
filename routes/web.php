@@ -84,6 +84,12 @@ Route::post('forget',[AuthController::class,'forget_pass'])->name('auth.forget_p
 Route::get('reset-password',[AuthController::class,'reset_password'])->name('reset-password');
 Route::post('store-password',[AuthController::class,'store_password'])->name('store-password');
 
+// routes/web.php
+
+Route::get('/change-password', [AuthController::class, 'showChangePasswordForm'])->name('auth.change-password-form');
+Route::post('/update-password', [AuthController::class, 'updatePassword'])->name('auth.update-password');
+
+
 Route::post('appointment/store',[AppointmentController::class,'store'])->name('appointment.store');
 Route::post('appointment/image',[AppointmentController::class,'image'])->name('appointment.image');
 

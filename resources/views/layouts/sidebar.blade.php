@@ -135,6 +135,12 @@
                     </a>
                 </li>
                 <li class="nav-item">
+                    <a href="{{route('auth.change-password-form')}}" class="nav-link">
+                        <i class="nav-icon fa fa-support"></i>
+                        <p>password</p>
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a href="{{route('logout')}}" class="nav-link">
                         <i class="nav-icon fa fa-support"></i>
                         <p>Logout</p>

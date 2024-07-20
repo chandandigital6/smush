@@ -75,11 +75,37 @@ class AuthController extends Controller
     }
 
 
+
     // forgot password
 
     public function forget(){
         return view('auth.forget');
     }
+
+
+
+    public function showChangePasswordForm() {
+        return view('auth.change-password');
+    }
+
+    public function updatePassword(Request $request) {
+        $request->validate([
+            'current_password' => 'required',
+            'new_password' => 'required|confirmed|min:8',
+        ]);
+
+        $user = Auth::user();
+
+        if (!Hash::check($request->current_password, $user->password)) {
+            return redirect()->back()->with('error', 'Current password does not match.');
+        }
+
+        $user->password = bcrypt($request->new_password);
+        $user->save();
+
+        return redirect()->back()->with('success', 'Password successfully updated.');
+    }
+
 
     public function forget_pass(Request $request){
 //        try {
@@ -260,5 +286,9 @@ class AuthController extends Controller
 //
 //        return redirect()->route('login-form')->with('success', 'Your password is successfully reset');
 //    }
+
+
+
+
 
 }
