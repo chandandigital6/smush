@@ -297,49 +297,49 @@
                         </div>
                     @endif
 
-                    <form action="{{ route('appointment.store') }}" method="post" enctype="multipart/form-data">
-                        @csrf
+{{--                    <form action="{{ route('appointment.store') }}" method="post" enctype="multipart/form-data">--}}
+{{--                        @csrf--}}
 
-                        <div class="mt-4 grid gap-2 grid-cols-1 sm:grid-cols-2">
-                            <div class="w-full flex flex-col gap-1">
-                                <label for="name" class="text-white text-md font-normal font-montserrat">Name</label>
-                                <input type="text" id="name" name="name" placeholder="Your full name" class="text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]">
-                            </div>
-                            <div class="w-full flex flex-col gap-1">
-                                <label for="email" class="text-white text-md font-normal font-montserrat">Email</label>
-                                <input type="email" id="email" name="email" placeholder="Your Email" class="text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]">
-                            </div>
-                            <div class="w-full flex flex-col gap-1">
-                                <label for="number" class="text-white text-md font-normal font-montserrat">Mobile Number</label>
-                                <input type="number" id="number" name="number" placeholder="Your number" class="text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]">
-                            </div>
-                            <div class="w-full flex flex-col gap-1">
-                                <label for="car_model" class="text-white text-md font-normal font-montserrat">Car Model</label>
-                                <input type="text" id="car_model" name="car_model" placeholder="Your car model" class="text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]">
-                            </div>
+{{--                        <div class="mt-4 grid gap-2 grid-cols-1 sm:grid-cols-2">--}}
+{{--                            <div class="w-full flex flex-col gap-1">--}}
+{{--                                <label for="name" class="text-white text-md font-normal font-montserrat">Name</label>--}}
+{{--                                <input type="text" id="name" name="name" placeholder="Your full name" class="text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]">--}}
+{{--                            </div>--}}
+{{--                            <div class="w-full flex flex-col gap-1">--}}
+{{--                                <label for="email" class="text-white text-md font-normal font-montserrat">Email</label>--}}
+{{--                                <input type="email" id="email" name="email" placeholder="Your Email" class="text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]">--}}
+{{--                            </div>--}}
+{{--                            <div class="w-full flex flex-col gap-1">--}}
+{{--                                <label for="number" class="text-white text-md font-normal font-montserrat">Mobile Number</label>--}}
+{{--                                <input type="number" id="number" name="number" placeholder="Your number" class="text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]">--}}
+{{--                            </div>--}}
+{{--                            <div class="w-full flex flex-col gap-1">--}}
+{{--                                <label for="car_model" class="text-white text-md font-normal font-montserrat">Car Model</label>--}}
+{{--                                <input type="text" id="car_model" name="car_model" placeholder="Your car model" class="text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]">--}}
+{{--                            </div>--}}
 
-                        </div>
+{{--                        </div>--}}
 
-                        <div class="w-full gap-1 mt-2">
-                            <label for="car_images" class="text-white text-md font-normal font-montserrat">Damage Image</label>
-                            {{-- dropzone element here --}}
-                            <div class="dropzone-main">
-                                <div action="/appointment/image" class="dropzone" id="my-awesome-dropzone2">
-                                    <div class="dz-message" data-dz-message><span>Click or drag files to this area to upload.</span><br><span class="dropzone-sub-title">You can upload up to 3 files.</span></div>
-                                </div>
-                                <div class="dropzone-list2 d-none" id="car_image_list2"></div>
-                            </div>
-                        </div>
-                        <div class="w-full gap-1 mt-2">
-                            <label for="msg" class="text-white text-md font-normal font-montserrat">Message</label>
-                            <textarea id="msg" placeholder="Your message" name="msg" rows="4" class="w-full text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]"></textarea>
-                        </div>
-                        <div class="w-full gap-1 mt-6">
-                            <button type="submit" class="text-[14px] sm:text-[20px] lg:text-[25px] w-full sm:w-max text-white bg-[#eeb21c] px-12 py-2 font-bold rounded-md border-[1px] border-[#eeb21c] hover:bg-white hover:text-[#eeb21c] transition ease-in duration-2000">
-                                Submit
-                            </button>
-                        </div>
-                    </form>
+{{--                        <div class="w-full gap-1 mt-2">--}}
+{{--                            <label for="car_images" class="text-white text-md font-normal font-montserrat">Damage Image</label>--}}
+{{--                            --}}{{-- dropzone element here --}}
+{{--                            <div class="dropzone-main">--}}
+{{--                                <div action="/appointment/image" class="dropzone" id="my-awesome-dropzone2">--}}
+{{--                                    <div class="dz-message" data-dz-message><span>Click or drag files to this area to upload.</span><br><span class="dropzone-sub-title">You can upload up to 3 files.</span></div>--}}
+{{--                                </div>--}}
+{{--                                <div class="dropzone-list2 d-none" id="car_image_list2"></div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
+{{--                        <div class="w-full gap-1 mt-2">--}}
+{{--                            <label for="msg" class="text-white text-md font-normal font-montserrat">Message</label>--}}
+{{--                            <textarea id="msg" placeholder="Your message" name="msg" rows="4" class="w-full text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]"></textarea>--}}
+{{--                        </div>--}}
+{{--                        <div class="w-full gap-1 mt-6">--}}
+{{--                            <button type="submit" class="text-[14px] sm:text-[20px] lg:text-[25px] w-full sm:w-max text-white bg-[#eeb21c] px-12 py-2 font-bold rounded-md border-[1px] border-[#eeb21c] hover:bg-white hover:text-[#eeb21c] transition ease-in duration-2000">--}}
+{{--                                Submit--}}
+{{--                            </button>--}}
+{{--                        </div>--}}
+{{--                    </form>--}}
 
                 </div>
                 <div class="w-full flex flex-col gap-6 ">
