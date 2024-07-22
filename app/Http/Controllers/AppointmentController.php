@@ -64,7 +64,7 @@ class AppointmentController extends Controller
             AppointmentImage::whereIn('id', $request->car_image)->delete();
 
             // Send email to the user
-            Mail::to($appointment->email)->send(new AppointmentCreated($appointment));
+            // Mail::to($appointment->email)->send(new AppointmentCreated($appointment));
 
             // Send email to the admin
             $adminEmail = 'mobilesmashrepair87@gmail.com';
