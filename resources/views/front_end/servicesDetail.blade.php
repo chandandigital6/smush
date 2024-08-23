@@ -220,7 +220,7 @@
 <div class="swiffy-slider" id="top-inquiry-form" style="width: 100%;">
     <ul class="slider-container">
         <li class="w-full relative">
-            <img src="{{ asset('asset/images/image2.jpg') }}" class="w-full lg:h-[700px] md:h-[500px] sm:h-[1200px] h-[1000px] object-cover" alt="Slider Image">
+            <img src="{{ asset('asset/images/image2.jpg') }}" class="w-full lg:h-[700px] md:h-[500px] sm:h-[1200px] h-[1100px] object-cover" alt="Slider Image">
             <div class="absolute top-0 left-0 w-full h-full bg-black/70 flex justify-center items-center px-4">
                 <div class="container mx-auto flex flex-col lg:flex-row items-center justify-between gap-4 px-4">
                     <div class="w-full lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left">
@@ -294,10 +294,6 @@
                                 <div class="w-full flex flex-col gap-1">
                                     <button type="submit" id="submitButton" class="text-[20px] sm:text-[12px] md:text-[14px] lg:text-[16px] w-max text-white bg-[#eeb21c] px-2 py-1 sm:px-3 sm:py-1 md:px-4 md:py-2 font-bold rounded-md border-[1px] border-[#ffffff] hover:bg-white hover:text-[#eeb21c] transition ease-in duration-200 flex items-center justify-center space-x-2">
                                         <span id="buttonText">Submit</span>
-                                        <svg id="loader" class="hidden w-5 h-5 text-white animate-spin" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                                            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                                            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4l-3 3 3 3V4a8 8 0 010 16H4a8 8 0 010-16z"></path>
-                                        </svg>
                                     </button>
                                 </div>
                             </form>
@@ -776,26 +772,6 @@
             window.scrollTo(0, scrollTop - scrollTop / 10);
         }
     }
-    document.addEventListener('DOMContentLoaded', function() {
-        const form = document.querySelector('form');
-        const submitButton = document.getElementById('submitButton');
-        const loader = document.getElementById('loader');
-        const buttonText = document.getElementById('buttonText');
-
-        form.addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent the default form submission
-
-            // Disable the button and show the loader
-            submitButton.disabled = true;
-            buttonText.classList.add('hidden');
-            loader.classList.remove('hidden');
-
-            // Simulate a delay for demonstration purposes (remove this in production)
-            setTimeout(function() {
-                form.submit(); // Submit the form after the delay
-            }, 3000);
-        });
-    });
 
     /** dropzone initiated */
     Dropzone.options.myAwesomeDropzone = {
