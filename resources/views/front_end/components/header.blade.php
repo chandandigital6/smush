@@ -24,8 +24,8 @@
     <div class="lg:w-[90%] md:w-[80%] sm:w-[90%] w-full flex justify-between items-center py-[5px] relative px-4">
         <div class="w-max">
             <a href="{{route('home')}}">
-                <img class="h-auto lg:w-full md:w-[70px] sm:w-[60px] w-[50px]"
-                     src="{{asset('asset/images/mainLogo.png')}}" alt="">
+                <img class="h-auto lg:w-[100px] md:w-[70px] sm:w-[60px] w-[50px]"
+                     src="{{asset('asset/images/logo final-01.png')}}" alt="">
             </a>
         </div>
         <div id="menuList" class="lg:w-max md:w-max lg:static md:static absolute top-[100%] left-0 w-full z-50 bg-white lg:flex md:flex hidden">

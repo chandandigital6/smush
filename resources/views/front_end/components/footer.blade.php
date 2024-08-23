@@ -24,7 +24,8 @@
                         Phone No.: <span class="font-normal">0449599000</span>
                    </span>
                 <span class="text-[17px] text-white font-bold font-[roboto]">
-                        Email: <span class="font-normal"> quote@mobilesmashrepair.com</span>
+                        Email: <span class="font-normal">info@mobilesmashrepair.com
+</span>
                    </span>
 
                 <a href="{{route('contact')}}"
@@ -39,8 +40,8 @@
                             class="fa-brands fa-facebook"></i></a>
                     <a href="https://www.youtube.com/@MobileSmashRepair" class="text-white hover:text-[#eeb21c] transition ease-in duration-2000 "><i
                             class="fa-brands fa-youtube"></i></a>
-                    <a href="https://wa.me/+61449599000" class="text-white hover:text-[#eeb21c] transition ease-in duration-2000 "><i
-                            class="fa-brands fa-whatsapp"></i></a>
+                    <a href="tel:+61449599000" class="text-white hover:text-[#eeb21c] transition ease-in duration-2000 "><i
+                            class="fa fa-phone"></i></a>
                 </div>
             </div>
             <div class="w-full grid grid-cols-2 gap-2">

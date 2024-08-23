@@ -9,7 +9,8 @@
             <span class="font-bold lg:text-[34px] md:text-[21px] sm:text-[17px] text-[10px]">GET YOUR FREE ESTIMATE NOW</span>
             <span class="font-bold lg:text-[23px] md:text-[15px] sm:text-[10px] text-[10px] text-[#EEB21C] text-center">SIMPLY SEND US PHOTOS OF THE DAMAGE!"</span>
             <h5 class="font-bold lg:text-[20px] md:text-[20px] sm:text-[17px] text-[10px]">
-                quote@mobilesmashrepair.com</h5>
+                info@mobilesmashrepair.com
+            </h5>
             <h5 class="font-bold lg:text-[30px] md:text-[20px] sm:text-[17px] text-[10px]">OR</h5>
             <a href="https://mobilesmashrepair.com/smash_repair"
                class=" lg:text-[20px] md:text-[20px] sm:text-[14px] text-[7px] w-max text-white bg-[#15aef1] px-4 lg:py-2 md:py-2 py-1 font-bold rounded-full border-[1px] border-[#15aef1] hover:bg-white hover:text-[#15aef1]  transition ease-in duration-2000">
