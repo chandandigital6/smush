@@ -11,9 +11,9 @@
                         <div class="w-max h-max flex flex-col items-center gap-4">
                             <span class="uppercase text-[#EEB21C] text-[22px] font-bold">Terms and Conditions</span>
                             <div class="lg:w-[1000px] md:w-[700px] sm:w-[500px] w-[350px] text-center">
-                                <p class="text-white font-bold lg:text-[80px] md:text-[60px] sm:text-[40px] text-[30px]">
+                                <h1 class="text-white font-bold lg:text-[80px] md:text-[60px] sm:text-[40px] text-[30px]">
                                      Our Terms and Conditions
-                                </p>
+                                </h1>
                             </div>
                             <div class="flex gap-4">
                                 <a href="{{ route('services') }}"

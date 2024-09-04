@@ -12,16 +12,16 @@
                         <div class="w-max h-max flex flex-col items-center gap-4">
                             <span class="uppercase text-[#EEB21C] text-[22px] font-bold">{{$banner->title}}</span>
                             <div class="lg:w-[1000px] md:w-[700px] sm:w-[500px] w-[350px] text-center">
-                                <p class="text-white font-bold lg:text-[80px] md:text-[60px] sm:text-[40px] text-[30px]">
+                                <h1 class="text-white font-bold lg:text-[80px] md:text-[60px] sm:text-[40px] text-[30px]">
                                   {{$banner->sub_title}}
-                                </p>
+                                </h1>
                             </div>
                             <div class="flex gap-4">
                                 <a href="{{ route('services') }}"
                                    class="lg:text-[25px] md:text-[20px] text-[14px] text-white bg-[#eeb21c] px-4 lg:py-2 md:py-2 py-1 font-bold rounded-md border-[1px] border-[#eeb21c] hover:bg-white hover:text-[#eeb21c]  transition ease-in duration-2000">
                                     SERVICES
                                 </a>
-                                <a href="https://mobilesmashrepair.com/smash_repair"
+                                <a href="https://mobilesmashrepair.com/smash-repair"
                                    class="lg:text-[25px] md:text-[20px] text-[14px] text-white bg-[#15aef1] px-4 lg:py-2 md:py-2 py-1 font-bold rounded-md border-[1px] border-[#15aef1] hover:bg-white hover:text-[#15aef1]  transition ease-in duration-2000">
                                     ENQUIRY
                                 </a>
