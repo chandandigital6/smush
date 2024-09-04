@@ -70,7 +70,9 @@ Route::get('/all-blogs', function () {
 })->name('all-blogs');
 
 
-
+Route::fallback(function () {
+    return response()->view('errors.404', [], 404);
+});
 
 
 Route::get('login-form',[AuthController::class,'index'])->name('login-form');
