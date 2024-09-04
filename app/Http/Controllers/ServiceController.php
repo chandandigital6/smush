@@ -94,7 +94,9 @@ class ServiceController extends Controller
 //          dd($service);
 //        $logos=ClientLogo::all();
         $service = Service::where('title', $title)->first();
-
+        if(!$service){
+            abort(404);
+        }
         $services=Service::where('status' ,1)->get();
         $serviceHeader = ServiceHeader::where('service_id', $service->id)->get();
         $serviceBefore = ServiceBefore::where('service_id', $service->id)->get();
