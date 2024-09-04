@@ -94,7 +94,8 @@
                             <option value="contact-us">contact-us</option>
                             <option value="index">index</option>
                             <option value="services">services</option>
-
+                            <option value="privacy_policy">privacy-policy</option>
+                            <option value="terms_and_conditions">terms_and_conditions</option>
                         </select>
                     </div>
 

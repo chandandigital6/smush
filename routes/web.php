@@ -57,16 +57,16 @@ Route::get('/services-detail', function () {
 })->name('services-detail');
 
 Route::get('/terms_and_conditions', function () {
-    return view('front_end.terms_and_conditions')->with('seos',$seos = Seo::where('page', 'index')->get());
+    return view('front_end.terms_and_conditions')->with('seos',$seos = Seo::where('page', 'terms_and_conditions')->get());
 })->name('terms_and_conditions');
 
 Route::get('/privacy-policy', function () {
-    return view('front_end.privacy-policy')->with('seos',$seos = Seo::where('page', 'index')->get());
+    return view('front_end.privacy-policy')->with('seos',$seos = Seo::where('page', 'privacy_policy')->get());
 })->name('privacy-policy');
 
 Route::get('/all-blogs', function () {
     $blog=Blog::all();
-    return view('front_end.all-blogs')->with('seos',$seos = Seo::where('page', 'index')->get())->with('blog', $blog);
+    return view('front_end.all-blogs')->with('seos',$seos = Seo::where('page', 'blog')->get())->with('blog', $blog);
 })->name('all-blogs');
 
 

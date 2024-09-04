@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('seos', function (Blueprint $table) {
             $table->id();
-            $table->enum('page', ['about-us', 'blog', 'contact-us','index','services'])->nullable();
+            $table->enum('page', ['about-us', 'blog', 'contact-us','index','services','privacy-policy','terms_and_conditions'])->nullable();
             $table->text('description')->nullable();
             $table->string('canonical')->nullable();
             $table->string('og_locale')->nullable();

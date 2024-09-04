@@ -379,9 +379,9 @@
 <!-- OUR WORK START -->
 <div class="mt-10 mb-10">
     <div class="mx-auto w-full sm:w-10/12 md:w-8/12 mb-9">
-        <h1 class="lg:text-[50px] text-center md:text-[40px] sm:text-[35px] text-[30px] text-[#EEB21C] font-bold">
+        <h2 class="lg:text-[50px] text-center md:text-[40px] sm:text-[35px] text-[30px] text-[#EEB21C] font-bold">
             OUR WORK
-        </h1>
+        </h2>
         <p class="text-black mt-5 lg:leading-7 md:leading-6 text-[16px] font-medium font-[montserrat] text-center">
             Experience the magic of Mobile Smash Company's car repair services - where we transform damaged vehicles
             into showroom-ready masterpieces. Our skilled technicians and cutting-edge techniques guarantee jaw-dropping
@@ -500,7 +500,7 @@
 <div class=" p-4 sm:p-6 md:p-10">
     <div class="max-w-6xl mx-auto text-center">
         <h2 class="text-xl sm:text-2xl md:text-3xl font-bold text-pink-600 mb-2 sm:mb-4">3 SIMPLE STEPS</h2>
-        <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">UPLOAD YOUR PHOTOS TO GET A FAST QUOTE</h1>
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">UPLOAD YOUR PHOTOS TO GET A FAST QUOTE</h2>
         <p class="text-base sm:text-lg mb-6 sm:mb-10">Just follow the prompts and you'll be done within minutes!</p>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
@@ -706,8 +706,8 @@
 
 <div class="flex flex-col items-center justify-center mb-4 p-4 sm:p-8">
     <div class="bg-[#15AEF1] rounded-lg p-6 sm:p-12">
-        <h1 class="text-center text-2xl sm:text-4xl text-white font-bold mb-6 w-full font-montserrat">MAKE YOUR INQUIRY
-            NOW</h1>
+        <h2 class="text-center text-2xl sm:text-4xl text-white font-bold mb-6 w-full font-montserrat">MAKE YOUR INQUIRY
+            NOW</h2>
         <form action="{{ route('appointment.store') }}" method="post" enctype="multipart/form-data">
             @csrf
 
