@@ -56,7 +56,7 @@ Route::get('/services-detail', function () {
     return view('front_end.servicesDetail');
 })->name('services-detail');
 
-Route::get('/terms_and_conditions', function () {
+Route::get('/terms-and-conditions', function () {
     return view('front_end.terms_and_conditions')->with('seos',$seos = Seo::where('page', 'terms_and_conditions')->get());
 })->name('terms_and_conditions');
 
