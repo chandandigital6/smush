@@ -21,6 +21,18 @@
         })(window, document, 'script', 'dataLayer', 'GTM-54PDXK3Z');
     </script>
     <!-- End Google Tag Manager -->
+
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Mobile Smash Repair",
+          "url": "https://www.mobilesmashrepair.com/",
+          "logo": "https://www.mobilesmashrepair.com/asset/images/mainLogo.png"
+        }
+        </script>
+        
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {{--    @vite('resources/css/app.css') --}}
