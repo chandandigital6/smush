@@ -52,6 +52,7 @@ Route::get('/blog/{blogs}',[HomeController::class,'blogDetails'])->name('blog-de
 
 
 
+
 Route::get('/services-detail', function () {
     return view('front_end.servicesDetail');
 })->name('services-detail');
