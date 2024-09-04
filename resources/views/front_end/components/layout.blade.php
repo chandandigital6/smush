@@ -1,7 +1,7 @@
 <!doctype html>
-<html>
-
+<html lang="en-AU">
 <head>
+
     <link rel="icon" href="{{ asset('asset/img/logo.png') }}" type="image/x-icon">
     <!-- Google Tag Manager -->
     <script>
@@ -31,7 +31,7 @@
           "logo": "https://www.mobilesmashrepair.com/asset/images/mainLogo.png"
         }
         </script>
-        
+
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
