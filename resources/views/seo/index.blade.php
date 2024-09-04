@@ -49,7 +49,7 @@
                                     <th>Title</th>
                                     <th>Description</th>
                                     <th>Service Name</th>
-
+                                     <th>page</th>
                                     <th>Action</th>
                                 </tr>
                                 </thead>
@@ -61,7 +61,7 @@
                                         <td>{{ $seo->title }}</td>
                                         <td>{{ $seo->description }}</td>
                                         <td>{{ $seo->service ? $seo->service->title : 'n/a' }}</td>
-
+                                        <td>{{ $seo->page ? : 'n/a' }}</td>
 
                                         <td>
                                             <a href="{{ route('seo.edit', $seo->id) }}" class="btn btn-primary">Edit</a>
