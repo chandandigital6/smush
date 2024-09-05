@@ -46,6 +46,7 @@
                                 <thead>
                                 <tr>
                                     <th>Id</th>
+                                    <th>url</th>
                                     <th>Title</th>
                                     <th>short_description</th>
                                     <th>Description</th>
@@ -59,6 +60,7 @@
                                 @forelse ($blogData as $blog)
                                     <tr>
                                         <td>{{ $blog->id }}</td>
+                                        <td>{{ $blog->url }}</td>
                                         <td>{{ $blog->title }}</td>
                                         <td>{{$blog->short_description}}</td>
                                         <td>{!! $blog->description !!}</td>
