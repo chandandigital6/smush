@@ -6,7 +6,7 @@
         <ul class="slider-container">
                 <li class="w-full relative">
                     <img src="{{asset('asset/images/Rectangle 42.png')}}"
-                         class="w-full lg:h-[450px] md:h-[400px] sm:h-[400px] h-[300px] object-cover">
+                         class="w-full lg:h-[450px] md:h-[400px] sm:h-[400px] h-[300px] object-cover" alt="Mobile Smash Repair - Terms And Conditions">
                     <div class="absolute top-0 left-0 w-full h-full bg-black/70 flex justify-center items-center px-4">
                         <div class="w-max h-max flex flex-col items-center gap-4">
                             <span class="uppercase text-[#EEB21C] text-[22px] font-bold">Terms and Conditions</span>
