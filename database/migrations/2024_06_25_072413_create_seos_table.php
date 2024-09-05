@@ -31,7 +31,7 @@ return new class extends Migration
             $table->string('title')->nullable();
             $table->text('schema_js')->nullable();
             $table->foreignId('service_id')->nullable()->constrained('services')->onDelete('cascade');
-            $table->foreignId('blog_id')->nullable()->constrained('blogs')->onDelete('cascade');
+         
             $table->timestamps();
         });
     }
