@@ -46,7 +46,7 @@ Route::get('/thankYou',[HomeController::class,'thank'])->name('home.thank');
 //Route::get('/price',[HomeController::class,'price'])->name('price');
 //Route::get('/appointment',[HomeController::class,'appointment'])->name('appointment');
 //Route::get('/smash_repair',[HomeController::class,'smash_repair'])->name('smash-repair');
-Route::get('/blog/{blogs}',[HomeController::class,'blogDetails'])->name('blog-details');
+Route::get('/blog/{url}',[HomeController::class,'blogDetails'])->name('blog-details');
 
 
 
@@ -72,7 +72,7 @@ Route::get('/all-blogs', function () {
 
 
 Route::fallback(function () {
-    return response()->view('errors.404', [], 404);
+    return response()->view('errors.404');
 });
 
 

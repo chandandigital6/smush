@@ -59,15 +59,19 @@ class HomeController extends Controller
 
 
 
-    public function blogDetails(Blog $blogs){
+      public function blogDetails($url)
+      {
+          // Fetch the blog by its URL
+          $blogs = Blog::where('url', $url)->firstOrFail();
 
-//        dd($blogs);
-//       $categories = Blog::all();
-        $recentPosts = Blog::orderBy('created_at', 'desc')->take(5)->get();
-        $seos = Seo::where('page', 'blog')->get();
-        // Pass the data to the view
-        return view('front_end.blogDetails', compact('blogs', 'recentPosts','seos'));
-    }
+          // Fetch recent posts and SEO details
+          $recentPosts = Blog::orderBy('created_at', 'desc')->take(5)->get();
+          $seos = Seo::where('blog_id', $blogs->id)->get(); // use id to fetch related SEO data
+        // dd($seos);
+          // Pass the data to the view
+          return view('front_end.blogDetails', compact('blogs', 'recentPosts', 'seos'));
+      }
+
 
 
 //    public function smash_repair()

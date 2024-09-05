@@ -14,4 +14,9 @@ class Seo extends Model
     {
         return $this->belongsTo(Service::class);
     }
+
+    public function blog()
+    {
+        return $this->belongsTo(Blog::class);
+    }
 }

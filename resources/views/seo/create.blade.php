@@ -105,15 +105,31 @@
                     </div>
 
 
+
+
                     <div class="form-group">
                         <label for="service_id">Service</label>
                         <select name="service_id" class="form-control @error('service_id') is-invalid @enderror">
+                            <option value="">Select</option>
                             @foreach($services as $service)
-                                <option value="">Select</option>
+
                                 <option value="{{ $service->id }}">{{ $service->title }}</option>
                             @endforeach
                         </select>
                         @error('service_id')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
+                    </div>
+
+                    <div class="form-group">
+                        <label for="blog_id">blogs </label>
+                        <select name="blog_id" class="form-control @error('blog_id') is-invalid @enderror">
+                            <option value="">Select</option>
+                            @foreach($blog as $blogs)
+                                <option value="{{ $blogs->id }}">{{ $blogs->title }}</option>
+                            @endforeach
+                        </select>
+                        @error('blog_id')
                         <div class="invalid-feedback">{{ $message }}</div>
                         @enderror
                     </div>

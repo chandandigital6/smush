@@ -9,4 +9,9 @@ class Blog extends Model
 {
     use HasFactory;
     protected $guarded=['id'];
+
+    public function seo()
+    {
+        return $this->hasMany(Seo::class);
+    }
 }

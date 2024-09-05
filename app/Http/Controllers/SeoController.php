@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\SeoRequest;
+use App\Models\Blog;
 use App\Models\Service;
 use App\Models\Seo;
 use Illuminate\Http\Request;
@@ -23,7 +24,8 @@ class SeoController extends Controller
 
     public function create(){
         $services=Service::all();
-        return view('seo.create',compact('services'));
+        $blog=Blog::all();
+        return view('seo.create',compact('services','blog'));
     }
 
     public function store(SeoRequest $request){
@@ -38,6 +40,7 @@ class SeoController extends Controller
 
     public function edit(Seo $seo){
         $services=Service::all();
+        $blog=Blog::all();
         return view('seo.edit',compact('seo','services'));
     }
 

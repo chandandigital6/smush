@@ -108,6 +108,19 @@
                         <div class="invalid-feedback">{{ $message }}</div>
                         @enderror
                     </div>
+
+                    <div class="form-group">
+                        <label for="blog_id">blog</label>
+                        <select name="blog_id" class="form-control @error('blog_id') is-invalid @enderror">
+                            <option value="">select</option>
+                            @foreach($blog as $blogs)
+                                <option value="{{ $blogs->id }}" {{ $seo->blog_id == $blogs->id ? 'selected' : '' }}>{{ $service->title }}</option>
+                            @endforeach
+                        </select>
+                        @error('blog_id')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
+                    </div>
                 </div>
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>

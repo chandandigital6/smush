@@ -19,6 +19,7 @@ return new class extends Migration
             $table->text('description')->nullable();
             $table->string('categories')->nullable();
             $table->string('author_name')->nullable();
+            $table->string('url')->nullable();
 
             $table->timestamps();
         });

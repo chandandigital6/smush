@@ -17,6 +17,10 @@
         <form action="{{ route('blogs.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="form-group">
+                <label for="url">url</label>
+                <input type="text" class="form-control" id="url" name="url" value="{{ old('url') }}" required>
+            </div>
+            <div class="form-group">
                 <label for="image">Image URL</label>
                 <input type="file" class="form-control" id="image" name="image" value="{{ old('image') }}">
             </div>
