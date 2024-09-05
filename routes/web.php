@@ -26,6 +26,9 @@ use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
+use Carbon\Carbon;
+use Spatie\Sitemap\Sitemap;
+use Spatie\Sitemap\Tags\Url;
 
 /*
 |--------------------------------------------------------------------------
@@ -50,7 +53,44 @@ Route::get('/blog/{url}',[HomeController::class,'blogDetails'])->name('blog-deta
 
 
 
+Route::get('/sitemap.xml', function () {
+    $sitemap = Sitemap::create();
 
+    // Static URLs
+    $urls = [
+        ['loc' => '/', 'priority' => 1.00],
+        ['loc' => '/about', 'priority' => 0.80],
+        ['loc' => '/services', 'priority' => 0.80],
+        ['loc' => '/contact', 'priority' => 0.80],
+        ['loc' => '/smash-repair', 'priority' => 0.80],
+        ['loc' => '/scratch-repair', 'priority' => 0.80],
+        ['loc' => '/dent-repair', 'priority' => 0.80],
+        ['loc' => '/panel-beating', 'priority' => 0.80],
+        ['loc' => '/trucks-repair', 'priority' => 0.80],
+        ['loc' => '/bumper-repair', 'priority' => 0.80],
+        ['loc' => '/headlight-restoration', 'priority' => 0.80],
+        ['loc' => '/scratch-chip-repair', 'priority' => 0.80],
+        ['loc' => '/car-spray-painting', 'priority' => 0.80],
+        ['loc' => '/blog/understanding-common-car-issues-in-australia', 'priority' => 0.80],
+        ['loc' => '/blog/top-benefits-of-professional-scratch-repair-services', 'priority' => 0.80],
+        ['loc' => '/blog/vehicle-repair-services-trust-mobile-smash-repair-for-quick-response', 'priority' => 0.80],
+        ['loc' => '/all-blogs', 'priority' => 0.80],
+        ['loc' => '/privacy-policy', 'priority' => 0.80],
+        ['loc' => '/terms-and-conditions', 'priority' => 0.80],
+    ];
+
+    // Convert last modification date to DateTime format
+    $lastModified = Carbon::createFromFormat('Y-m-d\TH:i:sP', '2024-09-05T07:39:30+00:00');
+
+    // Add URLs to sitemap
+    foreach ($urls as $url) {
+        $sitemap->add(Url::create($url['loc'])
+            ->setPriority($url['priority'])
+            ->setLastModificationDate($lastModified)); // Pass the DateTime object
+    }
+
+    return $sitemap->toResponse(request());
+});
 
 
 Route::get('/services-detail', function () {
