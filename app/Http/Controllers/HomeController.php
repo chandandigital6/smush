@@ -63,7 +63,9 @@ class HomeController extends Controller
       {
           // Fetch the blog by its URL
           $blogs = Blog::where('url', $url)->firstOrFail();
-
+          if(!$blogs){
+            abort(404);
+        }
           // Fetch recent posts and SEO details
           $recentPosts = Blog::orderBy('created_at', 'desc')->take(5)->get();
           $seos = Seo::where('blog_id', $blogs->id)->get(); // use id to fetch related SEO data
