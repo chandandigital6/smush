@@ -3,7 +3,7 @@
         class=" lg:w-[1000px] lg:h-[250px] md:h-[200px] sm:h-[200px] h-[120px] bg-white px-2 rounded-lg shadow-md shadow-gray-400 flex justify-between items-center gap-0">
         <div>
             <img class="lg:w-52 md:w-48 sm:w-40 w-24 h-auto" src="{{asset('asset/images/yeelowcar.png')}}"
-                 alt="">
+                 alt="Mobile Smash Repair Services in Melbourne">
         </div>
         <div class="flex flex-col gap-1 items-center py-2">
             <span class="font-bold lg:text-[34px] md:text-[21px] sm:text-[17px] text-[10px]">GET YOUR FREE ESTIMATE NOW</span>
@@ -19,7 +19,7 @@
         </div>
         <div>
             <img class="lg:w-52 md:w-48 sm:w-40 w-24 h-auto" src="{{asset('asset/images/bluecar.png')}}"
-                 alt="">
+                 alt="Mobile Smash Repair Services in Melbourne">
         </div>
     </div>
 </div>

@@ -4,7 +4,7 @@
             <div class="w-max">
                 <a href="{{route('contact')}}">
                     <img class="h-auto lg:w-full md:w-[70px] sm:w-[60px] w-[70px]"
-                         src="{{asset('asset/images/mainLogo.png')}}" alt="">
+                         src="{{asset('asset/images/mainLogo.png')}}" alt="Mobile Smash Repair Services in Melbourne">
                 </a>
             </div>
 

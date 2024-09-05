@@ -220,7 +220,7 @@
 <div class="swiffy-slider" id="top-inquiry-form" style="width: 100%;">
     <ul class="slider-container">
         <li class="w-full relative">
-            <img src="{{ asset('asset/images/image2.jpg') }}" class="w-full lg:h-[700px] md:h-[500px] sm:h-[1200px] h-[1100px] object-cover" alt="Slider Image">
+            <img src="{{ asset('asset/images/image2.jpg') }}" class="w-full lg:h-[700px] md:h-[500px] sm:h-[1200px] h-[1100px] object-cover" alt="Mobile Smash Repair Services">
             <div class="absolute top-0 left-0 w-full h-full bg-black/70 flex justify-center items-center px-4">
                 <div class="container mx-auto flex flex-col lg:flex-row items-center justify-between gap-4 px-4">
                     <div class="w-full lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left">
@@ -315,7 +315,7 @@
     <div class="w-full h-max absolute -top-[50px] left-0 px-4 flex justify-center z-10 py-4 ">
         <div class=" lg:w-[1000px] lg:h-[250px] md:h-[200px] sm:h-[200px] h-[120px] bg-white px-2 rounded-lg shadow-md shadow-gray-400 flex justify-between items-center gap-0">
             <div>
-                <img class="lg:w-52 md:w-48 sm:w-40 w-24 h-auto" src="{{ asset('asset/images/yeelowcar.png') }}" alt="">
+                <img class="lg:w-52 md:w-48 sm:w-40 w-24 h-auto" src="{{ asset('asset/images/yeelowcar.png') }}" alt="Mobile Smash Repair Services">
             </div>
             <div class="flex flex-col gap-1 items-center py-2">
                 <span class="font-bold lg:text-[34px] md:text-[21px] sm:text-[17px] text-[10px]">GET YOUR FREE ESTIMATE
@@ -329,7 +329,7 @@
                 </a>
             </div>
             <div>
-                <img class="lg:w-52 md:w-48 sm:w-40 w-24 h-auto" src="{{ asset('asset/images/bluecar.png') }}" alt="">
+                <img class="lg:w-52 md:w-48 sm:w-40 w-24 h-auto" src="{{ asset('asset/images/bluecar.png') }}" alt="Mobile Smash Repair Services">
             </div>
         </div>
     </div>
@@ -362,7 +362,7 @@
                     @endphp
                     @foreach ($imagePaths as $imagePath)
                     <li class="w-full relative">
-                        <img src="{{ asset('storage/' . $imagePath) }}" alt="{{ $logo->title }}" class="w-full lg:h-[550px] md:h-[500px] sm:h-[400px] h-[300px] object-cover">
+                        <img src="{{ asset('storage/' . $imagePath) }}" alt="Mobile Smash Repair Services" class="w-full lg:h-[550px] md:h-[500px] sm:h-[400px] h-[300px] object-cover">
                     </li>
                     @endforeach
                     @endif
@@ -397,8 +397,8 @@
 
             <div class="new-container w-full sm:w-1/2 md:w-1/3 p-2">
                 <div class="new-image-container">
-                    <img class="new-image-before new-slider-image" src="{{ asset('storage/'.$serviceBe->image_before) }}" alt="color photo" />
-                    <img class="new-image-after new-slider-image" src="{{ asset('storage/'.$serviceBe->image_after) }}" alt="black and white" />
+                    <img class="new-image-before new-slider-image" src="{{ asset('storage/'.$serviceBe->image_before) }}" alt="Mobile Smash Repair Services" />
+                    <img class="new-image-after new-slider-image" src="{{ asset('storage/'.$serviceBe->image_after) }}" alt="Mobile Smash Repair Services" />
                 </div>
                 <input type="range" min="0" max="100" value="50" aria-label="Percentage of before photo shown" class="new-slider" />
                 <div class="new-slider-line" aria-hidden="true"></div>
@@ -505,15 +505,15 @@
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
             <div class="relative p-2 sm:p-4 md:p-6">
-                <img src="{{ asset('asset/images/1.jpg') }}" alt="Take a Photo" class="w-full h-auto sm:h-60 md:h-72 lg:h-80 object-fit transition duration-300 transform hover:scale-105">
+                <img src="{{ asset('asset/images/1.jpg') }}" alt="Mobile Smash Repair Services" class="w-full h-auto sm:h-60 md:h-72 lg:h-80 object-fit transition duration-300 transform hover:scale-105" >
             </div>
 
             <div class="relative p-2 sm:p-4 md:p-6">
-                <img src="{{ asset('asset/images/2.jpg') }}" alt="Submit Quote Request" class="w-full h-auto sm:h-60 md:h-72 lg:h-80 object-fit transition duration-300 transform hover:scale-105">
+                <img src="{{ asset('asset/images/2.jpg') }}" alt="Mobile Smash Repair Services" class="w-full h-auto sm:h-60 md:h-72 lg:h-80 object-fit transition duration-300 transform hover:scale-105" >
             </div>
 
             <div class="relative p-2 sm:p-4 md:p-6">
-                <img src="{{ asset('asset/images/3.jpg') }}" alt="We'll Call You" class="w-full h-auto sm:h-60 md:h-72 lg:h-80 object-fit transition duration-300 transform hover:scale-105">
+                <img src="{{ asset('asset/images/3.jpg') }}" alt="Mobile Smash Repair Services" class="w-full h-auto sm:h-60 md:h-72 lg:h-80 object-fit transition duration-300 transform hover:scale-105" >
             </div>
         </div>
     </div>
@@ -541,7 +541,7 @@
             {{-- </a> --}}
         </div>
         <div class="w-full flex justify-center items-center">
-            <img src="{{ asset('storage/' . $service->service_image) }}" alt="">
+            <img src="{{ asset('storage/' . $service->service_image) }}" alt="Mobile Smash Repair Services">
         </div>
     </div>
 </div>
@@ -576,7 +576,7 @@
 
                 <div class="w-full grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-1 mt-6">
                     <div class="w-full flex justify-center items-center">
-                        <img src="{{ asset('storage/' . $choos->image) }}" alt="">
+                        <img src="{{ asset('storage/' . $choos->image) }}" alt="Mobile Smash Repair Services">
                     </div>
                     <div class="flex flex-col gap-4">
                         <div class="flex gap-2">
@@ -639,7 +639,7 @@
                 @endphp
 
                 <div class="bg-white rounded-3xl px-[20px] py-[30px] flex flex-col items-center" style="box-shadow: 0px 0px 10px 1px #eeb21ca8;">
-                    <img src="{{ asset('storage/' . $service->image) }}" alt="">
+                    <img src="{{ asset('storage/' . $service->image) }}" alt="Mobile Smash Repair Services">
                     <h2 class="uppercase lg:text-[35px] md:text-[30px] text-center sm:text-[25px] text-[20px] text-[#15AEF1] font-bold">
                         {{ $service->heading }}
                     </h2>

@@ -2,7 +2,7 @@
 <html lang="en-AU">
 <head>
 
-    <link rel="icon" href="{{ asset('asset/img/logo.png') }}" type="image/x-icon">
+    <link rel="icon" href="{{ asset('asset/img/logo.png') }}" type="image/x-icon" >
     <!-- Google Tag Manager -->
     <script>
         (function(w, d, s, l, i) {
@@ -130,7 +130,7 @@
     <div class="w-max h-max fixed right-4 bottom-4">
         <a href="tel:+61449599000" target="_blank"
             class="text-[#56eb6c] text-[70px] hover:text-[#eeb21c] transition ease-in duration-2000 ">
-            <img src="{{ asset('asset/images/image-removebg-preview.png') }}" alt="" style="width: 80px; height: auto;">
+            <img src="{{ asset('asset/images/image-removebg-preview.png') }}" alt="Mobile Smash Repair Services in Melbourne" style="width: 80px; height: auto;">
         </a>
     </div>
 

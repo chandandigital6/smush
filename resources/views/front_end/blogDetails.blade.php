@@ -7,7 +7,7 @@
             {{-- make copy of this li for dynamic slider --}}
             <li class="w-full  relative">
                 <img src="{{asset('storage/'.$blogs->image)}}"
-                     class="w-full lg:h-[550px] md:h-[500px] sm:h-[400px] h-[300px] object-cover">
+                     class="w-full lg:h-[550px] md:h-[500px] sm:h-[400px] h-[300px] object-cover" alt="Understanding Common Car Issues in Australia">
                 <div class="absolute top-0 left-0 w-full h-full bg-black/70 flex justify-center items-center px-4">
                     <div class="w-max h-max flex flex-col items-center gap-4">
                         <span class="uppercase text-[#EEB21C] text-[22px] font-bold">ANY KIND OF CAR YOU WILL GET</span>
@@ -49,7 +49,7 @@
         <div class="w-full px-4 flex justify-center">
             <div class="lg:w-[90%] md:w-[90%] sm:w-[90%] w-full grid grid-cols-1 gap-4 py-5">
                 <div class="w-full flex justify-center items-center">
-                    <img src="{{ asset('storage/'.$blogs->image) }}" alt="Blog Image" class="rounded-lg shadow-lg">
+                    <img src="{{ asset('storage/'.$blogs->image) }}"  alt="Understanding Common Car Issues in Australia" class="rounded-lg shadow-lg" >
                 </div>
                 <div class="w-full flex flex-col gap-6 p-4 bg-white rounded-lg shadow-md">
                     <h2 class="uppercase font-bold text-[#15AEF1] lg:text-5xl md:text-4xl text-3xl">

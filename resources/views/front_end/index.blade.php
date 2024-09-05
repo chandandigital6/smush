@@ -7,7 +7,7 @@
             @foreach($banners as $banner)
                 <li class="w-full relative">
                     <img src="{{ asset('storage/'.$banner->image) }}"
-                         class="w-full lg:h-[450px] md:h-[400px] sm:h-[400px] h-[400px] object-cover" alt="mobile-smash-repair-in-melbourne-banner">
+                         class="w-full lg:h-[450px] md:h-[400px] sm:h-[400px] h-[400px] object-cover" alt="Mobile Smash Repair Services in Melbourne">
                     <div class="absolute top-0 left-0 w-full h-full bg-black/70 flex justify-center items-center px-4">
                         <div class="w-max h-max flex flex-col items-center gap-4">
                             <span class="uppercase text-[#EEB21C] text-[22px] font-bold">{{$banner->title}}</span>
@@ -72,7 +72,7 @@
                                                 </a>
                     </div>
                     <div class="w-full justify-center items-center lg:flex md:flex hidden">
-                        <img src="{{asset('storage/'.$aboutUs->image)}}" alt="">
+                        <img src="{{asset('storage/'.$aboutUs->image)}}" alt="Mobile Smash Repair Services in Melbourne">
                     </div>
                 </div>
             @endforeach
@@ -122,7 +122,7 @@
 
                         <div class="w-full bg-white rounded-3xl px-[20px] py-[30px] flex flex-col items-center"
                              style="box-shadow: 0px 0px 10px 1px #eeb21ca8;">
-                            <img src="{{asset('storage/'.$service->image)}}" alt="">
+                            <img src="{{asset('storage/'.$service->image)}}" alt="Mobile Smash Repair Services in Melbourne">
                             <h2 class="uppercase lg:text-[35px] md:text-[30px] text-center sm:text-[25px] text-[20px] text-[#15AEF1] font-bold">
                                 {{$service->heading}}
 
@@ -190,7 +190,7 @@
                                         @endforeach
                         @foreach($plan->skip(1)->take(1) as $plans)
                     <div class="bg-[#15aef1] rounded-xl px-[20px] lg:py-[60px] md:py-[60px] py-[30px] flex flex-col items-center h-max ">
-                        <img src="{{asset('storage/'.$plans->image)}}" alt="">
+                        <img src="{{asset('storage/'.$plans->image)}}" alt="Mobile Smash Repair Services in Melbourne">
 
                         <h2 class="uppercase lg:text-[30px] md:text-[25px] text-center sm:text-[20px] text-[15px] text-white font-bold">
                             {{$plans->title}}</h2>
@@ -331,7 +331,7 @@
 
                         <li class="w-full  relative">
                             <div class="relative">
-                                <img src="{{asset('storage/'.$blogs->image)}}" class="w-full h-[400px] opacity-80 hover:opacity-100 transition ease-in duration-2000">
+                                <img src="{{asset('storage/'.$blogs->image)}}" class="w-full h-[400px] opacity-80 hover:opacity-100 transition ease-in duration-2000" alt="Mobile Smash Repair Services in Melbourne">
                             </div>
                             <div class="relative h-16 bg-white">
                                 <div class="absolute -top-[30px] left-0 flex justify-center w-full">

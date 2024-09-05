@@ -6,7 +6,7 @@
             {{-- make copy of this li for dynamic slider --}}
             <li class="w-full  relative">
                 <img src="{{ asset('asset/images/image2.jpg') }}"
-                    class="w-full lg:h-[550px] md:h-[500px] sm:h-[400px] h-[300px] object-cover">
+                    class="w-full lg:h-[550px] md:h-[500px] sm:h-[400px] h-[300px] object-cover" alt="About Mobile Smash Repair Services">
                 <div class="absolute top-0 left-0 w-full h-full bg-black/70 flex justify-center items-center px-4">
                     <div class="w-max h-max flex flex-col items-center gap-4">
                         <span class="uppercase text-[#EEB21C] text-[22px] font-bold">ANY KIND OF CAR YOU WILL GET</span>
@@ -59,7 +59,7 @@
                         <h2 class="uppercase font-bold lg:text-[30px] md:text-[30px] text-[25px] text-left">
                             {{ $aboutUs->title }} <span class="text-[#15AEF1]">{{ $aboutUs->heading }}</span></h2>
                         <div class="w-full  justify-center items-center lg:hidden md:hidden flex">
-                            <img src="{{ asset('storage/' . $aboutUs->image) }}" alt="">
+                            <img src="{{ asset('storage/' . $aboutUs->image) }}" alt="About Mobile Smash Repair Services">
                         </div>
 
                         <p class="text-black lg:leading-7 md:leading-2 lg:text-[18px] md:text-[13px] text-[12px] font-medium font-[montserrat]"
@@ -75,7 +75,7 @@
                         {{--                        </a> --}}
                     </div>
                     <div class="w-full justify-center items-center lg:flex md:flex hidden">
-                        <img src="{{ asset('storage/' . $aboutUs->image) }}" alt="">
+                        <img src="{{ asset('storage/' . $aboutUs->image) }}" alt="About Mobile Smash Repair Services">
                     </div>
                 </div>
             @endforeach

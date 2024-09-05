@@ -6,7 +6,7 @@
         <ul class="slider-container">
             <li class="w-full relative">
                 <img src="{{asset('asset/images/Rectangle 42.png')}}"
-                     class="w-full lg:h-[450px] md:h-[400px] sm:h-[400px] h-[300px] object-cover">
+                     class="w-full lg:h-[450px] md:h-[400px] sm:h-[400px] h-[300px] object-cover" alt="Mobile Smash Repair Services - Blogs">
                 <div class="absolute top-0 left-0 w-full h-full bg-black/70 flex justify-center items-center px-4">
                     <div class="w-max h-max flex flex-col items-center gap-4">
                         <span class="uppercase text-[#EEB21C] text-[22px] font-bold">All Blogs</span>
@@ -54,7 +54,7 @@
 
                         <di class="w-full  relative">
                             <div class="relative">
-                                <img src="{{asset('storage/'.$blogs->image)}}" class="w-full h-[400px] opacity-80 hover:opacity-100 transition ease-in duration-2000">
+                                <img src="{{asset('storage/'.$blogs->image)}}" class="w-full h-[400px] opacity-80 hover:opacity-100 transition ease-in duration-2000" alt="Mobile Smash Repair Services - Blogs">
                             </div>
                             <div class="relative h-16 bg-white">
                                 <div class="absolute -top-[30px] left-0 flex justify-center w-full">

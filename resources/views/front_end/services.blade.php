@@ -6,7 +6,7 @@
             {{-- make copy of this li for dynamic slider --}}
             <li class="w-full  relative">
                 <img src="{{ asset('asset/images/image2.jpg') }}"
-                    class="w-full lg:h-[550px] md:h-[500px] sm:h-[400px] h-[300px] object-cover">
+                    class="w-full lg:h-[550px] md:h-[500px] sm:h-[400px] h-[300px] object-cover" alt="Mobile Smash Repair Services">
                 <div class="absolute top-0 left-0 w-full h-full bg-black/70 flex justify-center items-center px-4">
                     <div class="w-max h-max flex flex-col items-center gap-4">
                         <span class="uppercase text-[#EEB21C] text-[22px] font-bold">ANY KIND OF CAR YOU WILL GET</span>
@@ -92,7 +92,7 @@
 
                         <div class="w-full grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-1 mt-6">
                             <div class="w-full flex justify-center items-center">
-                                <img src="{{ asset('storage/' . $choos->image) }}" alt="">
+                                <img src="{{ asset('storage/' . $choos->image) }}" alt="Mobile Smash Repair Services">
                             </div>
                             <div class="flex flex-col gap-4">
                                 <div class="flex gap-2">
@@ -168,7 +168,7 @@
                                 @endphp
                                 @foreach ($imagePaths as $imagePath)
                                     <li class="w-full relative">
-                                        <img src="{{ asset('storage/' . $imagePath) }}" alt="{{ $logo->title }}"
+                                        <img src="{{ asset('storage/' . $imagePath) }}" alt="Mobile Smash Repair Services"
                                             class="w-full lg:h-[550px] md:h-[450px] sm:h-[400px] h-[300px] ">
                                     </li>
                                 @endforeach
