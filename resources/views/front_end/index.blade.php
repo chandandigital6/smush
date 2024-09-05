@@ -7,7 +7,7 @@
             @foreach($banners as $banner)
                 <li class="w-full relative">
                     <img src="{{ asset('storage/'.$banner->image) }}"
-                         class="w-full lg:h-[450px] md:h-[400px] sm:h-[400px] h-[400px] object-cover">
+                         class="w-full lg:h-[450px] md:h-[400px] sm:h-[400px] h-[400px] object-cover" alt="mobile-smash-repair-in-melbourne-banner">
                     <div class="absolute top-0 left-0 w-full h-full bg-black/70 flex justify-center items-center px-4">
                         <div class="w-max h-max flex flex-col items-center gap-4">
                             <span class="uppercase text-[#EEB21C] text-[22px] font-bold">{{$banner->title}}</span>

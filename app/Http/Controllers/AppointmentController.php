@@ -120,4 +120,5 @@ class AppointmentController extends Controller
         //        $productDuplicate->save();
         //        return redirect()->back();
     }
+
 }
