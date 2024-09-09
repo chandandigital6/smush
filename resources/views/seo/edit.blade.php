@@ -114,7 +114,7 @@
                         <select name="blog_id" class="form-control @error('blog_id') is-invalid @enderror">
                             <option value="">select</option>
                             @foreach($blog as $blogs)
-                                <option value="{{ $blogs->id }}" {{ $seo->blog_id == $blogs->id ? 'selected' : '' }}>{{ $service->title }}</option>
+                                <option value="{{ $blogs->id }}" {{ $seo->blog_id == $blogs->id ? 'selected' : '' }}>{{ $blogs->title }}</option>
                             @endforeach
                         </select>
                         @error('blog_id')

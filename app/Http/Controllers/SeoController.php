@@ -41,7 +41,7 @@ class SeoController extends Controller
     public function edit(Seo $seo){
         $services=Service::all();
         $blog=Blog::all();
-        return view('seo.edit',compact('seo','services'));
+        return view('seo.edit',compact('seo','services','blog'));
     }
 
     public function update(Seo $seo , SeoRequest $request){

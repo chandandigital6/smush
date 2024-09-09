@@ -63,7 +63,7 @@
     @endif
 
     @if ($seo && $seo->description)
-        <meta name="description" content="{{ $seo->description }}">
+        <meta name="description" content="{!! $seo->description !!} ">
     @endif
 
     {{--    @if ($seo && $seo->canonical) --}}
@@ -76,7 +76,7 @@
     @endif
 
     @if ($seo && $seo->og_description)
-        <meta property="og:description" content="{{ $seo->og_description }}">
+        <meta property="og:description" content="{!! $seo->og_description !!}">
     @endif
 
     @if ($seo && $seo->og_type)
@@ -105,7 +105,7 @@
     @endif
 
     @if ($seo && $seo->og_description)
-        <meta name="twitter:description" content="{{ $seo->og_description }}">
+        <meta name="twitter:description" content="{!! $seo->og_description  !!}">
     @endif
 
     @if ($seo && $seo->og_image)
