@@ -197,7 +197,7 @@
                     <div class="flex flex-col ">
                         <h2 class=" font-bold lg:text-[30px] md:text-[20px] text-[20px]"> <span class="text-[#15AEF1]">Instagram</span></h2>
                         <p class="text-[#5c5b5b]  lg:text-[18px] md:text-[12px] text-[15px] font-normal font-[montserrat]" style="word-spacing: 10px;">
-                            <a href="https://www.instagram.com/mobilesmashreapir">@mobilesmashreapir</a></p>
+                            <a href="https://www.instagram.com/mobilesmashrepair">@mobilesmashreapir</a></p>
                     </div>
                 </div>
 
