@@ -76,8 +76,8 @@
 
             <div class="w-full flex flex-col ">
                 <p class="lg:text-[20px] md:text-[20px] text-[12px] text-white font-bold font-[roboto] text-center">
-                    Copyright © 2024 MOBILE SMASH REPAIR -
-                    <a href="https://viralbusinessgroup.com" target="_blank" class="hover:underline">Powered by VIRAL BUSINESS</a>
+                    Copyright © 2024 MOBILE SMASH REPAIR
+                    {{-- <a href="https://viralbusinessgroup.com" target="_blank" class="hover:underline">Powered by VIRAL BUSINESS</a> --}}
                 </p>
                 <p class="lg:text-[18px] md:text-[18px] text-[11px] text-white font-medium font-[roboto] text-center">
                     <a href="{{route('privacy-policy')}}" class="hover:underline">PRIVACY POLICY</a> / <a href="{{route('terms_and_conditions')}}" class="hover:underline">TERMS & CONDITIONS</a>
