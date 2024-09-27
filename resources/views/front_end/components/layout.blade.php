@@ -101,18 +101,18 @@
 
     <!-- Twitter data -->
     @if ($seo && $seo->twitter_label1)
-        <meta name="twitter:label1" content="{{ $seo->twitter_label1 }}">
+        <meta name="twitter:card" content="{{ $seo->twitter_label1 }}">
     @endif
 
     @if ($seo && $seo->twitter_data1)
-        <meta name="twitter:data1" content="{!! $seo->twitter_data1  !!}">
+        <meta name="twitter:title" content="{!! $seo->twitter_data1  !!}">
     @endif
 
     @if ($seo && $seo->twitter_label2)
-        <meta name="twitter:label2" content="{{ $seo->twitter_label2 }}">
+        <meta name="twitter:description" content="{{ $seo->twitter_label2 }}">
     @endif
     @if ($seo && $seo->twitter_data2)
-        <meta name="twitter:data2" content="{{ $seo->twitter_data2 }}">
+        <meta name="twitter:url" content="{{ $seo->twitter_data2 }}">
     @endif
 
 
