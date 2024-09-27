@@ -70,19 +70,19 @@
                         <input type="url" class="form-control" id="og_image" name="og_image" placeholder="https://example.com/assets/img/logo.png">
                     </div>
                     <div class="form-group">
-                        <label for="twitter_label1">Twitter Label 1:</label>
+                        <label for="twitter_label1">Twitter card:</label>
                         <input type="text" class="form-control" id="twitter_label1" name="twitter_label1" placeholder="Written by">
                     </div>
                     <div class="form-group">
-                        <label for="twitter_data1">Twitter Data 1:</label>
+                        <label for="twitter_data1">Twitter title :</label>
                         <input type="text" class="form-control" id="twitter_data1" name="twitter_data1" placeholder="Ankush Goyal">
                     </div>
                     <div class="form-group">
-                        <label for="twitter_label2">Twitter Label 2:</label>
+                        <label for="twitter_label2">Twitter description:</label>
                         <input type="text" class="form-control" id="twitter_label2" name="twitter_label2" placeholder="Est. reading time">
                     </div>
                     <div class="form-group">
-                        <label for="twitter_data2">Twitter Data 2:</label>
+                        <label for="twitter_data2">Twitter image url:</label>
                         <input type="text" class="form-control" id="twitter_data2" name="twitter_data2" placeholder="12 minutes">
                     </div>
                     <div class="form-group">

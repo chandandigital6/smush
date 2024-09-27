@@ -100,17 +100,21 @@
     @endif
 
     <!-- Twitter data -->
-    @if ($seo && $seo->og_title)
-        <meta name="twitter:title" content="{{ $seo->og_title }}">
+    @if ($seo && $seo->twitter_label1)
+        <meta name="twitter:label1" content="{{ $seo->twitter_label1 }}">
     @endif
 
-    @if ($seo && $seo->og_description)
-        <meta name="twitter:description" content="{!! $seo->og_description  !!}">
+    @if ($seo && $seo->twitter_data1)
+        <meta name="twitter:data1" content="{!! $seo->twitter_data1  !!}">
     @endif
 
-    @if ($seo && $seo->og_image)
-        <meta name="twitter:image" content="{{ $seo->og_image }}">
+    @if ($seo && $seo->twitter_label2)
+        <meta name="twitter:label2" content="{{ $seo->twitter_label2 }}">
     @endif
+    @if ($seo && $seo->twitter_data2)
+        <meta name="twitter:data2" content="{{ $seo->twitter_data2 }}">
+    @endif
+
 
 
 
