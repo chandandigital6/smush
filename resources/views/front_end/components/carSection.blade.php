@@ -9,7 +9,7 @@
             <span class="font-bold lg:text-[34px] md:text-[21px] sm:text-[17px] text-[10px]">GET YOUR FREE ESTIMATE NOW</span>
             <span class="font-bold lg:text-[23px] md:text-[15px] sm:text-[10px] text-[10px] text-[#EEB21C] text-center">SIMPLY SEND US PHOTOS OF THE DAMAGE!"</span>
             <h5 class="font-bold lg:text-[20px] md:text-[20px] sm:text-[17px] text-[10px]">
-                info@mobilesmashrepair.com
+                <a href="mailto: info@mobilesmashrepair.com"> info@mobilesmashrepair.com</a>
             </h5>
             <h5 class="font-bold lg:text-[30px] md:text-[20px] sm:text-[17px] text-[10px]">OR</h5>
             <a href="https://mobilesmashrepair.com/smash-repair"

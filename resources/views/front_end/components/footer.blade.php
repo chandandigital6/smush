@@ -2,7 +2,7 @@
     <div class="lg:w-[80%] md:w-[80%] sm:w-[90%] w-full flex flex-col justify-between py-10">
         <div class="flex gap-4 items-center w-full">
             <div class="w-max">
-                <a href="{{route('contact')}}">
+                <a href="{{route('home')}}">
                     <img class="h-auto lg:w-full md:w-[70px] sm:w-[60px] w-[70px]"
                          src="{{asset('asset/images/mainLogo.png')}}" alt="Mobile Smash Repair Services in Melbourne">
                 </a>
@@ -21,10 +21,11 @@
                     CONTACT INFO
                 </h2>
                 <span class="text-[17px] text-white font-bold font-[roboto] mt-2">
-                        Phone No.: <span class="font-normal">0449599000</span>
+                        Phone No.: <span class="font-normal"><a href="tel:+61449599000">+61 449599000</a></span>
                    </span>
                 <span class="text-[17px] text-white font-bold font-[roboto]">
-                        Email: <span class="font-normal">info@mobilesmashrepair.com
+                        Email: <span class="font-normal">
+                          <a href="mailto: info@mobilesmashrepair.com"> info@mobilesmashrepair.com</a>
 </span>
                    </span>
 
