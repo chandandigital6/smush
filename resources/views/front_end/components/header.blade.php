@@ -25,7 +25,7 @@
         <div class="w-max">
             <a href="{{route('home')}}">
                 <img class="h-auto lg:w-[100px] md:w-[70px] sm:w-[60px] w-[50px]"
-                     src="{{asset('asset/images/logo final-01.png')}}" alt="Mobile Smash Repair Services in Melbourne">
+                     src="{{asset('asset/images/logo.svg')}}" alt="Mobile Smash Repair Services in Melbourne">
             </a>
         </div>
         <div id="menuList" class="lg:w-max md:w-max lg:static md:static absolute top-[100%] left-0 w-full z-50 bg-white lg:flex md:flex hidden">
