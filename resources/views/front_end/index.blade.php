@@ -56,7 +56,7 @@
                         <h2 class="uppercase font-bold lg:text-[30px] md:text-[30px] text-[25px] text-left">{{$aboutUs->title}} <span
                                 class="text-[#15AEF1]">{{$aboutUs->heading}}</span></h2>
                         <div class="w-full  justify-center items-center lg:hidden md:hidden flex">
-                            <img src="{{asset('storage/'.$aboutUs->image)}}" alt="">
+                            <img src="{{asset('storage/'.$aboutUs->image)}}" alt="About us">
                         </div>
 
                         <p class="text-black lg:leading-7 md:leading-2 lg:text-[18px] md:text-[13px] text-[12px] font-medium font-[montserrat]"
@@ -173,7 +173,7 @@
 
 
                                         <div class="bg-[#eeb21c] rounded-xl px-[20px] py-[30px] flex flex-col items-center h-max">
-                                            <img src="{{asset('storage/'.$plans->image)}}" alt="">
+                                            <img src="{{asset('storage/'.$plans->image)}}" alt="GET A TECHNICIAN">
                                             <h2 class="uppercase lg:text-[30px] md:text-[25px] text-center sm:text-[20px] text-[15px] text-white font-bold">
                                                 {{$plans->title}}</h2>
                                             <p class="text-white lg:leading-7 md:leading-2 lg:text-[16px] md:text-[16px] text-[16px] font-medium font-[montserrat] text-center"
@@ -181,7 +181,7 @@
                                                 {!! $plans->msg !!}
                                             </p>
 
-                                            <a href="tel:0449599000
+                                            <a href="tel:+61449599000
 "
                                                class="mt-6 lg:text-[20px] md:text-[17px] text-[20px] w-max text-black bg-white px-4  py-1 font-bold rounded-md border-[1px] border-white hover:bg-white hover:text-black  transition ease-in duration-2000">
                                                 Call Now
@@ -210,7 +210,7 @@
 
 
                             <div class="bg-[#eeb21c] rounded-xl px-[20px] py-[30px] flex flex-col items-center h-max">
-                                <img src="{{asset('storage/'.$plans->image)}}" alt="">
+                                <img src="{{asset('storage/'.$plans->image)}}" alt="Get A Quote">
                                 <h2 class="uppercase lg:text-[30px] md:text-[25px] text-center sm:text-[20px] text-[15px] text-white font-bold">
                                     {{$plans->title}}</h2>
                                 <p class="text-white lg:leading-7 md:leading-2 lg:text-[16px] md:text-[16px] text-[16px] font-medium font-[montserrat] text-center"
@@ -249,7 +249,7 @@
                                 @endphp
                                 @foreach($imagePaths as $imagePath)
                                     <li class="w-full relative">
-                                        <img src="{{ asset('storage/'.$imagePath) }}" alt="{{ $logo->title }}" class="w-full lg:h-[550px] md:h-[450px] sm:h-[400px] h-[300px] ">
+                                        <img src="{{ asset('storage/'.$imagePath) }}" alt="{{ $logo->title }}" class="w-full lg:h-[550px] md:h-[450px] sm:h-[400px] h-[300px] " >
                                     </li>
                                 @endforeach
 

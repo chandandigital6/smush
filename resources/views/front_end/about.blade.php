@@ -124,7 +124,7 @@
 
                         <div class="w-full grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-1 mt-6">
                             <div class="w-full flex justify-center items-center">
-                                <img src="{{ asset('storage/' . $choos->image) }}" alt="">
+                                <img src="{{ asset('storage/' . $choos->image) }}" alt="Why Choose Us">
                             </div>
                             <div class="flex flex-col gap-4">
                                 <div class="flex gap-2">
