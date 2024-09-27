@@ -63,7 +63,7 @@
                         <p class="text-black lg:leading-7 md:leading-2 lg:text-[18px] md:text-[13px] text-[12px] font-normal font-[montserrat]"
                            style="word-spacing: 10px;">
                             <strong class="text-[#15AEF1]"> Restrictions:</strong> You are prohibited from republishing, reproducing, duplicating, selling, or renting any material from
-                            <a href="www.mobilesmashrepair.com" class="text-[#15AEF1]">www.mobilesmashrepair.com</a>
+                            <a href="/" class="text-[#15AEF1]">www.mobilesmashrepair.com</a>
                         </p>
                         <p class="text-black lg:leading-7 md:leading-2 lg:text-[18px] md:text-[13px] text-[12px] font-normal font-[montserrat]"
                            style="word-spacing: 10px;">

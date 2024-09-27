@@ -199,7 +199,7 @@
                             {!! $plans->msg !!}
                         </p>
 
-                        <a href="https://mobilesmashrepair.com/smash_repair"
+                        <a href="https://mobilesmashrepair.com/smash-repair"
                            class="mt-6 lg:text-[20px] md:text-[17px] text-[20px] w-max text-black bg-white px-4  py-1 font-bold rounded-md border-[1px] border-white hover:bg-white hover:text-black  transition ease-in duration-2000">
                           Book Now
                         </a>

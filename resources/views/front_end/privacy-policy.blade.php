@@ -55,7 +55,7 @@
                     <p class="text-black lg:leading-7 md:leading-2 lg:text-[18px] md:text-[13px] text-[12px] font-normal font-[montserrat]"
                        style="word-spacing: 10px;">
                         At Mobile Smash Repair, safeguarding your privacy is our utmost priority. We do not rent or lease customer data, and our policy is meticulously crafted to protect the personal information collected through
-                        <a href="www.mobilesmashrepair.com" class="text-[#15AEF1]">www.mobilesmashrepair.com</a> or directly from you.
+                        <a href="/" class="text-[#15AEF1]">www.mobilesmashrepair.com</a> or directly from you.
                     </p>
                     <p class="text-black lg:leading-7 md:leading-2 lg:text-[18px] md:text-[13px] text-[12px] font-normal font-[montserrat]"
                        style="word-spacing: 10px;">
