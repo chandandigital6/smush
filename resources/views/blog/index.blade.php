@@ -59,6 +59,7 @@
                                 <tbody>
                                 @forelse ($blogData as $blog)
                                     <tr>
+
                                         <td>{{ $blog->id }}</td>
                                         <td>{{ $blog->url }}</td>
                                         <td>{{ $blog->title }}</td>

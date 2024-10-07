@@ -21,7 +21,7 @@
         })(window, document, 'script', 'dataLayer', 'GTM-54PDXK3Z');
     </script>
     <!-- End Google Tag Manager -->
-
+    <meta name="google-site-verification" content="dY_0faB1TR7ZsFfR1GWqeoPXcFEdSRxVlvIgYDYOcyU" />
     <script type="application/ld+json">
         {
           "@context": "https://schema.org",
