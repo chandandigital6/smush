@@ -115,6 +115,10 @@
         <meta name="twitter:image" content="{{ $seo->twitter_data2 }}">
     @endif
 
+    @if ($seo && $seo->twitter_site)
+        <meta name="twitter:site" content="{{ $seo->twitter_site }}">
+    @endif
+
 
 
 

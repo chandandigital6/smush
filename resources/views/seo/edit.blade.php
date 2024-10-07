@@ -82,6 +82,11 @@
                         <label for="twitter_data2">Twitter  image url:</label>
                         <input type="text" class="form-control" id="twitter_data2" name="twitter_data2" value="{{$seo->twitter_label2}}" placeholder="12 minutes">
                     </div>
+
+                    <div class="form-group">
+                        <label for="twitter_data2">Twitter site:</label>
+                        <input type="text" class="form-control" id="twitter_site" name="twitter_site" value="{{$seo->twitter_site}}" placeholder="twitter_site">
+                    </div>
                     <div class="form-group">
                         <label for="">Select Page</label>
                         <select name="page" class="form-control" id="">

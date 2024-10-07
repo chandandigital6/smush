@@ -86,6 +86,10 @@
                         <input type="text" class="form-control" id="twitter_data2" name="twitter_data2" placeholder="12 minutes">
                     </div>
                     <div class="form-group">
+                        <label for="twitter_data2">Twitter site:</label>
+                        <input type="text" class="form-control" id="twitter_site" name="twitter_site" placeholder="12 minutes">
+                    </div>
+                    <div class="form-group">
                         <label for="seo">Select Page</label>
                         <select name="page" class="form-control" id="">
                             <option value="">select page</option>
