@@ -112,7 +112,7 @@
         <meta name="twitter:description" content="{{ $seo->twitter_label2 }}">
     @endif
     @if ($seo && $seo->twitter_data2)
-        <meta name="twitter:url" content="{{ $seo->twitter_data2 }}">
+        <meta name="twitter:image" content="{{ $seo->twitter_data2 }}">
     @endif
 
 
