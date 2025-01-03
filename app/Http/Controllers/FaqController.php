@@ -37,8 +37,9 @@ class FaqController extends Controller
     }
 
     public function edit(Faq $faqs){
-
-        return view('faqs.edit',compact('faqs'));
+        $services = Service::all();
+        // return view('faqs.create',compact('services'));
+        return view('faqs.create',compact('faqs','services'));
     }
 
     public function update(Faq $faqs , FaqRequest $request){
