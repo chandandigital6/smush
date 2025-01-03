@@ -27,7 +27,13 @@
                                 <div class="text-danger">{{ $message }}</div>
                                 @enderror
                             </div>
-
+                            <div class="form-group">
+                                <label for="paragraf">paragraf:</label>
+                                <input type="text" class="form-control" id="paragraf" name="paragraf" value="{{ old('paragraf', $serviceHeader->paragraf) }}" required>
+                                @error('paragraf')
+                                <div class="text-danger">{{ $message }}</div>
+                                @enderror
+                            </div>
                             <div class="form-group">
                                 <label for="f">Field f:</label>
                                 <input type="text" class="form-control" id="f" name="f" value="{{ old('f', $serviceHeader->f) }}">
@@ -51,7 +57,21 @@
                                 <div class="text-danger">{{ $message }}</div>
                                 @enderror
                             </div>
+                            <div class="form-group">
+                                <label for="f_3">Field f_3:</label>
+                                <input type="text" class="form-control" id="f_3" name="f_3" value="{{ old('f_3', $serviceHeader->f_3) }}">
+                                @error('f_3')
+                                <div class="text-danger">{{ $message }}</div>
+                                @enderror
+                            </div>
 
+                            <div class="form-group">
+                                <label for="f_4">Field f_4:</label>
+                                <input type="text" class="form-control" id="f_4" name="f_4" value="{{ old('f_4', $serviceHeader->f_4) }}">
+                                @error('f_4')
+                                <div class="text-danger">{{ $message }}</div>
+                                @enderror
+                            </div>
                             <div class="form-group">
                                 <label for="service_id">Service:</label>
                                 <select class="form-control" id="service_id" name="service_id">

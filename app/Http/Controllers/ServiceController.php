@@ -6,6 +6,7 @@ use App\Http\Requests\ServiceRequest;
 use App\Models\Faq;
 use App\Models\Seo;
 use App\Models\Service;
+use App\Models\ServiceAddon;
 use App\Models\ServiceBefore;
 use App\Models\ServiceChoose;
 use App\Models\ServiceGallery;
@@ -114,11 +115,16 @@ class ServiceController extends Controller
             $faqs=Faq::where('service_id', $service->id)
             ->where('status', 'active')
              ->get();
+             $serviceAddon=ServiceAddon::where('service_id', $service->id)
+             ->where('status', 'active')
+              ->get();
+
+
             //  dd($faqs);
 //        dd($chooseUs);
         $testimonials=Testimonial::all();
         $seos= Seo::where('service_id', $service->id)->get();
-        return view('front_end.servicesDetail',compact('service','serviceGallery','serviceChooseUs','services','serviceVideo','seos','testimonials','serviceHeader','serviceBefore','faqs'));
+        return view('front_end.servicesDetail',compact('service','serviceGallery','serviceChooseUs','services','serviceVideo','seos','testimonials','serviceHeader','serviceBefore','faqs','serviceAddon'));
     }
 
 }

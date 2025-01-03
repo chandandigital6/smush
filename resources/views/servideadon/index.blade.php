@@ -26,8 +26,8 @@
                 <div class="card">
                     <div class="card-header bg-primary text-white">
                         <div class="d-flex justify-content-between align-items-center">
-                            <h1>Service Header</h1>
-                            <a href="{{ route('serviceHeader.create') }}" class="btn btn-light">Create </a>
+                            <h1>serviceAddon</h1>
+                            <a href="{{ route('serviceAddon.create') }}" class="btn btn-light">Create serviceAddon</a>
                         </div>
                     </div>
 
@@ -46,37 +46,29 @@
                                 <thead>
                                 <tr>
                                     <th>ID</th>
-                                    <th>Title</th>
-                                    <th>paragraph</th>
-                                    <th>feature1</th>
-                                    <th>feature2</th>
-                                    <th>feature3</th>
-                                    <th>feature4</th>
-                                    <th>feature5</th>
-                                    <th>serviceName</th>
-                                    {{--                                    <th>Image</th>--}}
+                                    <th>heading</th>
+                                    <th>msg</th>
+                                   <th>ServiceNAme</th>
+                                   <th>status</th>
                                     <th>Action</th>
                                 </tr>
                                 </thead>
                                 <tbody>
-                                @forelse ($serviceHeaderData as $serviceHeader)
+                                @forelse ($serviceAddonData as $serviceAddon)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
-                                        <td>{{ $serviceHeader->title }}</td>
-                                        <td>{{ $serviceHeader->paragraf }}</td>
-                                        <td>{{$serviceHeader->f}}</td>
-                                        <td>{{$serviceHeader->f_1}}</td>
-                                        <td>{{ $serviceHeader->f_2 }}</td>
-                                        <td>{{ $serviceHeader->f_3 }}</td>
-                                        <td>{{ $serviceHeader->f_4 }}</td>
+                                        <td>{{ $serviceAddon->heading }}</td>
 
-                                        <td>{{$serviceHeader->service->title}}</td>
-{{--                                                                                <td><img src="{{ asset('storage/'.$serviceHeader->image) }}" alt="{{ $serviceHeader->title }}" style="max-width: 100px;"></td>--}}
+                                       <td>{!! $serviceAddon->msg !!}</td>
+                                       <td>{{$serviceAddon->service->title ?? 'null'}}</td>
+                                       <td>{{ $serviceAddon->status == 'active' ? 'active' : 'inactive' }}</td>
+
+{{--                                        <td><img src="{{ asset('storage/'.$serviceAddon->image) }}" alt="{{ $serviceAddon->title }}" style="max-width: 100px;"></td>--}}
                                         <td>
-                                            <a href="{{ route('serviceHeader.edit', $serviceHeader->id) }}" class="btn btn-primary">Edit</a>
-                                            <a href="{{ route('serviceHeader.delete', $serviceHeader->id) }}" class="btn btn-danger">Delete</a>
+                                            <a href="{{ route('serviceAddon.edit', $serviceAddon->id) }}" class="btn btn-primary">Edit</a>
+                                            <a href="{{ route('serviceAddon.delete', $serviceAddon->id) }}" class="btn btn-danger">Delete</a>
                                             <!-- Add delete button if needed -->
-                                            <a href="{{ route('serviceHeader.duplicate', $serviceHeader->id) }}" class="btn btn-warning">Duplicate</a>
+                                            <a href="{{ route('serviceAddon.duplicate', $serviceAddon->id) }}" class="btn btn-warning">Duplicate</a>
 
                                         </td>
                                     </tr>
@@ -92,7 +84,7 @@
 
                     <div class="card-footer">
                         <!-- Pagination links can be added here if needed -->
-                        {{$serviceHeaderData->links()}}
+                        {{$serviceAddonData->links()}}
                     </div>
                 </div>
             </div>

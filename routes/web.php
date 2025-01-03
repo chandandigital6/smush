@@ -27,6 +27,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\FaqController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ServiceAddonController;
 use Carbon\Carbon;
 use Spatie\Sitemap\Sitemap;
 use Spatie\Sitemap\Tags\Url;
@@ -265,6 +266,14 @@ Route::get('faqs/edit/{faqs}',[FaqController::class,'edit'])->name('faqs.edit');
 Route::post('faqs/update/{faqs}',[FaqController::class,'update'])->name('faqs.update');
 Route::get('faqs/delete/{faqs}',[FaqController::class,'delete'])->name('faqs.delete');
 Route::get('faqs/duplicate/{faqs}',[FaqController::class,'duplicate'])->name('faqs.duplicate');
+
+Route::get('serviceAddon/index',[ServiceAddonController::class,'index'])->name('serviceAddon.index');
+Route::get('serviceAddon/create',[ServiceAddonController::class,'create'])->name('serviceAddon.create');
+Route::post('serviceAddon/store',[ServiceAddonController::class,'store'])->name('serviceAddon.store');
+Route::get('serviceAddon/edit/{serviceAddon}',[ServiceAddonController::class,'edit'])->name('serviceAddon.edit');
+Route::post('serviceAddon/update/{serviceAddon}',[ServiceAddonController::class,'update'])->name('serviceAddon.update');
+Route::get('serviceAddon/delete/{serviceAddon}',[ServiceAddonController::class,'delete'])->name('serviceAddon.delete');
+Route::get('serviceAddon/duplicate/{serviceAddon}',[ServiceAddonController::class,'duplicate'])->name('serviceAddon.duplicate');
 
 
     //choose

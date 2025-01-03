@@ -21,7 +21,7 @@ class AppointmentController extends Controller
         $appointment = Appointment::query();
 
         if (!empty($keyword)) {
-            $appointment->where('title', 'like', "%$keyword%");
+            $appointment->where('name', 'like', "%$keyword%");
         }
 
         $appointment->orderBy($sort_by, $sort_order);

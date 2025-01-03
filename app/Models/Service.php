@@ -48,4 +48,8 @@ class Service extends Model
     {
         return $this->hasMany(faqs::class);
     }
+    public function serviceAddon()
+    {
+        return $this->hasMany(ServiceAddon::class);
+    }
 }
