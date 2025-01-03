@@ -49,7 +49,7 @@
                                     <th>Question</th>
                                     <th>Answer</th>
                                    <th>ServiceNAme</th>
-{{--                                    <th>Image</th>--}}
+                                   <th>status</th>
                                     <th>Action</th>
                                 </tr>
                                 </thead>
@@ -61,6 +61,8 @@
 
                                        <td>{!! $faqs->answer !!}</td>
                                        <td>{{$faqs->service->title ?? 'null'}}</td>
+                                       <td>{{ $faqs->status == 'active' ? 'active' : 'inactive' }}</td>
+
 {{--                                        <td><img src="{{ asset('storage/'.$faqs->image) }}" alt="{{ $faqs->title }}" style="max-width: 100px;"></td>--}}
                                         <td>
                                             <a href="{{ route('faqs.edit', $faqs->id) }}" class="btn btn-primary">Edit</a>

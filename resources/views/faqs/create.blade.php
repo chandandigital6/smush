@@ -60,19 +60,16 @@
                     <!-- Status Field -->
                     <div class="mb-3">
                         <label for="status" class="form-label">Status</label>
-                        <select
-                            name="status"
-                            id="status"
-                            class="form-control @error('status') is-invalid @enderror">
+                        <select name="status" id="status" class="form-control @error('status') is-invalid @enderror">
                             <option value="active" {{ old('status', $faqs->status ?? 'active') == 'active' ? 'selected' : '' }}>Active</option>
-                            <option value="inactive" {{ old('status', $faq->status ?? 'active') == 'inactive' ? 'selected' : '' }}>Inactive</option>
+                            <option value="inactive" {{ old('status', $faqs->status ?? 'active') == 'inactive' ? 'selected' : '' }}>Inactive</option>
                         </select>
                         @error('status')
                             <div class="invalid-feedback">{{ $message }}</div>
                         @enderror
                     </div>
 
-                    <!-- Service Field -->
+
                     <div class="mb-3">
                         <label for="service_id" class="form-label">Service</label>
                         <select
@@ -83,7 +80,7 @@
                             @foreach ($services as $service)
                                 <option
                                     value="{{ $service->id }}"
-                                    {{ old('service_id', $faq->service_id ?? '') == $service->id ? 'selected' : '' }}>
+                                    {{ (old('service_id', $faqs->service_id ?? '') == $service->id) ? 'selected' : '' }}>
                                     {{ $service->title }}
                                 </option>
                             @endforeach
@@ -92,6 +89,7 @@
                             <div class="invalid-feedback">{{ $message }}</div>
                         @enderror
                     </div>
+
 
                     <!-- Submit Button -->
                     <button type="submit" class="btn btn-primary">
