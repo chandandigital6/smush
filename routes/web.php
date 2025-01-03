@@ -28,6 +28,8 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\FaqController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ServiceAddonController;
+use App\Http\Controllers\ServiceBenefitController;
+use App\Http\Controllers\ServiceBestController;
 use Carbon\Carbon;
 use Spatie\Sitemap\Sitemap;
 use Spatie\Sitemap\Tags\Url;
@@ -274,6 +276,25 @@ Route::get('serviceAddon/edit/{serviceAddon}',[ServiceAddonController::class,'ed
 Route::post('serviceAddon/update/{serviceAddon}',[ServiceAddonController::class,'update'])->name('serviceAddon.update');
 Route::get('serviceAddon/delete/{serviceAddon}',[ServiceAddonController::class,'delete'])->name('serviceAddon.delete');
 Route::get('serviceAddon/duplicate/{serviceAddon}',[ServiceAddonController::class,'duplicate'])->name('serviceAddon.duplicate');
+
+
+Route::get('serviceBest/index',[ServiceBestController::class,'index'])->name('serviceBest.index');
+Route::get('serviceBest/create',[ServiceBestController::class,'create'])->name('serviceBest.create');
+Route::post('serviceBest/store',[ServiceBestController::class,'store'])->name('serviceBest.store');
+Route::get('serviceBest/edit/{serviceBest}',[ServiceBestController::class,'edit'])->name('serviceBest.edit');
+Route::post('serviceBest/update/{serviceBest}',[ServiceBestController::class,'update'])->name('serviceBest.update');
+Route::get('serviceBest/delete/{serviceBest}',[ServiceBestController::class,'delete'])->name('serviceBest.delete');
+Route::get('serviceBest/duplicate/{serviceBest}',[ServiceBestController::class,'duplicate'])->name('serviceBest.duplicate');
+
+
+Route::get('serviceBenefit/index',[ServiceBenefitController::class,'index'])->name('serviceBenefit.index');
+Route::get('serviceBenefit/create',[ServiceBenefitController::class,'create'])->name('serviceBenefit.create');
+Route::post('serviceBenefit/store',[ServiceBenefitController::class,'store'])->name('serviceBenefit.store');
+Route::get('serviceBenefit/edit/{serviceBenefit}',[ServiceBenefitController::class,'edit'])->name('serviceBenefit.edit');
+Route::post('serviceBenefit/update/{serviceBenefit}',[ServiceBenefitController::class,'update'])->name('serviceBenefit.update');
+Route::get('serviceBenefit/delete/{serviceBenefit}',[ServiceBenefitController::class,'delete'])->name('serviceBenefit.delete');
+Route::get('serviceBenefit/duplicate/{serviceBenefit}',[ServiceBenefitController::class,'duplicate'])->name('serviceBenefit.duplicate');
+
 
 
     //choose

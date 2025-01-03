@@ -46,10 +46,20 @@ class Service extends Model
 
     public function faqs()
     {
-        return $this->hasMany(faqs::class);
+        return $this->hasMany(Faq::class);
     }
     public function serviceAddon()
     {
         return $this->hasMany(ServiceAddon::class);
+    }
+
+    public function serviceBest()
+    {
+        return $this->hasMany(ServiceBest::class);
+    }
+
+    public function serviceBenefit()
+    {
+        return $this->hasMany(ServiceBenefit::class);
     }
 }
