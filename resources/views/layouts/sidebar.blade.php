@@ -103,6 +103,12 @@
                     <p>Service b/A images</p>
                 </a>
                 </li>
+                <li class="nav-item">
+                    <a href="{{route('faqs.index')}}" class="nav-link">
+                        <i class="nav-icon fa fa-bug"></i>
+                        <p>Faqs</p>
+                    </a>
+                    </li>
 
                 <li class="nav-item">
                     <a href="{{route('logo.index')}}" class="nav-link">

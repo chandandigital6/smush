@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\ServiceRequest;
-
+use App\Models\Faq;
 use App\Models\Seo;
 use App\Models\Service;
 use App\Models\ServiceBefore;
@@ -111,10 +111,14 @@ class ServiceController extends Controller
         $serviceChooseUs=ServiceChoose::where('service_id', $service->id)
            ->where('status', '1')
             ->get();
+            $faqs=Faq::where('service_id', $service->id)
+            ->where('status', 'active')
+             ->get();
+            //  dd($faqs);
 //        dd($chooseUs);
         $testimonials=Testimonial::all();
         $seos= Seo::where('service_id', $service->id)->get();
-        return view('front_end.servicesDetail',compact('service','serviceGallery','serviceChooseUs','services','serviceVideo','seos','testimonials','serviceHeader','serviceBefore'));
+        return view('front_end.servicesDetail',compact('service','serviceGallery','serviceChooseUs','services','serviceVideo','seos','testimonials','serviceHeader','serviceBefore','faqs'));
     }
 
 }

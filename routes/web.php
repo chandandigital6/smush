@@ -25,6 +25,7 @@ use App\Models\Seo;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\FaqController;
 use App\Http\Controllers\HomeController;
 use Carbon\Carbon;
 use Spatie\Sitemap\Sitemap;
@@ -255,6 +256,15 @@ Route::group(['middleware' => ['auth']],function (){
     Route::post('counter/update/{counter}',[CounterController::class,'update'])->name('counter.update');
     Route::get('counter/delete/{counter}',[CounterController::class,'delete'])->name('counter.delete');
     Route::get('counter/duplicate/{counter}',[CounterController::class,'duplicate'])->name('counter.duplicate');
+
+//faqs
+Route::get('faqs/index',[FaqController::class,'index'])->name('faqs.index');
+Route::get('faqs/create',[FaqController::class,'create'])->name('faqs.create');
+Route::post('faqs/store',[FaqController::class,'store'])->name('faqs.store');
+Route::get('faqs/edit/{faqs}',[FaqController::class,'edit'])->name('faqs.edit');
+Route::post('faqs/update/{faqs}',[FaqController::class,'update'])->name('faqs.update');
+Route::get('faqs/delete/{faqs}',[FaqController::class,'delete'])->name('faqs.delete');
+Route::get('faqs/duplicate/{faqs}',[FaqController::class,'duplicate'])->name('faqs.duplicate');
 
 
     //choose

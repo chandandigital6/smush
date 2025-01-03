@@ -701,6 +701,48 @@
 </div>
 
 
+<div class="flex flex-col items-center justify-center p-6">
+    <div class="bg-[#15AEF1] rounded-lg p-6 sm:p-12 w-full max-w-4xl">
+        <h2 class="text-center text-2xl sm:text-4xl text-white font-bold mb-6 w-full font-montserrat">FAQs</h2>
+
+        @if($faqs->isNotEmpty())
+            <div class="space-y-4">
+                @foreach($faqs as $faq)
+                    <div class="bg-white rounded-lg shadow-md">
+                        <button
+                            class="w-full text-left flex justify-between items-center px-4 py-3 text-gray-800 font-medium hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-[#15AEF1]"
+                            onclick="toggleFaq('faq-{{ $faq->id }}')"
+                        >
+                            <span>{{ $faq->question }}</span>
+                            <svg id="icon-faq-{{ $faq->id }}" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform transform rotate-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div id="faq-{{ $faq->id }}" class="hidden px-4 py-3 text-gray-600">
+                            {!! $faq->answer  !!}
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+        @else
+            <p class="text-center text-white font-medium">No FAQs available at the moment.</p>
+        @endif
+    </div>
+</div>
+
+<script>
+    function toggleFaq(id) {
+        const content = document.getElementById(id);
+        const icon = document.getElementById('icon-' + id);
+        if (content.classList.contains('hidden')) {
+            content.classList.remove('hidden');
+            icon.classList.add('rotate-180');
+        } else {
+            content.classList.add('hidden');
+            icon.classList.remove('rotate-180');
+        }
+    }
+</script>
 
 {{-- MAKE YOUR INQUIRY NOW START --}}
 
