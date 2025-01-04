@@ -9,17 +9,17 @@
             </div>
 
             <div class="w-max flex flex-col ">
-                <h2 class="lg:text-[30px] md:text-[30px] text-[20px] text-white font-bold lg:w-[600px] md:w-[500px] w-[250px]">
+                <h3 class="lg:text-[30px] md:text-[30px] text-[20px] text-white font-bold lg:w-[600px] md:w-[500px] w-[250px]">
                     ON-SITE PROFESSIONAL CAR BODY WORKS
-                </h2>
+                </h3>
 
             </div>
         </div>
         <div class="w-full py-12 grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-4">
             <div class="w-full flex flex-col">
-                <h2 class="lg:text-[30px] md:text-[30px] text-[20px] text-white font-bold ">
+                <h3 class="lg:text-[30px] md:text-[30px] text-[20px] text-white font-bold ">
                     CONTACT INFO
-                </h2>
+                </h3>
                 <span class="text-[17px] text-white font-bold font-[roboto] mt-2">
                         Phone No.: <span class="font-normal"><a href="tel:+61449599000">+61 449599000</a></span>
                    </span>
@@ -51,9 +51,9 @@
                 @endphp
 
                 <div class="w-full flex flex-col">
-                    <h2 class="lg:text-[30px] md:text-[30px] text-[20px] text-white font-bold ">
+                    <h3 class="lg:text-[30px] md:text-[30px] text-[20px] text-white font-bold ">
                         OUR SERVICE
-                    </h2>
+                    </h3>
 
                     @foreach($services as $service)
                         <a href="{{route('service.show', ['title'=>$service->title])}}" class="uppercase text-[15px] text-white font-normal font-[roboto] mt-1 hover:text-[#eeb21c] transition ease-in duration-2000 hover:scale-95">
@@ -63,9 +63,9 @@
                 </div>
 
                 <div class="w-full flex flex-col">
-                    <h2 class="lg:text-[30px] md:text-[30px] text-[20px] text-white font-bold ">
+                    <h3 class="lg:text-[30px] md:text-[30px] text-[20px] text-white font-bold ">
                         OFFICE: Melbourne
-                    </h2>
+                    </h3>
                     <iframe class="w-full lg:h-[300px] md:h-[300px] h-[200px]" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d402590.5160317996!2d144.72350271221922!3d-37.97156521869183!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad646b5d2ba4df7%3A0x4045675218ccd90!2sMelbourne%20VIC%2C%20Australia!5e0!3m2!1sen!2sin!4v1718964880416!5m2!1sen!2sin"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
 
