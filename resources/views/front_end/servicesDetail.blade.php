@@ -776,10 +776,10 @@
                         <div class="bg-white rounded-3xl px-[20px] py-[30px] flex flex-col items-center"
                             style="box-shadow: 0px 0px 10px 1px #eeb21ca8;">
                             <img src="{{ asset('storage/' . $service->image) }}" alt="Mobile Smash Repair Services">
-                            <h2
+                            <h3
                                 class="uppercase lg:text-[35px] md:text-[30px] text-center sm:text-[25px] text-[20px] text-[#15AEF1] font-bold">
                                 {{ $service->heading }}
-                            </h2>
+                            </h3>
                             <p
                                 class="text-black lg:leading-7 md:leading-2 lg:text-[20px] md:text-[18px] text-[16px] font-medium font-[montserrat] text-center">
                                 {!! $shortDescription !!}
