@@ -227,38 +227,37 @@
                     <div class="container mx-auto flex flex-col lg:flex-row items-center justify-between gap-4 px-4">
                         <div class="w-full lg:w-1/2 flex flex-col items-center lg:items-start text-center lg:text-left">
                             @foreach ($serviceHeader as $serviceHead)
-                                <div class="flex flex-col gap-2">
-                                    <div class="w-full max-w-lg text-left">
-                                        <h1
-                                            class="uppercase text-white font-bold text-[24px] sm:text-[20px] md:text-[30px] lg:text-[50px]">
-                                            {{ $serviceHead->title }}
-                                        </h1>
-                                        <p class="text-white lg:text-[26px] text-[20px] font-bold">
-                                            {{ $serviceHead->paragraf }}
-                                        </p>
-                                    </div>
-                                    <ul class="list-disc text-yellow-500 ml-5 text-left py-4">
-                                        <li><span class="text-white lg:text-[26px] text-[20px] font-bold">
-                                                {{ $serviceHead->f }}
-                                            </span></li>
-                                        <li><span class="text-white lg:text-[26px] text-[20px] font-bold">
-                                                {{ $serviceHead->f_1 }} </span>
-                                        </li>
-                                        <li><span class="text-white lg:text-[26px] text-[20px] font-bold">
-
-                                                {{ $serviceHead->f_2 }}
-                                            </span></li>
-                                            <li><span class="text-white lg:text-[26px] text-[20px] font-bold">
-
-                                                {{ $serviceHead->f_3 }}
-                                            </span></li>
-                                            <li><span class="text-white lg:text-[26px] text-[20px] font-bold">
-
-                                                {{ $serviceHead->f_4 }}
-                                            </span></li>
-                                    </ul>
+                            <div class="flex flex-col gap-2">
+                                <div class="w-full max-w-lg text-left">
+                                    <h1 class="uppercase text-white font-bold text-[24px] sm:text-[20px] md:text-[30px] lg:text-[50px]">
+                                        {{ $serviceHead->title }}
+                                    </h1>
+                                    <p class="text-white lg:text-[26px] text-[20px] font-bold">
+                                        {{ $serviceHead->paragraf }}
+                                    </p>
                                 </div>
-                            @endforeach
+                                @if($serviceHead->f || $serviceHead->f_1 || $serviceHead->f_2 || $serviceHead->f_3 || $serviceHead->f_4)
+                                    <ul class="list-disc text-yellow-500 ml-5 text-left py-4">
+                                        @if($serviceHead->f)
+                                            <li><span class="text-white lg:text-[26px] text-[20px] font-bold">{{ $serviceHead->f }}</span></li>
+                                        @endif
+                                        @if($serviceHead->f_1)
+                                            <li><span class="text-white lg:text-[26px] text-[20px] font-bold">{{ $serviceHead->f_1 }}</span></li>
+                                        @endif
+                                        @if($serviceHead->f_2)
+                                            <li><span class="text-white lg:text-[26px] text-[20px] font-bold">{{ $serviceHead->f_2 }}</span></li>
+                                        @endif
+                                        @if($serviceHead->f_3)
+                                            <li><span class="text-white lg:text-[26px] text-[20px] font-bold">{{ $serviceHead->f_3 }}</span></li>
+                                        @endif
+                                        @if($serviceHead->f_4)
+                                            <li><span class="text-white lg:text-[26px] text-[20px] font-bold">{{ $serviceHead->f_4 }}</span></li>
+                                        @endif
+                                    </ul>
+                                @endif
+                            </div>
+                        @endforeach
+
                         </div>
 
                         <div class="w-full lg:w-1/2 mt-4 lg:mt-0">
@@ -430,9 +429,9 @@
       </div>
   </div>
   @empty
-  <div class="text-center text-gray-500 mt-10">
+  {{-- <div class="text-center text-gray-500 mt-10">
       No data found
-  </div>
+  </div> --}}
   @endforelse
 
 <!-- OUR WORK END -->
@@ -662,9 +661,9 @@
         </div>
     </div>
     @empty
-    <div class="text-center text-gray-500 mt-10">
+    {{-- <div class="text-center text-gray-500 mt-10">
         No data found
-    </div>
+    </div> --}}
     @endforelse
 
 
@@ -749,9 +748,9 @@
         </div>
     </div>
     @empty
-    <div class="text-center text-gray-500 mt-10">
+    {{-- <div class="text-center text-gray-500 mt-10">
         No data found
-    </div>
+    </div> --}}
     @endforelse
 
 
