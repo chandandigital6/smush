@@ -418,24 +418,23 @@
     {{-- our gallery section ends here    --}}
 
   <!-- OUR WORK START -->
- @forelse ($serviceAddon as $serviceAdd)
- <div class="mt-10 mb-10">
-    <div class="mx-auto w-full sm:w-10/12 md:w-8/12 mb-9">
-        <h2 class="lg:text-[50px] text-center md:text-[40px] sm:text-[35px] text-[30px] text-[#000000] font-bold">
-           {{$serviceAdd->heading}}
-        </h2>
-        <p class="text-black mt-5 lg:leading-7 md:leading-6 text-[16px] font-medium font-[montserrat] text-center p-2">
+  @forelse ($serviceAddon as $serviceAdd)
+  <div class="mt-10 mb-10">
+      <div class="mx-auto w-full sm:w-10/12 md:w-8/12 mb-9 bg-gray-100 p-6 rounded-lg shadow-lg">
+          <h2 class="text-center text-[30px] sm:text-[35px] md:text-[40px] lg:text-[50px] font-bold text-black">
+              {{ $serviceAdd->heading }}
+          </h2>
+          <p class="mt-5 text-[16px] lg:leading-7 md:leading-6 font-medium font-[montserrat] text-center text-black">
+              {!! $serviceAdd->msg !!}
+          </p>
+      </div>
+  </div>
+  @empty
+  <div class="text-center text-gray-500 mt-10">
+      No data found
+  </div>
+  @endforelse
 
-            {!! $serviceAdd->msg !!}
-
-        </p>
-    </div>
-
-
-</div>
- @empty
-  no data found
- @endforelse
 <!-- OUR WORK END -->
 
     <!-- OUR WORK START -->
@@ -651,6 +650,24 @@
 
     {{-- youtube video section ends --}}
 
+    @forelse ($serviceBest as $serviceBest)
+    <div class="mt-10 mb-10">
+        <div class="mx-auto w-full sm:w-10/12 md:w-8/12 mb-9 bg-gray-100 p-6 rounded-lg shadow-lg">
+            <h2 class="text-center text-[30px] sm:text-[35px] md:text-[40px] lg:text-[50px] font-bold text-black">
+                {{ $serviceBest->heading }}
+            </h2>
+            <p class="mt-5 text-[16px] lg:leading-7 md:leading-6 font-medium font-[montserrat] text-center text-black">
+                {!! $serviceBest->msg !!}
+            </p>
+        </div>
+    </div>
+    @empty
+    <div class="text-center text-gray-500 mt-10">
+        No data found
+    </div>
+    @endforelse
+
+
     {{-- about section start here --}}
     <div class="w-full  relative py-10" style="background-image: url()">
         <div class="w-full px-4 flex justify-center">
@@ -719,6 +736,23 @@
 
     </div>
     {{-- about section ends here    --}}
+
+    @forelse ($serviceBenefit as $serviceBenefits)
+    <div class="mt-10 mb-10">
+        <div class="mx-auto w-full sm:w-10/12 md:w-8/12 mb-9 bg-gray-100 p-6 rounded-lg shadow-lg">
+            <h2 class="text-center text-[30px] sm:text-[35px] md:text-[40px] lg:text-[50px] font-bold text-black">
+                {{ $serviceBenefits->heading }}
+            </h2>
+            <p class="mt-5 text-[16px] lg:leading-7 md:leading-6 font-medium font-[montserrat] text-center text-black">
+                {!! $serviceBenefits->msg !!}
+            </p>
+        </div>
+    </div>
+    @empty
+    <div class="text-center text-gray-500 mt-10">
+        No data found
+    </div>
+    @endforelse
 
 
     {{-- what we offer section start here --}}
