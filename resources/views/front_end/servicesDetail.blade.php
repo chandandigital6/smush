@@ -383,9 +383,9 @@
         <div class="w-full flex justify-center">
             @foreach ($serviceGallery as $logo)
                 <div class="w-full flex flex-col items-center gap-6 py-[5px]">
-                    <h2 class="lg:text-[50px] md:text-[40px] sm:text-[35px] text-[30px] text-[#EEB21C] font-bold">
+                    <h3 class="lg:text-[50px] md:text-[40px] sm:text-[35px] text-[30px] text-[#EEB21C] font-bold">
                         {{ $logo->title }}
-                    </h2>
+                    </h3>
                     <div class="max-w-[600px]">
                         <p
                             class="text-black lg:leading-7 md:leading-2 lg:text-[16px] md:text-[16px] text-[16px] font-medium font-[montserrat] text-center">
@@ -419,8 +419,8 @@
   <!-- OUR WORK START -->
   @forelse ($serviceAddon as $serviceAdd)
   <div class="mt-10 mb-10">
-      <div class="mx-auto w-full sm:w-10/12 md:w-8/12 mb-9 bg-gray-100 p-6 rounded-lg shadow-lg">
-          <h2 class="text-center text-[30px] sm:text-[35px] md:text-[40px] lg:text-[50px] font-bold text-black">
+      <div class="mx-auto w-full sm:w-10/12 md:w-8/12 mb-9  p-6 rounded-lg ">
+          <h2 class="text-left text-[30px] sm:text-[35px] md:text-[40px] lg:text-[50px] font-bold text-black">
               {{ $serviceAdd->heading }}
           </h2>
           <p class="mt-5 text-[16px] lg:leading-7 md:leading-6 font-medium font-[montserrat] text-center text-black">
@@ -439,9 +439,9 @@
     <!-- OUR WORK START -->
     <div class="mt-10 mb-10">
         <div class="mx-auto w-full sm:w-10/12 md:w-8/12 mb-9">
-            <h2 class="lg:text-[50px] text-center md:text-[40px] sm:text-[35px] text-[30px] text-[#EEB21C] font-bold">
+            <h3 class="lg:text-[50px] text-center md:text-[40px] sm:text-[35px] text-[30px] text-[#EEB21C] font-bold">
                 OUR WORK
-            </h2>
+            </h3>
             <p class="text-black mt-5 lg:leading-7 md:leading-6 text-[16px] font-medium font-[montserrat] text-center p-2">
                 Experience the magic of Mobile Smash Company's car repair services - where we transform damaged vehicles
                 into showroom-ready masterpieces. Our skilled technicians and cutting-edge techniques guarantee jaw-dropping
@@ -508,14 +508,14 @@
             <div
                 class="w-full lg:w-[90%] md:w-[90%] sm:w-[90%] flex flex-col items-center gap-4 pt-2 sm:pt-[5px] px-2 sm:px-4 py-2">
                 <div class="w-full flex flex-col items-center px-2">
-                    <h2
+                    <h3
                         class="uppercase text-center text-black font-bold lg:text-[52px] md:text-[30px] sm:text-[25px] text-[18px]">
                         Contact us for a FREE smash
-                    </h2>
-                    <h2
+                    </h3>
+                    <h3
                         class="uppercase text-center text-black font-bold lg:text-[52px] md:text-[30px] sm:text-[25px] text-[18px]">
                         repair quote today!
-                    </h2>
+                    </h3>
                     <a href="#top-inquiry-form" onclick="slowScrollToTop()"
                         class="uppercase text-[#eeb52a] bg-white px-6 py-2 sm:px-12 sm:py-4 font-bold rounded-xl border-[1px] border-[#eeb21ce8] transition duration-200 ease-in-out hover:text-white hover:bg-[#15aef1] lg:text-[32px] md:text-[32px] text-[14px] sm:text-[18px]">
                         GET FREE ESTIMATE
@@ -532,9 +532,9 @@
         <div class="w-full flex justify-center">
             <div class="w-full flex flex-col items-center gap-6 py-4 px-4"
                 style="background-image: url({{ asset('asset/images/Rectangle43.jpg') }});background-repeat: no-repeat; background-size: cover">
-                <h2 class="text-[24px] sm:text-[30px] md:text-[35px] lg:text-[40px] xl:text-[50px] text-white font-bold">
+                <h3 class="text-[24px] sm:text-[30px] md:text-[35px] lg:text-[40px] xl:text-[50px] text-white font-bold">
                     WHAT OUR CLIENTS SAY
-                </h2>
+                </h3>
                 <div class="swiffy-slider slider-item-show3 slider-nav-dark slider-nav-autoplay mt-6 relative">
                     <ul class="slider-container">
                         {{-- make copy of this li for dynamic slider --}}
@@ -579,8 +579,8 @@
 
     <div class=" p-4 sm:p-6 md:p-10">
         <div class="max-w-6xl mx-auto text-center">
-            <h2 class="text-xl sm:text-2xl md:text-3xl font-bold text-pink-600 mb-2 sm:mb-4">3 SIMPLE STEPS</h2>
-            <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">UPLOAD YOUR PHOTOS TO GET A FAST QUOTE</h2>
+            <h3 class="text-xl sm:text-2xl md:text-3xl font-bold  mb-2 sm:mb-4" style="color: #eeb21c">3 SIMPLE STEPS</h3>
+            <h3 class="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6">UPLOAD YOUR PHOTOS TO GET A FAST QUOTE</h3>
             <p class="text-base sm:text-lg mb-6 sm:mb-10">Just follow the prompts and you'll be done within minutes!</p>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
@@ -651,8 +651,8 @@
 
     @forelse ($serviceBest as $serviceBest)
     <div class="mt-10 mb-10">
-        <div class="mx-auto w-full sm:w-10/12 md:w-8/12 mb-9 bg-gray-100 p-6 rounded-lg shadow-lg">
-            <h2 class="text-center text-[30px] sm:text-[35px] md:text-[40px] lg:text-[50px] font-bold text-black">
+        <div class="mx-auto w-full sm:w-10/12 md:w-8/12 mb-9  p-6 rounded-lg ">
+            <h2 class="text-left text-[30px] sm:text-[35px] md:text-[40px] lg:text-[50px] font-bold text-black">
                 {{ $serviceBest->heading }}
             </h2>
             <p class="mt-5 text-[16px] lg:leading-7 md:leading-6 font-medium font-[montserrat] text-center text-black">
@@ -675,14 +675,14 @@
                 <div class="lg:w-[90%] md:w-[90%] sm:w-[90%] w-full rounded-[50px]"
                     style="background-image: url({{ asset('asset/images/Rectangle56.jpg') }}); box-shadow: 0px 0px 10px 1px #25a8df">
                     <div class="w-full flex flex-col items-center gap-2 p-2 bg-[#25a8df]/90 rounded-[50px]">
-                        <h2
+                        <h3
                             class="lg:text-[45px] md:text-[40px] text-center sm:text-[35px] text-[25px] text-white font-bold">
                             {{ $choos->title }}
-                        </h2>
-                        <h2
+                        </h3>
+                        <h3
                             class=" lg:text-[45px] md:text-[40px] text-center sm:text-[35px] text-[25px] text-white font-bold">
                             {{ $choos->heading }}
-                        </h2>
+                        </h3>
 
                         <div class="w-full grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-1 mt-6">
                             <div class="w-full flex justify-center items-center">
@@ -693,10 +693,10 @@
                                     <ul class="flex flex-col gap-8 pl-8"
                                         style="list-style-image: url({{ asset('storage/' . $choos->f_image) }});">
                                         <li>
-                                            <h2
+                                            <h3
                                                 class="uppercase lg:text-[30px] md:text-[25px] sm:text-[20px] text-[20px] text-white font-bold">
                                                 {{ $choos->f_title }}
-                                            </h2>
+                                            </h3>
                                             <p class="text-white lg:leading-7 md:leading-2 lg:text-[18px] md:text-[16px] text-[16px] font-normal font-[montserrat]"
                                                 style="word-spacing: 3px;">
                                                 {!! $choos->f_msg !!}
@@ -704,20 +704,20 @@
                                         </li>
                                         <li>
 
-                                            <h2
+                                            <h3
                                                 class="uppercase lg:text-[30px] md:text-[25px] sm:text-[20px] text-[20px] text-white font-bold">
                                                 {{ $choos->f_1_title }}
-                                            </h2>
+                                            </h3>
                                             <p class="text-white lg:leading-7 md:leading-2 lg:text-[18px] md:text-[16px] text-[16px] font-normal font-[montserrat]"
                                                 style="word-spacing: 3px;">
                                                 {!! $choos->f_1_msg !!}
                                             </p>
                                         </li>
                                         <li>
-                                            <h2
+                                            <h3
                                                 class="uppercase lg:text-[30px] md:text-[25px] sm:text-[20px] text-[20px] text-white font-bold">
                                                 {{ $choos->f_2_title }}
-                                            </h2>
+                                            </h3>
                                             <p class="text-white lg:leading-7 md:leading-2 lg:text-[18px] md:text-[16px] text-[16px] font-normal font-[montserrat]"
                                                 style="word-spacing: 3px;">
                                                 {!! $choos->f_2_msg !!}
@@ -738,8 +738,8 @@
 
     @forelse ($serviceBenefit as $serviceBenefits)
     <div class="mt-10 mb-10">
-        <div class="mx-auto w-full sm:w-10/12 md:w-8/12 mb-9 bg-gray-100 p-6 rounded-lg shadow-lg">
-            <h2 class="text-center text-[30px] sm:text-[35px] md:text-[40px] lg:text-[50px] font-bold text-black">
+        <div class="mx-auto w-full sm:w-10/12 md:w-8/12 mb-9  p-6 rounded-lg ">
+            <h2 class="text-left text-[30px] sm:text-[35px] md:text-[40px] lg:text-[50px] font-bold text-black">
                 {{ $serviceBenefits->heading }}
             </h2>
             <p class="mt-5 text-[16px] lg:leading-7 md:leading-6 font-medium font-[montserrat] text-center text-black">
@@ -758,8 +758,8 @@
     <div class="w-full  relative py-6 rounded-t-[50px]" style="background-image: url();">
         <div class="w-full px-4 flex justify-center">
             <div class="lg:w-[90%] md:w-[90%] sm:w-[90%] w-full flex flex-col items-center gap-6 py-[5px]">
-                <h2 class="lg:text-[50px] md:text-[40px] sm:text-[35px] text-[30px] text-[#EEB21C] font-bold">OTHER
-                    SERVICES</h2>
+                <h3 class="lg:text-[50px] md:text-[40px] sm:text-[35px] text-[30px] text-[#EEB21C] font-bold">OTHER
+                    SERVICES</h3>
                 <div class="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 grid-cols-1 gap-4">
                     @foreach ($services->take(6) as $service)
                         @php
@@ -848,7 +848,7 @@
 
     <div class="flex flex-col items-center justify-center p-6">
         <div class="bg-[#15AEF1] rounded-lg p-6 sm:p-12 w-full max-w-4xl">
-            <h2 class="text-center text-2xl sm:text-4xl text-white font-bold mb-6 w-full font-montserrat">FAQs</h2>
+            <h3 class="text-center text-2xl sm:text-4xl text-white font-bold mb-6 w-full font-montserrat">FAQs</h3>
 
             @if ($faqs->isNotEmpty())
                 <div class="space-y-4">
@@ -895,8 +895,8 @@
 
     <div class="flex flex-col items-center justify-center mb-4 p-4 sm:p-8">
         <div class="bg-[#15AEF1] rounded-lg p-6 sm:p-12">
-            <h2 class="text-center text-2xl sm:text-4xl text-white font-bold mb-6 w-full font-montserrat">MAKE YOUR INQUIRY
-                NOW</h2>
+            <h3 class="text-center text-2xl sm:text-4xl text-white font-bold mb-6 w-full font-montserrat">MAKE YOUR INQUIRY
+                NOW</h3>
             <form action="{{ route('appointment.store') }}" method="post" enctype="multipart/form-data">
                 @csrf
 
