@@ -53,8 +53,8 @@
                 <div
                     class="lg:w-[90%] md:w-[90%] sm:w-[90%] w-full grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-4 py-[5px]">
                     <div class="w-full flex flex-col gap-6 p-2">
-                        <h2 class="uppercase font-bold lg:text-[30px] md:text-[30px] text-[25px] text-left">{{$aboutUs->title}} <span
-                                class="text-[#15AEF1]">{{$aboutUs->heading}}</span></h2>
+                        <h3 class="uppercase font-bold lg:text-[30px] md:text-[30px] text-[25px] text-left">{{$aboutUs->title}} <span
+                                class="text-[#15AEF1]">{{$aboutUs->heading}}</span></h3>
                         <div class="w-full  justify-center items-center lg:hidden md:hidden flex">
                             <img src="{{asset('storage/'.$aboutUs->image)}}" alt="About us">
                         </div>
@@ -89,10 +89,10 @@
 
 
             <div class="lg:w-[90%] md:w-[90%] sm:w-[90%] w-full flex flex-col items-center gap-6 py-[5px]">
-                <h2 class="lg:text-[50px] md:text-[40px] sm:text-[35px] text-[30px] text-[#EEB21C] font-bold">
+                <h3 class="lg:text-[50px] md:text-[40px] sm:text-[35px] text-[30px] text-[#EEB21C] font-bold">
 
                 {{$title->title}}
-                </h2>
+                </h3>
                 <div class="max-w-[600px]">
                     <p class="text-black lg:leading-7 md:leading-2 lg:text-[16px] md:text-[16px] text-[16px] font-medium font-[montserrat] text-center"
                        >
@@ -123,10 +123,10 @@
                         <div class="w-full bg-white rounded-3xl px-[20px] py-[30px] flex flex-col items-center"
                              style="box-shadow: 0px 0px 10px 1px #eeb21ca8;">
                             <img src="{{asset('storage/'.$service->image)}}" alt="Mobile Smash Repair Services in Melbourne">
-                            <h2 class="uppercase lg:text-[35px] md:text-[30px] text-center sm:text-[25px] text-[20px] text-[#15AEF1] font-bold">
+                            <h3 class="uppercase lg:text-[35px] md:text-[30px] text-center sm:text-[25px] text-[20px] text-[#15AEF1] font-bold">
                                 {{$service->heading}}
 
-                            </h2>
+                            </h3>
                             <p class="text-black lg:leading-7 md:leading-2 lg:text-[16px] md:text-[16px] text-[16px] font-medium font-[montserrat] text-center"
                                >
                                 {!! $shortDescription !!} ...
@@ -174,8 +174,8 @@
 
                                         <div class="bg-[#eeb21c] rounded-xl px-[20px] py-[30px] flex flex-col items-center h-max">
                                             <img src="{{asset('storage/'.$plans->image)}}" alt="GET A TECHNICIAN">
-                                            <h2 class="uppercase lg:text-[30px] md:text-[25px] text-center sm:text-[20px] text-[15px] text-white font-bold">
-                                                {{$plans->title}}</h2>
+                                            <h3 class="uppercase lg:text-[30px] md:text-[25px] text-center sm:text-[20px] text-[15px] text-white font-bold">
+                                                {{$plans->title}}</h3>
                                             <p class="text-white lg:leading-7 md:leading-2 lg:text-[16px] md:text-[16px] text-[16px] font-medium font-[montserrat] text-center"
                                                >
                                                 {!! $plans->msg !!}
@@ -192,8 +192,8 @@
                     <div class="bg-[#15aef1] rounded-xl px-[20px] lg:py-[60px] md:py-[60px] py-[30px] flex flex-col items-center h-max ">
                         <img src="{{asset('storage/'.$plans->image)}}" alt="Mobile Smash Repair Services in Melbourne">
 
-                        <h2 class="uppercase lg:text-[30px] md:text-[25px] text-center sm:text-[20px] text-[15px] text-white font-bold">
-                            {{$plans->title}}</h2>
+                        <h3 class="uppercase lg:text-[30px] md:text-[25px] text-center sm:text-[20px] text-[15px] text-white font-bold">
+                            {{$plans->title}}</h3>
                         <p class="text-white lg:leading-7 md:leading-2 lg:text-[16px] md:text-[16px] text-[16px] font-medium font-[montserrat] text-center"
                            >
                             {!! $plans->msg !!}
@@ -211,8 +211,8 @@
 
                             <div class="bg-[#eeb21c] rounded-xl px-[20px] py-[30px] flex flex-col items-center h-max">
                                 <img src="{{asset('storage/'.$plans->image)}}" alt="Get A Quote">
-                                <h2 class="uppercase lg:text-[30px] md:text-[25px] text-center sm:text-[20px] text-[15px] text-white font-bold">
-                                    {{$plans->title}}</h2>
+                                <h3 class="uppercase lg:text-[30px] md:text-[25px] text-center sm:text-[20px] text-[15px] text-white font-bold">
+                                    {{$plans->title}}</h3>
                                 <p class="text-white lg:leading-7 md:leading-2 lg:text-[16px] md:text-[16px] text-[16px] font-medium font-[montserrat] text-center"
                                    >
                                     {!! $plans->msg !!}
@@ -236,7 +236,7 @@
         <div class="w-full flex justify-center">
             @foreach($logos as $logo)
                 <div class="w-full flex flex-col items-center gap-6 py-[5px]">
-                    <h2 class="lg:text-[50px] md:text-[40px] sm:text-[35px] text-[30px] text-[#EEB21C] font-bold">{{ $logo->title }}</h2>
+                    <h3 class="lg:text-[50px] md:text-[40px] sm:text-[35px] text-[30px] text-[#EEB21C] font-bold">{{ $logo->title }}</h3>
                     <div class="max-w-[600px]">
                         <p class="text-black lg:leading-7 md:leading-2 lg:text-[16px] md:text-[16px] text-[16px] font-medium font-[montserrat] text-center"
                            >{{ $logo->msg }}</p>
@@ -271,9 +271,9 @@
         <div class="w-full flex justify-center">
             <div class="w-full flex flex-col items-center gap-6 py-4 px-4"
                 style="background-image: url({{ asset('asset/images/Rectangle43.jpg') }});background-repeat: no-repeat; background-size: cover">
-                <h2 class="text-[24px] sm:text-[30px] md:text-[35px] lg:text-[40px] xl:text-[50px] text-white font-bold">
+                <h3 class="text-[24px] sm:text-[30px] md:text-[35px] lg:text-[40px] xl:text-[50px] text-white font-bold">
                     WHAT OUR CLIENTS SAY
-                </h2>
+                </h3>
                 <div class="swiffy-slider slider-item-show3 slider-nav-dark slider-nav-autoplay mt-6 relative">
                     <ul class="slider-container">
                         {{-- make copy of this li for dynamic slider --}}
@@ -318,7 +318,7 @@
     <div class="w-full  relative py-6">
         <div class="w-full  flex justify-center">
             <div class=" lg:w-[90%] md:w-[90%] sm:w-[90%] w-full w-full flex flex-col items-center py-[5px] px-4">
-                <h2 class="lg:text-[50px] md:text-[40px] sm:text-[35px] text-[30px] text-[#EEB21C] font-bold">POSTS FROM THE BLOG</h2>
+                <h3 class="lg:text-[50px] md:text-[40px] sm:text-[35px] text-[30px] text-[#EEB21C] font-bold">POSTS FROM THE BLOG</h3>
                 <div class="max-w-[600px]">
                     <p class="text-black lg:text-[16px] md:text-[16px] text-[16px] font-medium font-[montserrat] text-center"
                        >See our updates, news and new coming features</p>
