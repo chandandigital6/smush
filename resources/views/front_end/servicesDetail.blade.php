@@ -378,47 +378,11 @@
     </div>
     {{-- about section ends here    --}}
 
-    {{-- our gallery section start here --}}
-    <div class="w-full relative py-6">
-        <div class="w-full flex justify-center">
-            @foreach ($serviceGallery as $logo)
-                <div class="w-full flex flex-col items-center gap-6 py-[5px]">
-                    <h3 class="lg:text-[50px] md:text-[40px] sm:text-[35px] text-[30px] text-[#EEB21C] font-bold">
-                        {{ $logo->title }}
-                    </h3>
-                    <div class="max-w-[600px]">
-                        <p
-                            class="text-black lg:leading-7 md:leading-2 lg:text-[16px] md:text-[16px] text-[16px] font-medium font-[montserrat] text-center">
-                            {{ $logo->msg }}
-                        </p>
-                    </div>
-                    <div class="swiffy-slider slider-nav-autoplay slider-item-show4">
-                        <ul class="slider-container">
-                            @if (is_string($logo->image) && !empty($logo->image))
-                                @php
-                                    $imagePaths = explode(',', $logo->image);
-                                @endphp
-                                @foreach ($imagePaths as $imagePath)
-                                    <li class="w-full relative">
-                                        <img src="{{ asset('storage/' . $imagePath) }}"
-                                            alt="Mobile Smash Repair Services"
-                                            class="w-full lg:h-[550px] md:h-[500px] sm:h-[400px] h-[300px] object-cover">
-                                    </li>
-                                @endforeach
-                            @endif
-                        </ul>
-                        <button type="button" class="slider-nav"></button>
-                        <button type="button" class="slider-nav slider-nav-next"></button>
-                    </div>
-                </div>
-            @endforeach
-        </div>
-    </div>
-    {{-- our gallery section ends here    --}}
+
 
   <!-- OUR WORK START -->
   @forelse ($serviceAddon as $serviceAdd)
-  <div class="mt-10 mb-10">
+  <div class="mt-0 mb-10">
       <div class="mx-auto w-full sm:w-10/12 md:w-8/12 mb-9  p-6 rounded-lg ">
           <h2 class="text-left text-[30px] sm:text-[35px] md:text-[40px] lg:text-[50px] font-bold text-black">
               {{ $serviceAdd->heading }}
@@ -434,10 +398,48 @@
   </div> --}}
   @endforelse
 
+{{-- our gallery section start here --}}
+<div class="w-full relative py-2">
+    <div class="w-full flex justify-center">
+        @foreach ($serviceGallery as $logo)
+            <div class="w-full flex flex-col items-center gap-6 py-[5px]">
+                <h3 class="lg:text-[50px] md:text-[40px] sm:text-[35px] text-[30px] text-[#EEB21C] font-bold">
+                    {{ $logo->title }}
+                </h3>
+                <div class="max-w-[600px]">
+                    <p
+                        class="text-black lg:leading-7 md:leading-2 lg:text-[16px] md:text-[16px] text-[16px] font-medium font-[montserrat] text-center">
+                        {{ $logo->msg }}
+                    </p>
+                </div>
+                <div class="swiffy-slider slider-nav-autoplay slider-item-show4">
+                    <ul class="slider-container">
+                        @if (is_string($logo->image) && !empty($logo->image))
+                            @php
+                                $imagePaths = explode(',', $logo->image);
+                            @endphp
+                            @foreach ($imagePaths as $imagePath)
+                                <li class="w-full relative">
+                                    <img src="{{ asset('storage/' . $imagePath) }}"
+                                        alt="Mobile Smash Repair Services"
+                                        class="w-full lg:h-[550px] md:h-[500px] sm:h-[400px] h-[300px] object-cover">
+                                </li>
+                            @endforeach
+                        @endif
+                    </ul>
+                    <button type="button" class="slider-nav"></button>
+                    <button type="button" class="slider-nav slider-nav-next"></button>
+                </div>
+            </div>
+        @endforeach
+    </div>
+</div>
+{{-- our gallery section ends here    --}}
+
 <!-- OUR WORK END -->
 
     <!-- OUR WORK START -->
-    <div class="mt-10 mb-10">
+    <div class="mt-0 mb-10">
         <div class="mx-auto w-full sm:w-10/12 md:w-8/12 mb-9">
             <h3 class="lg:text-[50px] text-center md:text-[40px] sm:text-[35px] text-[30px] text-[#EEB21C] font-bold">
                 OUR WORK
