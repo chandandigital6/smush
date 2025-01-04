@@ -26,7 +26,7 @@
                 <div class="card">
                     <div class="card-header bg-primary text-white">
                         <div class="d-flex justify-content-between align-items-center">
-                            <h1>Service Plans</h1>
+                            <h1>About Choose Us</h1>
                             <a href="{{ route('chose.create') }}" class="btn btn-light">Create</a>
                         </div>
                     </div>

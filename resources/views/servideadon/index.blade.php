@@ -26,8 +26,8 @@
                 <div class="card">
                     <div class="card-header bg-primary text-white">
                         <div class="d-flex justify-content-between align-items-center">
-                            <h1>serviceAddon</h1>
-                            <a href="{{ route('serviceAddon.create') }}" class="btn btn-light">Create serviceAddon</a>
+                            <h1>Service Main Section</h1>
+                            <a href="{{ route('serviceAddon.create') }}" class="btn btn-light">Create </a>
                         </div>
                     </div>
 
@@ -51,8 +51,7 @@
                                    <th>ServiceNAme</th>
                                    <th>status</th>
                                     <th>Action</th>
-                                </tr>
-                                </thead>
+                                </tr>                                </thead>
                                 <tbody>
                                 @forelse ($serviceAddonData as $serviceAddon)
                                     <tr>

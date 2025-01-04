@@ -24,8 +24,8 @@
                 <div class="card">
                     <div class="card-header bg-primary text-white">
                         <div class="d-flex justify-content-between align-items-center flex-wrap">
-                            <h1>Appointment</h1>
-                            <a href="{{ route('appointment.create') }}" class="btn btn-light mt-2 mt-md-0">Create new appointment</a>
+                            <h1>Appointments</h1>
+                            <a href="{{ route('appointment.create') }}" class="btn btn-light mt-2 mt-md-0">Create</a>
                         </div>
                     </div>
 

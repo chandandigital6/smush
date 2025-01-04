@@ -26,8 +26,8 @@
                 <div class="card">
                     <div class="card-header bg-primary text-white">
                         <div class="d-flex justify-content-between align-items-center">
-                            <h1>banner</h1>
-                            <a href="{{ route('banner.create') }}" class="btn btn-light">Create new Banner</a>
+                            <h1>Home Banner</h1>
+                            <a href="{{ route('banner.create') }}" class="btn btn-light">Create</a>
                         </div>
                     </div>
 

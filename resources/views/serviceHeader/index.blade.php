@@ -26,7 +26,7 @@
                 <div class="card">
                     <div class="card-header bg-primary text-white">
                         <div class="d-flex justify-content-between align-items-center">
-                            <h1>Service Header</h1>
+                            <h1>Service Hero Section</h1>
                             <a href="{{ route('serviceHeader.create') }}" class="btn btn-light">Create </a>
                         </div>
                     </div>

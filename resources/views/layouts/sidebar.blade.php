@@ -33,7 +33,19 @@
                 <li class="nav-item">
                     <a href="{{ route('banner.index') }}" class="nav-link">
                         <i class="nav-icon far fa-dailymotion"></i>
-                        <p>Banner</p>
+                        <p>Home Banner</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('plan.index') }}" class="nav-link">
+                        <i class="nav-icon fa fa-anchor"></i>
+                        <p>Home Appointment Sec</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('logo.index') }}" class="nav-link">
+                        <i class="nav-icon fa fa-podcast"></i>
+                        <p>Home Gallery</p>
                     </a>
                 </li>
                 <li class="nav-item">
@@ -45,7 +57,7 @@
                 <li class="nav-item">
                     <a href="{{ route('chose.index') }}" class="nav-link">
                         <i class="nav-icon fa fa-fax"></i>
-                        <p>Choose Us</p>
+                        <p>About Choose Us</p>
                     </a>
                 </li>
                 <li class="nav-item">
@@ -55,41 +67,57 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('serviceTitle.index') }}" class="nav-link">
-                        <i class="nav-icon fa fa-bullseye"></i>
-                        <p>Services Title</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="{{ route('serviceAddon.index') }}" class="nav-link">
-                        <i class="nav-icon fa fa-bug"></i>
-                        <p>ServiceAddon</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="{{ route('serviceBest.index') }}" class="nav-link">
-                        <i class="nav-icon fa fa-bug"></i>
-                        <p>ServiceBest</p>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a href="{{ route('serviceBenefit.index') }}" class="nav-link">
-                        <i class="nav-icon fa fa-bug"></i>
-                        <p>ServiceBenefit</p>
-                    </a>
-                </li>
-                <li class="nav-item">
                     <a href="{{ route('service.index') }}" class="nav-link">
                         <i class="nav-icon fa fa-bullseye"></i>
                         <p>Our Services</p>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{ route('plan.index') }}" class="nav-link">
-                        <i class="nav-icon fa fa-anchor"></i>
-                        <p>Services Plans</p>
+                    <a href="{{ route('serviceTitle.index') }}" class="nav-link">
+                        <i class="nav-icon fa fa-bullseye"></i>
+                        <p>Common Services Section</p>
                     </a>
                 </li>
+
+                <li class="nav-item">
+                    <a href="{{ route('serviceHeader.index') }}" class="nav-link">
+                        <i class="nav-icon fa fa-bug"></i>
+                        <p>Service Hero Sec</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('serviceAddon.index') }}" class="nav-link">
+                        <i class="nav-icon fa fa-bug"></i>
+                        <p>Service Main Sec</p>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="{{ route('serviceBefore.index') }}" class="nav-link">
+                        <i class="nav-icon fa fa-bug"></i>
+                        <p>Service b/A images</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('serviceBest.index') }}" class="nav-link">
+                        <i class="nav-icon fa fa-bug"></i>
+                        <p>Service Middle Sec</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('serviceChoose.index') }}" class="nav-link">
+                        <i class="nav-icon fa fa-bug"></i>
+                        <p>Service Choose Us</p>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="{{ route('serviceBenefit.index') }}" class="nav-link">
+                        <i class="nav-icon fa fa-bug"></i>
+                        <p>Service Benefit</p>
+                    </a>
+                </li>
+
                 <li class="nav-item">
                     <a href="{{ route('gallery.index') }}" class="nav-link">
                         <i class="nav-icon fa fa-fan"></i>
@@ -102,26 +130,10 @@
                         <p>Service Video</p>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a href="{{ route('serviceChoose.index') }}" class="nav-link">
-                        <i class="nav-icon fa fa-bug"></i>
-                        <p>Service Choose Us</p>
-                    </a>
-                </li>
 
-                <li class="nav-item">
-                    <a href="{{ route('serviceHeader.index') }}" class="nav-link">
-                        <i class="nav-icon fa fa-bug"></i>
-                        <p>ServiceHeader</p>
-                    </a>
-                </li>
 
-                <li class="nav-item">
-                    <a href="{{ route('serviceBefore.index') }}" class="nav-link">
-                        <i class="nav-icon fa fa-bug"></i>
-                        <p>Service b/A images</p>
-                    </a>
-                </li>
+
+
                 <li class="nav-item">
                     <a href="{{ route('faqs.index') }}" class="nav-link">
                         <i class="nav-icon fa fa-bug"></i>
@@ -130,12 +142,7 @@
                 </li>
 
 
-                <li class="nav-item">
-                    <a href="{{ route('logo.index') }}" class="nav-link">
-                        <i class="nav-icon fa fa-podcast"></i>
-                        <p>Home Gallery</p>
-                    </a>
-                </li>
+
                 <li class="nav-item">
                     <a href="{{ route('testimonial.index') }}" class="nav-link">
                         <i class="nav-icon fa fa-fax"></i>
@@ -145,7 +152,7 @@
                 <li class="nav-item">
                     <a href="{{ route('appointment.index') }}" class="nav-link">
                         <i class="nav-icon fa fa-american-sign-language-interpreting"></i>
-                        <p>Appointment</p>
+                        <p>Appointments</p>
                     </a>
                 </li>
                 <li class="nav-item">
