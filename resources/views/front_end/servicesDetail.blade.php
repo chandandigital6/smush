@@ -634,7 +634,7 @@
     </div>
 
     {{-- youtube video section --}}
-    <div class="w-full relative py-10">
+    <div class="w-full relative py-8">
         <div class="w-full px-4 flex justify-center">
             @foreach ($serviceVideo as $serviceVideos)
                 {{-- {{$serviceVideos->youtube_url_embed}} --}}
