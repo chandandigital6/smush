@@ -45,6 +45,24 @@
         @include('front_end.components.carSection')
 
 
+        <section class="bg-gray-50 py-12 px-6">
+            <div class="container mx-auto text-center">
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-6">Welcome to MobileSmashRepair</h2>
+                <p class="text-lg text-gray-600 mb-8">
+                    Melbourne’s top choice for premium vehicle repair solutions. We specialize in a wide array of repair
+                    services in Melbourne, ranging from minor cosmetic fixes to comprehensive smash repair in Melbourne.
+
+                    Our on-site repair experts ensure you receive top-quality service at your convenience, eliminating the need
+                    to visit a workshop.
+                </p>
+                <p class="text-lg text-gray-600">
+                    We cater to trucks with specialized truck repair in Melbourne, as well as offering
+                    headlight restoration in Melbourne to enhance your vehicle’s safety and aesthetics.
+                    Trust us to deliver efficient, high-standard repairs wherever you are in Melbourne.
+                </p>
+            </div>
+        </section>
+
 
         <div class="w-full px-4 flex justify-center">
             @foreach($about as $aboutUs)
@@ -230,6 +248,49 @@
     </div>
     {{--appointment section ends here    --}}
 
+    <section class="bg-white py-12 px-6">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-3xl sm:text-4xl font-bold text-gray-800 mb-6 text-center">
+                Your Go-To Experts for On-Site Repair Services in Melbourne
+            </h2>
+            <p class="text-lg text-gray-700 mb-8 text-center">
+                Looking for reliable repair services in Melbourne? We are your one-stop solution for a wide range of
+                vehicle repairs, providing top-notch services that are both efficient and convenient. Here’s why we’re the
+                top choice for all your vehicle repair needs:
+            </p>
+
+            <ul class="list-disc list-outside pl-6 space-y-4 text-gray-800 text-base">
+                <li>
+                    <strong>Comprehensive Smash Repair in Melbourne:</strong> Our skilled technicians specialize in smash
+                    repair in Melbourne, restoring your vehicle after an accident or collision with precision and care. We
+                    ensure your car is returned to its original condition, both in appearance and performance.
+                </li>
+                <li>
+                    <strong>On-Site Repair Experts:</strong> We offer on-site repair services that come to you, saving you
+                    the hassle of taking your vehicle to a shop. Whether you need minor repairs or major work, our on-site
+                    repair experts will get the job done quickly and professionally.
+                </li>
+                <li>
+                    <strong>Truck Repair Services in Melbourne:</strong> In need of reliable truck repair in Melbourne? Our
+                    team is equipped to handle truck repairs of all sizes, ensuring your vehicle is back on the road with
+                    minimal downtime.
+                </li>
+                <li>
+                    <strong>Professional Headlight Restoration:</strong> Clear headlights are essential for safe driving.
+                    Our headlight restoration in Melbourne service improves both the look and functionality of your
+                    vehicle, ensuring maximum visibility on the road.
+                </li>
+                <li>
+                    <strong>Melbourne-Wide Service:</strong> Wherever you are in Melbourne, we provide fast, reliable
+                    on-site repair in Melbourne and surrounding areas, giving you peace of mind and the convenience of
+                    professional repair services right at your location.
+                </li>
+            </ul>
+        </div>
+    </section>
+
+
+
 
     {{--our gallery section start here--}}
     <div class="w-full relative py-6 px-5">
@@ -313,6 +374,121 @@
     </div>
     {{-- our clients section ends here --}}
 
+    <div class="flex flex-col items-center justify-center p-6">
+        <div class="bg-[#ecedee] rounded-lg p-6 sm:p-12 w-full max-w-4xl">
+            <h3 class="text-center text-2xl sm:text-4xl text-black font-bold mb-6 w-full">FAQs</h3>
+
+            <div class="space-y-4">
+                <!-- FAQ 1 -->
+                <div class="bg-white rounded-lg shadow-md">
+                    <button
+                        class="w-full text-left flex justify-between items-center px-4 py-3 text-gray-800 font-medium hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        onclick="toggleFaq('faq-1')">
+                        <span>How do your on-site repair services work?</span>
+                        <svg id="icon-faq-1" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform transform rotate-0"
+                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div id="faq-1" class="hidden px-4 py-3 text-gray-700">
+                        Our on-site repair experts bring everything needed to fix your vehicle directly to your location.
+                        Whether you’re at home, work, or elsewhere, we provide the convenience of professional repairs
+                        without the hassle of visiting a workshop.
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="bg-white rounded-lg shadow-md">
+                    <button
+                        class="w-full text-left flex justify-between items-center px-4 py-3 text-gray-800 font-medium hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        onclick="toggleFaq('faq-2')">
+                        <span>Do you offer smash repair services for trucks?</span>
+                        <svg id="icon-faq-2" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform transform rotate-0"
+                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div id="faq-2" class="hidden px-4 py-3 text-gray-700">
+                        Yes, we provide comprehensive smash repair services for trucks in Melbourne. Whether it's minor
+                        or major damage, our team is equipped to handle truck repairs, ensuring minimal downtime and a
+                        quick return to the road.
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="bg-white rounded-lg shadow-md">
+                    <button
+                        class="w-full text-left flex justify-between items-center px-4 py-3 text-gray-800 font-medium hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        onclick="toggleFaq('faq-3')">
+                        <span>Can you repair scratches and dents on-site?</span>
+                        <svg id="icon-faq-3" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform transform rotate-0"
+                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div id="faq-3" class="hidden px-4 py-3 text-gray-700">
+                        Absolutely! We offer on-site repair in Melbourne for scratches, dents, and other types of damage.
+                        Our mobile team uses advanced tools and techniques to restore your vehicle’s exterior without
+                        you needing to bring it to a repair shop.
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="bg-white rounded-lg shadow-md">
+                    <button
+                        class="w-full text-left flex justify-between items-center px-4 py-3 text-gray-800 font-medium hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        onclick="toggleFaq('faq-4')">
+                        <span>Do you serve all of Melbourne and surrounding suburbs?</span>
+                        <svg id="icon-faq-4" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform transform rotate-0"
+                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div id="faq-4" class="hidden px-4 py-3 text-gray-700">
+                        Yes, we provide on-site repair services across all of Melbourne and the surrounding areas,
+                        including Essendon. Wherever you are, our mobile repair team can come to you to provide fast
+                        and efficient repairs.
+                    </div>
+                </div>
+
+                <!-- FAQ 5 -->
+                <div class="bg-white rounded-lg shadow-md">
+                    <button
+                        class="w-full text-left flex justify-between items-center px-4 py-3 text-gray-800 font-medium hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        onclick="toggleFaq('faq-5')">
+                        <span>What kind of guarantee do you offer on your repairs?</span>
+                        <svg id="icon-faq-5" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transition-transform transform rotate-0"
+                            fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div id="faq-5" class="hidden px-4 py-3 text-gray-700">
+                        We stand behind the quality of our work. All our repairs come with a satisfaction guarantee,
+                        ensuring that you receive professional, high-quality results that meet your expectations.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script>
+    function toggleFaq(id) {
+    const faq = document.getElementById(id);
+    const icon = document.getElementById(`icon-${id}`);
+    if (faq.classList.contains('hidden')) {
+        faq.classList.remove('hidden');
+        icon.classList.add('rotate-180');
+    } else {
+        faq.classList.add('hidden');
+        icon.classList.remove('rotate-180');
+    }
+}
+
+</script>
 
     {{--blogs section start here--}}
     <div class="w-full  relative py-6">

@@ -652,7 +652,7 @@
     {{-- youtube video section ends --}}
 
     @forelse ($serviceBest as $serviceBest)
-    <div class="mt-10 mb-10">
+    <div class="mt-4 mb-5">
         <div class="mx-auto w-full sm:w-10/12 md:w-8/12 mb-9  p-6 rounded-lg ">
             <h2 class="text-left text-[30px] sm:text-[35px] md:text-[40px] lg:text-[50px] font-bold text-black">
                 {{ $serviceBest->heading }}
@@ -687,8 +687,8 @@
                         </h3>
 
                         <div class="w-full grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-1 mt-6">
-                            <div class="w-full flex justify-center items-center">
-                                <img src="{{ asset('storage/' . $choos->image) }}" alt="Mobile Smash Repair Services">
+                            <div class="w-full flex justify-center items-center ">
+                                <img src="{{ asset('storage/' . $choos->image) }}" alt="Mobile Smash Repair Services" class="rounded-[30px]" style="width: 80%">
                             </div>
                             <div class="flex flex-col gap-4">
                                 <div class="flex gap-2">
@@ -849,8 +849,8 @@
 
 
     <div class="flex flex-col items-center justify-center p-6">
-        <div class="bg-[#15AEF1] rounded-lg p-6 sm:p-12 w-full max-w-4xl">
-            <h3 class="text-center text-2xl sm:text-4xl text-white font-bold mb-6 w-full font-montserrat">FAQs</h3>
+        <div class="bg-[#ecedee] rounded-lg p-6 sm:p-12 w-full max-w-4xl">
+            <h3 class="text-center text-2xl sm:text-4xl text-black font-bold mb-6 w-full font-montserrat">FAQs</h3>
 
             @if ($faqs->isNotEmpty())
                 <div class="space-y-4">
