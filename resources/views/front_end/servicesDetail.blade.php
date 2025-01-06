@@ -652,7 +652,7 @@
     {{-- youtube video section ends --}}
 
     @forelse ($serviceBest as $serviceBest)
-    <div class="mt-4 mb-5">
+    <div class="mt-0 mb-0">
         <div class="mx-auto w-full sm:w-10/12 md:w-8/12 mb-9  p-6 rounded-lg ">
             <h2 class="text-left text-[30px] sm:text-[35px] md:text-[40px] lg:text-[50px] font-bold text-black">
                 {{ $serviceBest->heading }}
