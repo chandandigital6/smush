@@ -44,9 +44,11 @@
                                 <thead>
                                     <tr>
                                         <th>ID</th>
-                                        <th>name</th>
-                                        <th>email</th>
-                                        <th>number</th>
+                                        <th>Name</th>
+                                        <th>Email</th>
+                                        <th>Number</th>
+                                        <th>Car Model</th>
+                                        <th>Suburb</th>
                                         <th>Massage</th>
                                         <th>Car Images</th>
                                         <th>Created At</th>
@@ -60,6 +62,8 @@
                                             <td>{{ $appointment->name }}</td>
                                             <td>{{ $appointment->email }}</td>
                                             <td>{{ $appointment->number }}</td>
+                                            <td>{{ $appointment->car_model ?? 'N/A' }}</td>
+                                            <td>{{ $appointment->suburb ?? 'N/A' }}</td>
                                             <td>{{ $appointment->msg }}</td>
                                             <td>
                                                 @if (is_string($appointment->car_image) && !empty($appointment->car_image))
