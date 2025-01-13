@@ -305,6 +305,13 @@
                                         </div>
                                     </div>
                                     <div class="w-full flex flex-col gap-1">
+                                        <label for="msg"
+                                            class="text-[#ffffff] text-xs sm:text-sm md:text-base">Suburb</label>
+					<input type="text" name="suburb" id="suburb"
+                                                placeholder="Please enter suburb"
+                                                class="text-gray-600 bg-[#ffffff] border-[1px] border-[#ffffff]/70 px-1 py-0.5 sm:px-2 sm:py-1 md:px-4 md:py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c] rounded-md">
+                                    </div>
+                                    <div class="w-full flex flex-col gap-1">
                                         <label for="car_image" class="text-[#ffffff] text-xs sm:text-sm md:text-base">Damage
                                             Image</label>
                                         {{-- dropzone element here --}}

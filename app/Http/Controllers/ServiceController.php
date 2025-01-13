@@ -36,7 +36,6 @@ class ServiceController extends Controller
     }
 
     public function store(ServiceRequest $request){
-//        dd($request);
         $validatedData = $request->validated();
 
         // Handle image uploads
@@ -49,6 +48,8 @@ class ServiceController extends Controller
                 $validatedData[$field] = str_replace('public/', '', $imagePath);
             }
         }
+
+//dd($validatedData);
 
         // Create the About model instance with the validated data
         Service::create($validatedData);

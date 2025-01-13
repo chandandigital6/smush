@@ -28,7 +28,7 @@ class ServiceRequest extends FormRequest
             'service_image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             'description' => 'nullable',
             'status' => 'required|in:1,0',
-
+	    'suburb' => 'required|string|max:255',
         ];
     }
 }
