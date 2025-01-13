@@ -43,6 +43,7 @@
                             <table class="table table-striped">
                                 <thead>
                                     <tr>
+                                        <th>Created At</th>
                                         <th>ID</th>
                                         <th>Name</th>
                                         <th>Email</th>
@@ -51,13 +52,13 @@
                                         <th>Suburb</th>
                                         <th>Massage</th>
                                         <th>Car Images</th>
-                                        <th>Created At</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     @forelse ($appointmentData as $appointment)
                                         <tr>
+                                            <td>{{ $appointment->created_at->format('d-m-Y H:i') }}</td>
                                             <td>{{ $appointment->id }}</td>
                                             <td>{{ $appointment->name }}</td>
                                             <td>{{ $appointment->email }}</td>
@@ -75,7 +76,6 @@
                                                     @endforeach
                                                 @endif
                                             </td>
-                                            <td>{{ $appointment->created_at->format('d-m-Y H:i') }}</td>
                                             <td>
                                                 <div class="btn-group" role="group">
                                                     <a href="{{ route('appointment.delete', $appointment->id) }}" class="btn btn-danger">Delete</a>
