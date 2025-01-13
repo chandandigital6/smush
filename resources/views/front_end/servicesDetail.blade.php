@@ -221,7 +221,7 @@
         <ul class="slider-container">
             <li class="w-full relative">
                 <img src="{{ asset('asset/images/image2.jpg') }}"
-                    class="w-full lg:h-[700px] md:h-[500px] sm:h-[1200px] h-[1100px] object-cover"
+                    class="w-full lg:h-[750px] md:h-[500px] sm:h-[1200px] h-[1100px] object-cover"
                     alt="Mobile Smash Repair Services">
                 <div class="absolute top-0 left-0 w-full h-full bg-black/70 flex justify-center items-center px-4">
                     <div class="container mx-auto flex flex-col lg:flex-row items-center justify-between gap-4 px-4">
@@ -931,6 +931,11 @@
                             class="text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]">
                     </div>
 
+                </div>
+                <div class="w-full flex flex-col gap-1 mt-2">
+                    <label for="suburb" class="text-white text-md font-normal font-montserrat">Suburb</label>
+                        <input type="text" id="suburb" name="suburb" placeholder="Please enter suburb"
+                            class="text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]">
                 </div>
 
                 <div class="w-full gap-1 mt-2">

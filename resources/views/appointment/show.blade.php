@@ -22,6 +22,10 @@
             </div>
 
             <div class="mb-4">
+                <label class="font-bold">Suburb:</label>
+                <p>{{ $appointment->suburb ?? 'N/A' }}</p>
+            </div>
+            <div class="mb-4">
                 <label class="font-bold">Message:</label>
                 <p>{{ $appointment->msg ?? 'N/A' }}</p>
             </div>

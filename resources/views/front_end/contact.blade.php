@@ -149,6 +149,10 @@
                             <input type="text" name="car_model" placeholder="Your car model" class="text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]">
                         </div>
                     </div>
+                    <div class="w-full flex flex-col gap-1 mt-2">
+                        <label for="suburb" class="text-[#eeb21c] text-md font-normal">Suburb</label>
+                        <textarea placeholder="Please enter suburb" name="suburb" rows="1" class="w-full text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]"></textarea>
+                    </div>
                     <div class="w-full gap-1 mt-2">
                         <label for="car_images" class="text-[#eeb21c] text-md font-normal">Damage Image</label>
                         {{-- dropzone element here --}}

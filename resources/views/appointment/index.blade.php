@@ -49,6 +49,7 @@
                                         <th>number</th>
                                         <th>Massage</th>
                                         <th>Car Images</th>
+                                        <th>Created At</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
@@ -70,6 +71,7 @@
                                                     @endforeach
                                                 @endif
                                             </td>
+                                            <td>{{ $appointment->created_at->format('d-m-Y H:i') }}</td>
                                             <td>
                                                 <div class="btn-group" role="group">
                                                     <a href="{{ route('appointment.delete', $appointment->id) }}" class="btn btn-danger">Delete</a>

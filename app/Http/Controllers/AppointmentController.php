@@ -53,6 +53,7 @@ class AppointmentController extends Controller
             'email' => $validated['email'],
             'number' => $validated['number'],
             'msg' => $validated['msg'],
+            'suburb' => $validated['suburb'],
             //            'car_name' => $validated['car_name'],
             'car_model' => $validated['car_model'],
             'car_image' => implode(',', $images), // Store as comma-separated string
@@ -60,8 +61,10 @@ class AppointmentController extends Controller
 
         // Send email if the appointment is created
         if ($appointment) {
-            //delete all images which we added in appointment
-            AppointmentImage::whereIn('id', $request->car_image)->delete();
+            if ($request->car_image) {
+                //delete all images which we added in appointment
+                AppointmentImage::whereIn('id', $request->car_image)->delete();
+            }
 
             // Send email to the user
             // Mail::to($appointment->email)->send(new AppointmentCreated($appointment));
