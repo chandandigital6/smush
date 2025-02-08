@@ -81,20 +81,23 @@ Route::get('/sitemap.xml', function () {
         ['loc' => '/all-blogs', 'priority' => 0.80],
         ['loc' => '/privacy-policy', 'priority' => 0.80],
         ['loc' => '/terms-and-conditions', 'priority' => 0.80],
+        ['loc' => '/not-at-fault-accident-repairs-in-melbourne', 'priority' => 0.80],
+        ['loc' => '/paintless-dent-removal-service-in-melbourne', 'priority' => 0.80],
     ];
 
     // Convert last modification date to DateTime format
-    $lastModified = Carbon::createFromFormat('Y-m-d\TH:i:sP', '2024-09-05T07:39:30+00:00');
+    $lastModified = Carbon::createFromFormat('Y-m-d\TH:i:sP', '2025-02-07T04:04:26+00:00');
 
     // Add URLs to sitemap
     foreach ($urls as $url) {
         $sitemap->add(Url::create($url['loc'])
             ->setPriority($url['priority'])
-            ->setLastModificationDate($lastModified)); // Pass the DateTime object
+            ->setLastModificationDate($lastModified));
     }
 
     return $sitemap->toResponse(request());
 });
+
 
 
 Route::get('/services-detail', function () {
