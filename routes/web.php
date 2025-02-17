@@ -98,7 +98,15 @@ Route::get('/sitemap.xml', function () {
     return $sitemap->toResponse(request());
 });
 
-
+Route::redirect('/not-at-fault-accident-repairs', '/not-at-fault-accident-repairs-in-melbourne', 301);
+Route::redirect('/scratch_chip_repair', '/scratch-repair', 301);
+Route::redirect('/terms_and_conditions', '/terms-and-conditions', 301);
+Route::redirect('/panel_beating', '/panel-beating', 301);
+Route::redirect('/smash_repair', '/smash-repair', 301);
+Route::redirect('/car_spray_painting', '/car-spray-painting', 301);
+Route::redirect('/headlight_restoration', '/headlight-restoration', 301);
+Route::redirect('/scratch_and_chip_repair', '/scratch-chip-repair', 301);
+Route::redirect('/panel-beating?utm_medium=social&utm_source=heylink.me', '/panel-beating', 301);"
 
 Route::get('/services-detail', function () {
     return view('front_end.servicesDetail');
