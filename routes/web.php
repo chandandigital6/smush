@@ -107,7 +107,7 @@ Route::redirect('/car_spray_painting', '/car-spray-painting', 301);
 Route::redirect('/headlight_restoration', '/headlight-restoration', 301);
 Route::redirect('/scratch_and_chip_repair', '/scratch-chip-repair', 301);
 Route::get('/panel-beating', function () {
-    return redirect('/panel-beating', 301)->withQueryString();
+    return redirect('/panel-beating' . request()->getQueryString(), 301);
 });
 
 
