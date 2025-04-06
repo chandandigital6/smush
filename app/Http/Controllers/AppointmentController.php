@@ -72,7 +72,7 @@ class AppointmentController extends Controller
             // Send email to the admin
             $adminEmail = 'mobilesmashrepair87@gmail.com';
 
-            Mail::to($adminEmail)->send(new AdminAppointmentNotification($appointment));
+//            Mail::to($adminEmail)->send(new AdminAppointmentNotification($appointment));
         }
         return redirect()->route('home.thank')->with('success', 'Appointment  created successfully.');
         //        return redirect()->back()->with('success', 'Appointment  created successfully.');
