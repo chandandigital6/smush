@@ -15,8 +15,6 @@ class BrevoMailService
             'Content-Type' => 'application/json',
         ])->post('https://api.brevo.com/v3/smtp/email', $data);
 
-        dd($response->json());
-
         return $response->successful();
     }
 }
