@@ -72,24 +72,11 @@ class AppointmentController extends Controller
             // Send email to the admin
             $viewContent = View::make('appointment.mailTemplate', ['appointment' => $appointment])->render();
 
-            $mailer = [
-                "sender" => [
-                    "name" => env('APP_NAME'),
-                    "email" => env('MAIL_FROM_ADDRESS')
-                ],
-                "to" => [
-                    [
-                        "email" => env('ADMIN_EMAIL')
-                    ],
-                    [
-                        "email" => $appointment->email
-                    ]
-                ],
-                "subject" => "New Appointment Created",
-                "htmlContent" => $viewContent
-            ];
+            //send email to admin
+            $this->sendEmail(env('ADMIN_EMAIL'), $viewContent);
 
-            BrevoMailService::send($mailer);
+            //send email to user
+            $this->sendEmail($appointment->email, $viewContent);
         }
         return redirect()->route('home.thank')->with('success', 'Appointment  created successfully.');
         //        return redirect()->back()->with('success', 'Appointment  created successfully.');
@@ -139,5 +126,24 @@ class AppointmentController extends Controller
         //        $productDuplicate=$appointment->replicate();
         //        $productDuplicate->save();
         //        return redirect()->back();
+    }
+
+    public function sendEmail($email, $viewContent)
+    {
+        $mailer = [
+            "sender" => [
+                "name" => env('APP_NAME'),
+                "email" => env('MAIL_FROM_ADDRESS')
+            ],
+            "to" => [
+                [
+                    "email" => $email
+                ]
+            ],
+            "subject" => "New Appointment Created",
+            "htmlContent" => $viewContent
+        ];
+
+        BrevoMailService::send($mailer);
     }
 }
