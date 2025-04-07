@@ -10,12 +10,17 @@ use App\Models\AppointmentImage;
 use App\Services\BrevoMailService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\View;
 
 class AppointmentController extends Controller
 {
 
     public function test()
     {
+        $appointment['appointment'] = Appointment::first();
+
+        $viewContent = View::make('appointment.mailTemplate', $appointment)->render();
+
         $mailer = [
             "sender" => [
                 "name" => "Mobile Smash Repair",
@@ -27,8 +32,8 @@ class AppointmentController extends Controller
                     "email" => "harishkumarkamboj@gmail.com"
                 ]
             ],
-            "subject" => "Hello world",
-            "htmlContent" => "<html><head></head><body><p>Hello,</p>This is my first transactional email sent from Brevo.</p></body></html>"
+            "subject" => "New Appointment Created",
+            "htmlContent" => $viewContent
         ];
 
         $response = BrevoMailService::send($mailer);
@@ -104,7 +109,7 @@ class AppointmentController extends Controller
                     "name" => "Harish Kumar",
                     "email" => "harishkumarkamboj@gmail.com"
                 ],
-                "subject" => "Hello world",
+                "subject" => "New Appointment Created",
                 "htmlContent" => "<html><head></head><body><p>Hello,</p>This is my first transactional email sent from Brevo.</p></body></html>"
             ];
 
