@@ -15,31 +15,6 @@ use Illuminate\Support\Facades\View;
 class AppointmentController extends Controller
 {
 
-    public function test()
-    {
-        $appointment['appointment'] = Appointment::first();
-
-        $viewContent = View::make('appointment.mailTemplate', $appointment)->render();
-
-        $mailer = [
-            "sender" => [
-                "name" => "Mobile Smash Repair",
-                "email" => "info@mobilesmashrepair.com"
-            ],
-            "to" => [
-                [
-                    "name" => "Harish Kumar",
-                    "email" => "harishkumarkamboj@gmail.com"
-                ]
-            ],
-            "subject" => "New Appointment Created",
-            "htmlContent" => $viewContent
-        ];
-
-        $response = BrevoMailService::send($mailer);
-        dd($response);
-    }
-
     public function index(Request $request)
     {
         $keyword = $request->input('keyword');
@@ -94,28 +69,27 @@ class AppointmentController extends Controller
                 AppointmentImage::whereIn('id', $request->car_image)->delete();
             }
 
-            // Send email to the user
-            // Mail::to($appointment->email)->send(new AppointmentCreated($appointment));
-
             // Send email to the admin
-            $adminEmail = 'mobilesmashrepair87@gmail.com';
+            $viewContent = View::make('appointment.mailTemplate', ['appointment' => $appointment])->render();
 
             $mailer = [
                 "sender" => [
-                    "name" => "Mobile Smash Repair",
-                    "email" => "info@mobilesmashrepair.com"
+                    "name" => env('APP_NAME'),
+                    "email" => env('MAIL_FROM_ADDRESS')
                 ],
                 "to" => [
-                    "name" => "Harish Kumar",
-                    "email" => "harishkumarkamboj@gmail.com"
+                    [
+                        "email" => env('ADMIN_EMAIL')
+                    ],
+                    [
+                        "email" => $appointment->email
+                    ]
                 ],
                 "subject" => "New Appointment Created",
-                "htmlContent" => "<html><head></head><body><p>Hello,</p>This is my first transactional email sent from Brevo.</p></body></html>"
+                "htmlContent" => $viewContent
             ];
 
-            // $response = BrevoMailService::send($mailer);
-            // dd($response);
-
+            BrevoMailService::send($mailer);
         }
         return redirect()->route('home.thank')->with('success', 'Appointment  created successfully.');
         //        return redirect()->back()->with('success', 'Appointment  created successfully.');
