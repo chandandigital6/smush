@@ -22,8 +22,10 @@ class AppointmentController extends Controller
                 "email" => "info@mobilesmashrepair.com"
             ],
             "to" => [
-                "name" => "Harish Kumar",
-                "email" => "harishkumarkamboj@gmail.com"
+                [
+                    "name" => "Harish Kumar",
+                    "email" => "harishkumarkamboj@gmail.com"
+                ]
             ],
             "subject" => "Hello world",
             "htmlContent" => "<html><head></head><body><p>Hello,</p>This is my first transactional email sent from Brevo.</p></body></html>"
