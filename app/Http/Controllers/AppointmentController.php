@@ -7,11 +7,32 @@ use App\Mail\AppointmentCreated;
 use App\Mail\AdminAppointmentNotification;
 use App\Models\Appointment;
 use App\Models\AppointmentImage;
+use App\Services\BrevoMailService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
 class AppointmentController extends Controller
 {
+
+    public function test()
+    {
+        $mailer = [
+            "sender" => [
+                "name" => "Mobile Smash Repair",
+                "email" => "info@mobilesmashrepair.com"
+            ],
+            "to" => [
+                "name" => "Harish Kumar",
+                "email" => "harishkumarkamboj@gmail.com"
+            ],
+            "subject" => "Hello world",
+            "htmlContent" => "<html><head></head><body><p>Hello,</p>This is my first transactional email sent from Brevo.</p></body></html>"
+        ];
+
+        $response = BrevoMailService::send($mailer);
+        dd($response);
+    }
+
     public function index(Request $request)
     {
         $keyword = $request->input('keyword');
@@ -72,7 +93,22 @@ class AppointmentController extends Controller
             // Send email to the admin
             $adminEmail = 'mobilesmashrepair87@gmail.com';
 
-//            Mail::to($adminEmail)->send(new AdminAppointmentNotification($appointment));
+            $mailer = [
+                "sender" => [
+                    "name" => "Mobile Smash Repair",
+                    "email" => "info@mobilesmashrepair.com"
+                ],
+                "to" => [
+                    "name" => "Harish Kumar",
+                    "email" => "harishkumarkamboj@gmail.com"
+                ],
+                "subject" => "Hello world",
+                "htmlContent" => "<html><head></head><body><p>Hello,</p>This is my first transactional email sent from Brevo.</p></body></html>"
+            ];
+
+            // $response = BrevoMailService::send($mailer);
+            // dd($response);
+
         }
         return redirect()->route('home.thank')->with('success', 'Appointment  created successfully.');
         //        return redirect()->back()->with('success', 'Appointment  created successfully.');
@@ -123,5 +159,4 @@ class AppointmentController extends Controller
         //        $productDuplicate->save();
         //        return redirect()->back();
     }
-
 }
