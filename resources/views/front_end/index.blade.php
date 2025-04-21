@@ -60,6 +60,9 @@
                     headlight restoration in Melbourne to enhance your vehicle’s safety and aesthetics.
                     Trust us to deliver efficient, high-standard repairs wherever you are in Melbourne.
                 </p>
+                <p class="text-lg text-gray-600">
+                    Get high-quality and affordable smash repairs Melbourne wide | Trust us for reliable and affordable smash repairs Melbourne | Need urgent help? We provide emergency smash repair Melbourne services | Count on us for emergency smash repair Melbourne, 24/7. 
+                </p>
             </div>
         </section>
 
@@ -290,7 +293,47 @@
     </section>
 
 
-
+    <section class="bg-white py-10 px-6">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-6">Highlights</h2>
+            <ul class="list-inside space-y-3 text-gray-700 text-base leading-relaxed">
+                <li class="flex items-start">
+                    <span class="text-[#EEB21C] mr-2 mt-1">➤</span>
+                    <span>Trusted by locals for the best smash repairs in Melbourne.</span>
+                </li>
+                <li class="flex items-start">
+                    <span class="text-[#EEB21C] mr-2 mt-1">➤</span>
+                    <span>Choose us for the best smash repairs in Melbourne experience.</span>
+                </li>
+                <li class="flex items-start">
+                    <span class="text-[#EEB21C] mr-2 mt-1">➤</span>
+                    <span>Complete Melbourne car smash repair services at competitive rates.</span>
+                </li>
+                <li class="flex items-start">
+                    <span class="text-[#EEB21C] mr-2 mt-1">➤</span>
+                    <span>Experience smooth and stress-free Melbourne car smash repair.</span>
+                </li>
+                <li class="flex items-start">
+                    <span class="text-[#EEB21C] mr-2 mt-1">➤</span>
+                    <span>Specialized truck smash repairs Melbourne for all types of trucks.</span>
+                </li>
+                <li class="flex items-start">
+                    <span class="text-[#EEB21C] mr-2 mt-1">➤</span>
+                    <span>Get back on the road fast with truck smash repairs Melbourne.</span>
+                </li>
+                <li class="flex items-start">
+                    <span class="text-[#EEB21C] mr-2 mt-1">➤</span>
+                    <span>We offer precise paintless dent and smash repair Melbourne services.</span>
+                </li>
+                <li class="flex items-start">
+                    <span class="text-[#EEB21C] mr-2 mt-1">➤</span>
+                    <span>Save time and money with paintless dent and smash repair Melbourne.</span>
+                </li>
+            </ul>
+        </div>
+    </section>
+    
+    
 
     {{--our gallery section start here--}}
     <div class="w-full relative py-6 px-5">
