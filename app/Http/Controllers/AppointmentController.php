@@ -9,6 +9,7 @@ use App\Models\Appointment;
 use App\Models\AppointmentImage;
 use App\Services\BrevoMailService;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\View;
 
@@ -59,8 +60,21 @@ class AppointmentController extends Controller
             'suburb' => $validated['suburb'],
             //            'car_name' => $validated['car_name'],
             'car_model' => $validated['car_model'],
-            'car_image' => implode(',', $images), // Store as comma-separated string
+            'car_image' => implode(',', $images), // Store as comma-separated string,
+            'g-recaptcha-response' => 'required',
         ]);
+
+        $response = Http::asForm()->post('https://www.google.com/recaptcha/api/siteverify', [
+            'secret' => env('RECAPTCHA_SECRET_KEY'),
+            'response' => $validated['g-recaptcha-response'],
+            'remoteip' => $request->ip(),
+        ]);
+    
+        $result = $response->json();
+
+        if (!($result['success'] ?? false) || ($result['score'] ?? 0) < 0.5) {
+            return back()->withErrors(['captcha' => 'Suspicious behavior detected.']);
+        }
 
         // Send email if the appointment is created
         if ($appointment) {

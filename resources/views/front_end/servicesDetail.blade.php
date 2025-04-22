@@ -331,6 +331,9 @@
                                             class="text-gray-600 bg-[#ffffff] border-[1px] border-[#ffffff]/70 px-1 py-0.5 sm:px-2 sm:py-1 md:px-4 md:py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c] rounded-md"></textarea>
                                     </div>
                                     <div class="w-full flex flex-col gap-1">
+                                        <input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response">
+                                    </div>
+                                    <div class="w-full flex flex-col gap-1">
                                         <button type="submit" id="submitButton"
                                             class="text-[20px] sm:text-[12px] md:text-[14px] lg:text-[16px] w-max text-white bg-[#eeb21c] px-2 py-1 sm:px-3 sm:py-1 md:px-4 md:py-2 font-bold rounded-md border-[1px] border-[#ffffff] hover:bg-white hover:text-[#eeb21c] transition ease-in duration-200 flex items-center justify-center space-x-2">
                                             <span id="buttonText">Submit</span>
@@ -956,6 +959,9 @@
                         class="w-full text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]"></textarea>
                 </div>
                 <div class="w-full gap-1 mt-6">
+                    <input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response2">
+                </div>
+                <div class="w-full gap-1 mt-6">
                     <button type="submit"
                         class="text-[14px] sm:text-[20px] lg:text-[25px] w-full sm:w-max text-white bg-[#eeb21c] px-12 py-2 font-bold rounded-md border-[1px] border-[#eeb21c] hover:bg-white hover:text-[#eeb21c] transition ease-in duration-2000">
                         Submit
@@ -967,6 +973,16 @@
 
 
     {{-- MAKE YOUR INQUIRY NOW END --}}
+
+    <script src="https://www.google.com/recaptcha/api.js?render={{ env('RECAPTCHA_SITE_KEY') }}"></script>
+    <script>
+        grecaptcha.ready(function() {
+            grecaptcha.execute('{{ env('RECAPTCHA_SITE_KEY') }}', {action: 'submit'}).then(function(token) {
+                document.getElementById('g-recaptcha-response').value = token;
+                document.getElementById('g-recaptcha-response2').value = token;
+            });
+        });
+    </script>
 
     <script>
         document.querySelectorAll('.new-slider').forEach((slider, index) => {

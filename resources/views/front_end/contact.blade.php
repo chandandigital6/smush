@@ -167,6 +167,9 @@
                         <label for="msg" class="text-[#eeb21c] text-md font-normal">Message</label>
                         <textarea placeholder="Your message" name="msg" rows="1" class="w-full text-gray-600 bg-none border-[1px] border-[#eeb21c]/70 px-4 py-2 focus:outline-none focus:ring-0 focus:border-[#eeb21c]"></textarea>
                     </div>
+                    <div class="w-full gap-1 mt-2">
+                        <input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response">    
+                    </div>
                     <div class="w-full flex flex-col gap-1 mt-6">
                         <button type="submit" class="text-[14px] sm:text-[16px] md:text-[20px] lg:text-[25px] w-max text-white bg-[#eeb21c] px-8 lg:py-2 md:py-2 py-1 font-bold rounded-md border-[1px] border-[#eeb21c] hover:bg-white hover:text-[#eeb21c] transition ease-in duration-2000">
                             Submit
@@ -210,6 +213,17 @@
     </div>
 </div>
 {{--about section ends here    --}}
+
+
+
+<script src="https://www.google.com/recaptcha/api.js?render={{ env('RECAPTCHA_SITE_KEY') }}"></script>
+<script>
+    grecaptcha.ready(function() {
+        grecaptcha.execute('{{ env('RECAPTCHA_SITE_KEY') }}', {action: 'submit'}).then(function(token) {
+            document.getElementById('g-recaptcha-response').value = token;
+        });
+    });
+</script>
 
 <script>
     function updateHiddenInput() {

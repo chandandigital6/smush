@@ -29,7 +29,15 @@ class AppointmentRequest extends FormRequest
             'car_name' => 'nullable|string|max:255',
             'car_model' => 'nullable|string|max:255',
             'suburb' => 'nullable|string|max:255',
-//            'car_image.*' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            // 'car_image.*' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'g-recaptcha-response' => 'required',
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'g-recaptcha-response.required' => 'Captcha must be completed.',
         ];
     }
 }
